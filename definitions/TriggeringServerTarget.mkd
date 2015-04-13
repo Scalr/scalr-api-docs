@@ -1,0 +1,48 @@
+# `TriggeringServerTarget` #
+
+Selects the Server that triggered the Event
+
+## Polymorphism ##
+
+`TriggeringServerTarget` is an implementation of [`Target`](./../definitions/Target.mkd).
+
+An object of type `TriggeringServerTarget` may be used whenever an object of type [`Target`](./../definitions/Target.mkd)
+is expected.
+
+
+
+
+## Properties ##
+
+### `targetType` (required) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"TriggeringServerTarget"`
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-abstractType": "#/definitions/Target", 
+      "required": [
+        "targetType"
+      ], 
+      "x-discriminator": "targetType", 
+      "description": "Selects the Server that triggered the Event", 
+      "properties": {
+        "targetType": {
+          "enum": [
+            "NullTarget", 
+            "TriggeringServerTarget", 
+            "TriggeringFarmRoleTarget", 
+            "SelectedFarmRolesTarget", 
+            "FarmTarget"
+          ], 
+          "type": "string"
+        }
+      }
+    }

@@ -1,0 +1,33 @@
+# `ApiErrorEnvelope` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `errors` (read-only) ###
+
+
+
+
+An array of objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }
+    }

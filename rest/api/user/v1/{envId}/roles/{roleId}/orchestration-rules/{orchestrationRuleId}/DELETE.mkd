@@ -1,0 +1,218 @@
+# `DELETE /api/user/v1/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}` #
+
+Delete an Orchestration Rule associated with this Role
+
+## Request Parameters #
+
+### Path Parameters ###
+
+Path parameters are included in the URL.
+
+#### `envId` ####
+
+The ID of the Environment scoping this request
+
+Parameter of type: `integer`.
+
+
+#### `roleId` ####
+
+The ID of a Role object.
+
+Parameter of type: `integer`.
+
+
+#### `orchestrationRuleId` ####
+
+The ID of a OrchestrationRule object.
+
+Parameter of type: `integer`.
+
+
+
+
+
+
+
+
+
+
+## Responses ##
+
+
+### 200 ###
+
+Orchestration Rule deleted
+
+
+
+### 400 ###
+
+A client-side error was made
+
+Response body: [`ApiErrorEnvelope`](./../../../../../../../../definitions/ApiErrorEnvelope.mkd).
+
+
+### 403 ###
+
+Insufficient permissions
+
+Response body: [`ApiErrorEnvelope`](./../../../../../../../../definitions/ApiErrorEnvelope.mkd).
+
+
+### 500 ###
+
+A server-side error occured
+
+Response body: [`ApiErrorEnvelope`](./../../../../../../../../definitions/ApiErrorEnvelope.mkd).
+
+
+### 401 ###
+
+Request was not authenticated
+
+Response body: [`ApiErrorEnvelope`](./../../../../../../../../definitions/ApiErrorEnvelope.mkd).
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "delete": {
+        "description": "Delete an Orchestration Rule associated with this Role", 
+        "responses": {
+          "200": {
+            "description": "Orchestration Rule deleted"
+          }, 
+          "400": {
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "403": {
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "401": {
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }
+        }
+      }, 
+      "get": {
+        "description": "Retrieve an Orchestration Rule", 
+        "responses": {
+          "200": {
+            "description": "The JSON representation of a OrchestrationRule object.", 
+            "schema": {
+              "$ref": "#/definitions/OrchestrationRuleDetailEnvelope"
+            }
+          }, 
+          "400": {
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "403": {
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "401": {
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }
+        }
+      }, 
+      "parameters": [
+        {
+          "required": true, 
+          "type": "integer", 
+          "description": "The ID of the Environment scoping this request", 
+          "in": "path", 
+          "name": "envId"
+        }, 
+        {
+          "required": true, 
+          "type": "integer", 
+          "description": "The ID of a Role object.", 
+          "in": "path", 
+          "name": "roleId"
+        }, 
+        {
+          "required": true, 
+          "type": "integer", 
+          "description": "The ID of a OrchestrationRule object.", 
+          "in": "path", 
+          "name": "orchestrationRuleId"
+        }
+      ], 
+      "patch": {
+        "description": "Update an Orchestration rule", 
+        "parameters": [
+          {
+            "required": true, 
+            "in": "body", 
+            "description": "The JSON representation of a OrchestrationRule object.", 
+            "name": "orchestrationRuleObject", 
+            "schema": {
+              "$ref": "#/definitions/OrchestrationRule"
+            }
+          }
+        ], 
+        "responses": {
+          "400": {
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "401": {
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "202": {
+            "description": "The JSON representation of a OrchestrationRule object.", 
+            "schema": {
+              "$ref": "#/definitions/OrchestrationRuleDetailEnvelope"
+            }
+          }, 
+          "403": {
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }
+        }
+      }
+    }

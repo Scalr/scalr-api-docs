@@ -1,0 +1,187 @@
+# `GlobalVariable` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `name` (required, read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `value` (optional) ###
+
+The value declared in the current scope for this variable.  null allows inheritance. Any other value overrides inheritance.  This is ignored if `declaredIn` is not the current scope.
+
+
+Property of type: `string`.
+
+
+
+
+### `validationPattern` (optional) ###
+
+A validation pattern to apply in inner scopes. This is read-only if `declaredIn` is not the current scope.
+
+
+Property of type: `string`.
+
+
+
+
+### `requiredIn` (optional) ###
+
+The scope where this variable is required. This is read-only if `declaredIn` is not the current scope.
+
+
+Property of type: `string`.
+
+ 
+
+The following are valid values for the `requiredIn` property:
+
+  + `scalr`
+  + `account`
+  + `environment`
+  + `farm`
+  + `farmrole`
+  + `server`
+
+
+
+
+### `outputFormat` (optional) ###
+
+The formatting to apply when formatting this variable. This is read-only if `declaredIn` is not the current scope.
+
+
+Property of type: `string`.
+
+
+
+
+### `locked` (optional) ###
+
+Whether this variable is locked in inner scopes. This is read-only if `declaredIn` is not the current scope.
+
+
+Property of type: `boolean`.
+
+
+
+
+### `hidden` (optional) ###
+
+Whether this variable is hidden in inner scopes. This is read-only if `declaredIn` is not the current scope.
+
+
+Property of type: `boolean`.
+
+
+
+
+### `declaredIn` (read-only) ###
+
+Whether this variable is declared in the current scope.
+
+
+Property of type: `string`.
+
+ 
+
+The following are valid values for the `declaredIn` property:
+
+  + `scalr`
+  + `account`
+  + `environment`
+  + `farm`
+  + `farmrole`
+  + `server`
+
+
+
+
+### `computedValue` (read-only) ###
+
+The value computed by Scalr for this variable once inheritance has been taken into account.
+
+
+Property of type: `string`.
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "required": [
+        "name"
+      ], 
+      "properties": {
+        "declaredIn": {
+          "readOnly": true, 
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "server"
+          ], 
+          "type": "string", 
+          "description": "Whether this variable is declared in the current scope."
+        }, 
+        "outputFormat": {
+          "type": "string", 
+          "description": "The formatting to apply when formatting this variable. This is read-only if `declaredIn` is not the current scope."
+        }, 
+        "locked": {
+          "type": "boolean", 
+          "description": "Whether this variable is locked in inner scopes. This is read-only if `declaredIn` is not the current scope."
+        }, 
+        "name": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "value": {
+          "type": "string", 
+          "description": "The value declared in the current scope for this variable.  null allows inheritance. Any other value overrides inheritance.  This is ignored if `declaredIn` is not the current scope."
+        }, 
+        "computedValue": {
+          "readOnly": true, 
+          "type": "string", 
+          "description": "The value computed by Scalr for this variable once inheritance has been taken into account."
+        }, 
+        "validationPattern": {
+          "type": "string", 
+          "description": "A validation pattern to apply in inner scopes. This is read-only if `declaredIn` is not the current scope."
+        }, 
+        "requiredIn": {
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "server"
+          ], 
+          "type": "string", 
+          "description": "The scope where this variable is required. This is read-only if `declaredIn` is not the current scope."
+        }, 
+        "hidden": {
+          "type": "boolean", 
+          "description": "Whether this variable is hidden in inner scopes. This is read-only if `declaredIn` is not the current scope."
+        }
+      }
+    }

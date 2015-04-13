@@ -1,0 +1,79 @@
+# `Event` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `id` (create-only) ###
+
+The name of this custom event
+
+
+Property of type: `string`.
+
+
+
+
+### `description` (optional) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `scope` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+
+The following are valid values for the `scope` property:
+
+  + `scalr`
+  + `account`
+  + `environment`
+  + `farm`
+  + `farmrole`
+  + `server`
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "scope": {
+          "readOnly": true, 
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "server"
+          ], 
+          "type": "string"
+        }, 
+        "description": {
+          "type": "string"
+        }, 
+        "id": {
+          "type": "string", 
+          "description": "The name of this custom event", 
+          "x-createOnly": true
+        }
+      }
+    }

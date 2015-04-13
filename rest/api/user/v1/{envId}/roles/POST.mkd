@@ -1,0 +1,171 @@
+# `POST /api/user/v1/{envId}/roles/` #
+
+Create a new Role in this Environment
+
+## Request Parameters #
+
+### Path Parameters ###
+
+Path parameters are included in the URL.
+
+#### `envId` ####
+
+The ID of the Environment scoping this request
+
+Parameter of type: `integer`.
+
+
+
+
+
+
+
+### Request Body ###
+
+The request body parameter is passed as the body of the request.
+
+#### `roleObject` ####
+
+The JSON representation of a Role object.
+
+
+An object of type: [`Role`](./../../../../../../definitions/Role.mkd).
+
+
+
+
+
+## Responses ##
+
+
+### 400 ###
+
+A client-side error was made
+
+Response body: [`ApiErrorEnvelope`](./../../../../../../definitions/ApiErrorEnvelope.mkd).
+
+
+### 201 ###
+
+The JSON representation of a Role object.
+
+Response body: [`RoleDetailEnvelope`](./../../../../../../definitions/RoleDetailEnvelope.mkd).
+
+
+### 403 ###
+
+Insufficient permissions
+
+Response body: [`ApiErrorEnvelope`](./../../../../../../definitions/ApiErrorEnvelope.mkd).
+
+
+### 500 ###
+
+A server-side error occured
+
+Response body: [`ApiErrorEnvelope`](./../../../../../../definitions/ApiErrorEnvelope.mkd).
+
+
+### 401 ###
+
+Request was not authenticated
+
+Response body: [`ApiErrorEnvelope`](./../../../../../../definitions/ApiErrorEnvelope.mkd).
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "post": {
+        "description": "Create a new Role in this Environment", 
+        "parameters": [
+          {
+            "required": true, 
+            "in": "body", 
+            "description": "The JSON representation of a Role object.", 
+            "name": "roleObject", 
+            "schema": {
+              "$ref": "#/definitions/Role"
+            }
+          }
+        ], 
+        "responses": {
+          "400": {
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "201": {
+            "description": "The JSON representation of a Role object.", 
+            "schema": {
+              "$ref": "#/definitions/RoleDetailEnvelope"
+            }
+          }, 
+          "403": {
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "401": {
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }
+        }
+      }, 
+      "parameters": [
+        {
+          "required": true, 
+          "type": "integer", 
+          "description": "The ID of the Environment scoping this request", 
+          "in": "path", 
+          "name": "envId"
+        }
+      ], 
+      "get": {
+        "description": "List Roles available in this Environment", 
+        "responses": {
+          "200": {
+            "description": "A list of Role objects.", 
+            "schema": {
+              "$ref": "#/definitions/RoleListEnvelope"
+            }
+          }, 
+          "400": {
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "403": {
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }, 
+          "401": {
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorEnvelope"
+            }
+          }
+        }
+      }
+    }

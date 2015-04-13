@@ -1,0 +1,48 @@
+# `NullTarget` #
+
+Selects no Server at all
+
+## Polymorphism ##
+
+`NullTarget` is an implementation of [`Target`](./../definitions/Target.mkd).
+
+An object of type `NullTarget` may be used whenever an object of type [`Target`](./../definitions/Target.mkd)
+is expected.
+
+
+
+
+## Properties ##
+
+### `targetType` (required) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"NullTarget"`
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-abstractType": "#/definitions/Target", 
+      "required": [
+        "targetType"
+      ], 
+      "x-discriminator": "targetType", 
+      "description": "Selects no Server at all", 
+      "properties": {
+        "targetType": {
+          "enum": [
+            "NullTarget", 
+            "TriggeringServerTarget", 
+            "TriggeringFarmRoleTarget", 
+            "SelectedFarmRolesTarget", 
+            "FarmTarget"
+          ], 
+          "type": "string"
+        }
+      }
+    }

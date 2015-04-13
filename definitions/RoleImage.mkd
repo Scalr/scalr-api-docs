@@ -1,0 +1,41 @@
+# `RoleImage` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `image` (optional) ###
+
+
+
+
+An object of type [`ImageForeignKey`](./../definitions/ImageForeignKey.mkd).
+
+
+### `role` (read-only) ###
+
+
+
+
+An object of type [`RoleForeignKey`](./../definitions/RoleForeignKey.mkd).
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "image": {
+          "$ref": "#/definitions/ImageForeignKey"
+        }, 
+        "role": {
+          "readOnly": true, 
+          "$ref": "#/definitions/RoleForeignKey"
+        }
+      }
+    }

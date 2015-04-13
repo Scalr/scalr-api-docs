@@ -1,0 +1,47 @@
+# `SelectedFarmRolesTarget` #
+
+
+
+## Polymorphism ##
+
+`SelectedFarmRolesTarget` is an implementation of [`Target`](./../definitions/Target.mkd).
+
+An object of type `SelectedFarmRolesTarget` may be used whenever an object of type [`Target`](./../definitions/Target.mkd)
+is expected.
+
+
+
+
+## Properties ##
+
+### `targetType` (required) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"SelectedFarmRolesTarget"`
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-abstractType": "#/definitions/Target", 
+      "required": [
+        "targetType"
+      ], 
+      "x-discriminator": "targetType", 
+      "properties": {
+        "targetType": {
+          "enum": [
+            "NullTarget", 
+            "TriggeringServerTarget", 
+            "TriggeringFarmRoleTarget", 
+            "SelectedFarmRolesTarget", 
+            "FarmTarget"
+          ], 
+          "type": "string"
+        }
+      }
+    }

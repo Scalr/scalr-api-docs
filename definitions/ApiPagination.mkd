@@ -1,0 +1,75 @@
+# `ApiPagination` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `prev` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `next` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `last` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `first` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "prev": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "last": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "first": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "next": {
+          "readOnly": true, 
+          "type": "string"
+        }
+      }, 
+      "x-derived": true
+    }

@@ -1,0 +1,78 @@
+# `ScriptVersion` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `body` (required) ###
+
+The contents of this ScriptVersion, those will be validated as per the Script's OS Type.
+
+
+Property of type: `string`.
+
+
+
+
+### `script` (create-only) ###
+
+The Script this ScriptVersion is a version of
+
+
+An object of type [`ScriptForeignKey`](./../definitions/ScriptForeignKey.mkd).
+
+
+### `version` (read-only) ###
+
+If at least one version exists, Scalr will return the latest ScriptVersion twice: one with version set, and one with version nulled. The null version represents the 'latest' version of the Script, and may be used
+
+
+Property of type: `integer`.
+
+
+
+
+### `added` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "required": [
+        "body"
+      ], 
+      "properties": {
+        "body": {
+          "type": "string", 
+          "description": "The contents of this ScriptVersion, those will be validated as per the Script's OS Type."
+        }, 
+        "added": {
+          "readOnly": true, 
+          "type": "string", 
+          "format": "date-time"
+        }, 
+        "version": {
+          "readOnly": true, 
+          "type": "integer", 
+          "description": "If at least one version exists, Scalr will return the latest ScriptVersion twice: one with version set, and one with version nulled. The null version represents the 'latest' version of the Script, and may be used"
+        }, 
+        "script": {
+          "$ref": "#/definitions/ScriptForeignKey", 
+          "description": "The Script this ScriptVersion is a version of", 
+          "x-createOnly": true
+        }
+      }
+    }
