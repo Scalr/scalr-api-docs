@@ -58,3 +58,8 @@ URL:
     http://your-scalr-host/#/core/api2
 
 Then, generate a new key.
+
+
+### Code Samples ###
+
+Get started with the code samples here: [`samples`](./samples).
