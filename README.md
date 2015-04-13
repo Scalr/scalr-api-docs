@@ -7,6 +7,7 @@ APIv2.
 **Note that this documentation as well as the API it describes are subject to
 change.**
 
+
 Using this Documentation
 ------------------------
 
@@ -24,3 +25,36 @@ endpoint.
 
 The [`definitions`](./definitions) folder includes documentation for the
 objects that are manipulated using the Scalr API.
+
+
+Getting Started
+---------------
+
+### Enable APIv2 ###
+
+To get started with APIv2, you should first enable APIv2 in your Scalr install.
+To do so, include the following in your `/etc/scalr-server/scalr-server.rb`
+file:
+
+    app[:configuration] = {
+      :scalr => {
+        :system => {
+          :api => {
+            :enabled => true
+          },
+        },
+      },
+    }
+
+Note that if you already have a `app[:configuration]`, you should instead
+merge this in.
+
+
+### Generate an API Key ###
+
+Login as the user you'd like to access the API as, and access the following
+URL:
+
+    http://your-scalr-host/#/core/api2
+
+Then, generate a new key.
