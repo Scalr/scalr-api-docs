@@ -27,6 +27,12 @@ The [`definitions`](./doc/definitions) folder includes documentation for the
 objects that are manipulated using the Scalr API.
 
 
+### Authentication ###
+
+If you'd like to write your own API Client, review the documentation under
+[`doc/authentication`](./doc/authentication).
+
+
 Getting Started
 ---------------
 
