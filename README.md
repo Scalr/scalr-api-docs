@@ -14,16 +14,16 @@ Using this Documentation
 ### Endpoints ###
 
 The endpoints currently exposed in the API are available under the
-[`doc/rest/api/user/v1`](./doc/rest/api/user/v1) path. Directories map to endpoints,
+[`doc/autodoc/rest/api/user/v1`](./doc/autodoc/rest/api/user/v1) path. Directories map to endpoints,
 and files map to methods.
 
-For example, [`doc/rest/api/user/v1/{envId}/events/GET.mkd`](./doc/rest/api/user/v1/{envId}/events/GET.mkd)
+For example, [`doc/autodoc/rest/api/user/v1/{envId}/events/GET.mkd`](./doc/autodoc/rest/api/user/v1/{envId}/events/GET.mkd)
 is documentation for the `GET` method on the `/api/user/v1/{envId}/events/`
 endpoint.
 
 ### Definitions ###
 
-The [`definitions`](./doc/definitions) folder includes documentation for the
+The [`definitions`](./doc/autodoc/definitions) folder includes documentation for the
 objects that are manipulated using the Scalr API.
 
 

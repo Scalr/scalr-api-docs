@@ -1,0 +1,87 @@
+# `ApiErrorResponse` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+
+
+## Used in ##
+
+  + [`/events/`](./../rest/api/user/v1/events/)
+  + [`/events/{eventId}/`](./../rest/api/user/v1/events/{eventId}/)
+  + [`/os/`](./../rest/api/user/v1/os/)
+  + [`/os/{osId}`](./../rest/api/user/v1/os/{osId})
+  + [`/{envId}/events/`](./../rest/api/user/v1/{envId}/events/)
+  + [`/{envId}/events/{eventId}/`](./../rest/api/user/v1/{envId}/events/{eventId}/)
+  + [`/{envId}/images/`](./../rest/api/user/v1/{envId}/images/)
+  + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1/{envId}/images/{imageId}/)
+  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1/{envId}/images/{imageId}/actions/copy/)
+  + [`/{envId}/role-categories/`](./../rest/api/user/v1/{envId}/role-categories/)
+  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/user/v1/{envId}/role-categories/{roleCategoryId}/)
+  + [`/{envId}/roles/`](./../rest/api/user/v1/{envId}/roles/)
+  + [`/{envId}/roles/{roleId}/`](./../rest/api/user/v1/{envId}/roles/{roleId}/)
+  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1/{envId}/roles/{roleId}/global-variables/)
+  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}`](./../rest/api/user/v1/{envId}/roles/{roleId}/global-variables/{globalVariableName})
+  + [`/{envId}/roles/{roleId}/images/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1/{envId}/roles/{roleId}/orchestration-rules/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}`](./../rest/api/user/v1/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId})
+  + [`/{envId}/scripts/`](./../rest/api/user/v1/{envId}/scripts/)
+  + [`/{envId}/scripts/{scriptId}/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/script-versions/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/scripts/{scriptId}/script-versions/", 
+        "/events/{eventId}/", 
+        "/{envId}/role-categories/", 
+        "/{envId}/scripts/{scriptId}/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/{envId}/images/{imageId}/actions/copy/", 
+        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/{envId}/roles/", 
+        "/{envId}/roles/{roleId}/", 
+        "/os/", 
+        "/os/{osId}", 
+        "/{envId}/roles/{roleId}/images/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/", 
+        "/{envId}/events/", 
+        "/{envId}/events/{eventId}/", 
+        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}", 
+        "/events/", 
+        "/{envId}/images/", 
+        "/{envId}/images/{imageId}/", 
+        "/{envId}/roles/{roleId}/global-variables/", 
+        "/{envId}/scripts/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}", 
+        "/{envId}/role-categories/{roleCategoryId}/"
+      ], 
+      "properties": {
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }
+    }

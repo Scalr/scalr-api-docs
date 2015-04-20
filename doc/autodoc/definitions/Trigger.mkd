@@ -1,0 +1,60 @@
+# `Trigger` #
+
+
+
+
+## Abstract Type ##
+
+`Trigger` is an abstract type. When an object of type `Trigger` is expected, you must pass an object of
+one of the following types:
+
+  + [`SpecificEventTrigger`](./../definitions/SpecificEventTrigger.mkd)
+  + [`AllEventsTrigger`](./../definitions/AllEventsTrigger.mkd)
+
+
+
+
+## Properties ##
+
+### `triggerType` (required) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `triggerType` property:
+  + `AllEventsTrigger`
+  + `SpecificEventTrigger`
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/SpecificEventTrigger"
+        }, 
+        {
+          "$ref": "#/definitions/AllEventsTrigger"
+        }
+      ], 
+      "discriminator": "triggerType", 
+      "required": [
+        "triggerType"
+      ], 
+      "properties": {
+        "triggerType": {
+          "enum": [
+            "AllEventsTrigger", 
+            "SpecificEventTrigger"
+          ], 
+          "type": "string"
+        }
+      }
+    }

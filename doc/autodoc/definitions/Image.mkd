@@ -1,0 +1,365 @@
+# `Image` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `os` (required, filterable) ###
+
+
+
+
+An object of type [`OsForeignKey`](./../definitions/OsForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`OsForeignKey`](./../definitions/OsForeignKey.mkd) object you are referencing,
+e.g.: `os=...`.
+
+
+### `name` (required, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+### `cloudPlatform` (required, filterable) ###
+
+Cloud Platform this resources resides in.
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `cloudPlatform` property:
+  + `ec2`
+  + `rackspace`
+  + `eucalyptus`
+  + `gce`
+  + `openstack`
+  + `ecs`
+  + `ocs`
+  + `nebula`
+  + `contrail`
+  + `rackspacengus`
+  + `rackspacenguk`
+  + `cloudstack`
+  + `idcf`
+
+To filter on this field, use: `cloudPlatform=...`.
+
+
+### `cloudImageId` (required, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `cloudImageId=...`.
+
+
+### `architecture` (required, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `architecture` property:
+  + `i386`
+  + `x86_64`
+
+To filter on this field, use: `architecture=...`.
+
+
+### `cloudLocation` (optional, filterable) ###
+
+More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `cloudLocation=...`.
+
+
+### `type` (read-only) ###
+
+(Only used on EC2 currently) Whether this Image is HVM or EBS.
+
+
+Property of type: `string`.
+
+
+
+
+### `statusError` (read-only) ###
+
+If the Image is in a failed state, this indicates why.
+
+
+Property of type: `string`.
+
+
+
+
+### `status` (read-only, filterable) ###
+
+Current status for this Image. Not that `delete` means deletion is underway, and `failed` means deletion failed
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `status` property:
+  + `active`
+  + `delete`
+  + `failed`
+
+To filter on this field, use: `status=...`.
+
+
+### `source` (read-only, filterable) ###
+
+Indicates how this Image was created
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `source` property:
+  + `Manual`
+  + `BundleTask`
+
+To filter on this field, use: `source=...`.
+
+
+### `size` (read-only) ###
+
+
+
+
+Property of type: `integer`.
+
+
+
+
+### `scope` (read-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `scope` property:
+  + `scalr`
+  + `account`
+  + `environment`
+  + `farm`
+  + `farmrole`
+  + `server`
+
+To filter on this field, use: `scope=...`.
+
+
+### `lastUsed` (read-only) ###
+
+Date and time when this Image was last used
+
+
+Property of type: `string`.
+
+
+
+
+### `id` (read-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `id=...`.
+
+
+### `deprecated` (read-only, filterable) ###
+
+Whether this Image is deprecated
+
+
+Property of type: `boolean`.
+
+
+To filter on this field, use: `deprecated=...`.
+
+
+### `added` (read-only) ###
+
+Date and time when this Image was created
+
+
+Property of type: `string`.
+
+
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/images/`](./../rest/api/user/v1/{envId}/images/)
+  + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1/{envId}/images/{imageId}/)
+  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1/{envId}/images/{imageId}/actions/copy/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/{envId}/images/{imageId}/actions/copy/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/", 
+        "/{envId}/images/", 
+        "/{envId}/images/{imageId}/"
+      ], 
+      "properties": {
+        "status": {
+          "readOnly": true, 
+          "enum": [
+            "active", 
+            "delete", 
+            "failed"
+          ], 
+          "type": "string", 
+          "description": "Current status for this Image. Not that `delete` means deletion is underway, and `failed` means deletion failed"
+        }, 
+        "added": {
+          "readOnly": true, 
+          "type": "string", 
+          "description": "Date and time when this Image was created", 
+          "format": "date-time"
+        }, 
+        "cloudImageId": {
+          "type": "string"
+        }, 
+        "statusError": {
+          "readOnly": true, 
+          "type": "string", 
+          "description": "If the Image is in a failed state, this indicates why."
+        }, 
+        "lastUsed": {
+          "readOnly": true, 
+          "type": "string", 
+          "description": "Date and time when this Image was last used", 
+          "format": "date-time"
+        }, 
+        "os": {
+          "$ref": "#/definitions/OsForeignKey"
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "size": {
+          "readOnly": true, 
+          "type": "integer"
+        }, 
+        "name": {
+          "type": "string"
+        }, 
+        "deprecated": {
+          "readOnly": true, 
+          "type": "boolean", 
+          "description": "Whether this Image is deprecated"
+        }, 
+        "source": {
+          "readOnly": true, 
+          "enum": [
+            "Manual", 
+            "BundleTask"
+          ], 
+          "type": "string", 
+          "description": "Indicates how this Image was created"
+        }, 
+        "cloudLocation": {
+          "type": "string", 
+          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`."
+        }, 
+        "architecture": {
+          "enum": [
+            "i386", 
+            "x86_64"
+          ], 
+          "type": "string"
+        }, 
+        "scope": {
+          "readOnly": true, 
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "server"
+          ], 
+          "type": "string"
+        }, 
+        "cloudPlatform": {
+          "enum": [
+            "ec2", 
+            "rackspace", 
+            "eucalyptus", 
+            "gce", 
+            "openstack", 
+            "ecs", 
+            "ocs", 
+            "nebula", 
+            "contrail", 
+            "rackspacengus", 
+            "rackspacenguk", 
+            "cloudstack", 
+            "idcf"
+          ], 
+          "type": "string", 
+          "description": "Cloud Platform this resources resides in."
+        }, 
+        "type": {
+          "readOnly": true, 
+          "type": "string", 
+          "description": "(Only used on EC2 currently) Whether this Image is HVM or EBS."
+        }
+      }, 
+      "x-filterable": [
+        "id", 
+        "name", 
+        "scope", 
+        "cloudPlatform", 
+        "cloudLocation", 
+        "cloudImageId", 
+        "architecture", 
+        "source", 
+        "status", 
+        "deprecated", 
+        "os"
+      ], 
+      "required": [
+        "name", 
+        "cloudPlatform", 
+        "cloudImageId", 
+        "architecture", 
+        "os"
+      ]
+    }

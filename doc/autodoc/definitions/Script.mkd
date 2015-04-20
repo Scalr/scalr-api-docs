@@ -1,0 +1,185 @@
+# `Script` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `osType` (required) ###
+
+Type of OS this Script should execute on. This will influence Orchestration Rules, an will trigger validation on individual ScriptVersion's you upload.
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `osType` property:
+  + `linux`
+  + `windows`
+
+
+
+### `name` (required) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `scope` (required, read-only) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `scope` property:
+  + `scalr`
+  + `account`
+  + `environment`
+  + `farm`
+  + `farmrole`
+  + `server`
+
+
+
+### `id` (required, read-only) ###
+
+
+
+
+Property of type: `integer`.
+
+
+
+
+### `timeoutDefault` (optional) ###
+
+
+
+
+Property of type: `integer`.
+
+
+
+
+### `description` (optional) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `blockingDefault` (optional) ###
+
+
+
+
+Property of type: `boolean`.
+
+
+
+
+### `lastChanged` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `added` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/scripts/`](./../rest/api/user/v1/{envId}/scripts/)
+  + [`/{envId}/scripts/{scriptId}/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/script-versions/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/scripts/{scriptId}/script-versions/", 
+        "/{envId}/scripts/{scriptId}/", 
+        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/{envId}/scripts/"
+      ], 
+      "properties": {
+        "timeoutDefault": {
+          "type": "integer"
+        }, 
+        "added": {
+          "readOnly": true, 
+          "type": "string", 
+          "format": "date-time"
+        }, 
+        "description": {
+          "type": "string"
+        }, 
+        "lastChanged": {
+          "readOnly": true, 
+          "type": "string", 
+          "format": "date-time"
+        }, 
+        "blockingDefault": {
+          "type": "boolean"
+        }, 
+        "osType": {
+          "enum": [
+            "linux", 
+            "windows"
+          ], 
+          "type": "string", 
+          "description": "Type of OS this Script should execute on. This will influence Orchestration Rules, an will trigger validation on individual ScriptVersion's you upload."
+        }, 
+        "scope": {
+          "readOnly": true, 
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "server"
+          ], 
+          "type": "string"
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "integer"
+        }, 
+        "name": {
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "id", 
+        "name", 
+        "scope", 
+        "osType"
+      ]
+    }

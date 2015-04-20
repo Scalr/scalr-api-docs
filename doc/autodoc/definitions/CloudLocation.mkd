@@ -1,0 +1,92 @@
+# `CloudLocation` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `cloudPlatform` (required, filterable) ###
+
+Cloud Platform this resources resides in.
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `cloudPlatform` property:
+  + `ec2`
+  + `rackspace`
+  + `eucalyptus`
+  + `gce`
+  + `openstack`
+  + `ecs`
+  + `ocs`
+  + `nebula`
+  + `contrail`
+  + `rackspacengus`
+  + `rackspacenguk`
+  + `cloudstack`
+  + `idcf`
+
+To filter on this field, use: `cloudPlatform=...`.
+
+
+### `cloudLocation` (optional, filterable) ###
+
+More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `cloudLocation=...`.
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1/{envId}/images/{imageId}/actions/copy/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/images/{imageId}/actions/copy/"
+      ], 
+      "properties": {
+        "cloudLocation": {
+          "type": "string", 
+          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`."
+        }, 
+        "cloudPlatform": {
+          "enum": [
+            "ec2", 
+            "rackspace", 
+            "eucalyptus", 
+            "gce", 
+            "openstack", 
+            "ecs", 
+            "ocs", 
+            "nebula", 
+            "contrail", 
+            "rackspacengus", 
+            "rackspacenguk", 
+            "cloudstack", 
+            "idcf"
+          ], 
+          "type": "string", 
+          "description": "Cloud Platform this resources resides in."
+        }
+      }, 
+      "x-filterable": [
+        "cloudPlatform", 
+        "cloudLocation"
+      ], 
+      "required": [
+        "cloudPlatform"
+      ]
+    }

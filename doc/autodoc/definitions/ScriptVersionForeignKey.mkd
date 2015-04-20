@@ -1,0 +1,50 @@
+# `ScriptVersionForeignKey` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `script` (create-only) ###
+
+The Script this ScriptVersion is a version of
+
+
+An object of type [`ScriptForeignKey`](./../definitions/ScriptForeignKey.mkd).
+
+
+
+### `version` (read-only) ###
+
+If at least one version exists, Scalr will return the latest ScriptVersion twice: one with version set, and one with version nulled. The null version represents the 'latest' version of the Script, and may be used
+
+
+Property of type: `integer`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "version": {
+          "readOnly": true, 
+          "type": "integer", 
+          "description": "If at least one version exists, Scalr will return the latest ScriptVersion twice: one with version set, and one with version nulled. The null version represents the 'latest' version of the Script, and may be used"
+        }, 
+        "script": {
+          "description": "The Script this ScriptVersion is a version of", 
+          "$ref": "#/definitions/ScriptForeignKey"
+        }
+      }, 
+      "x-createOnly": [
+        "script"
+      ]
+    }

@@ -1,0 +1,96 @@
+# `RoleCategory` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `name` (required, create-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+### `scope` (read-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `scope` property:
+  + `scalr`
+  + `account`
+  + `environment`
+  + `farm`
+  + `farmrole`
+  + `server`
+
+To filter on this field, use: `scope=...`.
+
+
+### `id` (read-only, filterable) ###
+
+
+
+
+Property of type: `integer`.
+
+
+To filter on this field, use: `id=...`.
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/user/v1/{envId}/role-categories/{roleCategoryId}/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/role-categories/{roleCategoryId}/"
+      ], 
+      "x-createOnly": [
+        "name"
+      ], 
+      "properties": {
+        "scope": {
+          "readOnly": true, 
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "server"
+          ], 
+          "type": "string"
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "integer"
+        }, 
+        "name": {
+          "type": "string"
+        }
+      }, 
+      "x-filterable": [
+        "id", 
+        "name", 
+        "scope"
+      ], 
+      "required": [
+        "name"
+      ]
+    }

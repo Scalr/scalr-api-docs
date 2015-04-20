@@ -1,0 +1,78 @@
+# `Target` #
+
+
+
+
+## Abstract Type ##
+
+`Target` is an abstract type. When an object of type `Target` is expected, you must pass an object of
+one of the following types:
+
+  + [`SelectedFarmRolesTarget`](./../definitions/SelectedFarmRolesTarget.mkd)
+  + [`FarmTarget`](./../definitions/FarmTarget.mkd)
+  + [`TriggeringServerTarget`](./../definitions/TriggeringServerTarget.mkd)
+  + [`NullTarget`](./../definitions/NullTarget.mkd)
+  + [`TriggeringFarmRoleTarget`](./../definitions/TriggeringFarmRoleTarget.mkd)
+
+
+
+
+## Properties ##
+
+### `targetType` (required) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `targetType` property:
+  + `NullTarget`
+  + `TriggeringServerTarget`
+  + `TriggeringFarmRoleTarget`
+  + `SelectedFarmRolesTarget`
+  + `FarmTarget`
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/SelectedFarmRolesTarget"
+        }, 
+        {
+          "$ref": "#/definitions/FarmTarget"
+        }, 
+        {
+          "$ref": "#/definitions/TriggeringServerTarget"
+        }, 
+        {
+          "$ref": "#/definitions/NullTarget"
+        }, 
+        {
+          "$ref": "#/definitions/TriggeringFarmRoleTarget"
+        }
+      ], 
+      "discriminator": "targetType", 
+      "required": [
+        "targetType"
+      ], 
+      "properties": {
+        "targetType": {
+          "enum": [
+            "NullTarget", 
+            "TriggeringServerTarget", 
+            "TriggeringFarmRoleTarget", 
+            "SelectedFarmRolesTarget", 
+            "FarmTarget"
+          ], 
+          "type": "string"
+        }
+      }
+    }

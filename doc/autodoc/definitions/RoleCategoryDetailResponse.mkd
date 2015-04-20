@@ -1,0 +1,85 @@
+# `RoleCategoryDetailResponse` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `data` (optional) ###
+
+
+
+
+An object of type [`RoleCategory`](./../definitions/RoleCategory.mkd).
+
+
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/user/v1/{envId}/role-categories/{roleCategoryId}/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/role-categories/{roleCategoryId}/"
+      ], 
+      "properties": {
+        "meta": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiMetaContainer"
+        }, 
+        "data": {
+          "$ref": "#/definitions/RoleCategory"
+        }, 
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "warnings": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }, 
+      "x-derived": {
+        "$ref": "#/definitions/RoleCategory"
+      }
+    }

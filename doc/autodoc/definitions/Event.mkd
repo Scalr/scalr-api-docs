@@ -1,0 +1,100 @@
+# `Event` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `id` (required, create-only, filterable) ###
+
+The name of this custom event
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `id=...`.
+
+
+### `description` (optional) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `scope` (read-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `scope` property:
+  + `scalr`
+  + `account`
+  + `environment`
+  + `farm`
+  + `farmrole`
+  + `server`
+
+To filter on this field, use: `scope=...`.
+
+
+
+
+## Used in ##
+
+  + [`/events/`](./../rest/api/user/v1/events/)
+  + [`/events/{eventId}/`](./../rest/api/user/v1/events/{eventId}/)
+  + [`/{envId}/events/`](./../rest/api/user/v1/{envId}/events/)
+  + [`/{envId}/events/{eventId}/`](./../rest/api/user/v1/{envId}/events/{eventId}/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/events/{eventId}/", 
+        "/{envId}/events/", 
+        "/{envId}/events/{eventId}/", 
+        "/events/"
+      ], 
+      "x-createOnly": [
+        "id"
+      ], 
+      "properties": {
+        "scope": {
+          "readOnly": true, 
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "server"
+          ], 
+          "type": "string"
+        }, 
+        "description": {
+          "type": "string"
+        }, 
+        "id": {
+          "type": "string", 
+          "description": "The name of this custom event"
+        }
+      }, 
+      "x-filterable": [
+        "id", 
+        "scope"
+      ], 
+      "required": [
+        "id"
+      ]
+    }

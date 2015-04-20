@@ -1,0 +1,45 @@
+# `ImageForeignKey` #
+
+
+
+
+
+## Reference ##
+
+`ImageForeignKey` is used when a reference to an object of type [`Image`](./../definitions/Image.mkd) is expected.
+Note that you can pass a complete [`Image`](./../definitions/Image.mkd) object as well.
+
+
+## Properties ##
+
+### `id` (required) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-derived": {
+        "$ref": "#/definitions/Image"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/Image"
+      }, 
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "id"
+      ]
+    }

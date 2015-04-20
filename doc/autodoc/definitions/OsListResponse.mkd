@@ -1,0 +1,102 @@
+# `OsListResponse` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `pagination` (read-only) ###
+
+
+
+
+An object of type [`ApiPagination`](./../definitions/ApiPagination.mkd).
+
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `data` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`Os`](./../definitions/Os.mkd).
+
+
+
+
+## Used in ##
+
+  + [`/os/`](./../rest/api/user/v1/os/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/os/"
+      ], 
+      "properties": {
+        "pagination": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiPagination"
+        }, 
+        "meta": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiMetaContainer"
+        }, 
+        "data": {
+          "items": {
+            "$ref": "#/definitions/Os"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "warnings": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }, 
+      "x-derived": {
+        "$ref": "#/definitions/Os"
+      }
+    }

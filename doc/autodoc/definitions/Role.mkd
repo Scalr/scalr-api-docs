@@ -1,0 +1,154 @@
+# `Role` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `os` (required, filterable) ###
+
+
+
+
+An object of type [`OsForeignKey`](./../definitions/OsForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`OsForeignKey`](./../definitions/OsForeignKey.mkd) object you are referencing,
+e.g.: `os=...`.
+
+
+### `name` (required, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+### `category` (required, filterable) ###
+
+
+
+
+An object of type [`RoleCategoryForeignKey`](./../definitions/RoleCategoryForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`RoleCategoryForeignKey`](./../definitions/RoleCategoryForeignKey.mkd) object you are referencing,
+e.g.: `category=...`.
+
+
+### `description` (optional) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `scope` (read-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `scope` property:
+  + `scalr`
+  + `account`
+  + `environment`
+  + `farm`
+  + `farmrole`
+  + `server`
+
+To filter on this field, use: `scope=...`.
+
+
+### `id` (read-only, filterable) ###
+
+
+
+
+Property of type: `integer`.
+
+
+To filter on this field, use: `id=...`.
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/roles/`](./../rest/api/user/v1/{envId}/roles/)
+  + [`/{envId}/roles/{roleId}/`](./../rest/api/user/v1/{envId}/roles/{roleId}/)
+  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1/{envId}/roles/{roleId}/global-variables/)
+  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}`](./../rest/api/user/v1/{envId}/roles/{roleId}/global-variables/{globalVariableName})
+  + [`/{envId}/roles/{roleId}/images/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1/{envId}/roles/{roleId}/orchestration-rules/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}`](./../rest/api/user/v1/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId})
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/roles/{roleId}/orchestration-rules/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/{envId}/roles/", 
+        "/{envId}/roles/{roleId}/", 
+        "/{envId}/roles/{roleId}/images/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/", 
+        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}", 
+        "/{envId}/roles/{roleId}/global-variables/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}"
+      ], 
+      "properties": {
+        "category": {
+          "$ref": "#/definitions/RoleCategoryForeignKey"
+        }, 
+        "description": {
+          "type": "string"
+        }, 
+        "scope": {
+          "readOnly": true, 
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "server"
+          ], 
+          "type": "string"
+        }, 
+        "os": {
+          "$ref": "#/definitions/OsForeignKey"
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "integer"
+        }, 
+        "name": {
+          "type": "string"
+        }
+      }, 
+      "x-filterable": [
+        "id", 
+        "name", 
+        "os", 
+        "category", 
+        "scope"
+      ], 
+      "required": [
+        "name", 
+        "category", 
+        "os"
+      ]
+    }

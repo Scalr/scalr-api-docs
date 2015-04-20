@@ -1,0 +1,66 @@
+# `Action` #
+
+
+
+
+## Abstract Type ##
+
+`Action` is an abstract type. When an object of type `Action` is expected, you must pass an object of
+one of the following types:
+
+  + [`UriAction`](./../definitions/UriAction.mkd)
+  + [`ChefAction`](./../definitions/ChefAction.mkd)
+  + [`ScriptAction`](./../definitions/ScriptAction.mkd)
+
+
+
+
+## Properties ##
+
+### `actionType` (required) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `actionType` property:
+  + `ScriptAction`
+  + `UriAction`
+  + `ChefAction`
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/UriAction"
+        }, 
+        {
+          "$ref": "#/definitions/ChefAction"
+        }, 
+        {
+          "$ref": "#/definitions/ScriptAction"
+        }
+      ], 
+      "discriminator": "actionType", 
+      "required": [
+        "actionType"
+      ], 
+      "properties": {
+        "actionType": {
+          "enum": [
+            "ScriptAction", 
+            "UriAction", 
+            "ChefAction"
+          ], 
+          "type": "string"
+        }
+      }
+    }

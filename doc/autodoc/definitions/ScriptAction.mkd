@@ -1,0 +1,62 @@
+# `ScriptAction` #
+
+
+
+## Polymorphism ##
+
+`ScriptAction` is a type that implements the [`Action`](./../definitions/Action.mkd) type.
+
+When an object of type [`Action`](./../definitions/Action.mkd) is expected, you can use one of type `ScriptAction`
+(or use any other implementation).
+
+
+
+
+## Properties ##
+
+### `scriptVersion` (required) ###
+
+ScriptVersion to execute.
+
+
+An object of type [`ScriptVersionForeignKey`](./../definitions/ScriptVersionForeignKey.mkd).
+
+
+
+### `actionType` (required) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"ScriptAction"`
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-abstractType": {
+        "$ref": "#/definitions/Action"
+      }, 
+      "required": [
+        "actionType", 
+        "scriptVersion"
+      ], 
+      "x-discriminator": "actionType", 
+      "properties": {
+        "scriptVersion": {
+          "description": "ScriptVersion to execute.", 
+          "$ref": "#/definitions/ScriptVersionForeignKey"
+        }, 
+        "actionType": {
+          "enum": [
+            "ScriptAction", 
+            "UriAction", 
+            "ChefAction"
+          ], 
+          "type": "string"
+        }
+      }
+    }

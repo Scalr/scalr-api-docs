@@ -1,0 +1,87 @@
+# `OrchestrationRuleDetailResponse` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `data` (optional) ###
+
+
+
+
+An object of type [`OrchestrationRule`](./../definitions/OrchestrationRule.mkd).
+
+
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1/{envId}/roles/{roleId}/orchestration-rules/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}`](./../rest/api/user/v1/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId})
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/roles/{roleId}/orchestration-rules/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}"
+      ], 
+      "properties": {
+        "meta": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiMetaContainer"
+        }, 
+        "data": {
+          "$ref": "#/definitions/OrchestrationRule"
+        }, 
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "warnings": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }, 
+      "x-derived": {
+        "$ref": "#/definitions/OrchestrationRule"
+      }
+    }

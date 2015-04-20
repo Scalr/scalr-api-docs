@@ -1,0 +1,155 @@
+# `Os` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `version` (required) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `name` (required, filterable) ###
+
+A human-readable name for this OS.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+### `id` (required, filterable) ###
+
+An ID uniquely identifying this OS in Scalr.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `id=...`.
+
+
+### `generation` (required, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `generation` property:
+  + `5`
+  + `6`
+  + `7`
+  + `10.04`
+  + `12.04`
+  + `14.04`
+  + `2003`
+  + `2008`
+  + `2012`
+  + `2012.09`
+  + `2013.03`
+  + `2014.03`
+  + `2014.09`
+
+To filter on this field, use: `generation=...`.
+
+
+### `family` (required, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `family` property:
+  + `debian`
+  + `ubuntu`
+  + `rhel`
+  + `centos`
+  + `amazon`
+  + `windows`
+
+To filter on this field, use: `family=...`.
+
+
+
+
+## Used in ##
+
+  + [`/os/{osId}`](./../rest/api/user/v1/os/{osId})
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/os/{osId}"
+      ], 
+      "properties": {
+        "generation": {
+          "enum": [
+            5, 
+            6, 
+            7, 
+            10.04, 
+            12.04, 
+            14.04, 
+            2003, 
+            2008, 
+            2012, 
+            2012.09, 
+            2013.03, 
+            2014.03, 
+            2014.09
+          ], 
+          "type": "string"
+        }, 
+        "version": {
+          "type": "string"
+        }, 
+        "id": {
+          "type": "string", 
+          "description": "An ID uniquely identifying this OS in Scalr."
+        }, 
+        "family": {
+          "enum": [
+            "debian", 
+            "ubuntu", 
+            "rhel", 
+            "centos", 
+            "amazon", 
+            "windows"
+          ], 
+          "type": "string"
+        }, 
+        "name": {
+          "type": "string", 
+          "description": "A human-readable name for this OS."
+        }
+      }, 
+      "x-filterable": [
+        "id", 
+        "name", 
+        "family", 
+        "generation"
+      ], 
+      "required": [
+        "id", 
+        "name", 
+        "family", 
+        "generation", 
+        "version"
+      ]
+    }

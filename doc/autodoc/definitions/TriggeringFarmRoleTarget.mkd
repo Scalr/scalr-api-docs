@@ -1,0 +1,51 @@
+# `TriggeringFarmRoleTarget` #
+
+Selects all Servers of the triggering Server's Farm Role
+
+## Polymorphism ##
+
+`TriggeringFarmRoleTarget` is a type that implements the [`Target`](./../definitions/Target.mkd) type.
+
+When an object of type [`Target`](./../definitions/Target.mkd) is expected, you can use one of type `TriggeringFarmRoleTarget`
+(or use any other implementation).
+
+
+
+
+## Properties ##
+
+### `targetType` (required) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"TriggeringFarmRoleTarget"`
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-abstractType": {
+        "$ref": "#/definitions/Target"
+      }, 
+      "required": [
+        "targetType"
+      ], 
+      "x-discriminator": "targetType", 
+      "description": "Selects all Servers of the triggering Server's Farm Role", 
+      "properties": {
+        "targetType": {
+          "enum": [
+            "NullTarget", 
+            "TriggeringServerTarget", 
+            "TriggeringFarmRoleTarget", 
+            "SelectedFarmRolesTarget", 
+            "FarmTarget"
+          ], 
+          "type": "string"
+        }
+      }
+    }

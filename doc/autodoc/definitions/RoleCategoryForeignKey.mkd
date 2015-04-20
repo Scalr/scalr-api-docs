@@ -1,0 +1,45 @@
+# `RoleCategoryForeignKey` #
+
+
+
+
+
+## Reference ##
+
+`RoleCategoryForeignKey` is used when a reference to an object of type [`RoleCategory`](./../definitions/RoleCategory.mkd) is expected.
+Note that you can pass a complete [`RoleCategory`](./../definitions/RoleCategory.mkd) object as well.
+
+
+## Properties ##
+
+### `id` (required) ###
+
+
+
+
+Property of type: `integer`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-derived": {
+        "$ref": "#/definitions/RoleCategory"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/RoleCategory"
+      }, 
+      "properties": {
+        "id": {
+          "type": "integer"
+        }
+      }, 
+      "required": [
+        "id"
+      ]
+    }

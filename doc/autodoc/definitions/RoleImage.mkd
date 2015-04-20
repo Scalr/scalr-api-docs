@@ -1,0 +1,64 @@
+# `RoleImage` #
+
+A Representation of a Role Image. Note that the `role` property is optional when POST-ing to a URL that already includes `{roleId}`.
+
+
+
+
+
+## Properties ##
+
+### `role` (required, filterable) ###
+
+
+
+
+An object of type [`RoleForeignKey`](./../definitions/RoleForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`RoleForeignKey`](./../definitions/RoleForeignKey.mkd) object you are referencing,
+e.g.: `role=...`.
+
+
+### `image` (required, filterable) ###
+
+
+
+
+An object of type [`ImageForeignKey`](./../definitions/ImageForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`ImageForeignKey`](./../definitions/ImageForeignKey.mkd) object you are referencing,
+e.g.: `image=...`.
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/roles/{roleId}/images/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "image": {
+          "$ref": "#/definitions/ImageForeignKey"
+        }, 
+        "role": {
+          "$ref": "#/definitions/RoleForeignKey"
+        }
+      }, 
+      "x-usedIn": [
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/{envId}/roles/{roleId}/images/"
+      ], 
+      "description": "A Representation of a Role Image. Note that the `role` property is optional when POST-ing to a URL that already includes `{roleId}`.", 
+      "x-filterable": [
+        "role", 
+        "image"
+      ], 
+      "required": [
+        "role", 
+        "image"
+      ]
+    }

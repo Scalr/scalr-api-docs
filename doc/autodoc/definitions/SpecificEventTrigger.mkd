@@ -1,0 +1,60 @@
+# `SpecificEventTrigger` #
+
+Triggers when a specific Event fires
+
+## Polymorphism ##
+
+`SpecificEventTrigger` is a type that implements the [`Trigger`](./../definitions/Trigger.mkd) type.
+
+When an object of type [`Trigger`](./../definitions/Trigger.mkd) is expected, you can use one of type `SpecificEventTrigger`
+(or use any other implementation).
+
+
+
+
+## Properties ##
+
+### `triggerType` (required) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"SpecificEventTrigger"`
+
+
+### `event` (optional) ###
+
+
+
+
+An object of type [`Event`](./../definitions/Event.mkd).
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-abstractType": {
+        "$ref": "#/definitions/Trigger"
+      }, 
+      "required": [
+        "triggerType"
+      ], 
+      "x-discriminator": "triggerType", 
+      "description": "Triggers when a specific Event fires", 
+      "properties": {
+        "event": {
+          "$ref": "#/definitions/Event"
+        }, 
+        "triggerType": {
+          "enum": [
+            "AllEventsTrigger", 
+            "SpecificEventTrigger"
+          ], 
+          "type": "string"
+        }
+      }
+    }

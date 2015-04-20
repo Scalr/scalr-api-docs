@@ -1,0 +1,33 @@
+# `ApiMetaContainer` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `sample` (optional) ###
+
+Actual properties TBD
+
+
+Property of type: `string`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "sample": {
+          "type": "string", 
+          "description": "Actual properties TBD"
+        }
+      }
+    }

@@ -1,0 +1,48 @@
+# `ChefAction` #
+
+
+
+## Polymorphism ##
+
+`ChefAction` is a type that implements the [`Action`](./../definitions/Action.mkd) type.
+
+When an object of type [`Action`](./../definitions/Action.mkd) is expected, you can use one of type `ChefAction`
+(or use any other implementation).
+
+
+
+
+## Properties ##
+
+### `actionType` (required) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"ChefAction"`
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-abstractType": {
+        "$ref": "#/definitions/Action"
+      }, 
+      "required": [
+        "actionType"
+      ], 
+      "x-discriminator": "actionType", 
+      "properties": {
+        "actionType": {
+          "enum": [
+            "ScriptAction", 
+            "UriAction", 
+            "ChefAction"
+          ], 
+          "type": "string"
+        }
+      }
+    }

@@ -1,0 +1,190 @@
+# `POST /api/user/v1/{envId}/roles/` #
+
+Create a new Role in this Environment
+
+## Request Parameters #
+
+### Path Parameters ###
+
+Path parameters are included in the URL.
+
+#### `envId` ####
+
+The ID of the Environment scoping this request
+
+Parameter of type: `integer`.
+
+
+
+
+
+
+
+### Request Body ###
+
+The request body parameter is passed as the body of the request.
+
+#### `roleObject` ####
+
+The JSON representation of a Role object.
+
+
+An object of type: [`Role`](./../../../../../../definitions/Role.mkd).
+
+
+
+
+
+## Responses ##
+
+
+### 201 ###
+
+The JSON representation of a Role object.
+
+Response body: [`RoleDetailResponse`](./../../../../../../definitions/RoleDetailResponse.mkd).
+
+
+### 400 ###
+
+A client-side error was made
+
+Response body: [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+### 401 ###
+
+Request was not authenticated
+
+Response body: [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+### 403 ###
+
+Insufficient permissions
+
+Response body: [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+### 409 ###
+
+Conflict with current state
+
+Response body: [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+### 500 ###
+
+A server-side error occured
+
+Response body: [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "post": {
+        "description": "Create a new Role in this Environment", 
+        "parameters": [
+          {
+            "required": true, 
+            "in": "body", 
+            "description": "The JSON representation of a Role object.", 
+            "name": "roleObject", 
+            "schema": {
+              "$ref": "#/definitions/Role"
+            }
+          }
+        ], 
+        "responses": {
+          "400": {
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "401": {
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "403": {
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "409": {
+            "description": "Conflict with current state", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "201": {
+            "description": "The JSON representation of a Role object.", 
+            "schema": {
+              "$ref": "#/definitions/RoleDetailResponse"
+            }
+          }
+        }
+      }, 
+      "parameters": [
+        {
+          "required": true, 
+          "type": "integer", 
+          "description": "The ID of the Environment scoping this request", 
+          "in": "path", 
+          "name": "envId"
+        }
+      ], 
+      "get": {
+        "description": "List Roles available in this Environment", 
+        "responses": {
+          "400": {
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "401": {
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "403": {
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "200": {
+            "description": "A list of Role objects.", 
+            "schema": {
+              "$ref": "#/definitions/RoleListResponse"
+            }
+          }, 
+          "409": {
+            "description": "Conflict with current state", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }
+        }
+      }
+    }

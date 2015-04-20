@@ -1,0 +1,85 @@
+# `OsDetailResponse` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `data` (optional) ###
+
+
+
+
+An object of type [`Os`](./../definitions/Os.mkd).
+
+
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+
+
+## Used in ##
+
+  + [`/os/{osId}`](./../rest/api/user/v1/os/{osId})
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/os/{osId}"
+      ], 
+      "properties": {
+        "meta": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiMetaContainer"
+        }, 
+        "data": {
+          "$ref": "#/definitions/Os"
+        }, 
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "warnings": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }, 
+      "x-derived": {
+        "$ref": "#/definitions/Os"
+      }
+    }

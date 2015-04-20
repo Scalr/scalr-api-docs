@@ -1,0 +1,262 @@
+# `GET /api/user/v1/{envId}/images/{imageId}/` #
+
+Retrieve an Image.
+
+## Request Parameters #
+
+### Path Parameters ###
+
+Path parameters are included in the URL.
+
+#### `envId` ####
+
+The ID of the Environment scoping this request
+
+Parameter of type: `integer`.
+
+
+#### `imageId` ####
+
+The ID of a Image object.
+
+Parameter of type: `string`.
+
+
+
+
+
+
+
+
+
+
+## Responses ##
+
+
+### 200 ###
+
+The JSON representation of a Image object.
+
+Response body: [`ImageDetailResponse`](./../../../../../../../definitions/ImageDetailResponse.mkd).
+
+
+### 400 ###
+
+A client-side error was made
+
+Response body: [`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+### 401 ###
+
+Request was not authenticated
+
+Response body: [`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+### 403 ###
+
+Insufficient permissions
+
+Response body: [`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+### 409 ###
+
+Conflict with current state
+
+Response body: [`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+### 500 ###
+
+A server-side error occured
+
+Response body: [`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "delete": {
+        "description": "De-register an Image from this Environment", 
+        "parameters": [
+          {
+            "required": false, 
+            "type": "boolean", 
+            "description": "Attempt to delete this Image in your Cloud", 
+            "in": "query", 
+            "name": "cloudDelete"
+          }
+        ], 
+        "responses": {
+          "400": {
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "401": {
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "403": {
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "200": {
+            "errors": {
+              "items": {
+                "$ref": "#/definitions/ApiMessage"
+              }, 
+              "readOnly": true, 
+              "type": "array"
+            }, 
+            "meta": {
+              "readOnly": true, 
+              "$ref": "#/definitions/ApiMetaContainer"
+            }, 
+            "warnings": {
+              "items": {
+                "$ref": "#/definitions/ApiMessage"
+              }, 
+              "readOnly": true, 
+              "type": "array"
+            }
+          }, 
+          "409": {
+            "description": "Conflict with current state", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "202": {
+            "description": "Image scheduled for de-registration and deletion"
+          }
+        }
+      }, 
+      "get": {
+        "description": "Retrieve an Image.", 
+        "responses": {
+          "400": {
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "401": {
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "403": {
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "200": {
+            "description": "The JSON representation of a Image object.", 
+            "schema": {
+              "$ref": "#/definitions/ImageDetailResponse"
+            }
+          }, 
+          "409": {
+            "description": "Conflict with current state", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }
+        }
+      }, 
+      "parameters": [
+        {
+          "required": true, 
+          "type": "integer", 
+          "description": "The ID of the Environment scoping this request", 
+          "in": "path", 
+          "name": "envId"
+        }, 
+        {
+          "x-references": {
+            "$ref": "#/definitions/Image"
+          }, 
+          "description": "The ID of a Image object.", 
+          "in": "path", 
+          "required": true, 
+          "type": "string", 
+          "name": "imageId"
+        }
+      ], 
+      "patch": {
+        "description": "Change image attributes. Only the name be can changed!", 
+        "parameters": [
+          {
+            "required": true, 
+            "in": "body", 
+            "description": "The updated definition", 
+            "name": "image", 
+            "schema": {
+              "$ref": "#/definitions/Image"
+            }
+          }
+        ], 
+        "responses": {
+          "400": {
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "401": {
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "403": {
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "200": {
+            "description": "The JSON representation of a Image object.", 
+            "schema": {
+              "$ref": "#/definitions/ImageDetailResponse"
+            }
+          }, 
+          "409": {
+            "description": "Conflict with current state", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }
+        }
+      }
+    }

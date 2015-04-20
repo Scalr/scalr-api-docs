@@ -1,0 +1,89 @@
+# `ImageDetailResponse` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `data` (optional) ###
+
+
+
+
+An object of type [`Image`](./../definitions/Image.mkd).
+
+
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/images/`](./../rest/api/user/v1/{envId}/images/)
+  + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1/{envId}/images/{imageId}/)
+  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1/{envId}/images/{imageId}/actions/copy/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/images/{imageId}/actions/copy/", 
+        "/{envId}/images/", 
+        "/{envId}/images/{imageId}/"
+      ], 
+      "properties": {
+        "meta": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiMetaContainer"
+        }, 
+        "data": {
+          "$ref": "#/definitions/Image"
+        }, 
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "warnings": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }, 
+      "x-derived": {
+        "$ref": "#/definitions/Image"
+      }
+    }

@@ -1,0 +1,45 @@
+# `ScriptForeignKey` #
+
+
+
+
+
+## Reference ##
+
+`ScriptForeignKey` is used when a reference to an object of type [`Script`](./../definitions/Script.mkd) is expected.
+Note that you can pass a complete [`Script`](./../definitions/Script.mkd) object as well.
+
+
+## Properties ##
+
+### `id` (required) ###
+
+
+
+
+Property of type: `integer`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-derived": {
+        "$ref": "#/definitions/Script"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/Script"
+      }, 
+      "properties": {
+        "id": {
+          "type": "integer"
+        }
+      }, 
+      "required": [
+        "id"
+      ]
+    }

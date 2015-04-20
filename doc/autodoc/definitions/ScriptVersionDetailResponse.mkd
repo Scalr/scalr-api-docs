@@ -1,0 +1,87 @@
+# `ScriptVersionDetailResponse` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `data` (optional) ###
+
+
+
+
+An object of type [`ScriptVersion`](./../definitions/ScriptVersion.mkd).
+
+
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/script-versions/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/scripts/{scriptId}/script-versions/", 
+        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
+      ], 
+      "properties": {
+        "meta": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiMetaContainer"
+        }, 
+        "data": {
+          "$ref": "#/definitions/ScriptVersion"
+        }, 
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "warnings": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }, 
+      "x-derived": {
+        "$ref": "#/definitions/ScriptVersion"
+      }
+    }
