@@ -70,7 +70,7 @@ class ScalrApiSession(requests.Session):
                 for error in errors:
                     self.client.logger.warning("API Error (%s): %s", error["code"], error["message"])
         except ValueError:
-            self.client.logger.error("Received non-JSON response from API: %s", repr(res.text))
+            self.client.logger.error("Received non-JSON response from API!")
         res.raise_for_status()
-        self.client.logger.debug(res.text)
+        self.client.logger.debug("Received response: %s", res.text)
         return res

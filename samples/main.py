@@ -25,10 +25,6 @@ def main(credentials_file, scenario):
 
 
 if __name__ == "__main__":
-    import logging
-    logging.basicConfig(level=logging.INFO)
-    logging.getLogger("requests").setLevel(logging.WARNING)
-
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("credentials", help="Path to credentials file")
