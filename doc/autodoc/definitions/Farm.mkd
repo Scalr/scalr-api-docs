@@ -1,0 +1,133 @@
+# `Farm` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `project` (required) ###
+
+
+
+
+An object of type [`ProjectForeignKey`](./../definitions/ProjectForeignKey.mkd).
+
+
+
+### `name` (required) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `vpc` (optional) ###
+
+
+
+
+An object of type [`CloudAwsVpcForeignKey`](./../definitions/CloudAwsVpcForeignKey.mkd).
+
+
+
+### `timezone` (optional) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `launchOrder` (optional) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `launchOrder` property:
+  + `simulatenous`
+  + `sequential`
+
+
+
+### `description` (optional) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `id` (read-only) ###
+
+
+
+
+Property of type: `integer`.
+
+
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/farms/`](./../rest/api/user/v1beta0/{envId}/farms/)
+  + [`/{envId}/farms/{farmId}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/)
+  + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
+  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName})
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/farms/{farmId}/", 
+        "/{envId}/farms/{farmId}/global-variables/", 
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}", 
+        "/{envId}/farms/"
+      ], 
+      "properties": {
+        "project": {
+          "$ref": "#/definitions/ProjectForeignKey"
+        }, 
+        "description": {
+          "type": "string"
+        }, 
+        "vpc": {
+          "$ref": "#/definitions/CloudAwsVpcForeignKey"
+        }, 
+        "timezone": {
+          "type": "string"
+        }, 
+        "launchOrder": {
+          "enum": [
+            "simulatenous", 
+            "sequential"
+          ], 
+          "type": "string"
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "integer"
+        }, 
+        "name": {
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "name", 
+        "project"
+      ]
+    }

@@ -57,7 +57,7 @@ objects of type [`ScriptVersion`](./../definitions/ScriptVersion.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/script-versions/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/user/v1beta0/{envId}/scripts/{scriptId}/script-versions/)
 
 ## Swagger Definition ##
 

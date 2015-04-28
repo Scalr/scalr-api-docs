@@ -219,20 +219,20 @@ Property of type: `string`.
 
 ## Used in ##
 
-  + [`/{envId}/images/`](./../rest/api/user/v1/{envId}/images/)
-  + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1/{envId}/images/{imageId}/)
-  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1/{envId}/images/{imageId}/actions/copy/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/{envId}/images/`](./../rest/api/user/v1beta0/{envId}/images/)
+  + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/)
+  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/actions/copy/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/{envId}/images/{imageId}/actions/copy/", 
         "/{envId}/roles/{roleId}/images/{imageId}/", 
         "/{envId}/images/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/{envId}/images/{imageId}/"
       ], 
       "properties": {

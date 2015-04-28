@@ -48,15 +48,19 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1/{envId}/roles/{roleId}/global-variables/)
-  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}`](./../rest/api/user/v1/{envId}/roles/{roleId}/global-variables/{globalVariableName})
+  + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
+  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName})
+  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/)
+  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/{globalVariableName})
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
+        "/{envId}/roles/{roleId}/global-variables/", 
         "/{envId}/roles/{roleId}/global-variables/{globalVariableName}", 
-        "/{envId}/roles/{roleId}/global-variables/"
+        "/{envId}/farms/{farmId}/global-variables/", 
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}"
       ], 
       "properties": {
         "meta": {

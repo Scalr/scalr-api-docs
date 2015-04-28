@@ -1,0 +1,45 @@
+# `ProjectForeignKey` #
+
+
+
+
+
+## Reference ##
+
+`ProjectForeignKey` is used when a reference to an object of type [`Project`](./../definitions/Project.mkd) is expected.
+Note that you can pass a complete [`Project`](./../definitions/Project.mkd) object as well.
+
+
+## Properties ##
+
+### `id` (required) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-derived": {
+        "$ref": "#/definitions/Project"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/Project"
+      }, 
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "id"
+      ]
+    }

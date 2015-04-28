@@ -57,7 +57,7 @@ objects of type [`Os`](./../definitions/Os.mkd).
 
 ## Used in ##
 
-  + [`/os/`](./../rest/api/user/v1/os/)
+  + [`/os/`](./../rest/api/user/v1beta0/os/)
 
 ## Swagger Definition ##
 

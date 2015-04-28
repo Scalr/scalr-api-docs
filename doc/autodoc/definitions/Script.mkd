@@ -114,10 +114,10 @@ Property of type: `string`.
 
 ## Used in ##
 
-  + [`/{envId}/scripts/`](./../rest/api/user/v1/{envId}/scripts/)
-  + [`/{envId}/scripts/{scriptId}/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/)
-  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/script-versions/)
-  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+  + [`/{envId}/scripts/`](./../rest/api/user/v1beta0/{envId}/scripts/)
+  + [`/{envId}/scripts/{scriptId}/`](./../rest/api/user/v1beta0/{envId}/scripts/{scriptId}/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/user/v1beta0/{envId}/scripts/{scriptId}/script-versions/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/user/v1beta0/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
 
 ## Swagger Definition ##
 
@@ -125,8 +125,8 @@ Property of type: `string`.
       "x-usedIn": [
         "/{envId}/scripts/{scriptId}/script-versions/", 
         "/{envId}/scripts/{scriptId}/", 
-        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
-        "/{envId}/scripts/"
+        "/{envId}/scripts/", 
+        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
       ], 
       "properties": {
         "timeoutDefault": {

@@ -1,0 +1,72 @@
+# `PlacementConfiguration` #
+
+
+
+
+## Abstract Type ##
+
+`PlacementConfiguration` is an abstract type. When an object of type `PlacementConfiguration` is expected, you must pass an object of
+one of the following types:
+
+  + [`AwsVpcPlacementConfiguration`](./../definitions/AwsVpcPlacementConfiguration.mkd)
+  + [`AwsClassicPlacementConfiguration`](./../definitions/AwsClassicPlacementConfiguration.mkd)
+
+
+
+
+## Properties ##
+
+### `placementConfigurationType` (required) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `placementConfigurationType` property:
+  + `AwsClassicPlacementConfiguration`
+  + `AwsVpcPlacementConfiguration`
+  + `OpenStackPlacementConfiguration`
+  + `CloudStackPlacementConfiguration`
+  + `GcePlacementConfiguration`
+
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/placement/)
+
+## Swagger Definition ##
+
+    {
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/AwsVpcPlacementConfiguration"
+        }, 
+        {
+          "$ref": "#/definitions/AwsClassicPlacementConfiguration"
+        }
+      ], 
+      "discriminator": "placementConfigurationType", 
+      "x-usedIn": [
+        "/{envId}/farm-roles/{farmRoleId}/placement/"
+      ], 
+      "properties": {
+        "placementConfigurationType": {
+          "enum": [
+            "AwsClassicPlacementConfiguration", 
+            "AwsVpcPlacementConfiguration", 
+            "OpenStackPlacementConfiguration", 
+            "CloudStackPlacementConfiguration", 
+            "GcePlacementConfiguration"
+          ], 
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "placementConfigurationType"
+      ]
+    }

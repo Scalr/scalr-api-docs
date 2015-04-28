@@ -57,8 +57,8 @@ objects of type [`Event`](./../definitions/Event.mkd).
 
 ## Used in ##
 
-  + [`/events/`](./../rest/api/user/v1/events/)
-  + [`/{envId}/events/`](./../rest/api/user/v1/{envId}/events/)
+  + [`/events/`](./../rest/api/user/v1beta0/events/)
+  + [`/{envId}/events/`](./../rest/api/user/v1beta0/{envId}/events/)
 
 ## Swagger Definition ##
 

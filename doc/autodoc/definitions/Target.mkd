@@ -8,11 +8,11 @@
 `Target` is an abstract type. When an object of type `Target` is expected, you must pass an object of
 one of the following types:
 
-  + [`SelectedFarmRolesTarget`](./../definitions/SelectedFarmRolesTarget.mkd)
   + [`FarmTarget`](./../definitions/FarmTarget.mkd)
+  + [`TriggeringFarmRoleTarget`](./../definitions/TriggeringFarmRoleTarget.mkd)
+  + [`SelectedFarmRolesTarget`](./../definitions/SelectedFarmRolesTarget.mkd)
   + [`TriggeringServerTarget`](./../definitions/TriggeringServerTarget.mkd)
   + [`NullTarget`](./../definitions/NullTarget.mkd)
-  + [`TriggeringFarmRoleTarget`](./../definitions/TriggeringFarmRoleTarget.mkd)
 
 
 
@@ -44,19 +44,19 @@ The following are valid values for the `targetType` property:
     {
       "x-concreteTypes": [
         {
-          "$ref": "#/definitions/SelectedFarmRolesTarget"
+          "$ref": "#/definitions/FarmTarget"
         }, 
         {
-          "$ref": "#/definitions/FarmTarget"
+          "$ref": "#/definitions/TriggeringFarmRoleTarget"
+        }, 
+        {
+          "$ref": "#/definitions/SelectedFarmRolesTarget"
         }, 
         {
           "$ref": "#/definitions/TriggeringServerTarget"
         }, 
         {
           "$ref": "#/definitions/NullTarget"
-        }, 
-        {
-          "$ref": "#/definitions/TriggeringFarmRoleTarget"
         }
       ], 
       "discriminator": "targetType", 

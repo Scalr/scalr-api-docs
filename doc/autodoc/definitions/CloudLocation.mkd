@@ -49,7 +49,7 @@ To filter on this field, use: `cloudLocation=...`.
 
 ## Used in ##
 
-  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1/{envId}/images/{imageId}/actions/copy/)
+  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/actions/copy/)
 
 ## Swagger Definition ##
 

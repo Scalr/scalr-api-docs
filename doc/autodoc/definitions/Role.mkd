@@ -85,29 +85,29 @@ To filter on this field, use: `id=...`.
 
 ## Used in ##
 
-  + [`/{envId}/roles/`](./../rest/api/user/v1/{envId}/roles/)
-  + [`/{envId}/roles/{roleId}/`](./../rest/api/user/v1/{envId}/roles/{roleId}/)
-  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1/{envId}/roles/{roleId}/global-variables/)
-  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}`](./../rest/api/user/v1/{envId}/roles/{roleId}/global-variables/{globalVariableName})
-  + [`/{envId}/roles/{roleId}/images/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
-  + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1/{envId}/roles/{roleId}/orchestration-rules/)
-  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}`](./../rest/api/user/v1/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId})
+  + [`/{envId}/roles/`](./../rest/api/user/v1beta0/{envId}/roles/)
+  + [`/{envId}/roles/{roleId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/)
+  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/)
+  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/{globalVariableName})
+  + [`/{envId}/roles/{roleId}/images/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId})
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
         "/{envId}/roles/{roleId}/orchestration-rules/", 
+        "/{envId}/roles/{roleId}/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/", 
+        "/{envId}/roles/{roleId}/global-variables/", 
+        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}", 
+        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}", 
         "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/{envId}/roles/", 
-        "/{envId}/roles/{roleId}/", 
-        "/{envId}/roles/{roleId}/images/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/", 
-        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}", 
-        "/{envId}/roles/{roleId}/global-variables/", 
-        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}"
+        "/{envId}/roles/{roleId}/images/"
       ], 
       "properties": {
         "category": {

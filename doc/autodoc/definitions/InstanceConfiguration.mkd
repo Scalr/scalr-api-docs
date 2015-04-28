@@ -1,0 +1,64 @@
+# `InstanceConfiguration` #
+
+
+
+
+## Abstract Type ##
+
+`InstanceConfiguration` is an abstract type. When an object of type `InstanceConfiguration` is expected, you must pass an object of
+one of the following types:
+
+  + [`AwsInstanceConfiguration`](./../definitions/AwsInstanceConfiguration.mkd)
+
+
+
+
+## Properties ##
+
+### `instanceConfigurationType` (required) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `instanceConfigurationType` property:
+  + `AwsInstanceConfiguration`
+
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/instance/)
+
+## Swagger Definition ##
+
+    {
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/AwsInstanceConfiguration"
+        }
+      ], 
+      "discriminator": "instanceConfigurationType", 
+      "x-usedIn": [
+        "/{envId}/farm-roles/{farmRoleId}/instance/"
+      ], 
+      "properties": {
+        "instanceConfigurationType": {
+          "enum": [
+            "AwsInstanceConfiguration"
+          ], 
+          "type": "string", 
+          "instanceType": {
+            "$ref": "#/definitions/CloudInstanceType"
+          }
+        }
+      }, 
+      "required": [
+        "instanceConfigurationType", 
+        "instanceType"
+      ]
+    }

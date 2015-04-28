@@ -57,13 +57,15 @@ objects of type [`GlobalVariable`](./../definitions/GlobalVariable.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1/{envId}/roles/{roleId}/global-variables/)
+  + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
+  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/roles/{roleId}/global-variables/"
+        "/{envId}/roles/{roleId}/global-variables/", 
+        "/{envId}/farms/{farmId}/global-variables/"
       ], 
       "properties": {
         "pagination": {

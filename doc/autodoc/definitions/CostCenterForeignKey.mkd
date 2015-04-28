@@ -1,0 +1,45 @@
+# `CostCenterForeignKey` #
+
+
+
+
+
+## Reference ##
+
+`CostCenterForeignKey` is used when a reference to an object of type [`CostCenter`](./../definitions/CostCenter.mkd) is expected.
+Note that you can pass a complete [`CostCenter`](./../definitions/CostCenter.mkd) object as well.
+
+
+## Properties ##
+
+### `id` (required) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-derived": {
+        "$ref": "#/definitions/CostCenter"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/CostCenter"
+      }, 
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "id"
+      ]
+    }

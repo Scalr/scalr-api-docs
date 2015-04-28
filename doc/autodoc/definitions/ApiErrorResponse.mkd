@@ -21,30 +21,41 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/events/`](./../rest/api/user/v1/events/)
-  + [`/events/{eventId}/`](./../rest/api/user/v1/events/{eventId}/)
-  + [`/os/`](./../rest/api/user/v1/os/)
-  + [`/os/{osId}`](./../rest/api/user/v1/os/{osId})
-  + [`/{envId}/events/`](./../rest/api/user/v1/{envId}/events/)
-  + [`/{envId}/events/{eventId}/`](./../rest/api/user/v1/{envId}/events/{eventId}/)
-  + [`/{envId}/images/`](./../rest/api/user/v1/{envId}/images/)
-  + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1/{envId}/images/{imageId}/)
-  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1/{envId}/images/{imageId}/actions/copy/)
-  + [`/{envId}/role-categories/`](./../rest/api/user/v1/{envId}/role-categories/)
-  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/user/v1/{envId}/role-categories/{roleCategoryId}/)
-  + [`/{envId}/roles/`](./../rest/api/user/v1/{envId}/roles/)
-  + [`/{envId}/roles/{roleId}/`](./../rest/api/user/v1/{envId}/roles/{roleId}/)
-  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1/{envId}/roles/{roleId}/global-variables/)
-  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}`](./../rest/api/user/v1/{envId}/roles/{roleId}/global-variables/{globalVariableName})
-  + [`/{envId}/roles/{roleId}/images/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
-  + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1/{envId}/roles/{roleId}/orchestration-rules/)
-  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}`](./../rest/api/user/v1/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId})
-  + [`/{envId}/scripts/`](./../rest/api/user/v1/{envId}/scripts/)
-  + [`/{envId}/scripts/{scriptId}/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/)
-  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/script-versions/)
-  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/user/v1/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+  + [`/events/`](./../rest/api/user/v1beta0/events/)
+  + [`/events/{eventId}/`](./../rest/api/user/v1beta0/events/{eventId}/)
+  + [`/os/`](./../rest/api/user/v1beta0/os/)
+  + [`/os/{osId}`](./../rest/api/user/v1beta0/os/{osId})
+  + [`/{envId}/events/`](./../rest/api/user/v1beta0/{envId}/events/)
+  + [`/{envId}/events/{eventId}/`](./../rest/api/user/v1beta0/{envId}/events/{eventId}/)
+  + [`/{envId}/farm-roles/`](./../rest/api/user/v1beta0/{envId}/farm-roles/)
+  + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/instance/)
+  + [`/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/placement/)
+  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/scaling/)
+  + [`/{envId}/farms/`](./../rest/api/user/v1beta0/{envId}/farms/)
+  + [`/{envId}/farms/{farmId}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/)
+  + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
+  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName})
+  + [`/{envId}/images/`](./../rest/api/user/v1beta0/{envId}/images/)
+  + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/)
+  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/actions/copy/)
+  + [`/{envId}/projects/`](./../rest/api/user/v1beta0/{envId}/projects/)
+  + [`/{envId}/projects/{projectId}`](./../rest/api/user/v1beta0/{envId}/projects/{projectId})
+  + [`/{envId}/role-categories/`](./../rest/api/user/v1beta0/{envId}/role-categories/)
+  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/user/v1beta0/{envId}/role-categories/{roleCategoryId}/)
+  + [`/{envId}/roles/`](./../rest/api/user/v1beta0/{envId}/roles/)
+  + [`/{envId}/roles/{roleId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/)
+  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/)
+  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/{globalVariableName})
+  + [`/{envId}/roles/{roleId}/images/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId})
+  + [`/{envId}/scripts/`](./../rest/api/user/v1beta0/{envId}/scripts/)
+  + [`/{envId}/scripts/{scriptId}/`](./../rest/api/user/v1beta0/{envId}/scripts/{scriptId}/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/user/v1beta0/{envId}/scripts/{scriptId}/script-versions/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/user/v1beta0/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
 
 ## Swagger Definition ##
 
@@ -52,28 +63,39 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
       "x-usedIn": [
         "/{envId}/scripts/{scriptId}/script-versions/", 
         "/events/{eventId}/", 
-        "/{envId}/role-categories/", 
         "/{envId}/scripts/{scriptId}/", 
         "/{envId}/roles/{roleId}/orchestration-rules/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/{envId}/images/{imageId}/actions/copy/", 
-        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
-        "/{envId}/roles/", 
         "/{envId}/roles/{roleId}/", 
-        "/os/", 
         "/os/{osId}", 
-        "/{envId}/roles/{roleId}/images/", 
+        "/{envId}/role-categories/", 
         "/{envId}/roles/{roleId}/images/{imageId}/", 
-        "/{envId}/events/", 
-        "/{envId}/events/{eventId}/", 
-        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}", 
-        "/events/", 
+        "/{envId}/projects/", 
         "/{envId}/images/", 
-        "/{envId}/images/{imageId}/", 
         "/{envId}/roles/{roleId}/global-variables/", 
+        "/{envId}/projects/{projectId}", 
+        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}", 
         "/{envId}/scripts/", 
         "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}", 
-        "/{envId}/role-categories/{roleCategoryId}/"
+        "/{envId}/farm-roles/{farmRoleId}/scaling/", 
+        "/{envId}/farms/{farmId}/", 
+        "/{envId}/farm-roles/{farmRoleId}/instance/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/{envId}/farm-roles/{farmRoleId}/", 
+        "/{envId}/roles/", 
+        "/os/", 
+        "/{envId}/roles/{roleId}/images/", 
+        "/{envId}/events/", 
+        "/{envId}/events/{eventId}/", 
+        "/{envId}/farm-roles/", 
+        "/events/", 
+        "/{envId}/images/{imageId}/", 
+        "/{envId}/farms/{farmId}/global-variables/", 
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}", 
+        "/{envId}/farm-roles/{farmRoleId}/placement/", 
+        "/{envId}/role-categories/{roleCategoryId}/", 
+        "/{envId}/farms/"
       ], 
       "properties": {
         "errors": {

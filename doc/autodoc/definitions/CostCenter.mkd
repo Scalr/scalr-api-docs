@@ -1,0 +1,49 @@
+# `CostCenter` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `name` (required) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `id` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "required": [
+        "name"
+      ], 
+      "properties": {
+        "id": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "name": {
+          "type": "string"
+        }
+      }
+    }

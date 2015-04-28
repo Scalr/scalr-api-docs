@@ -1,0 +1,64 @@
+# `ScalingConfiguration` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `minInstances` (optional) ###
+
+
+
+
+Property of type: `integer`.
+
+
+
+
+### `maxInstances` (optional) ###
+
+
+
+
+Property of type: `integer`.
+
+
+
+
+### `enabled` (optional) ###
+
+
+
+
+Property of type: `boolean`.
+
+
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/scaling/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/farm-roles/{farmRoleId}/scaling/"
+      ], 
+      "properties": {
+        "minInstances": {
+          "type": "integer"
+        }, 
+        "enabled": {
+          "type": "boolean"
+        }, 
+        "maxInstances": {
+          "type": "integer"
+        }
+      }
+    }

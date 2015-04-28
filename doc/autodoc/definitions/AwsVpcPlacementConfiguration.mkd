@@ -1,0 +1,65 @@
+# `AwsVpcPlacementConfiguration` #
+
+
+
+## Polymorphism ##
+
+`AwsVpcPlacementConfiguration` is a type that implements the [`PlacementConfiguration`](./../definitions/PlacementConfiguration.mkd) type.
+
+When an object of type [`PlacementConfiguration`](./../definitions/PlacementConfiguration.mkd) is expected, you can use one of type `AwsVpcPlacementConfiguration`
+(or use any other implementation).
+
+
+
+
+## Properties ##
+
+### `placementConfigurationType` (required) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"AwsVpcPlacementConfiguration"`
+
+
+### `subnets` (optional) ###
+
+
+
+
+An array of 
+objects of type [`CloudAwsVpcSubnetForeignKey`](./../definitions/CloudAwsVpcSubnetForeignKey.mkd).
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-abstractType": {
+        "$ref": "#/definitions/PlacementConfiguration"
+      }, 
+      "required": [
+        "placementConfigurationType"
+      ], 
+      "x-discriminator": "placementConfigurationType", 
+      "properties": {
+        "subnets": {
+          "items": {
+            "$ref": "#/definitions/CloudAwsVpcSubnetForeignKey"
+          }, 
+          "type": "array"
+        }, 
+        "placementConfigurationType": {
+          "enum": [
+            "AwsClassicPlacementConfiguration", 
+            "AwsVpcPlacementConfiguration", 
+            "OpenStackPlacementConfiguration", 
+            "CloudStackPlacementConfiguration", 
+            "GcePlacementConfiguration"
+          ], 
+          "type": "string"
+        }
+      }
+    }

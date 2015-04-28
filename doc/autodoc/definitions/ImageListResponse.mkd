@@ -57,7 +57,7 @@ objects of type [`Image`](./../definitions/Image.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/images/`](./../rest/api/user/v1/{envId}/images/)
+  + [`/{envId}/images/`](./../rest/api/user/v1beta0/{envId}/images/)
 
 ## Swagger Definition ##
 

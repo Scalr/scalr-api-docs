@@ -1,0 +1,102 @@
+# `FarmListResponse` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `pagination` (read-only) ###
+
+
+
+
+An object of type [`ApiPagination`](./../definitions/ApiPagination.mkd).
+
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `data` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`Farm`](./../definitions/Farm.mkd).
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/farms/`](./../rest/api/user/v1beta0/{envId}/farms/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/farms/"
+      ], 
+      "properties": {
+        "pagination": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiPagination"
+        }, 
+        "meta": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiMetaContainer"
+        }, 
+        "data": {
+          "items": {
+            "$ref": "#/definitions/Farm"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "warnings": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }, 
+      "x-derived": {
+        "$ref": "#/definitions/Farm"
+      }
+    }

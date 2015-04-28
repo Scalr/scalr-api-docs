@@ -1,0 +1,32 @@
+# `CloudInstanceType` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `id` (optional) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      }
+    }

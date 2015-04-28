@@ -48,7 +48,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/user/v1/{envId}/role-categories/{roleCategoryId}/)
+  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/user/v1beta0/{envId}/role-categories/{roleCategoryId}/)
 
 ## Swagger Definition ##
 

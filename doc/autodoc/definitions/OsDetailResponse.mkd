@@ -48,7 +48,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/os/{osId}`](./../rest/api/user/v1/os/{osId})
+  + [`/os/{osId}`](./../rest/api/user/v1beta0/os/{osId})
 
 ## Swagger Definition ##
 

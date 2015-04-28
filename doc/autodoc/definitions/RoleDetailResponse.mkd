@@ -48,15 +48,15 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/roles/`](./../rest/api/user/v1/{envId}/roles/)
-  + [`/{envId}/roles/{roleId}/`](./../rest/api/user/v1/{envId}/roles/{roleId}/)
+  + [`/{envId}/roles/`](./../rest/api/user/v1beta0/{envId}/roles/)
+  + [`/{envId}/roles/{roleId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/roles/", 
-        "/{envId}/roles/{roleId}/"
+        "/{envId}/roles/{roleId}/", 
+        "/{envId}/roles/"
       ], 
       "properties": {
         "meta": {

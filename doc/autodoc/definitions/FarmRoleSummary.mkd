@@ -1,0 +1,77 @@
+# `FarmRoleSummary` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `farm` (required) ###
+
+Farm this Farm Role should be added to. This is optional when POST-ing to /{envId}/farms/{farmId}/farm-roles/
+
+
+An object of type [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd).
+
+
+
+### `role` (required) ###
+
+
+
+
+An object of type [`RoleForeignKey`](./../definitions/RoleForeignKey.mkd).
+
+
+
+### `alias` (optional) ###
+
+The Alias for this Farm Role. If this isn't provided, it will default to the Role's name (possibly with '-n' appended if the Role name is already taken)
+
+
+Property of type: `string`.
+
+
+
+
+### `id` (read-only) ###
+
+
+
+
+Property of type: `integer`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "required": [
+        "farm", 
+        "role"
+      ], 
+      "properties": {
+        "farm": {
+          "$ref": "#/definitions/FarmForeignKey", 
+          "description": "Farm this Farm Role should be added to. This is optional when POST-ing to /{envId}/farms/{farmId}/farm-roles/", 
+          "x-createOnly": true
+        }, 
+        "alias": {
+          "type": "string", 
+          "description": "The Alias for this Farm Role. If this isn't provided, it will default to the Role's name (possibly with '-n' appended if the Role name is already taken)"
+        }, 
+        "role": {
+          "$ref": "#/definitions/RoleForeignKey"
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "integer"
+        }
+      }
+    }

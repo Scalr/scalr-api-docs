@@ -1,0 +1,46 @@
+# `CloudAwsVpcSubnetForeignKey` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `region` (optional) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `id` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "region": {
+          "type": "string"
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "string"
+        }
+      }
+    }

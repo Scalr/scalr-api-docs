@@ -1,0 +1,68 @@
+# `Project` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `name` (required) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `costCenter` (required) ###
+
+
+
+
+An object of type [`CostCenterForeignKey`](./../definitions/CostCenterForeignKey.mkd).
+
+
+
+### `id` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/projects/{projectId}`](./../rest/api/user/v1beta0/{envId}/projects/{projectId})
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/projects/{projectId}"
+      ], 
+      "properties": {
+        "id": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "costCenter": {
+          "$ref": "#/definitions/CostCenterForeignKey"
+        }, 
+        "name": {
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "costCenter", 
+        "name"
+      ]
+    }
