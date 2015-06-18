@@ -243,6 +243,7 @@ The response body is an object of type:
         }
       ], 
       "get": {
+        "description": "List Farm Roles available in this Enviromnent.", 
         "responses": {
           "400": {
             "x-errorCodes": [

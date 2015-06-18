@@ -48,13 +48,13 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/projects/{projectId}`](./../rest/api/user/v1beta0/{envId}/projects/{projectId})
+  + [`/{envId}/projects/{projectId}/`](./../rest/api/user/v1beta0/{envId}/projects/{projectId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/projects/{projectId}"
+        "/{envId}/projects/{projectId}/"
       ], 
       "properties": {
         "meta": {

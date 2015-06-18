@@ -229,6 +229,118 @@ The response body is an object of type:
           }
         }
       }, 
+      "delete": {
+        "description": "Delete this Script Version from this Script.", 
+        "responses": {
+          "400": {
+            "x-errorCodes": [
+              {
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ], 
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "401": {
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ], 
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "403": {
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ], 
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "409": {
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }
+            ], 
+            "description": "Conflict with current state", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "200": {
+            "errors": {
+              "items": {
+                "$ref": "#/definitions/ApiMessage"
+              }, 
+              "readOnly": true, 
+              "type": "array"
+            }, 
+            "meta": {
+              "readOnly": true, 
+              "$ref": "#/definitions/ApiMetaContainer"
+            }, 
+            "warnings": {
+              "items": {
+                "$ref": "#/definitions/ApiMessage"
+              }, 
+              "readOnly": true, 
+              "type": "array"
+            }
+          }, 
+          "404": {
+            "x-errorCodes": [
+              {
+                "noDoc": true, 
+                "description": "The route you are trying to access does not exist", 
+                "name": "EndpointNotFound"
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist", 
+                "name": "ObjectNotFound"
+              }
+            ], 
+            "description": "Resource not found", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }
+        }
+      }, 
       "parameters": [
         {
           "required": true, 

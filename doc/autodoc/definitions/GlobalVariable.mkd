@@ -86,6 +86,16 @@ Property of type: `boolean`.
 
 
 
+### `description` (optional) ###
+
+A description that explains what this Global Variable is used for.
+
+
+Property of type: `string`.
+
+
+
+
 ### `declaredIn` (read-only) ###
 
 Whether this variable is declared in the current scope.
@@ -119,18 +129,18 @@ Property of type: `string`.
 ## Used in ##
 
   + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
-  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName})
+  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
   + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/)
-  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/{globalVariableName})
+  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/{globalVariableName}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/roles/{roleId}/global-variables/", 
-        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}", 
+        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/{envId}/farms/{farmId}/global-variables/", 
-        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}"
+        "/{envId}/roles/{roleId}/global-variables/", 
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/"
       ], 
       "x-createOnly": [
         "name"
@@ -157,8 +167,9 @@ Property of type: `string`.
           "type": "boolean", 
           "description": "Whether this variable is locked in inner scopes. This is read-only if `declaredIn` is not the current scope."
         }, 
-        "name": {
-          "type": "string"
+        "description": {
+          "type": "string", 
+          "description": "A description that explains what this Global Variable is used for."
         }, 
         "value": {
           "type": "string", 
@@ -188,6 +199,9 @@ Property of type: `string`.
         "hidden": {
           "type": "boolean", 
           "description": "Whether this variable is hidden in inner scopes. This is read-only if `declaredIn` is not the current scope."
+        }, 
+        "name": {
+          "type": "string"
         }
       }, 
       "required": [

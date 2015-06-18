@@ -24,7 +24,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/events/`](./../rest/api/user/v1beta0/events/)
   + [`/events/{eventId}/`](./../rest/api/user/v1beta0/events/{eventId}/)
   + [`/os/`](./../rest/api/user/v1beta0/os/)
-  + [`/os/{osId}`](./../rest/api/user/v1beta0/os/{osId})
+  + [`/os/{osId}/`](./../rest/api/user/v1beta0/os/{osId}/)
   + [`/{envId}/events/`](./../rest/api/user/v1beta0/{envId}/events/)
   + [`/{envId}/events/{eventId}/`](./../rest/api/user/v1beta0/{envId}/events/{eventId}/)
   + [`/{envId}/farm-roles/`](./../rest/api/user/v1beta0/{envId}/farm-roles/)
@@ -35,23 +35,23 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/{envId}/farms/`](./../rest/api/user/v1beta0/{envId}/farms/)
   + [`/{envId}/farms/{farmId}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/)
   + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
-  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName})
+  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
   + [`/{envId}/images/`](./../rest/api/user/v1beta0/{envId}/images/)
   + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/)
   + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/actions/copy/)
   + [`/{envId}/projects/`](./../rest/api/user/v1beta0/{envId}/projects/)
-  + [`/{envId}/projects/{projectId}`](./../rest/api/user/v1beta0/{envId}/projects/{projectId})
+  + [`/{envId}/projects/{projectId}/`](./../rest/api/user/v1beta0/{envId}/projects/{projectId}/)
   + [`/{envId}/role-categories/`](./../rest/api/user/v1beta0/{envId}/role-categories/)
   + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/user/v1beta0/{envId}/role-categories/{roleCategoryId}/)
   + [`/{envId}/roles/`](./../rest/api/user/v1beta0/{envId}/roles/)
   + [`/{envId}/roles/{roleId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/)
   + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/)
-  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/{globalVariableName})
+  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/{globalVariableName}/)
   + [`/{envId}/roles/{roleId}/images/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/)
   + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/)
   + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
   + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/)
-  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId})
+  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
   + [`/{envId}/scripts/`](./../rest/api/user/v1beta0/{envId}/scripts/)
   + [`/{envId}/scripts/{scriptId}/`](./../rest/api/user/v1beta0/{envId}/scripts/{scriptId}/)
   + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/user/v1beta0/{envId}/scripts/{scriptId}/script-versions/)
@@ -62,39 +62,39 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
     {
       "x-usedIn": [
         "/{envId}/scripts/{scriptId}/script-versions/", 
-        "/events/{eventId}/", 
+        "/events/", 
         "/{envId}/scripts/{scriptId}/", 
-        "/{envId}/roles/{roleId}/orchestration-rules/", 
+        "/{envId}/projects/{projectId}/", 
         "/{envId}/images/{imageId}/actions/copy/", 
         "/{envId}/roles/{roleId}/", 
-        "/os/{osId}", 
         "/{envId}/role-categories/", 
         "/{envId}/roles/{roleId}/images/{imageId}/", 
         "/{envId}/projects/", 
         "/{envId}/images/", 
-        "/{envId}/roles/{roleId}/global-variables/", 
-        "/{envId}/projects/{projectId}", 
-        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}", 
         "/{envId}/scripts/", 
-        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}", 
         "/{envId}/farm-roles/{farmRoleId}/scaling/", 
-        "/{envId}/farms/{farmId}/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/", 
+        "/{envId}/farm-roles/{farmRoleId}/placement/", 
+        "/os/{osId}/", 
         "/{envId}/farm-roles/{farmRoleId}/instance/", 
         "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
         "/{envId}/farm-roles/{farmRoleId}/", 
         "/{envId}/roles/", 
         "/os/", 
+        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/{envId}/roles/{roleId}/images/", 
         "/{envId}/events/", 
         "/{envId}/events/{eventId}/", 
         "/{envId}/farm-roles/", 
-        "/events/", 
+        "/events/{eventId}/", 
         "/{envId}/images/{imageId}/", 
         "/{envId}/farms/{farmId}/global-variables/", 
-        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}", 
-        "/{envId}/farm-roles/{farmRoleId}/placement/", 
+        "/{envId}/roles/{roleId}/global-variables/", 
+        "/{envId}/farms/{farmId}/", 
         "/{envId}/role-categories/{roleCategoryId}/", 
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
         "/{envId}/farms/"
       ], 
       "properties": {

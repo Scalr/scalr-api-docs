@@ -1,6 +1,6 @@
-# `GET /api/user/v1beta0/{envId}/farm-roles/` #
+# `DELETE /api/user/v1beta0/{envId}/scripts/{scriptId}/script-versions/` #
 
-List Farm Roles available in this Enviromnent.
+Delete this Script Version from this Script.
 
 ## Request Parameters #
 
@@ -11,6 +11,13 @@ Path parameters are included in the URL.
 #### `envId` ####
 
 The ID of the Environment scoping this request
+
+Parameter of type: `integer`.
+
+
+#### `scriptId` ####
+
+The ID of a Script object.
 
 Parameter of type: `integer`.
 
@@ -28,10 +35,8 @@ Parameter of type: `integer`.
 
 ### 200 ###
 
-A list of FarmRoleSummary objects.
 
-The response body is an object of type:
-[`FarmRoleSummaryListResponse`](./../../../../../../definitions/FarmRoleSummaryListResponse.mkd).
+
 
 
 
@@ -40,7 +45,7 @@ The response body is an object of type:
 A client-side error was made
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -54,7 +59,7 @@ The following errors **may** be returned by this endpoint.
 Request was not authenticated
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -66,7 +71,7 @@ The following errors **may** be returned by this endpoint.
 Insufficient permissions
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -79,7 +84,7 @@ The following errors **may** be returned by this endpoint.
 Resource not found
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -91,7 +96,7 @@ The following errors **may** be returned by this endpoint.
 Conflict with current state
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -104,7 +109,7 @@ The following errors **may** be returned by this endpoint.
 A server-side error occured
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -114,6 +119,18 @@ The response body is an object of type:
 
     {
       "post": {
+        "description": "Create a new Script Version for this Script.", 
+        "parameters": [
+          {
+            "required": true, 
+            "in": "body", 
+            "description": "The JSON representation of a ScriptVersion object.", 
+            "name": "scriptVersionObject", 
+            "schema": {
+              "$ref": "#/definitions/ScriptVersion"
+            }
+          }
+        ], 
         "responses": {
           "400": {
             "x-errorCodes": [
@@ -186,9 +203,9 @@ The response body is an object of type:
             }
           }, 
           "201": {
-            "description": "The JSON representation of a FarmRole object.", 
+            "description": "The JSON representation of a ScriptVersion object.", 
             "schema": {
-              "$ref": "#/definitions/FarmRoleDetailResponse"
+              "$ref": "#/definitions/ScriptVersionDetailResponse"
             }
           }, 
           "404": {
@@ -208,30 +225,10 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }
-        }, 
-        "parameters": [
-          {
-            "required": true, 
-            "in": "body", 
-            "description": "The JSON representation of a FarmRole object.", 
-            "name": "farmRoleObject", 
-            "schema": {
-              "$ref": "#/definitions/FarmRole"
-            }
-          }
-        ]
-      }, 
-      "parameters": [
-        {
-          "required": true, 
-          "type": "integer", 
-          "description": "The ID of the Environment scoping this request", 
-          "in": "path", 
-          "name": "envId"
         }
-      ], 
-      "get": {
-        "description": "List Farm Roles available in this Enviromnent.", 
+      }, 
+      "delete": {
+        "description": "Delete this Script Version from this Script.", 
         "responses": {
           "400": {
             "x-errorCodes": [
@@ -304,9 +301,140 @@ The response body is an object of type:
             }
           }, 
           "200": {
-            "description": "A list of FarmRoleSummary objects.", 
+            "errors": {
+              "items": {
+                "$ref": "#/definitions/ApiMessage"
+              }, 
+              "readOnly": true, 
+              "type": "array"
+            }, 
+            "meta": {
+              "readOnly": true, 
+              "$ref": "#/definitions/ApiMetaContainer"
+            }, 
+            "warnings": {
+              "items": {
+                "$ref": "#/definitions/ApiMessage"
+              }, 
+              "readOnly": true, 
+              "type": "array"
+            }
+          }, 
+          "404": {
+            "x-errorCodes": [
+              {
+                "noDoc": true, 
+                "description": "The route you are trying to access does not exist", 
+                "name": "EndpointNotFound"
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist", 
+                "name": "ObjectNotFound"
+              }
+            ], 
+            "description": "Resource not found", 
             "schema": {
-              "$ref": "#/definitions/FarmRoleSummaryListResponse"
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }
+        }
+      }, 
+      "parameters": [
+        {
+          "required": true, 
+          "type": "integer", 
+          "description": "The ID of the Environment scoping this request", 
+          "in": "path", 
+          "name": "envId"
+        }, 
+        {
+          "x-references": {
+            "$ref": "#/definitions/Script"
+          }, 
+          "description": "The ID of a Script object.", 
+          "in": "path", 
+          "required": true, 
+          "type": "integer", 
+          "name": "scriptId"
+        }
+      ], 
+      "get": {
+        "description": "List versions for this Script.", 
+        "responses": {
+          "400": {
+            "x-errorCodes": [
+              {
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ], 
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "401": {
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ], 
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "403": {
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ], 
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "409": {
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }
+            ], 
+            "description": "Conflict with current state", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "200": {
+            "description": "A list of ScriptVersion objects.", 
+            "schema": {
+              "$ref": "#/definitions/ScriptVersionListResponse"
             }
           }, 
           "404": {

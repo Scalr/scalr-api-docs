@@ -87,15 +87,15 @@ Property of type: `integer`.
   + [`/{envId}/farms/`](./../rest/api/user/v1beta0/{envId}/farms/)
   + [`/{envId}/farms/{farmId}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/)
   + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
-  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName})
+  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/farms/{farmId}/", 
         "/{envId}/farms/{farmId}/global-variables/", 
-        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}", 
+        "/{envId}/farms/{farmId}/", 
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
         "/{envId}/farms/"
       ], 
       "properties": {

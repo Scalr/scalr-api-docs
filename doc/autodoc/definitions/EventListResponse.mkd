@@ -64,8 +64,8 @@ objects of type [`Event`](./../definitions/Event.mkd).
 
     {
       "x-usedIn": [
-        "/{envId}/events/", 
-        "/events/"
+        "/events/", 
+        "/{envId}/events/"
       ], 
       "properties": {
         "pagination": {
