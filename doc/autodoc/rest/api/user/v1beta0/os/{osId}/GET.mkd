@@ -1,4 +1,4 @@
-# `GET /api/user/v1beta0/os/{osId}` #
+# `GET /api/user/v1beta0/os/{osId}/` #
 
 Retrieve an OS.
 
@@ -31,7 +31,7 @@ Parameter of type: `string`.
 The JSON representation of a Os object.
 
 The response body is an object of type:
-[`OsDetailResponse`](./../../../../../definitions/OsDetailResponse.mkd).
+[`OsDetailResponse`](./../../../../../../definitions/OsDetailResponse.mkd).
 
 
 
@@ -40,7 +40,7 @@ The response body is an object of type:
 A client-side error was made
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -54,7 +54,7 @@ The following errors **may** be returned by this endpoint.
 Request was not authenticated
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -66,7 +66,7 @@ The following errors **may** be returned by this endpoint.
 Insufficient permissions
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -79,7 +79,7 @@ The following errors **may** be returned by this endpoint.
 Resource not found
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -91,7 +91,7 @@ The following errors **may** be returned by this endpoint.
 Conflict with current state
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -104,7 +104,7 @@ The following errors **may** be returned by this endpoint.
 A server-side error occured
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 

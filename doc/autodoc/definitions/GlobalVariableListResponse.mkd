@@ -64,8 +64,8 @@ objects of type [`GlobalVariable`](./../definitions/GlobalVariable.mkd).
 
     {
       "x-usedIn": [
-        "/{envId}/roles/{roleId}/global-variables/", 
-        "/{envId}/farms/{farmId}/global-variables/"
+        "/{envId}/farms/{farmId}/global-variables/", 
+        "/{envId}/roles/{roleId}/global-variables/"
       ], 
       "properties": {
         "pagination": {

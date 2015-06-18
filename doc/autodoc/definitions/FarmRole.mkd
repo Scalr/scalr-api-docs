@@ -88,10 +88,10 @@ Property of type: `integer`.
     {
       "x-usedIn": [
         "/{envId}/farm-roles/{farmRoleId}/scaling/", 
+        "/{envId}/farm-roles/{farmRoleId}/placement/", 
         "/{envId}/farm-roles/{farmRoleId}/instance/", 
         "/{envId}/farm-roles/{farmRoleId}/", 
-        "/{envId}/farm-roles/", 
-        "/{envId}/farm-roles/{farmRoleId}/placement/"
+        "/{envId}/farm-roles/"
       ], 
       "properties": {
         "scaling": {

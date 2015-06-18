@@ -61,10 +61,10 @@ To filter on this field, use: `scope=...`.
 
     {
       "x-usedIn": [
-        "/events/{eventId}/", 
+        "/events/", 
         "/{envId}/events/", 
         "/{envId}/events/{eventId}/", 
-        "/events/"
+        "/events/{eventId}/"
       ], 
       "x-createOnly": [
         "id"

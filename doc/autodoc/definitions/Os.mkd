@@ -89,13 +89,13 @@ To filter on this field, use: `family=...`.
 
 ## Used in ##
 
-  + [`/os/{osId}`](./../rest/api/user/v1beta0/os/{osId})
+  + [`/os/{osId}/`](./../rest/api/user/v1beta0/os/{osId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/os/{osId}"
+        "/os/{osId}/"
       ], 
       "properties": {
         "generation": {
