@@ -96,6 +96,16 @@ Property of type: `string`.
 
 
 
+### `category` (optional) ###
+
+Category of the variable
+
+
+Property of type: `string`.
+
+
+
+
 ### `declaredIn` (read-only) ###
 
 Whether this variable is declared in the current scope.
@@ -146,6 +156,10 @@ Property of type: `string`.
         "name"
       ], 
       "properties": {
+        "category": {
+          "type": "string", 
+          "description": "Category of the variable"
+        }, 
         "declaredIn": {
           "readOnly": true, 
           "enum": [
