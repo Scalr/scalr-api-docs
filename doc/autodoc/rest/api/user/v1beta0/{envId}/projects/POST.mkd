@@ -1,6 +1,6 @@
-# `GET /api/user/v1beta0/{envId}/projects/` #
+# `POST /api/user/v1beta0/{envId}/projects/` #
 
-List Projects available in this Environment
+Creates a new Project in this Environment
 
 ## Request Parameters #
 
@@ -20,18 +20,37 @@ Parameter of type: `integer`.
 
 
 
+### Request Body ###
+
+The request body parameter is passed as the body of the request.
+
+#### `projectObject` ####
+
+The JSON representation of a Project object.
+
+
+An object of type: [`Project`](./../../../../../../definitions/Project.mkd).
+
+#### `projectSettingsObject` ####
+
+The JSON representation of a ProjectSettings object.
+
+
+An object of type: [`ProjectSettings`](./../../../../../../definitions/ProjectSettings.mkd).
+
+
 
 
 
 ## Responses ##
 
 
-### 200 ###
+### 201 ###
 
-A list of Project objects.
+The JSON representation of a Project object.
 
 The response body is an object of type:
-[`ProjectListResponse`](./../../../../../../definitions/ProjectListResponse.mkd).
+[`ProjectDetailResponse`](./../../../../../../definitions/ProjectDetailResponse.mkd).
 
 
 

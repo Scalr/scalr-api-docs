@@ -8,7 +8,7 @@
 
 ## Properties ##
 
-### `name` (required) ###
+### `name` (required, filterable) ###
 
 
 
@@ -16,9 +16,10 @@
 Property of type: `string`.
 
 
+To filter on this field, use: `name=...`.
 
 
-### `id` (read-only) ###
+### `id` (read-only, filterable) ###
 
 
 
@@ -26,24 +27,51 @@ Property of type: `string`.
 Property of type: `string`.
 
 
+To filter on this field, use: `id=...`.
+
+
+### `billingCode` (read-only, filterable) ###
 
 
 
 
+Property of type: `string`.
+
+
+To filter on this field, use: `billingCode=...`.
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/cost-centers/{costCenterId}/`](./../rest/api/user/v1beta0/{envId}/cost-centers/{costCenterId}/)
 
 ## Swagger Definition ##
 
     {
-      "required": [
-        "name"
+      "x-usedIn": [
+        "/{envId}/cost-centers/{costCenterId}/"
       ], 
       "properties": {
         "id": {
           "readOnly": true, 
           "type": "string"
         }, 
+        "billingCode": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
         "name": {
           "type": "string"
         }
-      }
+      }, 
+      "x-filterable": [
+        "id", 
+        "name", 
+        "billingCode"
+      ], 
+      "required": [
+        "name"
+      ]
     }

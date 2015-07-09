@@ -1,0 +1,75 @@
+# `ProjectSettings` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `leadEmail` (required) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+### `billingCode` (required, create-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `billingCode=...`.
+
+
+### `description` (optional) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/projects/`](./../rest/api/user/v1beta0/{envId}/projects/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/projects/"
+      ], 
+      "x-createOnly": [
+        "billingCode"
+      ], 
+      "properties": {
+        "description": {
+          "type": "string"
+        }, 
+        "billingCode": {
+          "type": "string"
+        }, 
+        "leadEmail": {
+          "type": "string"
+        }
+      }, 
+      "x-filterable": [
+        "billingCode"
+      ], 
+      "required": [
+        "billingCode", 
+        "leadEmail"
+      ]
+    }

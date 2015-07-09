@@ -1,6 +1,6 @@
-# `GET /api/user/v1beta0/{envId}/projects/` #
+# `GET /api/user/v1beta0/{envId}/cost-centers/{costCenterId}/` #
 
-List Projects available in this Environment
+Return a JSON representation of a Cost-Center
 
 ## Request Parameters #
 
@@ -13,6 +13,13 @@ Path parameters are included in the URL.
 The ID of the Environment scoping this request
 
 Parameter of type: `integer`.
+
+
+#### `costCenterId` ####
+
+The ID of a CostCenter object.
+
+Parameter of type: `string`.
 
 
 
@@ -28,10 +35,10 @@ Parameter of type: `integer`.
 
 ### 200 ###
 
-A list of Project objects.
+The JSON representation of a CostCenter object.
 
 The response body is an object of type:
-[`ProjectListResponse`](./../../../../../../definitions/ProjectListResponse.mkd).
+[`CostCenterDetailResponse`](./../../../../../../../definitions/CostCenterDetailResponse.mkd).
 
 
 
@@ -40,7 +47,7 @@ The response body is an object of type:
 A client-side error was made
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -54,7 +61,7 @@ The following errors **may** be returned by this endpoint.
 Request was not authenticated
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -66,7 +73,7 @@ The following errors **may** be returned by this endpoint.
 Insufficient permissions
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -79,7 +86,7 @@ The following errors **may** be returned by this endpoint.
 Resource not found
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -91,7 +98,7 @@ The following errors **may** be returned by this endpoint.
 Conflict with current state
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -104,7 +111,7 @@ The following errors **may** be returned by this endpoint.
 A server-side error occured
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -113,124 +120,6 @@ The response body is an object of type:
 ## Swagger Definition ##
 
     {
-      "post": {
-        "description": "Creates a new Project in this Environment", 
-        "parameters": [
-          {
-            "required": true, 
-            "in": "body", 
-            "description": "The JSON representation of a Project object.", 
-            "name": "projectObject", 
-            "schema": {
-              "$ref": "#/definitions/Project"
-            }
-          }, 
-          {
-            "required": true, 
-            "in": "body", 
-            "description": "The JSON representation of a ProjectSettings object.", 
-            "name": "projectSettingsObject", 
-            "schema": {
-              "$ref": "#/definitions/ProjectSettings"
-            }
-          }
-        ], 
-        "responses": {
-          "400": {
-            "x-errorCodes": [
-              {
-                "description": "Your request is structurally incorrect, and was not understood by the API.", 
-                "name": "InvalidStructure"
-              }, 
-              {
-                "description": "Your request was understood by the API, but included data that is not acceptable.", 
-                "name": "InvalidValue"
-              }, 
-              {
-                "description": "Your request wasn't understood by the API.", 
-                "name": "BadRequest"
-              }
-            ], 
-            "description": "A client-side error was made", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "401": {
-            "x-errorCodes": [
-              {
-                "description": "Your request authentication failed to validate.", 
-                "name": "BadAuthentication"
-              }
-            ], 
-            "description": "Request was not authenticated", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "403": {
-            "x-errorCodes": [
-              {
-                "description": "Your request should be made in a different Scope.", 
-                "name": "ScopeViolation"
-              }, 
-              {
-                "description": "Your request requires permissions you do not have.", 
-                "name": "PermissionViolation"
-              }
-            ], 
-            "description": "Insufficient permissions", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "500": {
-            "description": "A server-side error occured", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "409": {
-            "x-errorCodes": [
-              {
-                "description": "The changes you are trying to make aren't possible while this object is in use.", 
-                "name": "ObjectInUse"
-              }, 
-              {
-                "description": "The changes you are trying to make violate a unicity constraint.", 
-                "name": "UnicityViolation"
-              }
-            ], 
-            "description": "Conflict with current state", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "201": {
-            "description": "The JSON representation of a Project object.", 
-            "schema": {
-              "$ref": "#/definitions/ProjectDetailResponse"
-            }
-          }, 
-          "404": {
-            "x-errorCodes": [
-              {
-                "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
-                "name": "EndpointNotFound"
-              }, 
-              {
-                "description": "The URL you are trying to access does not exist", 
-                "name": "ObjectNotFound"
-              }
-            ], 
-            "description": "Resource not found", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }
-        }
-      }, 
       "parameters": [
         {
           "required": true, 
@@ -238,10 +127,20 @@ The response body is an object of type:
           "description": "The ID of the Environment scoping this request", 
           "in": "path", 
           "name": "envId"
+        }, 
+        {
+          "x-references": {
+            "$ref": "#/definitions/CostCenter"
+          }, 
+          "description": "The ID of a CostCenter object.", 
+          "in": "path", 
+          "required": true, 
+          "type": "string", 
+          "name": "costCenterId"
         }
       ], 
       "get": {
-        "description": "List Projects available in this Environment", 
+        "description": "Return a JSON representation of a Cost-Center", 
         "responses": {
           "400": {
             "x-errorCodes": [
@@ -314,9 +213,9 @@ The response body is an object of type:
             }
           }, 
           "200": {
-            "description": "A list of Project objects.", 
+            "description": "The JSON representation of a CostCenter object.", 
             "schema": {
-              "$ref": "#/definitions/ProjectListResponse"
+              "$ref": "#/definitions/CostCenterDetailResponse"
             }
           }, 
           "404": {

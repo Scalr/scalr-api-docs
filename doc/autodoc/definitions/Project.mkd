@@ -45,13 +45,15 @@ To filter on this field, use: `id=...`.
 
 ## Used in ##
 
+  + [`/{envId}/projects/`](./../rest/api/user/v1beta0/{envId}/projects/)
   + [`/{envId}/projects/{projectId}/`](./../rest/api/user/v1beta0/{envId}/projects/{projectId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/projects/{projectId}/"
+        "/{envId}/projects/{projectId}/", 
+        "/{envId}/projects/"
       ], 
       "x-createOnly": [
         "costCenter"

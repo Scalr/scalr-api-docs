@@ -1,4 +1,4 @@
-# `ProjectDetailResponse` #
+# `CostCenterDetailResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`Project`](./../definitions/Project.mkd).
+An object of type [`CostCenter`](./../definitions/CostCenter.mkd).
 
 
 
@@ -48,15 +48,13 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/projects/`](./../rest/api/user/v1beta0/{envId}/projects/)
-  + [`/{envId}/projects/{projectId}/`](./../rest/api/user/v1beta0/{envId}/projects/{projectId}/)
+  + [`/{envId}/cost-centers/{costCenterId}/`](./../rest/api/user/v1beta0/{envId}/cost-centers/{costCenterId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/projects/{projectId}/", 
-        "/{envId}/projects/"
+        "/{envId}/cost-centers/{costCenterId}/"
       ], 
       "properties": {
         "meta": {
@@ -64,7 +62,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/Project"
+          "$ref": "#/definitions/CostCenter"
         }, 
         "errors": {
           "items": {
@@ -82,6 +80,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/Project"
+        "$ref": "#/definitions/CostCenter"
       }
     }
