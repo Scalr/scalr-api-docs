@@ -31,13 +31,6 @@ The JSON representation of a Project object.
 
 An object of type: [`Project`](./../../../../../../definitions/Project.mkd).
 
-#### `projectSettingsObject` ####
-
-The JSON representation of a ProjectSettings object.
-
-
-An object of type: [`ProjectSettings`](./../../../../../../definitions/ProjectSettings.mkd).
-
 
 
 
@@ -142,15 +135,6 @@ The response body is an object of type:
             "name": "projectObject", 
             "schema": {
               "$ref": "#/definitions/Project"
-            }
-          }, 
-          {
-            "required": true, 
-            "in": "body", 
-            "description": "The JSON representation of a ProjectSettings object.", 
-            "name": "projectSettingsObject", 
-            "schema": {
-              "$ref": "#/definitions/ProjectSettings"
             }
           }
         ], 

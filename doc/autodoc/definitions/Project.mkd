@@ -19,6 +19,16 @@ Property of type: `string`.
 To filter on this field, use: `name=...`.
 
 
+### `leadEmail` (required, create-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
 ### `costCenter` (required, create-only, filterable) ###
 
 
@@ -28,6 +38,27 @@ An object of type [`CostCenterForeignKey`](./../definitions/CostCenterForeignKey
 
 To filter on this field, pass the `id` property of the [`CostCenterForeignKey`](./../definitions/CostCenterForeignKey.mkd) object you are referencing,
 e.g.: `costCenter=...`.
+
+
+### `billingCode` (required, create-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `billingCode=...`.
+
+
+### `description` (optional) ###
+
+
+
+
+Property of type: `string`.
+
+
 
 
 ### `id` (read-only, filterable) ###
@@ -56,27 +87,41 @@ To filter on this field, use: `id=...`.
         "/{envId}/projects/"
       ], 
       "x-createOnly": [
-        "costCenter"
+        "costCenter", 
+        "billingCode", 
+        "leadEmail"
       ], 
       "properties": {
-        "id": {
-          "readOnly": true, 
+        "billingCode": {
+          "type": "string"
+        }, 
+        "name": {
           "type": "string"
         }, 
         "costCenter": {
           "$ref": "#/definitions/CostCenterForeignKey"
         }, 
-        "name": {
+        "description": {
+          "type": "string"
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "leadEmail": {
           "type": "string"
         }
       }, 
       "x-filterable": [
         "id", 
         "name", 
-        "costCenter"
+        "costCenter", 
+        "billingCode"
       ], 
       "required": [
         "costCenter", 
+        "billingCode", 
+        "leadEmail", 
         "name"
       ]
     }
