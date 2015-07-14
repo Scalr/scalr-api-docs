@@ -26,6 +26,16 @@ An object of type [`RoleForeignKey`](./../definitions/RoleForeignKey.mkd).
 
 
 
+### `platform` (required) ###
+
+Farm role platform
+
+
+Property of type: `string`.
+
+
+
+
 ### `alias` (optional) ###
 
 The Alias for this Farm Role. If this isn't provided, it will default to the Role's name (possibly with '-n' appended if the Role name is already taken)
@@ -54,7 +64,8 @@ Property of type: `integer`.
     {
       "required": [
         "farm", 
-        "role"
+        "role", 
+        "platform"
       ], 
       "properties": {
         "farm": {
@@ -72,6 +83,10 @@ Property of type: `integer`.
         "id": {
           "readOnly": true, 
           "type": "integer"
+        }, 
+        "platform": {
+          "type": "string", 
+          "description": "Farm role platform"
         }
       }
     }

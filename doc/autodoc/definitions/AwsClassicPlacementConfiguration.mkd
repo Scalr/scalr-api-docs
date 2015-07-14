@@ -14,15 +14,7 @@ When an object of type [`PlacementConfiguration`](./../definitions/PlacementConf
 
 ## Properties ##
 
-### `placementConfigurationType` (required) ###
-
-
-
-
-This `string` property is used for polymorphism. It **must** be set to: `"AwsClassicPlacementConfiguration"`
-
-
-### `region` (optional) ###
+### `region` (required) ###
 
 
 
@@ -30,6 +22,14 @@ This `string` property is used for polymorphism. It **must** be set to: `"AwsCla
 Property of type: `string`.
 
 
+
+
+### `placementConfigurationType` (required) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"AwsClassicPlacementConfiguration"`
 
 
 ### `availabilityZones` (optional) ###
@@ -51,7 +51,8 @@ An array of
         "$ref": "#/definitions/PlacementConfiguration"
       }, 
       "required": [
-        "placementConfigurationType"
+        "placementConfigurationType", 
+        "region"
       ], 
       "x-discriminator": "placementConfigurationType", 
       "properties": {

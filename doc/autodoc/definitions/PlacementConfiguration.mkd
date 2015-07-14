@@ -16,6 +16,16 @@ one of the following types:
 
 ## Properties ##
 
+### `region` (required) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
 ### `placementConfigurationType` (required) ###
 
 
@@ -55,6 +65,9 @@ The following are valid values for the `placementConfigurationType` property:
         "/{envId}/farm-roles/{farmRoleId}/placement/"
       ], 
       "properties": {
+        "region": {
+          "type": "string"
+        }, 
         "placementConfigurationType": {
           "enum": [
             "AwsClassicPlacementConfiguration", 
@@ -67,6 +80,7 @@ The following are valid values for the `placementConfigurationType` property:
         }
       }, 
       "required": [
-        "placementConfigurationType"
+        "placementConfigurationType", 
+        "region"
       ]
     }

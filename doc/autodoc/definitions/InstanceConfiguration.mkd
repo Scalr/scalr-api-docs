@@ -15,6 +15,15 @@ one of the following types:
 
 ## Properties ##
 
+### `instanceType` (required) ###
+
+
+
+
+An object of type [`CloudInstanceType`](./../definitions/CloudInstanceType.mkd).
+
+
+
 ### `instanceConfigurationType` (required) ###
 
 
@@ -51,10 +60,10 @@ The following are valid values for the `instanceConfigurationType` property:
           "enum": [
             "AwsInstanceConfiguration"
           ], 
-          "type": "string", 
-          "instanceType": {
-            "$ref": "#/definitions/CloudInstanceType"
-          }
+          "type": "string"
+        }, 
+        "instanceType": {
+          "$ref": "#/definitions/CloudInstanceType"
         }
       }, 
       "required": [

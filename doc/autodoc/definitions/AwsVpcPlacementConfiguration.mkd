@@ -14,6 +14,16 @@ When an object of type [`PlacementConfiguration`](./../definitions/PlacementConf
 
 ## Properties ##
 
+### `region` (required) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
 ### `placementConfigurationType` (required) ###
 
 
@@ -31,6 +41,15 @@ An array of
 objects of type [`CloudAwsVpcSubnetForeignKey`](./../definitions/CloudAwsVpcSubnetForeignKey.mkd).
 
 
+### `router` (optional) ###
+
+
+
+
+An object of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd).
+
+
+
 
 
 
@@ -41,7 +60,8 @@ objects of type [`CloudAwsVpcSubnetForeignKey`](./../definitions/CloudAwsVpcSubn
         "$ref": "#/definitions/PlacementConfiguration"
       }, 
       "required": [
-        "placementConfigurationType"
+        "placementConfigurationType", 
+        "region"
       ], 
       "x-discriminator": "placementConfigurationType", 
       "properties": {
@@ -50,6 +70,9 @@ objects of type [`CloudAwsVpcSubnetForeignKey`](./../definitions/CloudAwsVpcSubn
             "$ref": "#/definitions/CloudAwsVpcSubnetForeignKey"
           }, 
           "type": "array"
+        }, 
+        "region": {
+          "type": "string"
         }, 
         "placementConfigurationType": {
           "enum": [
@@ -60,6 +83,9 @@ objects of type [`CloudAwsVpcSubnetForeignKey`](./../definitions/CloudAwsVpcSubn
             "GcePlacementConfiguration"
           ], 
           "type": "string"
+        }, 
+        "router": {
+          "$ref": "#/definitions/FarmRoleForeignKey"
         }
       }
     }

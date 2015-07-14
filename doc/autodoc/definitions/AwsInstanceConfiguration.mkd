@@ -14,6 +14,15 @@ When an object of type [`InstanceConfiguration`](./../definitions/InstanceConfig
 
 ## Properties ##
 
+### `instanceType` (required) ###
+
+
+
+
+An object of type [`CloudInstanceType`](./../definitions/CloudInstanceType.mkd).
+
+
+
 ### `instanceConfigurationType` (required) ###
 
 
@@ -51,13 +60,13 @@ Property of type: `boolean`.
           "enum": [
             "AwsInstanceConfiguration"
           ], 
-          "type": "string", 
-          "instanceType": {
-            "$ref": "#/definitions/CloudInstanceType"
-          }
+          "type": "string"
         }, 
         "ebsOptimized": {
           "type": "boolean"
+        }, 
+        "instanceType": {
+          "$ref": "#/definitions/CloudInstanceType"
         }
       }
     }

@@ -1,0 +1,33 @@
+# `FarmRoleForeignKey` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `id` (read-only) ###
+
+
+
+
+Property of type: `integer`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "id": {
+          "readOnly": true, 
+          "type": "integer"
+        }
+      }
+    }
