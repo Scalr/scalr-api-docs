@@ -49,8 +49,8 @@ e.g.: `image=...`.
         }
       }, 
       "x-usedIn": [
-        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/{envId}/roles/{roleId}/images/"
+        "/{envId}/roles/{roleId}/images/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/"
       ], 
       "description": "A Representation of a Role Image. Note that the `role` property is optional when POST-ing to a URL that already includes `{roleId}`.", 
       "x-filterable": [

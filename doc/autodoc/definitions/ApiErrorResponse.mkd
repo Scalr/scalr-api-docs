@@ -36,6 +36,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/scaling/)
   + [`/{envId}/farms/`](./../rest/api/user/v1beta0/{envId}/farms/)
   + [`/{envId}/farms/{farmId}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/)
+  + [`/{envId}/farms/{farmId}/actions/launch/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/actions/launch/)
+  + [`/{envId}/farms/{farmId}/actions/terminate/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/actions/terminate/)
   + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
   + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
   + [`/{envId}/images/`](./../rest/api/user/v1beta0/{envId}/images/)
@@ -81,6 +83,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/roles/{roleId}/orchestration-rules/", 
         "/{envId}/farm-roles/{farmRoleId}/placement/", 
         "/os/{osId}/", 
+        "/{envId}/roles/{roleId}/images/", 
         "/{envId}/farm-roles/{farmRoleId}/instance/", 
         "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
@@ -88,7 +91,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/roles/", 
         "/os/", 
         "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/roles/{roleId}/images/", 
+        "/{envId}/farms/{farmId}/actions/terminate/", 
         "/{envId}/events/", 
         "/{envId}/events/{eventId}/", 
         "/{envId}/farm-roles/", 
@@ -97,6 +100,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/farms/{farmId}/global-variables/", 
         "/{envId}/roles/{roleId}/global-variables/", 
         "/{envId}/farms/{farmId}/", 
+        "/{envId}/farms/{farmId}/actions/launch/", 
         "/{envId}/role-categories/{roleCategoryId}/", 
         "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
         "/{envId}/farms/"

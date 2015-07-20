@@ -103,10 +103,10 @@ To filter on this field, use: `id=...`.
         "/{envId}/roles/{roleId}/images/{imageId}/", 
         "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/{envId}/roles/{roleId}/orchestration-rules/", 
+        "/{envId}/roles/{roleId}/images/", 
         "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/{envId}/roles/", 
         "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/roles/{roleId}/images/", 
         "/{envId}/roles/{roleId}/global-variables/"
       ], 
       "properties": {
