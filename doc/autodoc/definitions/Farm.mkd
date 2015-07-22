@@ -8,16 +8,18 @@
 
 ## Properties ##
 
-### `project` (required) ###
+### `project` (required, filterable) ###
 
 
 
 
 An object of type [`ProjectForeignKey`](./../definitions/ProjectForeignKey.mkd).
 
+To filter on this field, pass the `id` property of the [`ProjectForeignKey`](./../definitions/ProjectForeignKey.mkd) object you are referencing,
+e.g.: `project=...`.
 
 
-### `name` (required) ###
+### `name` (required, filterable) ###
 
 
 
@@ -25,15 +27,18 @@ An object of type [`ProjectForeignKey`](./../definitions/ProjectForeignKey.mkd).
 Property of type: `string`.
 
 
+To filter on this field, use: `name=...`.
 
 
-### `vpc` (optional) ###
+### `vpc` (optional, filterable) ###
 
 
 
 
 An object of type [`CloudAwsVpcForeignKey`](./../definitions/CloudAwsVpcForeignKey.mkd).
 
+To filter on this field, pass the `id` property of the [`CloudAwsVpcForeignKey`](./../definitions/CloudAwsVpcForeignKey.mkd) object you are referencing,
+e.g.: `vpc=...`.
 
 
 ### `timezone` (optional) ###
@@ -46,7 +51,7 @@ Property of type: `string`.
 
 
 
-### `launchOrder` (optional) ###
+### `launchOrder` (optional, filterable) ###
 
 
 
@@ -58,6 +63,7 @@ The following are valid values for the `launchOrder` property:
   + `simulatenous`
   + `sequential`
 
+To filter on this field, use: `launchOrder=...`.
 
 
 ### `description` (optional) ###
@@ -70,7 +76,7 @@ Property of type: `string`.
 
 
 
-### `id` (read-only) ###
+### `id` (read-only, filterable) ###
 
 
 
@@ -78,6 +84,7 @@ Property of type: `string`.
 Property of type: `integer`.
 
 
+To filter on this field, use: `id=...`.
 
 
 
@@ -130,6 +137,13 @@ Property of type: `integer`.
           "type": "string"
         }
       }, 
+      "x-filterable": [
+        "id", 
+        "name", 
+        "vpc", 
+        "project", 
+        "launchOrder"
+      ], 
       "required": [
         "name", 
         "project"

@@ -8,13 +8,15 @@
 
 ## Properties ##
 
-### `script` (create-only) ###
+### `script` (create-only, filterable) ###
 
 The Script this ScriptVersion is a version of
 
 
 An object of type [`ScriptForeignKey`](./../definitions/ScriptForeignKey.mkd).
 
+To filter on this field, pass the `id` property of the [`ScriptForeignKey`](./../definitions/ScriptForeignKey.mkd) object you are referencing,
+e.g.: `script=...`.
 
 
 ### `version` (read-only) ###
@@ -33,6 +35,9 @@ Property of type: `integer`.
 ## Swagger Definition ##
 
     {
+      "x-createOnly": [
+        "script"
+      ], 
       "properties": {
         "version": {
           "readOnly": true, 
@@ -44,7 +49,7 @@ Property of type: `integer`.
           "$ref": "#/definitions/ScriptForeignKey"
         }
       }, 
-      "x-createOnly": [
+      "x-filterable": [
         "script"
       ]
     }

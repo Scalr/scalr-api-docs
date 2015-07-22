@@ -8,7 +8,7 @@
 
 ## Properties ##
 
-### `osType` (required) ###
+### `osType` (required, filterable) ###
 
 Type of OS this Script should execute on. This will influence Orchestration Rules, an will trigger validation on individual ScriptVersion's you upload.
 
@@ -20,9 +20,10 @@ The following are valid values for the `osType` property:
   + `linux`
   + `windows`
 
+To filter on this field, use: `osType=...`.
 
 
-### `name` (required) ###
+### `name` (required, filterable) ###
 
 
 
@@ -30,9 +31,10 @@ The following are valid values for the `osType` property:
 Property of type: `string`.
 
 
+To filter on this field, use: `name=...`.
 
 
-### `scope` (required, read-only) ###
+### `scope` (required, read-only, filterable) ###
 
 
 
@@ -48,9 +50,10 @@ The following are valid values for the `scope` property:
   + `farmrole`
   + `server`
 
+To filter on this field, use: `scope=...`.
 
 
-### `id` (required, read-only) ###
+### `id` (required, read-only, filterable) ###
 
 
 
@@ -58,6 +61,7 @@ The following are valid values for the `scope` property:
 Property of type: `integer`.
 
 
+To filter on this field, use: `id=...`.
 
 
 ### `timeoutDefault` (optional) ###
@@ -80,7 +84,7 @@ Property of type: `string`.
 
 
 
-### `blockingDefault` (optional) ###
+### `blockingDefault` (optional, filterable) ###
 
 
 
@@ -88,6 +92,7 @@ Property of type: `string`.
 Property of type: `boolean`.
 
 
+To filter on this field, use: `blockingDefault=...`.
 
 
 ### `lastChanged` (read-only) ###
@@ -176,6 +181,13 @@ Property of type: `string`.
           "type": "string"
         }
       }, 
+      "x-filterable": [
+        "id", 
+        "name", 
+        "osType", 
+        "blockingDefault", 
+        "scope"
+      ], 
       "required": [
         "id", 
         "name", 

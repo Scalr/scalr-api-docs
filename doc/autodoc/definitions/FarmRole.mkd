@@ -8,25 +8,18 @@
 
 ## Properties ##
 
-### `farm` (required) ###
-
-Farm this Farm Role should be added to. This is optional when POST-ing to /{envId}/farms/{farmId}/farm-roles/
-
-
-An object of type [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd).
-
-
-
-### `role` (required) ###
+### `role` (required, filterable) ###
 
 
 
 
 An object of type [`RoleForeignKey`](./../definitions/RoleForeignKey.mkd).
 
+To filter on this field, pass the `id` property of the [`RoleForeignKey`](./../definitions/RoleForeignKey.mkd) object you are referencing,
+e.g.: `role=...`.
 
 
-### `platform` (required) ###
+### `platform` (required, filterable) ###
 
 Farm role platform
 
@@ -34,6 +27,18 @@ Farm role platform
 Property of type: `string`.
 
 
+To filter on this field, use: `platform=...`.
+
+
+### `farm` (required, create-only, filterable) ###
+
+Farm this Farm Role should be added to. This is optional when POST-ing to /{envId}/farms/{farmId}/farm-roles/
+
+
+An object of type [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd) object you are referencing,
+e.g.: `farm=...`.
 
 
 ### `scaling` (optional) ###
@@ -73,7 +78,7 @@ Property of type: `string`.
 
 
 
-### `id` (read-only) ###
+### `id` (read-only, filterable) ###
 
 
 
@@ -81,6 +86,7 @@ Property of type: `string`.
 Property of type: `integer`.
 
 
+To filter on this field, use: `id=...`.
 
 
 
@@ -103,6 +109,9 @@ Property of type: `integer`.
         "/{envId}/farm-roles/{farmRoleId}/", 
         "/{envId}/farm-roles/"
       ], 
+      "x-createOnly": [
+        "farm"
+      ], 
       "properties": {
         "placement": {
           "$ref": "#/definitions/PlacementConfiguration"
@@ -112,9 +121,8 @@ Property of type: `integer`.
           "description": "Farm role platform"
         }, 
         "farm": {
-          "$ref": "#/definitions/FarmForeignKey", 
           "description": "Farm this Farm Role should be added to. This is optional when POST-ing to /{envId}/farms/{farmId}/farm-roles/", 
-          "x-createOnly": true
+          "$ref": "#/definitions/FarmForeignKey"
         }, 
         "scaling": {
           "$ref": "#/definitions/ScalingConfiguration"
@@ -134,6 +142,12 @@ Property of type: `integer`.
           "type": "integer"
         }
       }, 
+      "x-filterable": [
+        "id", 
+        "farm", 
+        "role", 
+        "platform"
+      ], 
       "required": [
         "farm", 
         "role", 
