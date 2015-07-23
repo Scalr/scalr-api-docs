@@ -1,6 +1,6 @@
-# `POST /api/user/v1beta0/{envId}/farm-roles/` #
+# `GET /api/user/v1beta0/{envId}/farms/{farmId}/farm-roles/` #
 
-
+List Farm Roles available in this Enviromnent.
 
 ## Request Parameters #
 
@@ -15,21 +15,16 @@ The ID of the Environment scoping this request
 Parameter of type: `integer`.
 
 
+#### `farmId` ####
+
+The ID of a Farm object.
+
+Parameter of type: `integer`.
 
 
 
 
 
-### Request Body ###
-
-The request body parameter is passed as the body of the request.
-
-#### `farmRoleObject` ####
-
-The JSON representation of a FarmRole object.
-
-
-An object of type: [`FarmRole`](./../../../../../../definitions/FarmRole.mkd).
 
 
 
@@ -38,12 +33,12 @@ An object of type: [`FarmRole`](./../../../../../../definitions/FarmRole.mkd).
 ## Responses ##
 
 
-### 201 ###
+### 200 ###
 
-The JSON representation of a FarmRole object.
+A list of FarmRoleSummary objects.
 
 The response body is an object of type:
-[`FarmRoleDetailResponse`](./../../../../../../definitions/FarmRoleDetailResponse.mkd).
+[`FarmRoleSummaryListResponse`](./../../../../../../../../definitions/FarmRoleSummaryListResponse.mkd).
 
 
 
@@ -52,7 +47,7 @@ The response body is an object of type:
 A client-side error was made
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -66,7 +61,7 @@ The following errors **may** be returned by this endpoint.
 Request was not authenticated
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -78,7 +73,7 @@ The following errors **may** be returned by this endpoint.
 Insufficient permissions
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -91,7 +86,7 @@ The following errors **may** be returned by this endpoint.
 Resource not found
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -103,7 +98,7 @@ The following errors **may** be returned by this endpoint.
 Conflict with current state
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -116,7 +111,7 @@ The following errors **may** be returned by this endpoint.
 A server-side error occured
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -240,6 +235,16 @@ The response body is an object of type:
           "description": "The ID of the Environment scoping this request", 
           "in": "path", 
           "name": "envId"
+        }, 
+        {
+          "x-references": {
+            "$ref": "#/definitions/Farm"
+          }, 
+          "description": "The ID of a Farm object.", 
+          "in": "path", 
+          "required": true, 
+          "type": "integer", 
+          "name": "farmId"
         }
       ], 
       "get": {
