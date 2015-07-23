@@ -15,13 +15,6 @@ The ID of the Environment scoping this request
 Parameter of type: `integer`.
 
 
-#### `farmId` ####
-
-The ID of a Farm object.
-
-Parameter of type: `integer`.
-
-
 #### `farmRoleId` ####
 
 The ID of a FarmRole object.
@@ -231,16 +224,6 @@ The response body is an object of type:
           "description": "The ID of the Environment scoping this request", 
           "in": "path", 
           "name": "envId"
-        }, 
-        {
-          "x-references": {
-            "$ref": "#/definitions/Farm"
-          }, 
-          "description": "The ID of a Farm object.", 
-          "in": "path", 
-          "required": true, 
-          "type": "integer", 
-          "name": "farmId"
         }, 
         {
           "x-references": {
