@@ -48,15 +48,15 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/`](./../rest/api/user/v1beta0/{envId}/farm-roles/)
   + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/)
+  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/farm-roles/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/", 
-        "/{envId}/farm-roles/"
+        "/{envId}/farms/{farmId}/farm-roles/", 
+        "/{envId}/farm-roles/{farmRoleId}/"
       ], 
       "properties": {
         "meta": {

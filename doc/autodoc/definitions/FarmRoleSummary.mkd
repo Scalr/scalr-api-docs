@@ -30,17 +30,6 @@ Property of type: `string`.
 To filter on this field, use: `platform=...`.
 
 
-### `farm` (required, create-only, filterable) ###
-
-Farm this Farm Role should be added to. This is optional when POST-ing to /{envId}/farms/{farmId}/farm-roles/
-
-
-An object of type [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd).
-
-To filter on this field, pass the `id` property of the [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd) object you are referencing,
-e.g.: `farm=...`.
-
-
 ### `alias` (optional) ###
 
 The Alias for this Farm Role. If this isn't provided, it will default to the Role's name (possibly with '-n' appended if the Role name is already taken)
@@ -62,6 +51,17 @@ Property of type: `integer`.
 To filter on this field, use: `id=...`.
 
 
+### `farm` (read-only, filterable) ###
+
+Farm this Farm Role should be added to
+
+
+An object of type [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd) object you are referencing,
+e.g.: `farm=...`.
+
+
 
 
 
@@ -69,16 +69,13 @@ To filter on this field, use: `id=...`.
 
     {
       "required": [
-        "farm", 
         "role", 
         "platform"
       ], 
-      "x-createOnly": [
-        "farm"
-      ], 
       "properties": {
         "farm": {
-          "description": "Farm this Farm Role should be added to. This is optional when POST-ing to /{envId}/farms/{farmId}/farm-roles/", 
+          "readOnly": true, 
+          "description": "Farm this Farm Role should be added to", 
           "$ref": "#/definitions/FarmForeignKey"
         }, 
         "alias": {

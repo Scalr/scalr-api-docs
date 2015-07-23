@@ -57,13 +57,13 @@ objects of type [`FarmRoleSummary`](./../definitions/FarmRoleSummary.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/`](./../rest/api/user/v1beta0/{envId}/farm-roles/)
+  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/farm-roles/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/farm-roles/"
+        "/{envId}/farms/{farmId}/farm-roles/"
       ], 
       "properties": {
         "pagination": {

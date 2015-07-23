@@ -95,6 +95,7 @@ To filter on this field, use: `id=...`.
   + [`/{envId}/farms/{farmId}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/)
   + [`/{envId}/farms/{farmId}/actions/launch/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/actions/launch/)
   + [`/{envId}/farms/{farmId}/actions/terminate/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/actions/terminate/)
+  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/farm-roles/)
   + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
   + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
 
@@ -102,6 +103,7 @@ To filter on this field, use: `id=...`.
 
     {
       "x-usedIn": [
+        "/{envId}/farms/{farmId}/farm-roles/", 
         "/{envId}/farms/{farmId}/actions/terminate/", 
         "/{envId}/farms/{farmId}/global-variables/", 
         "/{envId}/farms/{farmId}/", 
