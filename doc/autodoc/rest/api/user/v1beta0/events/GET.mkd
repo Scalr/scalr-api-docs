@@ -105,6 +105,13 @@ The response body is an object of type:
             "schema": {
               "$ref": "#/definitions/Event"
             }
+          }, 
+          {
+            "required": false, 
+            "type": "boolean", 
+            "description": "Forces the replacement of the Events declared at lower scopes.", 
+            "in": "query", 
+            "name": "replace"
           }
         ], 
         "responses": {

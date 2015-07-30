@@ -6,6 +6,18 @@ Create a new Custom Event in this Account.
 
 
 
+### Query Parameters ###
+
+Query parameters are passed as GET parameters (e.g. `?query=value`).
+
+#### `replace` ####
+
+Forces the replacement of the Events declared at lower scopes.
+
+Parameter of type: `boolean`.
+
+
+
 
 
 ### Request Body ###
@@ -124,6 +136,13 @@ The response body is an object of type:
             "schema": {
               "$ref": "#/definitions/Event"
             }
+          }, 
+          {
+            "required": false, 
+            "type": "boolean", 
+            "description": "Forces the replacement of the Events declared at lower scopes.", 
+            "in": "query", 
+            "name": "replace"
           }
         ], 
         "responses": {
