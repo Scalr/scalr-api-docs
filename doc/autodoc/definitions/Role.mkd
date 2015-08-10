@@ -41,6 +41,17 @@ To filter on this field, pass the `id` property of the [`RoleCategoryForeignKey`
 e.g.: `category=...`.
 
 
+### `quickStart` (optional, filterable) ###
+
+Whether it is QuickStart Role
+
+
+Property of type: `boolean`.
+
+
+To filter on this field, use: `quickStart=...`.
+
+
 ### `description` (optional) ###
 
 
@@ -49,6 +60,17 @@ e.g.: `category=...`.
 Property of type: `string`.
 
 
+
+
+### `deprecated` (optional, filterable) ###
+
+Whether the role is deprecated
+
+
+Property of type: `boolean`.
+
+
+To filter on this field, use: `deprecated=...`.
 
 
 ### `scope` (read-only, filterable) ###
@@ -116,6 +138,13 @@ To filter on this field, use: `id=...`.
         "description": {
           "type": "string"
         }, 
+        "deprecated": {
+          "type": "boolean", 
+          "description": "Whether the role is deprecated"
+        }, 
+        "name": {
+          "type": "string"
+        }, 
         "scope": {
           "readOnly": true, 
           "enum": [
@@ -135,8 +164,9 @@ To filter on this field, use: `id=...`.
           "readOnly": true, 
           "type": "integer"
         }, 
-        "name": {
-          "type": "string"
+        "quickStart": {
+          "type": "boolean", 
+          "description": "Whether it is QuickStart Role"
         }
       }, 
       "x-filterable": [
@@ -144,7 +174,9 @@ To filter on this field, use: `id=...`.
         "name", 
         "os", 
         "category", 
-        "scope"
+        "scope", 
+        "quickStart", 
+        "deprecated"
       ], 
       "required": [
         "name", 
