@@ -40,18 +40,19 @@ Property of type: `string`.
  
 The following are valid values for the `cloudPlatform` property:
   + `ec2`
-  + `rackspace`
-  + `eucalyptus`
   + `gce`
-  + `openstack`
-  + `ecs`
-  + `ocs`
-  + `nebula`
-  + `contrail`
-  + `rackspacengus`
-  + `rackspacenguk`
+  + `azure`
   + `cloudstack`
   + `idcf`
+  + `openstack`
+  + `ocs`
+  + `rackspacenguk`
+  + `rackspacengus`
+  + `nebula`
+  + `hpcloud`
+  + `mirantis`
+  + `vio`
+  + `cisco`
 
 To filter on this field, use: `cloudPlatform=...`.
 
@@ -320,18 +321,19 @@ Property of type: `string`.
         "cloudPlatform": {
           "enum": [
             "ec2", 
-            "rackspace", 
-            "eucalyptus", 
             "gce", 
-            "openstack", 
-            "ecs", 
-            "ocs", 
-            "nebula", 
-            "contrail", 
-            "rackspacengus", 
-            "rackspacenguk", 
+            "azure", 
             "cloudstack", 
-            "idcf"
+            "idcf", 
+            "openstack", 
+            "ocs", 
+            "rackspacenguk", 
+            "rackspacengus", 
+            "nebula", 
+            "hpcloud", 
+            "mirantis", 
+            "vio", 
+            "cisco"
           ], 
           "type": "string", 
           "description": "Cloud Platform this resources resides in."
