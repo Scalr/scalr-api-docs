@@ -48,7 +48,6 @@ The following are valid values for the `cloudPlatform` property:
   + `ocs`
   + `rackspacenguk`
   + `rackspacengus`
-  + `nebula`
   + `hpcloud`
   + `mirantis`
   + `vio`
@@ -329,7 +328,6 @@ Property of type: `string`.
             "ocs", 
             "rackspacenguk", 
             "rackspacengus", 
-            "nebula", 
             "hpcloud", 
             "mirantis", 
             "vio", 
