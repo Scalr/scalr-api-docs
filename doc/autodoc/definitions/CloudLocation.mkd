@@ -26,7 +26,6 @@ The following are valid values for the `cloudPlatform` property:
   + `ocs`
   + `rackspacenguk`
   + `rackspacengus`
-  + `nebula`
   + `hpcloud`
   + `mirantis`
   + `vio`
@@ -74,7 +73,6 @@ To filter on this field, use: `cloudLocation=...`.
             "ocs", 
             "rackspacenguk", 
             "rackspacengus", 
-            "nebula", 
             "hpcloud", 
             "mirantis", 
             "vio", 
