@@ -8,7 +8,7 @@
 
 ## Properties ##
 
-### `osType` (required, filterable) ###
+### `osType` (required, create-only, filterable) ###
 
 Type of OS this Script should execute on. This will influence Orchestration Rules, an will trigger validation on individual ScriptVersion's you upload.
 
@@ -132,6 +132,9 @@ Property of type: `string`.
         "/{envId}/scripts/{scriptId}/", 
         "/{envId}/scripts/", 
         "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
+      ], 
+      "x-createOnly": [
+        "osType"
       ], 
       "properties": {
         "timeoutDefault": {
