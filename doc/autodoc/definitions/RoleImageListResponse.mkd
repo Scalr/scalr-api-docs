@@ -57,12 +57,15 @@ objects of type [`RoleImage`](./../definitions/RoleImage.mkd).
 
 ## Used in ##
 
+  + [`/roles/{roleId}/images/`](./../rest/api/account/v1beta0/roles/{roleId}/images/)
+
   + [`/{envId}/roles/{roleId}/images/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
+        "/roles/{roleId}/images/",
         "/{envId}/roles/{roleId}/images/"
       ], 
       "properties": {

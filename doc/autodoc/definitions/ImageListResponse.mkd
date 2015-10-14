@@ -57,12 +57,15 @@ objects of type [`Image`](./../definitions/Image.mkd).
 
 ## Used in ##
 
+  + [`/images/`](./../rest/api/account/v1beta0/images/)
+
   + [`/{envId}/images/`](./../rest/api/user/v1beta0/{envId}/images/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
+        "/images/",
         "/{envId}/images/"
       ], 
       "properties": {

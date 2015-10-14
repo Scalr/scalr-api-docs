@@ -52,8 +52,9 @@ To filter on this field, use: `scope=...`.
 
 ## Used in ##
 
-  + [`/events/`](./../rest/api/user/v1beta0/events/)
-  + [`/events/{eventId}/`](./../rest/api/user/v1beta0/events/{eventId}/)
+  + [`/events/`](./../rest/api/account/v1beta0/events/)
+  + [`/events/{eventId}/`](./../rest/api/account/v1beta0/events/{eventId}/)
+
   + [`/{envId}/events/`](./../rest/api/user/v1beta0/{envId}/events/)
   + [`/{envId}/events/{eventId}/`](./../rest/api/user/v1beta0/{envId}/events/{eventId}/)
 
@@ -61,10 +62,10 @@ To filter on this field, use: `scope=...`.
 
     {
       "x-usedIn": [
-        "/events/", 
+        "/events/",
+        "/events/{eventId}/",
         "/{envId}/events/", 
-        "/{envId}/events/{eventId}/", 
-        "/events/{eventId}/"
+        "/{envId}/events/{eventId}/"
       ], 
       "x-createOnly": [
         "id"

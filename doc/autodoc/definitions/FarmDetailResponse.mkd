@@ -57,8 +57,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
-        "/{envId}/farms/{farmId}/actions/terminate/", 
         "/{envId}/farms/{farmId}/", 
+        "/{envId}/farms/{farmId}/actions/terminate/", 
         "/{envId}/farms/{farmId}/actions/launch/", 
         "/{envId}/farms/"
       ], 

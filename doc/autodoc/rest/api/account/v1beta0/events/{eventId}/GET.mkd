@@ -1,4 +1,4 @@
-# `GET /api/user/v1beta0/events/{eventId}/` #
+# `GET /api/account/v1beta0/events/{eventId}/` #
 
 Retrieve an Event.
 
@@ -114,7 +114,7 @@ The response body is an object of type:
 
     {
       "delete": {
-        "description": "Delete this Event from this Account.", 
+        "description": "Delete the Event from the Account.", 
         "responses": {
           "400": {
             "x-errorCodes": [

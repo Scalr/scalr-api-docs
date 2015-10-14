@@ -34,6 +34,9 @@ e.g.: `image=...`.
 
 ## Used in ##
 
+  + [`/roles/{roleId}/images/`](./../rest/api/account/v1beta0/roles/{roleId}/images/)
+  + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/account/v1beta0/roles/{roleId}/images/{imageId}/actions/replace/)
+
   + [`/{envId}/roles/{roleId}/images/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/)
   + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
 
@@ -49,6 +52,8 @@ e.g.: `image=...`.
         }
       }, 
       "x-usedIn": [
+        "/roles/{roleId}/images/",
+        "/roles/{roleId}/images/{imageId}/actions/replace/",
         "/{envId}/roles/{roleId}/images/", 
         "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/"
       ], 

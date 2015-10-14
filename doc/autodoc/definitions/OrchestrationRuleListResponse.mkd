@@ -57,12 +57,15 @@ objects of type [`OrchestrationRule`](./../definitions/OrchestrationRule.mkd).
 
 ## Used in ##
 
+  + [`/roles/{roleId}/orchestration-rules/`](./../rest/api/account/v1beta0/roles/{roleId}/orchestration-rules/)
+
   + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
+        "/roles/{roleId}/orchestration-rules/",
         "/{envId}/roles/{roleId}/orchestration-rules/"
       ], 
       "properties": {

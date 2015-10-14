@@ -104,9 +104,9 @@ To filter on this field, use: `id=...`.
     {
       "x-usedIn": [
         "/{envId}/farms/{farmId}/farm-roles/", 
+        "/{envId}/farms/{farmId}/", 
         "/{envId}/farms/{farmId}/actions/terminate/", 
         "/{envId}/farms/{farmId}/global-variables/", 
-        "/{envId}/farms/{farmId}/", 
         "/{envId}/farms/{farmId}/actions/launch/", 
         "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
         "/{envId}/farms/"

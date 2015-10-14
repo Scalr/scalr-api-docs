@@ -57,12 +57,15 @@ objects of type [`Role`](./../definitions/Role.mkd).
 
 ## Used in ##
 
+  + [`/roles/`](./../rest/api/account/v1beta0/roles/)
+
   + [`/{envId}/roles/`](./../rest/api/user/v1beta0/{envId}/roles/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
+        "/roles/",
         "/{envId}/roles/"
       ], 
       "properties": {

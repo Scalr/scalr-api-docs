@@ -48,6 +48,9 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
+  + [`/roles/{roleId}/orchestration-rules/`](./../rest/api/account/v1beta0/roles/{roleId}/orchestration-rules/)
+  + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/account/v1beta0/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+
   + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/)
   + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
 
@@ -55,6 +58,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
+        "/roles/{roleId}/orchestration-rules/",
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/",
         "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/{envId}/roles/{roleId}/orchestration-rules/"
       ], 

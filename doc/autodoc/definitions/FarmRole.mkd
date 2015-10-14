@@ -105,9 +105,9 @@ e.g.: `farm=...`.
       "x-usedIn": [
         "/{envId}/farms/{farmId}/farm-roles/", 
         "/{envId}/farm-roles/{farmRoleId}/scaling/", 
-        "/{envId}/farm-roles/{farmRoleId}/placement/", 
         "/{envId}/farm-roles/{farmRoleId}/instance/", 
-        "/{envId}/farm-roles/{farmRoleId}/"
+        "/{envId}/farm-roles/{farmRoleId}/", 
+        "/{envId}/farm-roles/{farmRoleId}/placement/"
       ], 
       "properties": {
         "placement": {

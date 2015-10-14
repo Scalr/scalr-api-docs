@@ -1,6 +1,6 @@
-# `PATCH /api/user/v1beta0/events/{eventId}/` #
+# `GET /api/account/v1beta0/roles/{roleId}/` #
 
-Change Event attributes.
+Retrieve a Role.
 
 ## Request Parameters #
 
@@ -8,28 +8,16 @@ Change Event attributes.
 
 Path parameters are included in the URL.
 
-#### `eventId` ####
+#### `roleId` ####
 
-The ID of a Event object.
+The ID of a Role object.
 
-Parameter of type: `string`.
-
-
+Parameter of type: `integer`.
 
 
 
 
 
-### Request Body ###
-
-The request body parameter is passed as the body of the request.
-
-#### `eventObject` ####
-
-The JSON representation of a Event object.
-
-
-An object of type: [`Event`](./../../../../../../definitions/Event.mkd).
 
 
 
@@ -40,10 +28,10 @@ An object of type: [`Event`](./../../../../../../definitions/Event.mkd).
 
 ### 200 ###
 
-The JSON representation of a Event object.
+The JSON representation of a Role object.
 
 The response body is an object of type:
-[`EventDetailResponse`](./../../../../../../definitions/EventDetailResponse.mkd).
+[`RoleDetailResponse`](./../../../../../../definitions/RoleDetailResponse.mkd).
 
 
 
@@ -126,7 +114,7 @@ The response body is an object of type:
 
     {
       "delete": {
-        "description": "Delete this Event from this Account.", 
+        "description": "Delete specified Role from the Account.", 
         "responses": {
           "400": {
             "x-errorCodes": [
@@ -238,7 +226,7 @@ The response body is an object of type:
         }
       }, 
       "get": {
-        "description": "Retrieve an Event.", 
+        "description": "Retrieve a Role.", 
         "responses": {
           "400": {
             "x-errorCodes": [
@@ -311,9 +299,9 @@ The response body is an object of type:
             }
           }, 
           "200": {
-            "description": "The JSON representation of a Event object.", 
+            "description": "The JSON representation of a Role object.", 
             "schema": {
-              "$ref": "#/definitions/EventDetailResponse"
+              "$ref": "#/definitions/RoleDetailResponse"
             }
           }, 
           "404": {
@@ -338,25 +326,25 @@ The response body is an object of type:
       "parameters": [
         {
           "x-references": {
-            "$ref": "#/definitions/Event"
+            "$ref": "#/definitions/Role"
           }, 
-          "description": "The ID of a Event object.", 
+          "description": "The ID of a Role object.", 
           "in": "path", 
           "required": true, 
-          "type": "string", 
-          "name": "eventId"
+          "type": "integer", 
+          "name": "roleId"
         }
       ], 
       "patch": {
-        "description": "Change Event attributes.", 
+        "description": "Change Role attributes.", 
         "parameters": [
           {
             "required": true, 
             "in": "body", 
-            "description": "The JSON representation of a Event object.", 
-            "name": "eventObject", 
+            "description": "The JSON representation of a Role object.", 
+            "name": "roleObject", 
             "schema": {
-              "$ref": "#/definitions/Event"
+              "$ref": "#/definitions/Role"
             }
           }
         ], 
@@ -432,9 +420,9 @@ The response body is an object of type:
             }
           }, 
           "200": {
-            "description": "The JSON representation of a Event object.", 
+            "description": "The JSON representation of a Role object.", 
             "schema": {
-              "$ref": "#/definitions/EventDetailResponse"
+              "$ref": "#/definitions/RoleDetailResponse"
             }
           }, 
           "404": {

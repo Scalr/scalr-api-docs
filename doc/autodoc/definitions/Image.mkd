@@ -219,6 +219,12 @@ Property of type: `string`.
 
 ## Used in ##
 
+  + [`/images/`](./../rest/api/account/v1beta0/images/)
+  + [`/images/{imageId}/`](./../rest/api/account/v1beta0/images/{imageId}/)
+  + [`/images/{imageId}/actions/copy/`](./../rest/api/account/v1beta0/images/{imageId}/actions/copy/)
+  + [`/roles/{roleId}/images/{imageId}/`](./../rest/api/account/v1beta0/roles/{roleId}/images/{imageId}/)
+  + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/account/v1beta0/roles/{roleId}/images/{imageId}/actions/replace/)
+
   + [`/{envId}/images/`](./../rest/api/user/v1beta0/{envId}/images/)
   + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/)
   + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/actions/copy/)
@@ -229,6 +235,11 @@ Property of type: `string`.
 
     {
       "x-usedIn": [
+        "/images/{imageId}/",
+        "/images/",
+        "/roles/{roleId}/images/{imageId}/actions/replace/",
+        "/roles/{roleId}/images/{imageId}/",
+        "/images/{imageId}/actions/copy/",
         "/{envId}/images/{imageId}/actions/copy/", 
         "/{envId}/roles/{roleId}/images/{imageId}/", 
         "/{envId}/images/", 
