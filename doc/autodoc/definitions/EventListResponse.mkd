@@ -58,14 +58,13 @@ objects of type [`Event`](./../definitions/Event.mkd).
 ## Used in ##
 
   + [`/events/`](./../rest/api/account/v1beta0/events/)
-
   + [`/{envId}/events/`](./../rest/api/user/v1beta0/{envId}/events/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/events/",
+        "/events/", 
         "/{envId}/events/"
       ], 
       "properties": {

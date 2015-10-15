@@ -21,6 +21,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
+  + [`/cost-centers/`](./../rest/api/account/v1beta0/cost-centers/)
+  + [`/cost-centers/{costCenterId}/`](./../rest/api/account/v1beta0/cost-centers/{costCenterId}/)
   + [`/events/`](./../rest/api/account/v1beta0/events/)
   + [`/events/{eventId}/`](./../rest/api/account/v1beta0/events/{eventId}/)
   + [`/images/`](./../rest/api/account/v1beta0/images/)
@@ -37,7 +39,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/account/v1beta0/roles/{roleId}/images/{imageId}/actions/replace/)
   + [`/roles/{roleId}/orchestration-rules/`](./../rest/api/account/v1beta0/roles/{roleId}/orchestration-rules/)
   + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/account/v1beta0/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
-
   + [`/{envId}/cost-centers/`](./../rest/api/user/v1beta0/{envId}/cost-centers/)
   + [`/{envId}/cost-centers/{costCenterId}/`](./../rest/api/user/v1beta0/{envId}/cost-centers/{costCenterId}/)
   + [`/{envId}/events/`](./../rest/api/user/v1beta0/{envId}/events/)
@@ -80,22 +81,24 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
-        "/images/{imageId}/",
-        "/events/",
-        "/roles/{roleId}/global-variables/",
-        "/os/",
-        "/roles/{roleId}/global-variables/{globalVariableName}/",
-        "/roles/{roleId}/orchestration-rules/",
-        "/roles/{roleId}/",
-        "/roles/{roleId}/images/",
-        "/images/",
-        "/events/{eventId}/",
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/",
-        "/roles/{roleId}/images/{imageId}/actions/replace/",
-        "/os/{osId}/",
-        "/roles/{roleId}/images/{imageId}/",
-        "/images/{imageId}/actions/copy/",
-        "/roles/",
+        "/images/{imageId}/", 
+        "/events/", 
+        "/roles/{roleId}/global-variables/", 
+        "/os/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/cost-centers/{costCenterId}/", 
+        "/roles/{roleId}/orchestration-rules/", 
+        "/images/{imageId}/actions/copy/", 
+        "/roles/{roleId}/", 
+        "/roles/{roleId}/images/", 
+        "/images/", 
+        "/events/{eventId}/", 
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/os/{osId}/", 
+        "/roles/{roleId}/images/{imageId}/", 
+        "/cost-centers/", 
+        "/roles/", 
         "/{envId}/scripts/{scriptId}/script-versions/", 
         "/{envId}/os/", 
         "/{envId}/scripts/{scriptId}/", 

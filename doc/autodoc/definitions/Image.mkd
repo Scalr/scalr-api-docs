@@ -115,7 +115,7 @@ Property of type: `string`.
 
 ### `status` (read-only, filterable) ###
 
-Current status for this Image. Not that `delete` means deletion is underway, and `failed` means deletion failed
+Current status for this Image. Not that `delete` means deletion is underway, and `failed` means deletion failed.
 
 
 Property of type: `string`.
@@ -131,7 +131,7 @@ To filter on this field, use: `status=...`.
 
 ### `source` (read-only, filterable) ###
 
-Indicates how this Image was created
+Indicates how this Image was created.
 
 
 Property of type: `string`.
@@ -175,7 +175,7 @@ To filter on this field, use: `scope=...`.
 
 ### `lastUsed` (read-only) ###
 
-Date and time when this Image was last used
+Date and time when this Image was last used.
 
 
 Property of type: `string`.
@@ -196,7 +196,7 @@ To filter on this field, use: `id=...`.
 
 ### `deprecated` (read-only, filterable) ###
 
-Whether this Image is deprecated
+Whether this Image is deprecated.
 
 
 Property of type: `boolean`.
@@ -207,7 +207,7 @@ To filter on this field, use: `deprecated=...`.
 
 ### `added` (read-only) ###
 
-Date and time when this Image was created
+Date and time when this Image was created.
 
 
 Property of type: `string`.
@@ -224,7 +224,6 @@ Property of type: `string`.
   + [`/images/{imageId}/actions/copy/`](./../rest/api/account/v1beta0/images/{imageId}/actions/copy/)
   + [`/roles/{roleId}/images/{imageId}/`](./../rest/api/account/v1beta0/roles/{roleId}/images/{imageId}/)
   + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/account/v1beta0/roles/{roleId}/images/{imageId}/actions/replace/)
-
   + [`/{envId}/images/`](./../rest/api/user/v1beta0/{envId}/images/)
   + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/)
   + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/actions/copy/)
@@ -234,12 +233,19 @@ Property of type: `string`.
 ## Swagger Definition ##
 
     {
+      "required": [
+        "name", 
+        "cloudPlatform", 
+        "cloudImageId", 
+        "architecture", 
+        "os"
+      ], 
       "x-usedIn": [
-        "/images/{imageId}/",
-        "/images/",
-        "/roles/{roleId}/images/{imageId}/actions/replace/",
-        "/roles/{roleId}/images/{imageId}/",
-        "/images/{imageId}/actions/copy/",
+        "/images/{imageId}/", 
+        "/images/{imageId}/actions/copy/", 
+        "/images/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/roles/{roleId}/images/{imageId}/", 
         "/{envId}/images/{imageId}/actions/copy/", 
         "/{envId}/roles/{roleId}/images/{imageId}/", 
         "/{envId}/images/", 
@@ -255,15 +261,18 @@ Property of type: `string`.
             "failed"
           ], 
           "type": "string", 
-          "description": "Current status for this Image. Not that `delete` means deletion is underway, and `failed` means deletion failed"
+          "description": "Current status for this Image. Not that `delete` means deletion is underway, and `failed` means deletion failed."
         }, 
         "added": {
           "readOnly": true, 
           "type": "string", 
-          "description": "Date and time when this Image was created", 
+          "description": "Date and time when this Image was created.", 
           "format": "date-time"
         }, 
         "cloudImageId": {
+          "type": "string"
+        }, 
+        "name": {
           "type": "string"
         }, 
         "statusError": {
@@ -271,30 +280,16 @@ Property of type: `string`.
           "type": "string", 
           "description": "If the Image is in a failed state, this indicates why."
         }, 
-        "lastUsed": {
-          "readOnly": true, 
-          "type": "string", 
-          "description": "Date and time when this Image was last used", 
-          "format": "date-time"
-        }, 
-        "os": {
-          "$ref": "#/definitions/OsForeignKey"
-        }, 
-        "id": {
-          "readOnly": true, 
-          "type": "string"
-        }, 
-        "size": {
-          "readOnly": true, 
-          "type": "integer"
-        }, 
-        "name": {
-          "type": "string"
-        }, 
         "deprecated": {
           "readOnly": true, 
           "type": "boolean", 
-          "description": "Whether this Image is deprecated"
+          "description": "Whether this Image is deprecated."
+        }, 
+        "lastUsed": {
+          "readOnly": true, 
+          "type": "string", 
+          "description": "Date and time when this Image was last used.", 
+          "format": "date-time"
         }, 
         "source": {
           "readOnly": true, 
@@ -303,7 +298,7 @@ Property of type: `string`.
             "BundleTask"
           ], 
           "type": "string", 
-          "description": "Indicates how this Image was created"
+          "description": "Indicates how this Image was created."
         }, 
         "cloudLocation": {
           "type": "string", 
@@ -315,6 +310,11 @@ Property of type: `string`.
             "x86_64"
           ], 
           "type": "string"
+        }, 
+        "type": {
+          "readOnly": true, 
+          "type": "string", 
+          "description": "(Only used on EC2 currently) Whether this Image is HVM or EBS."
         }, 
         "scope": {
           "readOnly": true, 
@@ -347,10 +347,16 @@ Property of type: `string`.
           "type": "string", 
           "description": "Cloud Platform this resources resides in."
         }, 
-        "type": {
+        "os": {
+          "$ref": "#/definitions/OsForeignKey"
+        }, 
+        "id": {
           "readOnly": true, 
-          "type": "string", 
-          "description": "(Only used on EC2 currently) Whether this Image is HVM or EBS."
+          "type": "string"
+        }, 
+        "size": {
+          "readOnly": true, 
+          "type": "integer"
         }
       }, 
       "x-filterable": [
@@ -364,13 +370,6 @@ Property of type: `string`.
         "source", 
         "status", 
         "deprecated", 
-        "os"
-      ], 
-      "required": [
-        "name", 
-        "cloudPlatform", 
-        "cloudImageId", 
-        "architecture", 
         "os"
       ]
     }

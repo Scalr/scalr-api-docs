@@ -90,14 +90,20 @@ To filter on this field, use: `family=...`.
 ## Used in ##
 
   + [`/os/{osId}/`](./../rest/api/account/v1beta0/os/{osId}/)
-
   + [`/{envId}/os/{osId}/`](./../rest/api/user/v1beta0/{envId}/os/{osId}/)
 
 ## Swagger Definition ##
 
     {
+      "required": [
+        "id", 
+        "name", 
+        "family", 
+        "generation", 
+        "version"
+      ], 
       "x-usedIn": [
-        "/os/{osId}/",
+        "/os/{osId}/", 
         "/{envId}/os/{osId}/"
       ], 
       "properties": {
@@ -147,12 +153,5 @@ To filter on this field, use: `family=...`.
         "name", 
         "family", 
         "generation"
-      ], 
-      "required": [
-        "id", 
-        "name", 
-        "family", 
-        "generation", 
-        "version"
       ]
     }

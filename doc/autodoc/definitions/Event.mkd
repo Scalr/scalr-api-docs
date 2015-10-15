@@ -54,21 +54,20 @@ To filter on this field, use: `scope=...`.
 
   + [`/events/`](./../rest/api/account/v1beta0/events/)
   + [`/events/{eventId}/`](./../rest/api/account/v1beta0/events/{eventId}/)
-
   + [`/{envId}/events/`](./../rest/api/user/v1beta0/{envId}/events/)
   + [`/{envId}/events/{eventId}/`](./../rest/api/user/v1beta0/{envId}/events/{eventId}/)
 
 ## Swagger Definition ##
 
     {
+      "required": [
+        "id"
+      ], 
       "x-usedIn": [
-        "/events/",
-        "/events/{eventId}/",
+        "/events/", 
+        "/events/{eventId}/", 
         "/{envId}/events/", 
         "/{envId}/events/{eventId}/"
-      ], 
-      "x-createOnly": [
-        "id"
       ], 
       "properties": {
         "scope": {
@@ -95,7 +94,7 @@ To filter on this field, use: `scope=...`.
         "id", 
         "scope"
       ], 
-      "required": [
+      "x-createOnly": [
         "id"
       ]
     }

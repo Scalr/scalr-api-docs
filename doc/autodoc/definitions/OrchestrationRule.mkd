@@ -111,16 +111,20 @@ To filter on this field, use: `id=...`.
 
   + [`/roles/{roleId}/orchestration-rules/`](./../rest/api/account/v1beta0/roles/{roleId}/orchestration-rules/)
   + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/account/v1beta0/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
-
   + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/)
   + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
 
 ## Swagger Definition ##
 
     {
+      "required": [
+        "trigger", 
+        "action", 
+        "target"
+      ], 
       "x-usedIn": [
-        "/roles/{roleId}/orchestration-rules/",
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/",
+        "/roles/{roleId}/orchestration-rules/", 
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/{envId}/roles/{roleId}/orchestration-rules/"
       ], 
@@ -129,12 +133,12 @@ To filter on this field, use: `id=...`.
           "$ref": "#/definitions/Target"
         }, 
         "runAs": {
-          "descrition": "User the Orchestration Rule should execute as. Defaults to root / Administrator when null.", 
-          "type": "string"
+          "type": "string", 
+          "descrition": "User the Orchestration Rule should execute as. Defaults to root / Administrator when null."
         }, 
-        "id": {
-          "readOnly": true, 
-          "type": "integer"
+        "order": {
+          "type": "integer", 
+          "description": "When should this Orchestration Rule execute relative to other Orchestration Rules that use the same triggeringEvent? Default is relative to existing Rules."
         }, 
         "trigger": {
           "$ref": "#/definitions/Trigger"
@@ -142,6 +146,10 @@ To filter on this field, use: `id=...`.
         "timeout": {
           "type": "integer", 
           "description": "How long should Scalr wait before aborting the execution of this Orchestration Rule? Defaults to the action's default when null."
+        }, 
+        "blocking": {
+          "type": "boolean", 
+          "description": "Should this Orchestration Rule's execution delay the execution of further Orchestration Rules and triggering of further Events? Defaults to the action's default when null."
         }, 
         "action": {
           "$ref": "#/definitions/Action"
@@ -158,22 +166,13 @@ To filter on this field, use: `id=...`.
           ], 
           "type": "string"
         }, 
-        "order": {
-          "type": "integer", 
-          "description": "When should this Orchestration Rule execute relative to other Orchestration Rules that use the same triggeringEvent? Default is relative to existing Rules."
-        }, 
-        "blocking": {
-          "type": "boolean", 
-          "description": "Should this Orchestration Rule's execution delay the execution of further Orchestration Rules and triggering of further Events? Defaults to the action's default when null."
+        "id": {
+          "readOnly": true, 
+          "type": "integer"
         }
       }, 
       "x-filterable": [
         "id", 
         "scope"
-      ], 
-      "required": [
-        "trigger", 
-        "action", 
-        "target"
       ]
     }

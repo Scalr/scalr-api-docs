@@ -43,7 +43,7 @@ e.g.: `category=...`.
 
 ### `quickStart` (optional, filterable) ###
 
-Whether it is QuickStart Role
+Whether it is QuickStart Role.
 
 
 Property of type: `boolean`.
@@ -64,7 +64,7 @@ Property of type: `string`.
 
 ### `deprecated` (optional, filterable) ###
 
-Whether the role is deprecated
+Whether the Role is deprecated.
 
 
 Property of type: `boolean`.
@@ -116,7 +116,6 @@ To filter on this field, use: `id=...`.
   + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/account/v1beta0/roles/{roleId}/images/{imageId}/actions/replace/)
   + [`/roles/{roleId}/orchestration-rules/`](./../rest/api/account/v1beta0/roles/{roleId}/orchestration-rules/)
   + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/account/v1beta0/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
-
   + [`/{envId}/roles/`](./../rest/api/user/v1beta0/{envId}/roles/)
   + [`/{envId}/roles/{roleId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/)
   + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/)
@@ -130,16 +129,21 @@ To filter on this field, use: `id=...`.
 ## Swagger Definition ##
 
     {
+      "required": [
+        "name", 
+        "category", 
+        "os"
+      ], 
       "x-usedIn": [
-        "/roles/{roleId}/global-variables/",
-        "/roles/{roleId}/global-variables/{globalVariableName}/",
-        "/roles/{roleId}/orchestration-rules/",
-        "/roles/{roleId}/",
-        "/roles/{roleId}/images/",
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/",
-        "/roles/{roleId}/images/{imageId}/actions/replace/",
-        "/roles/{roleId}/images/{imageId}/",
-        "/roles/",
+        "/roles/{roleId}/global-variables/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/roles/{roleId}/orchestration-rules/", 
+        "/roles/{roleId}/", 
+        "/roles/{roleId}/images/", 
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/roles/{roleId}/images/{imageId}/", 
+        "/roles/", 
         "/{envId}/roles/{roleId}/", 
         "/{envId}/roles/{roleId}/images/{imageId}/", 
         "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
@@ -159,10 +163,11 @@ To filter on this field, use: `id=...`.
         }, 
         "deprecated": {
           "type": "boolean", 
-          "description": "Whether the role is deprecated"
+          "description": "Whether the Role is deprecated."
         }, 
-        "name": {
-          "type": "string"
+        "quickStart": {
+          "type": "boolean", 
+          "description": "Whether it is QuickStart Role."
         }, 
         "scope": {
           "readOnly": true, 
@@ -183,9 +188,8 @@ To filter on this field, use: `id=...`.
           "readOnly": true, 
           "type": "integer"
         }, 
-        "quickStart": {
-          "type": "boolean", 
-          "description": "Whether it is QuickStart Role"
+        "name": {
+          "type": "string"
         }
       }, 
       "x-filterable": [
@@ -196,10 +200,5 @@ To filter on this field, use: `id=...`.
         "scope", 
         "quickStart", 
         "deprecated"
-      ], 
-      "required": [
-        "name", 
-        "category", 
-        "os"
       ]
     }

@@ -36,13 +36,22 @@ e.g.: `image=...`.
 
   + [`/roles/{roleId}/images/`](./../rest/api/account/v1beta0/roles/{roleId}/images/)
   + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/account/v1beta0/roles/{roleId}/images/{imageId}/actions/replace/)
-
   + [`/{envId}/roles/{roleId}/images/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/)
   + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
 
 ## Swagger Definition ##
 
     {
+      "required": [
+        "role", 
+        "image"
+      ], 
+      "x-usedIn": [
+        "/roles/{roleId}/images/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/{envId}/roles/{roleId}/images/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/"
+      ], 
       "properties": {
         "image": {
           "$ref": "#/definitions/ImageForeignKey"
@@ -51,19 +60,9 @@ e.g.: `image=...`.
           "$ref": "#/definitions/RoleForeignKey"
         }
       }, 
-      "x-usedIn": [
-        "/roles/{roleId}/images/",
-        "/roles/{roleId}/images/{imageId}/actions/replace/",
-        "/{envId}/roles/{roleId}/images/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/"
-      ], 
-      "description": "A Representation of a Role Image. Note that the `role` property is optional when POST-ing to a URL that already includes `{roleId}`.", 
       "x-filterable": [
         "role", 
         "image"
       ], 
-      "required": [
-        "role", 
-        "image"
-      ]
+      "description": "A Representation of a Role Image. Note that the `role` property is optional when POST-ing to a URL that already includes `{roleId}`."
     }

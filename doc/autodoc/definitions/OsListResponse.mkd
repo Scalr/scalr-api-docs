@@ -58,14 +58,13 @@ objects of type [`Os`](./../definitions/Os.mkd).
 ## Used in ##
 
   + [`/os/`](./../rest/api/account/v1beta0/os/)
-
   + [`/{envId}/os/`](./../rest/api/user/v1beta0/{envId}/os/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/os/",
+        "/os/", 
         "/{envId}/os/"
       ], 
       "properties": {

@@ -51,7 +51,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/images/`](./../rest/api/account/v1beta0/images/)
   + [`/images/{imageId}/`](./../rest/api/account/v1beta0/images/{imageId}/)
   + [`/images/{imageId}/actions/copy/`](./../rest/api/account/v1beta0/images/{imageId}/actions/copy/)
-
   + [`/{envId}/images/`](./../rest/api/user/v1beta0/{envId}/images/)
   + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/)
   + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/actions/copy/)
@@ -60,9 +59,9 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
-        "/images/{imageId}/",
-        "/images/",
-        "/images/{imageId}/actions/copy/",
+        "/images/{imageId}/", 
+        "/images/{imageId}/actions/copy/", 
+        "/images/", 
         "/{envId}/images/{imageId}/actions/copy/", 
         "/{envId}/images/", 
         "/{envId}/images/{imageId}/"

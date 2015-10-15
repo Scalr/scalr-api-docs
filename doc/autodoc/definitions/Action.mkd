@@ -8,8 +8,8 @@
 `Action` is an abstract type. When an object of type `Action` is expected, you must pass an object of
 one of the following types:
 
-  + [`UriAction`](./../definitions/UriAction.mkd)
   + [`ChefAction`](./../definitions/ChefAction.mkd)
+  + [`UriAction`](./../definitions/UriAction.mkd)
   + [`ScriptAction`](./../definitions/ScriptAction.mkd)
 
 
@@ -40,10 +40,10 @@ The following are valid values for the `actionType` property:
     {
       "x-concreteTypes": [
         {
-          "$ref": "#/definitions/UriAction"
+          "$ref": "#/definitions/ChefAction"
         }, 
         {
-          "$ref": "#/definitions/ChefAction"
+          "$ref": "#/definitions/UriAction"
         }, 
         {
           "$ref": "#/definitions/ScriptAction"

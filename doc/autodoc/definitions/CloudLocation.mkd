@@ -50,14 +50,16 @@ To filter on this field, use: `cloudLocation=...`.
 ## Used in ##
 
   + [`/images/{imageId}/actions/copy/`](./../rest/api/account/v1beta0/images/{imageId}/actions/copy/)
-
   + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/actions/copy/)
 
 ## Swagger Definition ##
 
     {
+      "required": [
+        "cloudPlatform"
+      ], 
       "x-usedIn": [
-        "/images/{imageId}/actions/copy/",
+        "/images/{imageId}/actions/copy/", 
         "/{envId}/images/{imageId}/actions/copy/"
       ], 
       "properties": {
@@ -88,8 +90,5 @@ To filter on this field, use: `cloudLocation=...`.
       "x-filterable": [
         "cloudPlatform", 
         "cloudLocation"
-      ], 
-      "required": [
-        "cloudPlatform"
       ]
     }

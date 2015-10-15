@@ -55,6 +55,10 @@ Property of type: `string`.
 
     {
       "properties": {
+        "next": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
         "prev": {
           "readOnly": true, 
           "type": "string"
@@ -64,10 +68,6 @@ Property of type: `string`.
           "type": "string"
         }, 
         "first": {
-          "readOnly": true, 
-          "type": "string"
-        }, 
-        "next": {
           "readOnly": true, 
           "type": "string"
         }

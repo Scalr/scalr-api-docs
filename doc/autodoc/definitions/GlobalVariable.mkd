@@ -140,7 +140,6 @@ Property of type: `string`.
 
   + [`/roles/{roleId}/global-variables/`](./../rest/api/account/v1beta0/roles/{roleId}/global-variables/)
   + [`/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/account/v1beta0/roles/{roleId}/global-variables/{globalVariableName}/)
-
   + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
   + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
   + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/)
@@ -149,16 +148,16 @@ Property of type: `string`.
 ## Swagger Definition ##
 
     {
+      "required": [
+        "name"
+      ], 
       "x-usedIn": [
-        "/roles/{roleId}/global-variables/",
-        "/roles/{roleId}/global-variables/{globalVariableName}/",
+        "/roles/{roleId}/global-variables/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/{envId}/farms/{farmId}/global-variables/", 
         "/{envId}/roles/{roleId}/global-variables/", 
         "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/"
-      ], 
-      "x-createOnly": [
-        "name"
       ], 
       "properties": {
         "category": {
@@ -194,15 +193,6 @@ Property of type: `string`.
           "type": "string", 
           "description": "The value declared in the current scope for this variable.  null allows inheritance. Any other value overrides inheritance.  This is ignored if `declaredIn` is not the current scope."
         }, 
-        "computedValue": {
-          "readOnly": true, 
-          "type": "string", 
-          "description": "The value computed by Scalr for this variable once inheritance has been taken into account."
-        }, 
-        "validationPattern": {
-          "type": "string", 
-          "description": "A validation pattern to apply in inner scopes. This is read-only if `declaredIn` is not the current scope."
-        }, 
         "requiredIn": {
           "enum": [
             "scalr", 
@@ -215,6 +205,15 @@ Property of type: `string`.
           "type": "string", 
           "description": "The scope where this variable is required. This is read-only if `declaredIn` is not the current scope."
         }, 
+        "validationPattern": {
+          "type": "string", 
+          "description": "A validation pattern to apply in inner scopes. This is read-only if `declaredIn` is not the current scope."
+        }, 
+        "computedValue": {
+          "readOnly": true, 
+          "type": "string", 
+          "description": "The value computed by Scalr for this variable once inheritance has been taken into account."
+        }, 
         "hidden": {
           "type": "boolean", 
           "description": "Whether this variable is hidden in inner scopes. This is read-only if `declaredIn` is not the current scope."
@@ -223,7 +222,7 @@ Property of type: `string`.
           "type": "string"
         }
       }, 
-      "required": [
+      "x-createOnly": [
         "name"
       ]
     }

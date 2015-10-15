@@ -61,7 +61,7 @@ To filter on this field, use: `id=...`.
       "x-usedIn": [
         "/{envId}/role-categories/{roleCategoryId}/"
       ], 
-      "x-createOnly": [
+      "required": [
         "name"
       ], 
       "properties": {
@@ -90,7 +90,7 @@ To filter on this field, use: `id=...`.
         "name", 
         "scope"
       ], 
-      "required": [
+      "x-createOnly": [
         "name"
       ]
     }
