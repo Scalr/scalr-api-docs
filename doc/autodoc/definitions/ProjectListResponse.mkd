@@ -57,7 +57,7 @@ objects of type [`Project`](./../definitions/Project.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/projects/`](./../rest/api/user/v1beta0/{envId}/projects/)
+  + [`/{envId}/projects/`](./../rest/api/v1beta0/user/{envId}/projects/)
 
 ## Swagger Definition ##
 

@@ -219,16 +219,16 @@ Property of type: `string`.
 
 ## Used in ##
 
-  + [`/images/`](./../rest/api/account/v1beta0/images/)
-  + [`/images/{imageId}/`](./../rest/api/account/v1beta0/images/{imageId}/)
-  + [`/images/{imageId}/actions/copy/`](./../rest/api/account/v1beta0/images/{imageId}/actions/copy/)
-  + [`/roles/{roleId}/images/{imageId}/`](./../rest/api/account/v1beta0/roles/{roleId}/images/{imageId}/)
-  + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/account/v1beta0/roles/{roleId}/images/{imageId}/actions/replace/)
-  + [`/{envId}/images/`](./../rest/api/user/v1beta0/{envId}/images/)
-  + [`/{envId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/)
-  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/user/v1beta0/{envId}/images/{imageId}/actions/copy/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/images/`](./../rest/api/v1beta0/account/images/)
+  + [`/images/{imageId}/`](./../rest/api/v1beta0/account/images/{imageId}/)
+  + [`/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/account/images/{imageId}/actions/copy/)
+  + [`/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/)
+  + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/{envId}/images/`](./../rest/api/v1beta0/user/{envId}/images/)
+  + [`/{envId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/)
+  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/actions/copy/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
 
 ## Swagger Definition ##
 

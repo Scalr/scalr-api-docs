@@ -57,7 +57,7 @@ objects of type [`Script`](./../definitions/Script.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/scripts/`](./../rest/api/user/v1beta0/{envId}/scripts/)
+  + [`/{envId}/scripts/`](./../rest/api/v1beta0/user/{envId}/scripts/)
 
 ## Swagger Definition ##
 

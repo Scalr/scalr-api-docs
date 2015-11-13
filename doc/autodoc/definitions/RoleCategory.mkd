@@ -53,7 +53,7 @@ To filter on this field, use: `id=...`.
 
 ## Used in ##
 
-  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/user/v1beta0/{envId}/role-categories/{roleCategoryId}/)
+  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/user/{envId}/role-categories/{roleCategoryId}/)
 
 ## Swagger Definition ##
 

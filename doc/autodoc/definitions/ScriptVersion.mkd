@@ -53,8 +53,8 @@ Property of type: `string`.
 
 ## Used in ##
 
-  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/user/v1beta0/{envId}/scripts/{scriptId}/script-versions/)
-  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/user/v1beta0/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
 
 ## Swagger Definition ##
 

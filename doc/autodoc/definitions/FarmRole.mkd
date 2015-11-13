@@ -93,17 +93,21 @@ e.g.: `farm=...`.
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/)
-  + [`/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/instance/)
-  + [`/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/placement/)
-  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/scaling/)
-  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/farm-roles/)
+  + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/)
+  + [`/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/instance/)
+  + [`/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/placement/)
+  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
+  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
         "/{envId}/farms/{farmId}/farm-roles/", 
+        "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
+        "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
         "/{envId}/farm-roles/{farmRoleId}/scaling/", 
         "/{envId}/farm-roles/{farmRoleId}/instance/", 
         "/{envId}/farm-roles/{farmRoleId}/", 

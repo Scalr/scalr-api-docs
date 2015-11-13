@@ -57,7 +57,7 @@ objects of type [`Farm`](./../definitions/Farm.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farms/`](./../rest/api/user/v1beta0/{envId}/farms/)
+  + [`/{envId}/farms/`](./../rest/api/v1beta0/user/{envId}/farms/)
 
 ## Swagger Definition ##
 

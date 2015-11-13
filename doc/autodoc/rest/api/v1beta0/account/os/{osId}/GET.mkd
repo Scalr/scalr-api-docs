@@ -1,0 +1,226 @@
+# `GET /api/v1beta0/account/os/{osId}/` #
+
+Retrieve an OS.
+
+## Request Parameters #
+
+### Path Parameters ###
+
+Path parameters are included in the URL.
+
+#### `osId` ####
+
+The ID of a Os object.
+
+Parameter of type: `string`.
+
+
+
+
+
+
+
+
+
+
+## Responses ##
+
+
+### 200 ###
+
+The JSON representation of a Os object.
+
+The response body is an object of type:
+[`OsDetailResponse`](./../../../../../../definitions/OsDetailResponse.mkd).
+
+
+
+### 400 ###
+
+A client-side error was made
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `InvalidStructure`: Your request is structurally incorrect, and was not understood by the API. Check the error message for more information.
++ `InvalidValue`: Your request was understood by the API, but included data that is not acceptable. Check the error message for more information.
++ `BadRequest`: Your request wasn't understood by the API. Check the error message for more information.
+
+
+### 401 ###
+
+Request was not authenticated
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `BadAuthentication`: Your request authentication failed to validate. Check the error message for more information.
+
+
+### 403 ###
+
+Insufficient permissions
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `ScopeViolation`: Your request should be made in a different Scope. Check the error message for more information.
++ `PermissionViolation`: Your request requires permissions you do not have. Check the error message for more information.
+
+
+### 404 ###
+
+Resource not found
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `ObjectNotFound`: The URL you are trying to access does not exist Check the error message for more information.
+
+
+### 409 ###
+
+Conflict with current state
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `ObjectInUse`: The changes you are trying to make aren't possible while this object is in use. Check the error message for more information.
++ `UnicityViolation`: The changes you are trying to make violate a unicity constraint. Check the error message for more information.
+
+
+### 500 ###
+
+A server-side error occured
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "parameters": [
+        {
+          "x-references": {
+            "$ref": "#/definitions/Os"
+          }, 
+          "description": "The ID of a Os object.", 
+          "in": "path", 
+          "required": true, 
+          "type": "string", 
+          "name": "osId"
+        }
+      ], 
+      "get": {
+        "description": "Retrieve an OS.", 
+        "responses": {
+          "400": {
+            "x-errorCodes": [
+              {
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ], 
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "401": {
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ], 
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "403": {
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ], 
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "409": {
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }
+            ], 
+            "description": "Conflict with current state", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "200": {
+            "description": "The JSON representation of a Os object.", 
+            "schema": {
+              "$ref": "#/definitions/OsDetailResponse"
+            }
+          }, 
+          "404": {
+            "x-errorCodes": [
+              {
+                "noDoc": true, 
+                "description": "The route you are trying to access does not exist", 
+                "name": "EndpointNotFound"
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist", 
+                "name": "ObjectNotFound"
+              }
+            ], 
+            "description": "Resource not found", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }
+        }
+      }
+    }
