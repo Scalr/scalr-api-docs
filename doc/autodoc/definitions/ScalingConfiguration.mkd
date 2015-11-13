@@ -42,7 +42,7 @@ Property of type: `boolean`.
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/scaling/)
+  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
 
 ## Swagger Definition ##
 

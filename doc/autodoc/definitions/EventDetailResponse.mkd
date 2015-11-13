@@ -48,10 +48,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/events/`](./../rest/api/account/v1beta0/events/)
-  + [`/events/{eventId}/`](./../rest/api/account/v1beta0/events/{eventId}/)
-  + [`/{envId}/events/`](./../rest/api/user/v1beta0/{envId}/events/)
-  + [`/{envId}/events/{eventId}/`](./../rest/api/user/v1beta0/{envId}/events/{eventId}/)
+  + [`/events/`](./../rest/api/v1beta0/account/events/)
+  + [`/events/{eventId}/`](./../rest/api/v1beta0/account/events/{eventId}/)
+  + [`/{envId}/events/`](./../rest/api/v1beta0/user/{envId}/events/)
+  + [`/{envId}/events/{eventId}/`](./../rest/api/v1beta0/user/{envId}/events/{eventId}/)
 
 ## Swagger Definition ##
 

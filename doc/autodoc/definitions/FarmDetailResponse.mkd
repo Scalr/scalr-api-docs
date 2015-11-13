@@ -48,10 +48,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farms/`](./../rest/api/user/v1beta0/{envId}/farms/)
-  + [`/{envId}/farms/{farmId}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/)
-  + [`/{envId}/farms/{farmId}/actions/launch/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/actions/launch/)
-  + [`/{envId}/farms/{farmId}/actions/terminate/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/actions/terminate/)
+  + [`/{envId}/farms/`](./../rest/api/v1beta0/user/{envId}/farms/)
+  + [`/{envId}/farms/{farmId}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/)
+  + [`/{envId}/farms/{farmId}/actions/launch/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/launch/)
+  + [`/{envId}/farms/{farmId}/actions/terminate/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/terminate/)
 
 ## Swagger Definition ##
 

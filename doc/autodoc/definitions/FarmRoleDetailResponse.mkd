@@ -48,8 +48,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/user/v1beta0/{envId}/farm-roles/{farmRoleId}/)
-  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/farm-roles/)
+  + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/)
+  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
 
 ## Swagger Definition ##
 

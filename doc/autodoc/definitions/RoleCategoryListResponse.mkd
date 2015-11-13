@@ -57,7 +57,7 @@ objects of type [`RoleCategory`](./../definitions/RoleCategory.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/role-categories/`](./../rest/api/user/v1beta0/{envId}/role-categories/)
+  + [`/{envId}/role-categories/`](./../rest/api/v1beta0/user/{envId}/role-categories/)
 
 ## Swagger Definition ##
 

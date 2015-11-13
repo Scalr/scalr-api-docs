@@ -91,13 +91,13 @@ To filter on this field, use: `id=...`.
 
 ## Used in ##
 
-  + [`/{envId}/farms/`](./../rest/api/user/v1beta0/{envId}/farms/)
-  + [`/{envId}/farms/{farmId}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/)
-  + [`/{envId}/farms/{farmId}/actions/launch/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/actions/launch/)
-  + [`/{envId}/farms/{farmId}/actions/terminate/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/actions/terminate/)
-  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/farm-roles/)
-  + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
-  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
+  + [`/{envId}/farms/`](./../rest/api/v1beta0/user/{envId}/farms/)
+  + [`/{envId}/farms/{farmId}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/)
+  + [`/{envId}/farms/{farmId}/actions/launch/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/launch/)
+  + [`/{envId}/farms/{farmId}/actions/terminate/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/terminate/)
+  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
+  + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/)
+  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
 
 ## Swagger Definition ##
 

@@ -48,10 +48,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/roles/{roleId}/orchestration-rules/`](./../rest/api/account/v1beta0/roles/{roleId}/orchestration-rules/)
-  + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/account/v1beta0/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
-  + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/)
-  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/)
+  + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
 
 ## Swagger Definition ##
 

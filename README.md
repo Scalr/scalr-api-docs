@@ -14,11 +14,11 @@ Using this Documentation
 ### Endpoints ###
 
 The endpoints currently exposed in the API are available under the
-[`doc/autodoc/rest/api/user/v1beta0`](./doc/autodoc/rest/api/user/v1beta0) path. Directories map to endpoints,
+[`doc/autodoc/rest/api/v1beta0/user/`](./doc/autodoc/rest/api/v1beta0/user/) path. Directories map to endpoints,
 and files map to methods.
 
-For example, [`doc/autodoc/rest/api/user/v1beta0/{envId}/events/GET.mkd`](./doc/autodoc/rest/api/user/v1beta0/{envId}/events/GET.mkd)
-is documentation for the `GET` method on the `/api/user/v1beta0/{envId}/events/`
+For example, [`doc/autodoc/rest/api/v1beta0/user/{envId}/events/GET.mkd`](./doc/autodoc/rest/api/v1beta0/user/{envId}/events/GET.mkd)
+is documentation for the `GET` method on the `/api/v1beta0/user/{envId}/events/`
 endpoint.
 
 ### Definitions ###

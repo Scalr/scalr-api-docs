@@ -48,12 +48,14 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/roles/{roleId}/global-variables/`](./../rest/api/account/v1beta0/roles/{roleId}/global-variables/)
-  + [`/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/account/v1beta0/roles/{roleId}/global-variables/{globalVariableName}/)
-  + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
-  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
-  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/)
-  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/{globalVariableName}/)
+  + [`/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/)
+  + [`/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/{globalVariableName}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/)
+  + [`/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/)
+  + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/)
+  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
+  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/)
+  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/{globalVariableName}/)
 
 ## Swagger Definition ##
 
@@ -61,6 +63,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
       "x-usedIn": [
         "/roles/{roleId}/global-variables/", 
         "/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
+        "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
         "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/{envId}/farms/{farmId}/global-variables/", 
         "/{envId}/roles/{roleId}/global-variables/", 

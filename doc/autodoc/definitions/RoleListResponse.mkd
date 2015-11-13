@@ -57,8 +57,8 @@ objects of type [`Role`](./../definitions/Role.mkd).
 
 ## Used in ##
 
-  + [`/roles/`](./../rest/api/account/v1beta0/roles/)
-  + [`/{envId}/roles/`](./../rest/api/user/v1beta0/{envId}/roles/)
+  + [`/roles/`](./../rest/api/v1beta0/account/roles/)
+  + [`/{envId}/roles/`](./../rest/api/v1beta0/user/{envId}/roles/)
 
 ## Swagger Definition ##
 

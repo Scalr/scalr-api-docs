@@ -57,15 +57,17 @@ objects of type [`GlobalVariable`](./../definitions/GlobalVariable.mkd).
 
 ## Used in ##
 
-  + [`/roles/{roleId}/global-variables/`](./../rest/api/account/v1beta0/roles/{roleId}/global-variables/)
-  + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/global-variables/)
-  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/user/v1beta0/{envId}/roles/{roleId}/global-variables/)
+  + [`/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/)
+  + [`/{envId}/farm-roles/{farmRoleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/)
+  + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/)
+  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
         "/roles/{roleId}/global-variables/", 
+        "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
         "/{envId}/farms/{farmId}/global-variables/", 
         "/{envId}/roles/{roleId}/global-variables/"
       ], 

@@ -89,8 +89,8 @@ To filter on this field, use: `family=...`.
 
 ## Used in ##
 
-  + [`/os/{osId}/`](./../rest/api/account/v1beta0/os/{osId}/)
-  + [`/{envId}/os/{osId}/`](./../rest/api/user/v1beta0/{envId}/os/{osId}/)
+  + [`/os/{osId}/`](./../rest/api/v1beta0/account/os/{osId}/)
+  + [`/{envId}/os/{osId}/`](./../rest/api/v1beta0/user/{envId}/os/{osId}/)
 
 ## Swagger Definition ##
 

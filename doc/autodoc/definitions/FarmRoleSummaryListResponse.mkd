@@ -57,7 +57,7 @@ objects of type [`FarmRoleSummary`](./../definitions/FarmRoleSummary.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/user/v1beta0/{envId}/farms/{farmId}/farm-roles/)
+  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
 
 ## Swagger Definition ##
 

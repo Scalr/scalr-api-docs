@@ -48,8 +48,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/cost-centers/{costCenterId}/`](./../rest/api/account/v1beta0/cost-centers/{costCenterId}/)
-  + [`/{envId}/cost-centers/{costCenterId}/`](./../rest/api/user/v1beta0/{envId}/cost-centers/{costCenterId}/)
+  + [`/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/account/cost-centers/{costCenterId}/)
+  + [`/{envId}/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/user/{envId}/cost-centers/{costCenterId}/)
 
 ## Swagger Definition ##
 
