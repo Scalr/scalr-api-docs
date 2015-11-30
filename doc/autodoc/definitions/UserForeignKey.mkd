@@ -1,0 +1,32 @@
+# `UserForeignKey` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `id` (optional) ###
+
+
+
+
+Property of type: `integer`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "id": {
+          "type": "integer"
+        }
+      }
+    }

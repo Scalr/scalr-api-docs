@@ -51,6 +51,28 @@ Property of type: `string`.
 
 
 
+### `teamOwner` (optional, filterable) ###
+
+Identifier of the Team who owns the Farm
+
+
+An object of type [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd) object you are referencing,
+e.g.: `teamOwner=...`.
+
+
+### `owner` (optional, filterable) ###
+
+Identifier of the User who owns the Farm
+
+
+An object of type [`UserForeignKey`](./../definitions/UserForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`UserForeignKey`](./../definitions/UserForeignKey.mkd) object you are referencing,
+e.g.: `owner=...`.
+
+
 ### `launchOrder` (optional, filterable) ###
 
 
@@ -112,14 +134,22 @@ To filter on this field, use: `id=...`.
         "/{envId}/farms/"
       ], 
       "properties": {
-        "project": {
-          "$ref": "#/definitions/ProjectForeignKey"
-        }, 
         "description": {
           "type": "string"
         }, 
+        "project": {
+          "$ref": "#/definitions/ProjectForeignKey"
+        }, 
         "vpc": {
           "$ref": "#/definitions/CloudAwsVpcForeignKey"
+        }, 
+        "teamOwner": {
+          "description": "Identifier of the Team who owns the Farm", 
+          "$ref": "#/definitions/TeamForeignKey"
+        }, 
+        "owner": {
+          "description": "Identifier of the User who owns the Farm", 
+          "$ref": "#/definitions/UserForeignKey"
         }, 
         "timezone": {
           "type": "string"
@@ -144,7 +174,9 @@ To filter on this field, use: `id=...`.
         "name", 
         "vpc", 
         "project", 
-        "launchOrder"
+        "launchOrder", 
+        "owner", 
+        "teamOwner"
       ], 
       "required": [
         "name", 
