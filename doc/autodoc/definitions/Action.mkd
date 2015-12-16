@@ -9,8 +9,8 @@
 one of the following types:
 
   + [`ChefAction`](./../definitions/ChefAction.mkd)
-  + [`UriAction`](./../definitions/UriAction.mkd)
   + [`ScriptAction`](./../definitions/ScriptAction.mkd)
+  + [`UriAction`](./../definitions/UriAction.mkd)
 
 
 
@@ -43,10 +43,10 @@ The following are valid values for the `actionType` property:
           "$ref": "#/definitions/ChefAction"
         }, 
         {
-          "$ref": "#/definitions/UriAction"
+          "$ref": "#/definitions/ScriptAction"
         }, 
         {
-          "$ref": "#/definitions/ScriptAction"
+          "$ref": "#/definitions/UriAction"
         }
       ], 
       "discriminator": "actionType", 

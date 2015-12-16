@@ -21,6 +21,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
+  + [`/cloud-credentials/`](./../rest/api/v1beta0/account/cloud-credentials/)
+  + [`/cloud-credentials/{cloudCredentialsId}/`](./../rest/api/v1beta0/account/cloud-credentials/{cloudCredentialsId}/)
   + [`/cost-centers/`](./../rest/api/v1beta0/account/cost-centers/)
   + [`/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/account/cost-centers/{costCenterId}/)
   + [`/events/`](./../rest/api/v1beta0/account/events/)
@@ -39,6 +41,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/actions/replace/)
   + [`/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/)
   + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/{envId}/cloud-credentials/`](./../rest/api/v1beta0/user/{envId}/cloud-credentials/)
+  + [`/{envId}/cloud-credentials/{cloudCredentialsId}/`](./../rest/api/v1beta0/user/{envId}/cloud-credentials/{cloudCredentialsId}/)
   + [`/{envId}/cost-centers/`](./../rest/api/v1beta0/user/{envId}/cost-centers/)
   + [`/{envId}/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/user/{envId}/cost-centers/{costCenterId}/)
   + [`/{envId}/events/`](./../rest/api/v1beta0/user/{envId}/events/)
@@ -89,6 +93,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/os/", 
         "/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/cost-centers/{costCenterId}/", 
+        "/cloud-credentials/", 
         "/roles/{roleId}/orchestration-rules/", 
         "/images/{imageId}/actions/copy/", 
         "/roles/{roleId}/", 
@@ -99,6 +104,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/os/{osId}/", 
         "/roles/{roleId}/images/{imageId}/", 
+        "/cloud-credentials/{cloudCredentialsId}/", 
         "/cost-centers/", 
         "/roles/", 
         "/{envId}/scripts/{scriptId}/script-versions/", 
@@ -117,6 +123,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/images/", 
         "/{envId}/cost-centers/{costCenterId}/", 
         "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
+        "/{envId}/cloud-credentials/{cloudCredentialsId}/", 
         "/{envId}/scripts/", 
         "/{envId}/farm-roles/{farmRoleId}/scaling/", 
         "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
@@ -125,6 +132,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/roles/{roleId}/images/", 
         "/{envId}/farm-roles/{farmRoleId}/instance/", 
         "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/{envId}/cloud-credentials/", 
         "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
         "/{envId}/farm-roles/{farmRoleId}/", 
         "/{envId}/roles/", 

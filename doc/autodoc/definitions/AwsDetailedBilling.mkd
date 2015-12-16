@@ -1,0 +1,61 @@
+# `AwsDetailedBilling` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `payerAccount` (optional) ###
+
+Payer AWS account number.
+
+
+Property of type: `string`.
+
+
+
+
+### `cloudLocation` (optional) ###
+
+Billing bucket region.
+
+
+Property of type: `string`.
+
+
+
+
+### `bucket` (optional) ###
+
+Billing bucket name.
+
+
+Property of type: `string`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "payerAccount": {
+          "type": "string", 
+          "description": "Payer AWS account number."
+        }, 
+        "cloudLocation": {
+          "type": "string", 
+          "description": "Billing bucket region."
+        }, 
+        "bucket": {
+          "type": "string", 
+          "description": "Billing bucket name."
+        }
+      }
+    }
