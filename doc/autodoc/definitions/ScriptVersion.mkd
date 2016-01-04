@@ -8,17 +8,7 @@
 
 ## Properties ##
 
-### `body` (required) ###
-
-The contents of this ScriptVersion, those will be validated as per the Script's OS Type.
-
-
-Property of type: `string`.
-
-
-
-
-### `script` (create-only, filterable) ###
+### `script` (required, create-only, filterable) ###
 
 The Script this ScriptVersion is a version of
 
@@ -29,9 +19,19 @@ To filter on this field, pass the `id` property of the [`ScriptForeignKey`](./..
 e.g.: `script=...`.
 
 
+### `body` (required) ###
+
+The contents of this ScriptVersion, those will be validated as per the Script's OS Type.
+
+
+Property of type: `string`.
+
+
+
+
 ### `version` (read-only) ###
 
-If at least one version exists, Scalr will return the latest ScriptVersion twice: one with version set, and one with version nulled. The null version represents the 'latest' version of the Script, and may be used
+The Script version number. NULL is interpreted as the Latest Version.
 
 
 Property of type: `integer`.
@@ -79,7 +79,7 @@ Property of type: `string`.
         "version": {
           "readOnly": true, 
           "type": "integer", 
-          "description": "If at least one version exists, Scalr will return the latest ScriptVersion twice: one with version set, and one with version nulled. The null version represents the 'latest' version of the Script, and may be used"
+          "description": "The Script version number. NULL is interpreted as the Latest Version."
         }, 
         "script": {
           "description": "The Script this ScriptVersion is a version of", 
@@ -90,6 +90,7 @@ Property of type: `string`.
         "script"
       ], 
       "required": [
+        "script", 
         "body"
       ]
     }

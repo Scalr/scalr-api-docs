@@ -133,7 +133,10 @@ Property of type: `string`.
         "/{envId}/scripts/", 
         "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
       ], 
-      "x-createOnly": [
+      "required": [
+        "id", 
+        "name", 
+        "scope", 
         "osType"
       ], 
       "properties": {
@@ -191,10 +194,7 @@ Property of type: `string`.
         "blockingDefault", 
         "scope"
       ], 
-      "required": [
-        "id", 
-        "name", 
-        "scope", 
+      "x-createOnly": [
         "osType"
       ]
     }

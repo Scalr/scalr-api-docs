@@ -14,7 +14,7 @@ When an object of type [`Action`](./../definitions/Action.mkd) is expected, you 
 
 ## Properties ##
 
-### `uri` (required) ###
+### `path` (required) ###
 
 Path or URL to the script to execute.
 
@@ -43,10 +43,14 @@ This `string` property is used for polymorphism. It **must** be set to: `"UriAct
       }, 
       "required": [
         "actionType", 
-        "uri"
+        "path"
       ], 
       "x-discriminator": "actionType", 
       "properties": {
+        "path": {
+          "type": "string", 
+          "description": "Path or URL to the script to execute."
+        }, 
         "actionType": {
           "enum": [
             "ScriptAction", 
@@ -54,10 +58,6 @@ This `string` property is used for polymorphism. It **must** be set to: `"UriAct
             "ChefAction"
           ], 
           "type": "string"
-        }, 
-        "uri": {
-          "type": "string", 
-          "description": "Path or URL to the script to execute."
         }
       }
     }

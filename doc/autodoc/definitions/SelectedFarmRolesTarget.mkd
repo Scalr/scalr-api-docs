@@ -1,6 +1,6 @@
 # `SelectedFarmRolesTarget` #
 
-
+Selects all Servers with specified Roles
 
 ## Polymorphism ##
 
@@ -22,6 +22,15 @@ When an object of type [`Target`](./../definitions/Target.mkd) is expected, you 
 This `string` property is used for polymorphism. It **must** be set to: `"SelectedFarmRolesTarget"`
 
 
+### `roles` (optional) ###
+
+
+
+
+An array of 
+objects of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd).
+
+
 
 
 
@@ -35,6 +44,7 @@ This `string` property is used for polymorphism. It **must** be set to: `"Select
         "targetType"
       ], 
       "x-discriminator": "targetType", 
+      "description": "Selects all Servers with specified Roles", 
       "properties": {
         "targetType": {
           "enum": [
@@ -45,6 +55,12 @@ This `string` property is used for polymorphism. It **must** be set to: `"Select
             "FarmTarget"
           ], 
           "type": "string"
+        }, 
+        "roles": {
+          "items": {
+            "$ref": "#/definitions/FarmRoleForeignKey"
+          }, 
+          "type": "array"
         }
       }
     }

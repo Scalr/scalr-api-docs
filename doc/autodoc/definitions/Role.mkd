@@ -41,6 +41,17 @@ To filter on this field, pass the `id` property of the [`RoleCategoryForeignKey`
 e.g.: `category=...`.
 
 
+### `useScalrAgent` (create-only, filterable) ###
+
+Using Scalarizr (Scalr agent)
+
+
+Property of type: `boolean`.
+
+
+To filter on this field, use: `useScalrAgent=...`.
+
+
 ### `quickStart` (optional, filterable) ###
 
 Whether it is QuickStart Role.
@@ -135,11 +146,11 @@ To filter on this field, use: `id=...`.
         "os"
       ], 
       "x-usedIn": [
+        "/roles/{roleId}/images/", 
         "/roles/{roleId}/global-variables/", 
         "/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/roles/{roleId}/orchestration-rules/", 
         "/roles/{roleId}/", 
-        "/roles/{roleId}/images/", 
         "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/roles/{roleId}/images/{imageId}/", 
@@ -160,6 +171,10 @@ To filter on this field, use: `id=...`.
         }, 
         "description": {
           "type": "string"
+        }, 
+        "useScalrAgent": {
+          "type": "boolean", 
+          "description": "Using Scalarizr (Scalr agent)"
         }, 
         "deprecated": {
           "type": "boolean", 
@@ -199,6 +214,10 @@ To filter on this field, use: `id=...`.
         "category", 
         "scope", 
         "quickStart", 
-        "deprecated"
+        "deprecated", 
+        "useScalrAgent"
+      ], 
+      "x-createOnly": [
+        "useScalrAgent"
       ]
     }

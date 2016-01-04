@@ -1,0 +1,119 @@
+# `Environment` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `status` (optional, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `status` property:
+  + `active`
+  + `inactive`
+
+To filter on this field, use: `status=...`.
+
+
+### `name` (optional, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+### `costCenter` (optional, filterable) ###
+
+
+
+
+An object of type [`CostCenterForeignKey`](./../definitions/CostCenterForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`CostCenterForeignKey`](./../definitions/CostCenterForeignKey.mkd) object you are referencing,
+e.g.: `costCenter=...`.
+
+
+### `id` (read-only, filterable) ###
+
+
+
+
+Property of type: `int`.
+
+
+To filter on this field, use: `id=...`.
+
+
+### `added` (read-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `added=...`.
+
+
+
+
+## Used in ##
+
+  + [`/environments/`](./../rest/api/v1beta0/account/environments/)
+  + [`/environments/{envId}/`](./../rest/api/v1beta0/account/environments/{envId}/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/environments/", 
+        "/environments/{envId}/"
+      ], 
+      "x-required": [
+        "name", 
+        "costCenter"
+      ], 
+      "properties": {
+        "status": {
+          "enum": [
+            "active", 
+            "inactive"
+          ], 
+          "type": "string"
+        }, 
+        "added": {
+          "readOnly": true, 
+          "type": "string", 
+          "format": "date-time"
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "int"
+        }, 
+        "costCenter": {
+          "$ref": "#/definitions/CostCenterForeignKey"
+        }, 
+        "name": {
+          "type": "string"
+        }
+      }, 
+      "x-filterable": [
+        "id", 
+        "name", 
+        "added", 
+        "status", 
+        "costCenter"
+      ]
+    }

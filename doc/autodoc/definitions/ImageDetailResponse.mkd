@@ -60,8 +60,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
     {
       "x-usedIn": [
         "/images/{imageId}/", 
-        "/images/{imageId}/actions/copy/", 
         "/images/", 
+        "/images/{imageId}/actions/copy/", 
         "/{envId}/images/{imageId}/actions/copy/", 
         "/{envId}/images/", 
         "/{envId}/images/{imageId}/"

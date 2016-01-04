@@ -126,7 +126,17 @@ The following are valid values for the `declaredIn` property:
 
 ### `computedValue` (read-only) ###
 
-The value computed by Scalr for this variable once inheritance has been taken into account.
+The value computed by Scalr for this variable.
+
+
+Property of type: `string`.
+
+
+
+
+### `computedCategory` (read-only) ###
+
+The category computed by Scalr for this variable.
 
 
 Property of type: `string`.
@@ -209,14 +219,19 @@ Property of type: `string`.
           "type": "string", 
           "description": "The scope where this variable is required. This is read-only if `declaredIn` is not the current scope."
         }, 
+        "computedValue": {
+          "readOnly": true, 
+          "type": "string", 
+          "description": "The value computed by Scalr for this variable."
+        }, 
         "validationPattern": {
           "type": "string", 
           "description": "A validation pattern to apply in inner scopes. This is read-only if `declaredIn` is not the current scope."
         }, 
-        "computedValue": {
+        "computedCategory": {
           "readOnly": true, 
           "type": "string", 
-          "description": "The value computed by Scalr for this variable once inheritance has been taken into account."
+          "description": "The category computed by Scalr for this variable."
         }, 
         "hidden": {
           "type": "boolean", 

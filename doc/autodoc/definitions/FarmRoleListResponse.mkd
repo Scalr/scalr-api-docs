@@ -1,0 +1,102 @@
+# `FarmRoleListResponse` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `pagination` (read-only) ###
+
+
+
+
+An object of type [`ApiPagination`](./../definitions/ApiPagination.mkd).
+
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `data` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`FarmRole`](./../definitions/FarmRole.mkd).
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/{envId}/farms/{farmId}/farm-roles/"
+      ], 
+      "properties": {
+        "pagination": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiPagination"
+        }, 
+        "meta": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiMetaContainer"
+        }, 
+        "data": {
+          "items": {
+            "$ref": "#/definitions/FarmRole"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "warnings": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }, 
+      "x-derived": {
+        "$ref": "#/definitions/FarmRole"
+      }
+    }

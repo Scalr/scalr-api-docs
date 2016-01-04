@@ -12,7 +12,7 @@ Note that you can pass a complete [`Role`](./../definitions/Role.mkd) object as 
 
 ## Properties ##
 
-### `id` (required) ###
+### `id` (required, read-only) ###
 
 
 
@@ -39,6 +39,7 @@ Property of type: `integer`.
       }, 
       "properties": {
         "id": {
+          "readOnly": true, 
           "type": "integer"
         }
       }

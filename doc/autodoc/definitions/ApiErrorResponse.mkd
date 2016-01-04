@@ -25,11 +25,19 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/cloud-credentials/{cloudCredentialsId}/`](./../rest/api/v1beta0/account/cloud-credentials/{cloudCredentialsId}/)
   + [`/cost-centers/`](./../rest/api/v1beta0/account/cost-centers/)
   + [`/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/account/cost-centers/{costCenterId}/)
+  + [`/environments/`](./../rest/api/v1beta0/account/environments/)
+  + [`/environments/{envId}/`](./../rest/api/v1beta0/account/environments/{envId}/)
+  + [`/environments/{envId}/clouds/`](./../rest/api/v1beta0/account/environments/{envId}/clouds/)
+  + [`/environments/{envId}/clouds/{cloud}/`](./../rest/api/v1beta0/account/environments/{envId}/clouds/{cloud}/)
+  + [`/environments/{envId}/teams/`](./../rest/api/v1beta0/account/environments/{envId}/teams/)
+  + [`/environments/{envId}/teams/{teamId}/`](./../rest/api/v1beta0/account/environments/{envId}/teams/{teamId}/)
   + [`/events/`](./../rest/api/v1beta0/account/events/)
   + [`/events/{eventId}/`](./../rest/api/v1beta0/account/events/{eventId}/)
   + [`/images/`](./../rest/api/v1beta0/account/images/)
   + [`/images/{imageId}/`](./../rest/api/v1beta0/account/images/{imageId}/)
   + [`/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/account/images/{imageId}/actions/copy/)
+  + [`/orchestration-rules/`](./../rest/api/v1beta0/account/orchestration-rules/)
+  + [`/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/orchestration-rules/{orchestrationRuleId}/)
   + [`/os/`](./../rest/api/v1beta0/account/os/)
   + [`/os/{osId}/`](./../rest/api/v1beta0/account/os/{osId}/)
   + [`/roles/`](./../rest/api/v1beta0/account/roles/)
@@ -51,6 +59,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/{envId}/farm-roles/{farmRoleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/)
   + [`/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/)
   + [`/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/instance/)
+  + [`/{envId}/farm-roles/{farmRoleId}/orchestration-rules/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/)
+  + [`/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/)
   + [`/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/placement/)
   + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
   + [`/{envId}/farms/`](./../rest/api/v1beta0/user/{envId}/farms/)
@@ -88,24 +98,32 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
     {
       "x-usedIn": [
         "/images/{imageId}/", 
+        "/orchestration-rules/", 
         "/events/", 
+        "/roles/{roleId}/images/", 
         "/roles/{roleId}/global-variables/", 
+        "/environments/", 
+        "/orchestration-rules/{orchestrationRuleId}/", 
         "/os/", 
         "/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/cost-centers/{costCenterId}/", 
         "/cloud-credentials/", 
         "/roles/{roleId}/orchestration-rules/", 
-        "/images/{imageId}/actions/copy/", 
+        "/environments/{envId}/teams/{teamId}/", 
+        "/cost-centers/", 
         "/roles/{roleId}/", 
-        "/roles/{roleId}/images/", 
+        "/environments/{envId}/clouds/", 
+        "/environments/{envId}/clouds/{cloud}/", 
         "/images/", 
+        "/environments/{envId}/teams/", 
         "/events/{eventId}/", 
         "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/os/{osId}/", 
         "/roles/{roleId}/images/{imageId}/", 
         "/cloud-credentials/{cloudCredentialsId}/", 
-        "/cost-centers/", 
+        "/images/{imageId}/actions/copy/", 
+        "/environments/{envId}/", 
         "/roles/", 
         "/{envId}/scripts/{scriptId}/script-versions/", 
         "/{envId}/os/", 
@@ -131,6 +149,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/farms/{farmId}/", 
         "/{envId}/roles/{roleId}/images/", 
         "/{envId}/farm-roles/{farmRoleId}/instance/", 
+        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/{envId}/cloud-credentials/", 
         "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
@@ -143,6 +162,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/images/{imageId}/", 
         "/{envId}/farms/{farmId}/global-variables/", 
         "/{envId}/roles/{roleId}/global-variables/", 
+        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
         "/{envId}/farm-roles/{farmRoleId}/placement/", 
         "/{envId}/farms/{farmId}/actions/launch/", 
         "/{envId}/role-categories/{roleCategoryId}/", 

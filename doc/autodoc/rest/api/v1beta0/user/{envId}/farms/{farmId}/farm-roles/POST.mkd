@@ -333,9 +333,9 @@ The response body is an object of type:
             }
           }, 
           "200": {
-            "description": "A list of FarmRoleSummary objects.", 
+            "description": "A list of FarmRole objects.", 
             "schema": {
-              "$ref": "#/definitions/FarmRoleSummaryListResponse"
+              "$ref": "#/definitions/FarmRoleListResponse"
             }
           }, 
           "404": {

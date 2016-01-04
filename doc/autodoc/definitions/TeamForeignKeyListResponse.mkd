@@ -1,4 +1,4 @@
-# `FarmRoleSummaryListResponse` #
+# `TeamForeignKeyListResponse` #
 
 
 
@@ -50,20 +50,20 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 
 An array of 
-objects of type [`FarmRoleSummary`](./../definitions/FarmRoleSummary.mkd).
+objects of type [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd).
 
 
 
 
 ## Used in ##
 
-  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
+  + [`/environments/{envId}/teams/`](./../rest/api/v1beta0/account/environments/{envId}/teams/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/farms/{farmId}/farm-roles/"
+        "/environments/{envId}/teams/"
       ], 
       "properties": {
         "pagination": {
@@ -76,7 +76,7 @@ objects of type [`FarmRoleSummary`](./../definitions/FarmRoleSummary.mkd).
         }, 
         "data": {
           "items": {
-            "$ref": "#/definitions/FarmRoleSummary"
+            "$ref": "#/definitions/TeamForeignKey"
           }, 
           "readOnly": true, 
           "type": "array"
@@ -97,6 +97,6 @@ objects of type [`FarmRoleSummary`](./../definitions/FarmRoleSummary.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/FarmRoleSummary"
+        "$ref": "#/definitions/TeamForeignKey"
       }
     }

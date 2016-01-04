@@ -1,0 +1,75 @@
+# `Cloud` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `credentials` (optional) ###
+
+
+
+
+An object of type [`CloudCredentialsForeignKey`](./../definitions/CloudCredentialsForeignKey.mkd).
+
+
+
+### `cloud` (optional) ###
+
+Cloud Platform this resources resides in.
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `cloud` property:
+  + `ec2`
+  + `gce`
+  + `azure`
+  + `cloudstack`
+  + `idcf`
+  + `openstack`
+  + `ocs`
+  + `rackspacenguk`
+  + `rackspacengus`
+  + `hpcloud`
+  + `mirantis`
+  + `vio`
+  + `cisco`
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "credentials": {
+          "$ref": "#/definitions/CloudCredentialsForeignKey"
+        }, 
+        "cloud": {
+          "enum": [
+            "ec2", 
+            "gce", 
+            "azure", 
+            "cloudstack", 
+            "idcf", 
+            "openstack", 
+            "ocs", 
+            "rackspacenguk", 
+            "rackspacengus", 
+            "hpcloud", 
+            "mirantis", 
+            "vio", 
+            "cisco"
+          ], 
+          "type": "string", 
+          "description": "Cloud Platform this resources resides in."
+        }
+      }
+    }

@@ -10,7 +10,7 @@
 
 ### `id` (optional) ###
 
-
+Team ID
 
 
 Property of type: `integer`.
@@ -20,13 +20,20 @@ Property of type: `integer`.
 
 
 
+## Used in ##
+
+  + [`/environments/{envId}/teams/`](./../rest/api/v1beta0/account/environments/{envId}/teams/)
 
 ## Swagger Definition ##
 
     {
+      "x-usedIn": [
+        "/environments/{envId}/teams/"
+      ], 
       "properties": {
         "id": {
-          "type": "integer"
+          "type": "integer", 
+          "description": "Team ID"
         }
       }
     }

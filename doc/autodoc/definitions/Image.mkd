@@ -82,6 +82,17 @@ The following are valid values for the `architecture` property:
 To filter on this field, use: `architecture=...`.
 
 
+### `scalrAgentInstalled` (create-only, filterable) ###
+
+Scalarizer is installed.
+
+
+Property of type: `boolean`.
+
+
+To filter on this field, use: `scalrAgentInstalled=...`.
+
+
 ### `cloudLocation` (optional, filterable) ###
 
 More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.
@@ -91,6 +102,17 @@ Property of type: `string`.
 
 
 To filter on this field, use: `cloudLocation=...`.
+
+
+### `cloudInitInstalled` (create-only, filterable) ###
+
+Install scalarizr via cloud-init at instance launch.
+
+
+Property of type: `boolean`.
+
+
+To filter on this field, use: `cloudInitInstalled=...`.
 
 
 ### `type` (read-only) ###
@@ -242,10 +264,10 @@ Property of type: `string`.
       ], 
       "x-usedIn": [
         "/images/{imageId}/", 
-        "/images/{imageId}/actions/copy/", 
         "/images/", 
         "/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/roles/{roleId}/images/{imageId}/", 
+        "/images/{imageId}/actions/copy/", 
         "/{envId}/images/{imageId}/actions/copy/", 
         "/{envId}/roles/{roleId}/images/{imageId}/", 
         "/{envId}/images/", 
@@ -311,22 +333,14 @@ Property of type: `string`.
           ], 
           "type": "string"
         }, 
+        "scalrAgentInstalled": {
+          "type": "boolean", 
+          "description": "Scalarizer is installed."
+        }, 
         "type": {
           "readOnly": true, 
           "type": "string", 
           "description": "(Only used on EC2 currently) Whether this Image is HVM or EBS."
-        }, 
-        "scope": {
-          "readOnly": true, 
-          "enum": [
-            "scalr", 
-            "account", 
-            "environment", 
-            "farm", 
-            "farmrole", 
-            "server"
-          ], 
-          "type": "string"
         }, 
         "cloudPlatform": {
           "enum": [
@@ -346,6 +360,22 @@ Property of type: `string`.
           ], 
           "type": "string", 
           "description": "Cloud Platform this resources resides in."
+        }, 
+        "scope": {
+          "readOnly": true, 
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "server"
+          ], 
+          "type": "string"
+        }, 
+        "cloudInitInstalled": {
+          "type": "boolean", 
+          "description": "Install scalarizr via cloud-init at instance launch."
         }, 
         "os": {
           "$ref": "#/definitions/OsForeignKey"
@@ -370,6 +400,12 @@ Property of type: `string`.
         "source", 
         "status", 
         "deprecated", 
-        "os"
+        "os", 
+        "scalrAgentInstalled", 
+        "cloudInitInstalled"
+      ], 
+      "x-createOnly": [
+        "scalrAgentInstalled", 
+        "cloudInitInstalled"
       ]
     }

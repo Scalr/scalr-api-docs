@@ -30,16 +30,7 @@ Property of type: `string`.
 To filter on this field, use: `platform=...`.
 
 
-### `scaling` (optional) ###
-
-
-
-
-An object of type [`ScalingConfiguration`](./../definitions/ScalingConfiguration.mkd).
-
-
-
-### `placement` (optional) ###
+### `placement` (required) ###
 
 
 
@@ -48,12 +39,21 @@ An object of type [`PlacementConfiguration`](./../definitions/PlacementConfigura
 
 
 
-### `instance` (optional) ###
+### `instance` (required) ###
 
 
 
 
 An object of type [`InstanceConfiguration`](./../definitions/InstanceConfiguration.mkd).
+
+
+
+### `scaling` (optional) ###
+
+
+
+
+An object of type [`ScalingConfiguration`](./../definitions/ScalingConfiguration.mkd).
 
 
 
@@ -97,6 +97,8 @@ e.g.: `farm=...`.
   + [`/{envId}/farm-roles/{farmRoleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/)
   + [`/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/)
   + [`/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/instance/)
+  + [`/{envId}/farm-roles/{farmRoleId}/orchestration-rules/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/)
+  + [`/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/)
   + [`/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/placement/)
   + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
   + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
@@ -110,7 +112,9 @@ e.g.: `farm=...`.
         "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
         "/{envId}/farm-roles/{farmRoleId}/scaling/", 
         "/{envId}/farm-roles/{farmRoleId}/instance/", 
+        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/{envId}/farm-roles/{farmRoleId}/", 
+        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
         "/{envId}/farm-roles/{farmRoleId}/placement/"
       ], 
       "properties": {
@@ -153,7 +157,7 @@ e.g.: `farm=...`.
       "required": [
         "role", 
         "platform", 
-        "placementConfiguration", 
-        "instanceConfiguration"
+        "placement", 
+        "instance"
       ]
     }

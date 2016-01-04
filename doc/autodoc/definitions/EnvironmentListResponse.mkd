@@ -1,0 +1,102 @@
+# `EnvironmentListResponse` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `pagination` (read-only) ###
+
+
+
+
+An object of type [`ApiPagination`](./../definitions/ApiPagination.mkd).
+
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `data` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`Environment`](./../definitions/Environment.mkd).
+
+
+
+
+## Used in ##
+
+  + [`/environments/`](./../rest/api/v1beta0/account/environments/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/environments/"
+      ], 
+      "properties": {
+        "pagination": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiPagination"
+        }, 
+        "meta": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiMetaContainer"
+        }, 
+        "data": {
+          "items": {
+            "$ref": "#/definitions/Environment"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "warnings": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }, 
+      "x-derived": {
+        "$ref": "#/definitions/Environment"
+      }
+    }

@@ -8,7 +8,7 @@
 
 ## Properties ##
 
-### `script` (create-only, filterable) ###
+### `script` (required, create-only, filterable) ###
 
 The Script this ScriptVersion is a version of
 
@@ -21,7 +21,7 @@ e.g.: `script=...`.
 
 ### `version` (read-only) ###
 
-If at least one version exists, Scalr will return the latest ScriptVersion twice: one with version set, and one with version nulled. The null version represents the 'latest' version of the Script, and may be used
+The Script version number. NULL is interpreted as the Latest Version.
 
 
 Property of type: `integer`.
@@ -35,14 +35,14 @@ Property of type: `integer`.
 ## Swagger Definition ##
 
     {
-      "x-createOnly": [
+      "required": [
         "script"
       ], 
       "properties": {
         "version": {
           "readOnly": true, 
           "type": "integer", 
-          "description": "If at least one version exists, Scalr will return the latest ScriptVersion twice: one with version set, and one with version nulled. The null version represents the 'latest' version of the Script, and may be used"
+          "description": "The Script version number. NULL is interpreted as the Latest Version."
         }, 
         "script": {
           "description": "The Script this ScriptVersion is a version of", 
@@ -50,6 +50,9 @@ Property of type: `integer`.
         }
       }, 
       "x-filterable": [
+        "script"
+      ], 
+      "x-createOnly": [
         "script"
       ]
     }
