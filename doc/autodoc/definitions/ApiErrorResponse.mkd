@@ -1,12 +1,30 @@
 # `ApiErrorResponse` #
 
-
+Common envelope
 
 
 
 
 
 ## Properties ##
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
 
 ### `errors` (read-only) ###
 
@@ -65,6 +83,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
   + [`/{envId}/farms/`](./../rest/api/v1beta0/user/{envId}/farms/)
   + [`/{envId}/farms/{farmId}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/)
+  + [`/{envId}/farms/{farmId}/actions/clone/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/clone/)
   + [`/{envId}/farms/{farmId}/actions/launch/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/launch/)
   + [`/{envId}/farms/{farmId}/actions/terminate/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/terminate/)
   + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
@@ -167,10 +186,23 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/farms/{farmId}/actions/launch/", 
         "/{envId}/role-categories/{roleCategoryId}/", 
         "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
-        "/{envId}/farms/"
+        "/{envId}/farms/", 
+        "/{envId}/farms/{farmId}/actions/clone/"
       ], 
+      "description": "Common envelope", 
       "properties": {
         "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "meta": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiMetaContainer"
+        }, 
+        "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
           }, 

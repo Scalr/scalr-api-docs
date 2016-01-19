@@ -133,7 +133,7 @@ The response body is an object of type:
 
     {
       "delete": {
-        "description": "De-register an Image from this Environment", 
+        "description": "Deregister an Image from this Environment", 
         "parameters": [
           {
             "required": false, 
@@ -145,27 +145,16 @@ The response body is an object of type:
         ], 
         "responses": {
           "200": {
-            "errors": {
-              "items": {
-                "$ref": "#/definitions/ApiMessage"
-              }, 
-              "readOnly": true, 
-              "type": "array"
-            }, 
-            "meta": {
-              "readOnly": true, 
-              "$ref": "#/definitions/ApiMetaContainer"
-            }, 
-            "warnings": {
-              "items": {
-                "$ref": "#/definitions/ApiMessage"
-              }, 
-              "readOnly": true, 
-              "type": "array"
+            "description": "Image has been deregistered.", 
+            "schema": {
+              "$ref": "#/definitions/DeleteSuccessResponse"
             }
           }, 
           "202": {
-            "description": "Image scheduled for de-registration and deletion"
+            "description": "Image scheduled for deregistration and deletion from cloud.", 
+            "schema": {
+              "$ref": "#/definitions/DeleteSuccessResponse"
+            }
           }, 
           "400": {
             "x-errorCodes": [

@@ -115,6 +115,7 @@ To filter on this field, use: `id=...`.
 
   + [`/{envId}/farms/`](./../rest/api/v1beta0/user/{envId}/farms/)
   + [`/{envId}/farms/{farmId}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/)
+  + [`/{envId}/farms/{farmId}/actions/clone/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/clone/)
   + [`/{envId}/farms/{farmId}/actions/launch/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/launch/)
   + [`/{envId}/farms/{farmId}/actions/terminate/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/terminate/)
   + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
@@ -131,7 +132,8 @@ To filter on this field, use: `id=...`.
         "/{envId}/farms/{farmId}/global-variables/", 
         "/{envId}/farms/{farmId}/actions/launch/", 
         "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
-        "/{envId}/farms/"
+        "/{envId}/farms/", 
+        "/{envId}/farms/{farmId}/actions/clone/"
       ], 
       "properties": {
         "description": {

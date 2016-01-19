@@ -30,6 +30,8 @@ Parameter of type: `string`.
 
 Cloud Credentials delete
 
+The response body is an object of type:
+[`DeleteSuccessResponse`](./../../../../../../definitions/DeleteSuccessResponse.mkd).
 
 
 
@@ -185,7 +187,10 @@ The response body is an object of type:
             }
           }, 
           "200": {
-            "description": "Cloud Credentials delete"
+            "description": "Cloud Credentials delete", 
+            "schema": {
+              "$ref": "#/definitions/DeleteSuccessResponse"
+            }
           }, 
           "404": {
             "x-errorCodes": [

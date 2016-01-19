@@ -35,8 +35,10 @@ Parameter of type: `string`.
 
 ### 200 ###
 
+Global Variable deleted
 
-
+The response body is an object of type:
+[`DeleteSuccessResponse`](./../../../../../../../../definitions/DeleteSuccessResponse.mkd).
 
 
 
@@ -192,23 +194,9 @@ The response body is an object of type:
             }
           }, 
           "200": {
-            "errors": {
-              "items": {
-                "$ref": "#/definitions/ApiMessage"
-              }, 
-              "readOnly": true, 
-              "type": "array"
-            }, 
-            "meta": {
-              "readOnly": true, 
-              "$ref": "#/definitions/ApiMetaContainer"
-            }, 
-            "warnings": {
-              "items": {
-                "$ref": "#/definitions/ApiMessage"
-              }, 
-              "readOnly": true, 
-              "type": "array"
+            "description": "Global Variable deleted", 
+            "schema": {
+              "$ref": "#/definitions/DeleteSuccessResponse"
             }
           }, 
           "404": {
@@ -431,6 +419,12 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
+          "200": {
+            "description": "The JSON representation of a GlobalVariable object.", 
+            "schema": {
+              "$ref": "#/definitions/GlobalVariableDetailResponse"
+            }
+          }, 
           "404": {
             "x-errorCodes": [
               {
@@ -446,12 +440,6 @@ The response body is an object of type:
             "description": "Resource not found", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "202": {
-            "description": "The JSON representation of a GlobalVariable object.", 
-            "schema": {
-              "$ref": "#/definitions/GlobalVariableDetailResponse"
             }
           }
         }

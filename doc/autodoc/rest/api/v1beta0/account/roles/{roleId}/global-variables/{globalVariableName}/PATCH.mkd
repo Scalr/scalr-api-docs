@@ -45,7 +45,7 @@ An object of type: [`GlobalVariable`](./../../../../../../../../definitions/Glob
 ## Responses ##
 
 
-### 202 ###
+### 200 ###
 
 The JSON representation of a GlobalVariable object.
 
@@ -206,23 +206,9 @@ The response body is an object of type:
             }
           }, 
           "200": {
-            "errors": {
-              "items": {
-                "$ref": "#/definitions/ApiMessage"
-              }, 
-              "readOnly": true, 
-              "type": "array"
-            }, 
-            "meta": {
-              "readOnly": true, 
-              "$ref": "#/definitions/ApiMetaContainer"
-            }, 
-            "warnings": {
-              "items": {
-                "$ref": "#/definitions/ApiMessage"
-              }, 
-              "readOnly": true, 
-              "type": "array"
+            "description": "Global Variable deleted", 
+            "schema": {
+              "$ref": "#/definitions/DeleteSuccessResponse"
             }
           }, 
           "404": {
@@ -445,6 +431,12 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
+          "200": {
+            "description": "The JSON representation of a GlobalVariable object.", 
+            "schema": {
+              "$ref": "#/definitions/GlobalVariableDetailResponse"
+            }
+          }, 
           "404": {
             "x-errorCodes": [
               {
@@ -460,12 +452,6 @@ The response body is an object of type:
             "description": "Resource not found", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "202": {
-            "description": "The JSON representation of a GlobalVariable object.", 
-            "schema": {
-              "$ref": "#/definitions/GlobalVariableDetailResponse"
             }
           }
         }

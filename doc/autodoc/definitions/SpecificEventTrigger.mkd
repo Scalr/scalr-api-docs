@@ -22,7 +22,7 @@ When an object of type [`Trigger`](./../definitions/Trigger.mkd) is expected, yo
 This `string` property is used for polymorphism. It **must** be set to: `"SpecificEventTrigger"`
 
 
-### `event` (optional) ###
+### `event` (required) ###
 
 
 
@@ -41,7 +41,8 @@ An object of type [`Event`](./../definitions/Event.mkd).
         "$ref": "#/definitions/Trigger"
       }, 
       "required": [
-        "triggerType"
+        "triggerType", 
+        "event"
       ], 
       "x-discriminator": "triggerType", 
       "description": "Triggers when a specific Event fires", 

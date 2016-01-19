@@ -50,6 +50,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
   + [`/{envId}/farms/`](./../rest/api/v1beta0/user/{envId}/farms/)
   + [`/{envId}/farms/{farmId}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/)
+  + [`/{envId}/farms/{farmId}/actions/clone/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/clone/)
   + [`/{envId}/farms/{farmId}/actions/launch/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/launch/)
   + [`/{envId}/farms/{farmId}/actions/terminate/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/terminate/)
 
@@ -60,7 +61,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/farms/{farmId}/", 
         "/{envId}/farms/{farmId}/actions/terminate/", 
         "/{envId}/farms/{farmId}/actions/launch/", 
-        "/{envId}/farms/"
+        "/{envId}/farms/", 
+        "/{envId}/farms/{farmId}/actions/clone/"
       ], 
       "properties": {
         "meta": {

@@ -1,0 +1,133 @@
+# `DeleteSuccessResponse` #
+
+Common envelope
+
+
+
+
+
+## Properties ##
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `data` (read-only) ###
+
+
+
+
+Property of type: `string`.
+
+
+
+
+
+
+## Used in ##
+
+  + [`/cloud-credentials/{cloudCredentialsId}/`](./../rest/api/v1beta0/account/cloud-credentials/{cloudCredentialsId}/)
+  + [`/environments/{envId}/`](./../rest/api/v1beta0/account/environments/{envId}/)
+  + [`/environments/{envId}/clouds/{cloud}/`](./../rest/api/v1beta0/account/environments/{envId}/clouds/{cloud}/)
+  + [`/environments/{envId}/teams/{teamId}/`](./../rest/api/v1beta0/account/environments/{envId}/teams/{teamId}/)
+  + [`/events/{eventId}/`](./../rest/api/v1beta0/account/events/{eventId}/)
+  + [`/images/{imageId}/`](./../rest/api/v1beta0/account/images/{imageId}/)
+  + [`/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/orchestration-rules/{orchestrationRuleId}/)
+  + [`/roles/{roleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/)
+  + [`/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/{globalVariableName}/)
+  + [`/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/)
+  + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/{envId}/cloud-credentials/{cloudCredentialsId}/`](./../rest/api/v1beta0/user/{envId}/cloud-credentials/{cloudCredentialsId}/)
+  + [`/{envId}/events/{eventId}/`](./../rest/api/v1beta0/user/{envId}/events/{eventId}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/{envId}/farms/{farmId}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/)
+  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
+  + [`/{envId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/)
+  + [`/{envId}/roles/{roleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/)
+  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/{globalVariableName}/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/)
+  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/{envId}/scripts/{scriptId}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/)
+  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
+
+## Swagger Definition ##
+
+    {
+      "x-usedIn": [
+        "/images/{imageId}/", 
+        "/orchestration-rules/{orchestrationRuleId}/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/environments/{envId}/teams/{teamId}/", 
+        "/roles/{roleId}/", 
+        "/environments/{envId}/clouds/{cloud}/", 
+        "/events/{eventId}/", 
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/roles/{roleId}/images/{imageId}/", 
+        "/cloud-credentials/{cloudCredentialsId}/", 
+        "/environments/{envId}/", 
+        "/{envId}/scripts/{scriptId}/script-versions/", 
+        "/{envId}/scripts/{scriptId}/", 
+        "/{envId}/roles/{roleId}/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/", 
+        "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
+        "/{envId}/cloud-credentials/{cloudCredentialsId}/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/{envId}/farms/{farmId}/", 
+        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/{envId}/farm-roles/{farmRoleId}/", 
+        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/{envId}/events/{eventId}/", 
+        "/{envId}/images/{imageId}/", 
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/"
+      ], 
+      "description": "Common envelope", 
+      "properties": {
+        "meta": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiMetaContainer"
+        }, 
+        "data": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "warnings": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }
+    }

@@ -14,6 +14,15 @@ When an object of type [`PlacementConfiguration`](./../definitions/PlacementConf
 
 ## Properties ##
 
+### `subnets` (required) ###
+
+
+
+
+An array of 
+objects of type [`CloudAwsVpcSubnetForeignKey`](./../definitions/CloudAwsVpcSubnetForeignKey.mkd).
+
+
 ### `region` (required) ###
 
 
@@ -30,15 +39,6 @@ Property of type: `string`.
 
 
 This `string` property is used for polymorphism. It **must** be set to: `"AwsVpcPlacementConfiguration"`
-
-
-### `subnets` (optional) ###
-
-
-
-
-An array of 
-objects of type [`CloudAwsVpcSubnetForeignKey`](./../definitions/CloudAwsVpcSubnetForeignKey.mkd).
 
 
 ### `router` (optional) ###
@@ -61,7 +61,8 @@ An object of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd
       }, 
       "required": [
         "placementConfigurationType", 
-        "region"
+        "region", 
+        "subnets"
       ], 
       "x-discriminator": "placementConfigurationType", 
       "properties": {

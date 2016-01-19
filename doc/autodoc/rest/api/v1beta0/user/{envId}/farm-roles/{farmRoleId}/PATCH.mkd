@@ -205,7 +205,10 @@ The response body is an object of type:
             }
           }, 
           "200": {
-            "description": "Farm Role deleted"
+            "description": "Farm Role deleted", 
+            "schema": {
+              "$ref": "#/definitions/DeleteSuccessResponse"
+            }
           }, 
           "404": {
             "x-errorCodes": [
