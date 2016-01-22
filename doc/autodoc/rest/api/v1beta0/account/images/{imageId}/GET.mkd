@@ -121,7 +121,7 @@ The response body is an object of type:
             "type": "boolean", 
             "description": "Attempt to delete this Image from the Cloud.", 
             "in": "query", 
-            "name": "cloudDelete"
+            "name": "deleteFromCloud"
           }
         ], 
         "responses": {

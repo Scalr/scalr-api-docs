@@ -22,7 +22,7 @@ Parameter of type: `string`.
 
 Query parameters are passed as GET parameters (e.g. `?query=value`).
 
-#### `cloudDelete` ####
+#### `deleteFromCloud` ####
 
 Attempt to delete this Image from the Cloud.
 
@@ -142,7 +142,7 @@ The response body is an object of type:
             "type": "boolean", 
             "description": "Attempt to delete this Image from the Cloud.", 
             "in": "query", 
-            "name": "cloudDelete"
+            "name": "deleteFromCloud"
           }
         ], 
         "responses": {
