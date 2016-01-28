@@ -6,10 +6,10 @@ import requests.exceptions
 
 def execute(client, env_id):
     for path in [
-        "/api/user/v1beta0/os/?family=ubuntu",
-        "/api/user/v1beta0/{0}/role-categories/".format(env_id),
-        "/api/user/v1beta0/{0}/roles/".format(env_id),
-        "/api/user/v1beta0/{0}/images/".format(env_id)
+        "/api/v1beta0/user/os/?family=ubuntu",
+        "/api/v1beta0/user/{0}/role-categories/".format(env_id),
+        "/api/v1beta0/user/{0}/roles/".format(env_id),
+        "/api/v1beta0/user/{0}/images/".format(env_id)
     ]:
         print "\n\n\n"
         try:
@@ -30,4 +30,3 @@ def execute(client, env_id):
         except requests.exceptions.HTTPError as e:
             print "ERROR!", e.response.status_code, e.response.text
             continue
-
