@@ -29,14 +29,19 @@ class ScalrApiClient(object):
         self.key_id = key_id
         self.key_secret = key_secret
         self.logger = logging.getLogger("api[{0}]".format(self.api_url))
+        self.logger.addHandler(logging.StreamHandler())
         self.session = ScalrApiSession(self)
 
     def list(self, path, **kwargs):
         data = []
+        ident = False
         while path is not None:
+            if ident:
+                print
             body = self.session.get(path, **kwargs).json()
             data.extend(body["data"])
             path = body["pagination"]["next"]
+            ident = True
         return data
 
     def create(self, *args, **kwargs):

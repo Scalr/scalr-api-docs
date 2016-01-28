@@ -67,69 +67,69 @@ GLOBAL_VARIABLE = [
 
 
 def list_os(client, **params):
-    return client.list("/api/user/v1beta0/os/", params=params)
+    return client.list("/api/v1beta0/user/os/", params=params)
 
 
 def list_images(client, env_id, **params):
-    return client.list("/api/user/v1beta0/{0}/images/".format(env_id), params=params)
+    return client.list("/api/v1beta0/user/{0}/images/".format(env_id), params=params)
 
 
 def create_image(client, env_id, img):
     logger.info("Creating Image: %s", img["name"])
-    return client.create("/api/user/v1beta0/{0}/images/".format(env_id), json=img)
+    return client.create("/api/v1beta0/user/{0}/images/".format(env_id), json=img)
 
 
 def delete_image(client, env_id, image):
     logger.info("Deleting Image: %s", image["name"])
-    client.delete("/api/user/v1beta0/{0}/images/{1}/".format(env_id, image["id"]))
+    client.delete("/api/v1beta0/user/{0}/images/{1}/".format(env_id, image["id"]))
 
 
 def list_roles(client, env_id, **params):
-    return client.list("/api/user/v1beta0/{0}/roles/".format(env_id), params=params)
+    return client.list("/api/v1beta0/user/{0}/roles/".format(env_id), params=params)
 
 
 def create_role(client, env_id, role):
     logger.info("Creating Role: %s", role["name"])
-    return client.create("/api/user/v1beta0/{0}/roles/".format(env_id), json=role)
+    return client.create("/api/v1beta0/user/{0}/roles/".format(env_id), json=role)
 
 
 def delete_role(client, env_id, role):
     logger.info("Deleting Role: %s", role["name"])
-    client.delete("/api/user/v1beta0/{0}/roles/{1}/".format(env_id, role["id"]))
+    client.delete("/api/v1beta0/user/{0}/roles/{1}/".format(env_id, role["id"]))
 
 
 def list_role_images(client, env_id, role):
-    return client.list("/api/user/v1beta0/{0}/roles/{1}/images/".format(env_id, role["id"]))
+    return client.list("/api/v1beta0/user/{0}/roles/{1}/images/".format(env_id, role["id"]))
 
 
 def associate_role_image(client, env_id, role, image):
     logger.info("Associating Image %s with Role %s", image["name"], role["name"])
-    return client.create("/api/user/v1beta0/{0}/roles/{1}/images/".format(env_id, role["id"]), json={"image": image})
+    return client.create("/api/v1beta0/user/{0}/roles/{1}/images/".format(env_id, role["id"]), json={"image": image})
 
 
 def dissociate_role_image(client, env_id, role, image):
     logger.info("Disassociating Image %s from Role %s", image["name"], role["name"])
-    client.delete("/api/user/v1beta0/{0}/roles/{1}/images/{2}/".format(env_id, role["id"], image["id"]))
+    client.delete("/api/v1beta0/user/{0}/roles/{1}/images/{2}/".format(env_id, role["id"], image["id"]))
 
 
 def replace_role_image(client, env_id, role, old_image, new_image):
-    client.post("/api/user/v1beta0/{0}/roles/{1}/images/{2}/actions/replace/".format(env_id, role["id"], old_image["id"]),
+    client.post("/api/v1beta0/user/{0}/roles/{1}/images/{2}/actions/replace/".format(env_id, role["id"], old_image["id"]),
                  json={"image": new_image})
 
 
 def set_role_global_variable(client, env_id, role, gv):
     logger.info("Setting Global Variable on Role %s: %s=%s", role["name"], gv["name"], gv.get("value", ""))
-    client.create("/api/user/v1beta0/{0}/roles/{1}/global-variables/".format(env_id, role["id"]), json=gv)
+    client.create("/api/v1beta0/user/{0}/roles/{1}/global-variables/".format(env_id, role["id"]), json=gv)
 
 
 def list_global_variables(client, env_id, role):
     logger.info("Listing Global Variables on Role %s", role["name"])
-    return client.list("/api/user/v1beta0/{0}/roles/{1}/global-variables/".format(env_id, role["id"]))
+    return client.list("/api/v1beta0/user/{0}/roles/{1}/global-variables/".format(env_id, role["id"]))
 
 
 def delete_role_global_variable(client, env_id, role, gv):
     logger.info("Deleting Global Variable from Role %s: %s", role["name"], gv["name"])
-    return client.delete("/api/user/v1beta0/{0}/roles/{1}/global-variables/{2}/".format(env_id, role["id"], gv["name"]))
+    return client.delete("/api/v1beta0/user/{0}/roles/{1}/global-variables/{2}/".format(env_id, role["id"], gv["name"]))
 
 
 class BaseApiTestCase(unittest.TestCase):
@@ -173,7 +173,7 @@ class BaseApiTestCase(unittest.TestCase):
     def _role_has_image(self, role, image):
         for role_image in list_role_images(self.client, self.env_id, role):
             if role_image["image"]["id"] == image["id"]:
-               return True
+                return True
         return False
 
     def assertRoleHasImage(self, role, image):
@@ -232,6 +232,7 @@ class DissociateImageTestCase(BaseApiTestCase):
         self.assertRaises(HTTPError, dissociate_role_image,
                           self.client, self.env_id, self.role, self.image)
 
+
 class AssociateConflictingImageTestCase(BaseApiTestCase):
     def runTest(self):
         # Check conflict
@@ -272,4 +273,3 @@ class TestListOsTestCase(BaseApiTestCase):
 def execute(client, env_id):
     suite = [cls(client, env_id) for cls in BaseApiTestCase.__subclasses__()]
     nose.core.TestProgram(suite=suite)
-
