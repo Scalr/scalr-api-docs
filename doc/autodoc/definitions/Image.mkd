@@ -137,7 +137,7 @@ Property of type: `string`.
 
 ### `status` (read-only, filterable) ###
 
-Current status for this Image. Not that `delete` means deletion is underway, and `failed` means deletion failed.
+Current status for this Image. That `failed` means deletion failed.
 
 
 Property of type: `string`.
@@ -145,7 +145,7 @@ Property of type: `string`.
  
 The following are valid values for the `status` property:
   + `active`
-  + `delete`
+  + `pending_delete`
   + `failed`
 
 To filter on this field, use: `status=...`.
@@ -264,10 +264,10 @@ Property of type: `string`.
       ], 
       "x-usedIn": [
         "/images/{imageId}/", 
+        "/images/{imageId}/actions/copy/", 
         "/images/", 
         "/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/roles/{roleId}/images/{imageId}/", 
-        "/images/{imageId}/actions/copy/", 
         "/{envId}/images/{imageId}/actions/copy/", 
         "/{envId}/roles/{roleId}/images/{imageId}/", 
         "/{envId}/images/", 
@@ -279,11 +279,11 @@ Property of type: `string`.
           "readOnly": true, 
           "enum": [
             "active", 
-            "delete", 
+            "pending_delete", 
             "failed"
           ], 
           "type": "string", 
-          "description": "Current status for this Image. Not that `delete` means deletion is underway, and `failed` means deletion failed."
+          "description": "Current status for this Image. That `failed` means deletion failed."
         }, 
         "added": {
           "readOnly": true, 

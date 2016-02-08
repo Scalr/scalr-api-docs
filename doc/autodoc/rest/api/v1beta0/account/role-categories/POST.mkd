@@ -1,23 +1,23 @@
-# `GET /api/v1beta0/user/{envId}/role-categories/` #
+# `POST /api/v1beta0/account/role-categories/` #
 
-List Role Categories available in this Environment
+Create a new Role Category in this Account
 
 ## Request Parameters #
 
-### Path Parameters ###
-
-Path parameters are included in the URL.
-
-#### `envId` ####
-
-The ID of the Environment scoping this request
-
-Parameter of type: `integer`.
 
 
 
 
+### Request Body ###
 
+The request body parameter is passed as the body of the request.
+
+#### `roleCategoryObject` ####
+
+The JSON representation of a RoleCategory object.
+
+
+An object of type: [`RoleCategory`](./../../../../../definitions/RoleCategory.mkd).
 
 
 
@@ -26,12 +26,12 @@ Parameter of type: `integer`.
 ## Responses ##
 
 
-### 200 ###
+### 201 ###
 
-A list of RoleCategory objects.
+The JSON representation of a RoleCategory object.
 
 The response body is an object of type:
-[`RoleCategoryListResponse`](./../../../../../../definitions/RoleCategoryListResponse.mkd).
+[`RoleCategoryDetailResponse`](./../../../../../definitions/RoleCategoryDetailResponse.mkd).
 
 
 
@@ -40,7 +40,7 @@ The response body is an object of type:
 A client-side error was made
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -54,7 +54,7 @@ The following errors **may** be returned by this endpoint.
 Request was not authenticated
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -66,7 +66,7 @@ The following errors **may** be returned by this endpoint.
 Insufficient permissions
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -79,7 +79,7 @@ The following errors **may** be returned by this endpoint.
 Resource not found
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -91,7 +91,7 @@ The following errors **may** be returned by this endpoint.
 Conflict with current state
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -104,7 +104,7 @@ The following errors **may** be returned by this endpoint.
 A server-side error occured
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -114,7 +114,7 @@ The response body is an object of type:
 
     {
       "post": {
-        "description": "Create a new Role Category in this Environment", 
+        "description": "Create a new Role Category in this Account", 
         "parameters": [
           {
             "required": true, 
@@ -222,17 +222,8 @@ The response body is an object of type:
           }
         }
       }, 
-      "parameters": [
-        {
-          "required": true, 
-          "type": "integer", 
-          "description": "The ID of the Environment scoping this request", 
-          "in": "path", 
-          "name": "envId"
-        }
-      ], 
       "get": {
-        "description": "List Role Categories available in this Environment", 
+        "description": "List Role Categories available in this Account", 
         "responses": {
           "400": {
             "x-errorCodes": [

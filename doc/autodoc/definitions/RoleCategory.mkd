@@ -53,16 +53,22 @@ To filter on this field, use: `id=...`.
 
 ## Used in ##
 
+  + [`/role-categories/`](./../rest/api/v1beta0/account/role-categories/)
+  + [`/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/account/role-categories/{roleCategoryId}/)
+  + [`/{envId}/role-categories/`](./../rest/api/v1beta0/user/{envId}/role-categories/)
   + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/user/{envId}/role-categories/{roleCategoryId}/)
 
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/role-categories/{roleCategoryId}/"
-      ], 
       "required": [
         "name"
+      ], 
+      "x-usedIn": [
+        "/role-categories/", 
+        "/role-categories/{roleCategoryId}/", 
+        "/{envId}/role-categories/", 
+        "/{envId}/role-categories/{roleCategoryId}/"
       ], 
       "properties": {
         "scope": {

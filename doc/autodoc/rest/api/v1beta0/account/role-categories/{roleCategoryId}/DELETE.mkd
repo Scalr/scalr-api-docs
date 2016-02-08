@@ -1,6 +1,6 @@
-# `GET /api/v1beta0/user/{envId}/role-categories/` #
+# `DELETE /api/v1beta0/account/role-categories/{roleCategoryId}/` #
 
-List Role Categories available in this Environment
+Delete this Role Category from this Account.
 
 ## Request Parameters #
 
@@ -8,9 +8,9 @@ List Role Categories available in this Environment
 
 Path parameters are included in the URL.
 
-#### `envId` ####
+#### `roleCategoryId` ####
 
-The ID of the Environment scoping this request
+The ID of a RoleCategory object.
 
 Parameter of type: `integer`.
 
@@ -28,10 +28,10 @@ Parameter of type: `integer`.
 
 ### 200 ###
 
-A list of RoleCategory objects.
+Successful deletion
 
 The response body is an object of type:
-[`RoleCategoryListResponse`](./../../../../../../definitions/RoleCategoryListResponse.mkd).
+[`DeleteSuccessResponse`](./../../../../../../definitions/DeleteSuccessResponse.mkd).
 
 
 
@@ -113,8 +113,216 @@ The response body is an object of type:
 ## Swagger Definition ##
 
     {
-      "post": {
-        "description": "Create a new Role Category in this Environment", 
+      "delete": {
+        "description": "Delete this Role Category from this Account.", 
+        "responses": {
+          "400": {
+            "x-errorCodes": [
+              {
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ], 
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "401": {
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ], 
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "403": {
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ], 
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "409": {
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }
+            ], 
+            "description": "Conflict with current state", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "200": {
+            "description": "Successful deletion", 
+            "schema": {
+              "$ref": "#/definitions/DeleteSuccessResponse"
+            }
+          }, 
+          "404": {
+            "x-errorCodes": [
+              {
+                "noDoc": true, 
+                "description": "The route you are trying to access does not exist", 
+                "name": "EndpointNotFound"
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist", 
+                "name": "ObjectNotFound"
+              }
+            ], 
+            "description": "Resource not found", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }
+        }
+      }, 
+      "get": {
+        "description": "Return a JSON representation of a Role Category", 
+        "responses": {
+          "400": {
+            "x-errorCodes": [
+              {
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ], 
+            "description": "A client-side error was made", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "401": {
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ], 
+            "description": "Request was not authenticated", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "403": {
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ], 
+            "description": "Insufficient permissions", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "409": {
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }
+            ], 
+            "description": "Conflict with current state", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "200": {
+            "description": "The JSON representation of a RoleCategory object.", 
+            "schema": {
+              "$ref": "#/definitions/RoleCategoryDetailResponse"
+            }
+          }, 
+          "404": {
+            "x-errorCodes": [
+              {
+                "noDoc": true, 
+                "description": "The route you are trying to access does not exist", 
+                "name": "EndpointNotFound"
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist", 
+                "name": "ObjectNotFound"
+              }
+            ], 
+            "description": "Resource not found", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }
+        }
+      }, 
+      "parameters": [
+        {
+          "x-references": {
+            "$ref": "#/definitions/RoleCategory"
+          }, 
+          "description": "The ID of a RoleCategory object.", 
+          "in": "path", 
+          "required": true, 
+          "type": "integer", 
+          "name": "roleCategoryId"
+        }
+      ], 
+      "patch": {
+        "description": "Change Role Category attributes.", 
         "parameters": [
           {
             "required": true, 
@@ -197,117 +405,10 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
-          "201": {
+          "200": {
             "description": "The JSON representation of a RoleCategory object.", 
             "schema": {
               "$ref": "#/definitions/RoleCategoryDetailResponse"
-            }
-          }, 
-          "404": {
-            "x-errorCodes": [
-              {
-                "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
-                "name": "EndpointNotFound"
-              }, 
-              {
-                "description": "The URL you are trying to access does not exist", 
-                "name": "ObjectNotFound"
-              }
-            ], 
-            "description": "Resource not found", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }
-        }
-      }, 
-      "parameters": [
-        {
-          "required": true, 
-          "type": "integer", 
-          "description": "The ID of the Environment scoping this request", 
-          "in": "path", 
-          "name": "envId"
-        }
-      ], 
-      "get": {
-        "description": "List Role Categories available in this Environment", 
-        "responses": {
-          "400": {
-            "x-errorCodes": [
-              {
-                "description": "Your request is structurally incorrect, and was not understood by the API.", 
-                "name": "InvalidStructure"
-              }, 
-              {
-                "description": "Your request was understood by the API, but included data that is not acceptable.", 
-                "name": "InvalidValue"
-              }, 
-              {
-                "description": "Your request wasn't understood by the API.", 
-                "name": "BadRequest"
-              }
-            ], 
-            "description": "A client-side error was made", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "401": {
-            "x-errorCodes": [
-              {
-                "description": "Your request authentication failed to validate.", 
-                "name": "BadAuthentication"
-              }
-            ], 
-            "description": "Request was not authenticated", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "403": {
-            "x-errorCodes": [
-              {
-                "description": "Your request should be made in a different Scope.", 
-                "name": "ScopeViolation"
-              }, 
-              {
-                "description": "Your request requires permissions you do not have.", 
-                "name": "PermissionViolation"
-              }
-            ], 
-            "description": "Insufficient permissions", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "500": {
-            "description": "A server-side error occured", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "409": {
-            "x-errorCodes": [
-              {
-                "description": "The changes you are trying to make aren't possible while this object is in use.", 
-                "name": "ObjectInUse"
-              }, 
-              {
-                "description": "The changes you are trying to make violate a unicity constraint.", 
-                "name": "UnicityViolation"
-              }
-            ], 
-            "description": "Conflict with current state", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "200": {
-            "description": "A list of RoleCategory objects.", 
-            "schema": {
-              "$ref": "#/definitions/RoleCategoryListResponse"
             }
           }, 
           "404": {

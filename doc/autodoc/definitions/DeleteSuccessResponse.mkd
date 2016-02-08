@@ -56,6 +56,7 @@ Property of type: `string`.
   + [`/events/{eventId}/`](./../rest/api/v1beta0/account/events/{eventId}/)
   + [`/images/{imageId}/`](./../rest/api/v1beta0/account/images/{imageId}/)
   + [`/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/orchestration-rules/{orchestrationRuleId}/)
+  + [`/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/account/role-categories/{roleCategoryId}/)
   + [`/roles/{roleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/)
   + [`/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/{globalVariableName}/)
   + [`/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/)
@@ -68,6 +69,7 @@ Property of type: `string`.
   + [`/{envId}/farms/{farmId}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/)
   + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
   + [`/{envId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/)
+  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/user/{envId}/role-categories/{roleCategoryId}/)
   + [`/{envId}/roles/{roleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/)
   + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/{globalVariableName}/)
   + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/)
@@ -79,14 +81,15 @@ Property of type: `string`.
 
     {
       "x-usedIn": [
-        "/images/{imageId}/", 
+        "/events/{eventId}/", 
         "/orchestration-rules/{orchestrationRuleId}/", 
+        "/images/{imageId}/", 
         "/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/environments/{envId}/teams/{teamId}/", 
         "/roles/{roleId}/", 
         "/environments/{envId}/clouds/{cloud}/", 
-        "/events/{eventId}/", 
         "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/role-categories/{roleCategoryId}/", 
         "/roles/{roleId}/images/{imageId}/", 
         "/cloud-credentials/{cloudCredentialsId}/", 
         "/environments/{envId}/", 
@@ -103,6 +106,7 @@ Property of type: `string`.
         "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/{envId}/events/{eventId}/", 
         "/{envId}/images/{imageId}/", 
+        "/{envId}/role-categories/{roleCategoryId}/", 
         "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/"
       ], 
       "description": "Common envelope", 

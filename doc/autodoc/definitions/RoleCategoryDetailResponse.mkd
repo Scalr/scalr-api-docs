@@ -48,12 +48,18 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
+  + [`/role-categories/`](./../rest/api/v1beta0/account/role-categories/)
+  + [`/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/account/role-categories/{roleCategoryId}/)
+  + [`/{envId}/role-categories/`](./../rest/api/v1beta0/user/{envId}/role-categories/)
   + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/user/{envId}/role-categories/{roleCategoryId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
+        "/role-categories/", 
+        "/role-categories/{roleCategoryId}/", 
+        "/{envId}/role-categories/", 
         "/{envId}/role-categories/{roleCategoryId}/"
       ], 
       "properties": {
