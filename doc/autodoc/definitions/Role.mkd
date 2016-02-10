@@ -84,6 +84,15 @@ Property of type: `boolean`.
 To filter on this field, use: `deprecated=...`.
 
 
+### `builtinAutomation` (create-only, filterable) ###
+
+
+
+
+An array of 
+`string` objects.
+
+
 ### `scope` (read-only, filterable) ###
 
 
@@ -184,6 +193,28 @@ To filter on this field, use: `id=...`.
           "type": "boolean", 
           "description": "Whether it is QuickStart Role."
         }, 
+        "builtinAutomation": {
+          "items": {
+            "enum": [
+              "base", 
+              "chef", 
+              "mysql", 
+              "percona", 
+              "mariadb", 
+              "postgresql", 
+              "mongodb", 
+              "redis", 
+              "apache", 
+              "nginx", 
+              "tomcat", 
+              "haproxy", 
+              "rabbitmq", 
+              "memcached"
+            ], 
+            "type": "string"
+          }, 
+          "type": "array"
+        }, 
         "scope": {
           "readOnly": true, 
           "enum": [
@@ -215,9 +246,11 @@ To filter on this field, use: `id=...`.
         "scope", 
         "quickStart", 
         "deprecated", 
-        "useScalrAgent"
+        "useScalrAgent", 
+        "builtinAutomation"
       ], 
       "x-createOnly": [
-        "useScalrAgent"
+        "useScalrAgent", 
+        "builtinAutomation"
       ]
     }

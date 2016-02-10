@@ -64,8 +64,8 @@ To filter on this field, use: `scope=...`.
         "id"
       ], 
       "x-usedIn": [
-        "/events/", 
         "/events/{eventId}/", 
+        "/events/", 
         "/{envId}/events/", 
         "/{envId}/events/{eventId}/"
       ], 

@@ -1,25 +1,6 @@
-# `GET /api/v1beta0/user/{envId}/role-categories/` #
+# `GET /api/v1beta0/account/role-categories/` #
 
-List Role Categories available in this Environment
-
-## Request Parameters #
-
-### Path Parameters ###
-
-Path parameters are included in the URL.
-
-#### `envId` ####
-
-The ID of the Environment scoping this request
-
-Parameter of type: `integer`.
-
-
-
-
-
-
-
+List Role Categories available in this Account
 
 
 
@@ -31,7 +12,7 @@ Parameter of type: `integer`.
 A list of RoleCategory objects.
 
 The response body is an object of type:
-[`RoleCategoryListResponse`](./../../../../../../definitions/RoleCategoryListResponse.mkd).
+[`RoleCategoryListResponse`](./../../../../../definitions/RoleCategoryListResponse.mkd).
 
 
 
@@ -40,7 +21,7 @@ The response body is an object of type:
 A client-side error was made
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -54,7 +35,7 @@ The following errors **may** be returned by this endpoint.
 Request was not authenticated
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -66,7 +47,7 @@ The following errors **may** be returned by this endpoint.
 Insufficient permissions
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -79,7 +60,7 @@ The following errors **may** be returned by this endpoint.
 Resource not found
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -91,7 +72,7 @@ The following errors **may** be returned by this endpoint.
 Conflict with current state
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -104,7 +85,7 @@ The following errors **may** be returned by this endpoint.
 A server-side error occured
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -114,7 +95,7 @@ The response body is an object of type:
 
     {
       "post": {
-        "description": "Create a new Role Category in this Environment", 
+        "description": "Create a new Role Category in this Account", 
         "parameters": [
           {
             "required": true, 
@@ -222,17 +203,8 @@ The response body is an object of type:
           }
         }
       }, 
-      "parameters": [
-        {
-          "required": true, 
-          "type": "integer", 
-          "description": "The ID of the Environment scoping this request", 
-          "in": "path", 
-          "name": "envId"
-        }
-      ], 
       "get": {
-        "description": "List Role Categories available in this Environment", 
+        "description": "List Role Categories available in this Account", 
         "responses": {
           "400": {
             "x-errorCodes": [
