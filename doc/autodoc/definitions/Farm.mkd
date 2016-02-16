@@ -53,7 +53,7 @@ Property of type: `string`.
 
 ### `teamOwner` (optional, filterable) ###
 
-Identifier of the Team who owns the Farm
+Identifier of the Team who owns the Farm.
 
 
 An object of type [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd).
@@ -64,7 +64,7 @@ e.g.: `teamOwner=...`.
 
 ### `owner` (optional, filterable) ###
 
-Identifier of the User who owns the Farm
+Identifier of the User who owns the Farm.
 
 
 An object of type [`UserForeignKey`](./../definitions/UserForeignKey.mkd).
@@ -125,6 +125,10 @@ To filter on this field, use: `id=...`.
 ## Swagger Definition ##
 
     {
+      "required": [
+        "name", 
+        "project"
+      ], 
       "x-usedIn": [
         "/{envId}/farms/{farmId}/farm-roles/", 
         "/{envId}/farms/{farmId}/", 
@@ -145,16 +149,16 @@ To filter on this field, use: `id=...`.
         "vpc": {
           "$ref": "#/definitions/CloudAwsVpcForeignKey"
         }, 
-        "teamOwner": {
-          "description": "Identifier of the Team who owns the Farm", 
-          "$ref": "#/definitions/TeamForeignKey"
-        }, 
-        "owner": {
-          "description": "Identifier of the User who owns the Farm", 
-          "$ref": "#/definitions/UserForeignKey"
-        }, 
         "timezone": {
           "type": "string"
+        }, 
+        "owner": {
+          "description": "Identifier of the User who owns the Farm.", 
+          "$ref": "#/definitions/UserForeignKey"
+        }, 
+        "teamOwner": {
+          "description": "Identifier of the Team who owns the Farm.", 
+          "$ref": "#/definitions/TeamForeignKey"
         }, 
         "launchOrder": {
           "enum": [
@@ -179,9 +183,5 @@ To filter on this field, use: `id=...`.
         "launchOrder", 
         "owner", 
         "teamOwner"
-      ], 
-      "required": [
-        "name", 
-        "project"
       ]
     }

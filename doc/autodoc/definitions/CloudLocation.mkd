@@ -59,8 +59,8 @@ To filter on this field, use: `cloudLocation=...`.
         "cloudPlatform"
       ], 
       "x-usedIn": [
-        "/images/{imageId}/actions/copy/", 
-        "/{envId}/images/{imageId}/actions/copy/"
+        "/{envId}/images/{imageId}/actions/copy/", 
+        "/images/{imageId}/actions/copy/"
       ], 
       "properties": {
         "cloudLocation": {

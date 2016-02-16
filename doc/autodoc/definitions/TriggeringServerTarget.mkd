@@ -1,6 +1,6 @@
 # `TriggeringServerTarget` #
 
-Selects the Server that triggered the Event
+Selects the Server that triggered the Event.
 
 ## Polymorphism ##
 
@@ -35,7 +35,7 @@ This `string` property is used for polymorphism. It **must** be set to: `"Trigge
         "targetType"
       ], 
       "x-discriminator": "targetType", 
-      "description": "Selects the Server that triggered the Event", 
+      "description": "Selects the Server that triggered the Event.", 
       "properties": {
         "targetType": {
           "enum": [

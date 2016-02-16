@@ -1,0 +1,122 @@
+# `SqsQueueSizeScalingRule` #
+
+It is used in combination with user defined Scaling Metrics.
+
+## Polymorphism ##
+
+`SqsQueueSizeScalingRule` is a type that implements the [`BasicScalingRule`](./../definitions/BasicScalingRule.mkd) type.
+
+When an object of type [`BasicScalingRule`](./../definitions/BasicScalingRule.mkd) is expected, you can use one of type `SqsQueueSizeScalingRule`
+(or use any other implementation).
+
+
+
+
+## Properties ##
+
+### `scaleUp` (required) ###
+
+Scale up threshold.
+
+
+Property of type: `integer`.
+
+
+
+
+### `scaleDown` (required) ###
+
+Scale down threshold.
+
+
+Property of type: `integer`.
+
+
+
+
+### `ruleType` (required, create-only, filterable) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"SqsQueueSizeScalingRule"`
+
+
+### `queue` (required) ###
+
+The AWS SQS queue name.
+
+
+Property of type: `string`.
+
+
+
+
+### `name` (required, create-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "description": "It is used in combination with user defined Scaling Metrics.", 
+      "required": [
+        "name", 
+        "ruleType", 
+        "scaleUp", 
+        "scaleDown", 
+        "queue"
+      ], 
+      "x-discriminator": "ruleType", 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/BasicScalingRule"
+      }, 
+      "properties": {
+        "queue": {
+          "type": "string", 
+          "description": "The AWS SQS queue name."
+        }, 
+        "ruleType": {
+          "enum": [
+            "BasicScalingRule", 
+            "LoadAveragesScalingRule", 
+            "FreeRamScalingRule", 
+            "UrlResponseTimeScalingRule", 
+            "SqsQueueSizeScalingRule", 
+            "DateAndTimeScalingRule", 
+            "BandWidthScalingRule"
+          ], 
+          "type": "string"
+        }, 
+        "scaleUp": {
+          "type": "integer", 
+          "description": "Scale up threshold."
+        }, 
+        "name": {
+          "type": "string", 
+          "descritpion": "The name of the Scaling Metric."
+        }, 
+        "scaleDown": {
+          "type": "integer", 
+          "description": "Scale down threshold."
+        }
+      }, 
+      "x-filterable": [
+        "name", 
+        "ruleType"
+      ]
+    }

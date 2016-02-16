@@ -1,4 +1,4 @@
-# `EventDetailResponse` #
+# `RoleCategoryDetailsResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`Event`](./../definitions/Event.mkd).
+An object of type [`RoleCategory`](./../definitions/RoleCategory.mkd).
 
 
 
@@ -48,19 +48,19 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/events/`](./../rest/api/v1beta0/account/events/)
-  + [`/events/{eventId}/`](./../rest/api/v1beta0/account/events/{eventId}/)
-  + [`/{envId}/events/`](./../rest/api/v1beta0/user/{envId}/events/)
-  + [`/{envId}/events/{eventId}/`](./../rest/api/v1beta0/user/{envId}/events/{eventId}/)
+  + [`/role-categories/`](./../rest/api/v1beta0/account/role-categories/)
+  + [`/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/account/role-categories/{roleCategoryId}/)
+  + [`/{envId}/role-categories/`](./../rest/api/v1beta0/user/{envId}/role-categories/)
+  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/user/{envId}/role-categories/{roleCategoryId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/events/{eventId}/", 
-        "/events/", 
-        "/{envId}/events/", 
-        "/{envId}/events/{eventId}/"
+        "/{envId}/role-categories/", 
+        "/{envId}/role-categories/{roleCategoryId}/", 
+        "/role-categories/", 
+        "/role-categories/{roleCategoryId}/"
       ], 
       "properties": {
         "meta": {
@@ -68,7 +68,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/Event"
+          "$ref": "#/definitions/RoleCategory"
         }, 
         "errors": {
           "items": {
@@ -86,6 +86,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/Event"
+        "$ref": "#/definitions/RoleCategory"
       }
     }

@@ -1,4 +1,4 @@
-# `FarmRoleDetailResponse` #
+# `ScalingMetricListResponse` #
 
 
 
@@ -8,15 +8,6 @@
 
 ## Properties ##
 
-### `data` (optional) ###
-
-
-
-
-An object of type [`FarmRole`](./../definitions/FarmRole.mkd).
-
-
-
 ### `warnings` (read-only) ###
 
 
@@ -24,6 +15,15 @@ An object of type [`FarmRole`](./../definitions/FarmRole.mkd).
 
 An array of 
 objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `pagination` (read-only) ###
+
+
+
+
+An object of type [`ApiPagination`](./../definitions/ApiPagination.mkd).
+
 
 
 ### `meta` (read-only) ###
@@ -44,27 +44,42 @@ An array of
 objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 
+### `data` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ScalingMetric`](./../definitions/ScalingMetric.mkd).
+
+
 
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/)
-  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
+  + [`/{envId}/scaling-metrics/`](./../rest/api/v1beta0/user/{envId}/scaling-metrics/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/farms/{farmId}/farm-roles/", 
-        "/{envId}/farm-roles/{farmRoleId}/"
+        "/{envId}/scaling-metrics/"
       ], 
       "properties": {
+        "pagination": {
+          "readOnly": true, 
+          "$ref": "#/definitions/ApiPagination"
+        }, 
         "meta": {
           "readOnly": true, 
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/FarmRole"
+          "items": {
+            "$ref": "#/definitions/ScalingMetric"
+          }, 
+          "readOnly": true, 
+          "type": "array"
         }, 
         "errors": {
           "items": {
@@ -82,6 +97,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/FarmRole"
+        "$ref": "#/definitions/ScalingMetric"
       }
     }

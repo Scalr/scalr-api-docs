@@ -1,4 +1,4 @@
-# `InstanceConfigurationDetailResponse` #
+# `OsDetailsResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`InstanceConfiguration`](./../definitions/InstanceConfiguration.mkd).
+An object of type [`Os`](./../definitions/Os.mkd).
 
 
 
@@ -48,13 +48,15 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/instance/)
+  + [`/os/{osId}/`](./../rest/api/v1beta0/account/os/{osId}/)
+  + [`/{envId}/os/{osId}/`](./../rest/api/v1beta0/user/{envId}/os/{osId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/instance/"
+        "/{envId}/os/{osId}/", 
+        "/os/{osId}/"
       ], 
       "properties": {
         "meta": {
@@ -62,7 +64,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/InstanceConfiguration"
+          "$ref": "#/definitions/Os"
         }, 
         "errors": {
           "items": {
@@ -80,6 +82,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/InstanceConfiguration"
+        "$ref": "#/definitions/Os"
       }
     }

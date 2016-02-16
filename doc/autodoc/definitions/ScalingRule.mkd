@@ -1,0 +1,103 @@
+# `ScalingRule` #
+
+
+
+
+## Abstract Type ##
+
+`ScalingRule` is an abstract type. When an object of type `ScalingRule` is expected, you must pass an object of
+one of the following types:
+
+  + [`BasicScalingRule`](./../definitions/BasicScalingRule.mkd)
+  + [`DateAndTimeScalingRule`](./../definitions/DateAndTimeScalingRule.mkd)
+
+
+
+
+## Properties ##
+
+### `ruleType` (required, create-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `ruleType` property:
+  + `BasicScalingRule`
+  + `LoadAveragesScalingRule`
+  + `FreeRamScalingRule`
+  + `UrlResponseTimeScalingRule`
+  + `SqsQueueSizeScalingRule`
+  + `DateAndTimeScalingRule`
+  + `BandWidthScalingRule`
+
+To filter on this field, use: `ruleType=...`.
+
+
+### `name` (required, create-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
+  + [`/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/)
+
+## Swagger Definition ##
+
+    {
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/BasicScalingRule"
+        }, 
+        {
+          "$ref": "#/definitions/DateAndTimeScalingRule"
+        }
+      ], 
+      "required": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "discriminator": "ruleType", 
+      "x-usedIn": [
+        "/{envId}/farm-roles/{farmRoleId}/scaling/", 
+        "/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/"
+      ], 
+      "properties": {
+        "ruleType": {
+          "enum": [
+            "BasicScalingRule", 
+            "LoadAveragesScalingRule", 
+            "FreeRamScalingRule", 
+            "UrlResponseTimeScalingRule", 
+            "SqsQueueSizeScalingRule", 
+            "DateAndTimeScalingRule", 
+            "BandWidthScalingRule"
+          ], 
+          "type": "string"
+        }, 
+        "name": {
+          "type": "string", 
+          "descritpion": "The name of the Scaling Metric."
+        }
+      }, 
+      "x-filterable": [
+        "name", 
+        "ruleType"
+      ]
+    }

@@ -1,6 +1,6 @@
 # `NullTarget` #
 
-Selects no Server at all
+Selects no Server at all.
 
 ## Polymorphism ##
 
@@ -35,7 +35,7 @@ This `string` property is used for polymorphism. It **must** be set to: `"NullTa
         "targetType"
       ], 
       "x-discriminator": "targetType", 
-      "description": "Selects no Server at all", 
+      "description": "Selects no Server at all.", 
       "properties": {
         "targetType": {
           "enum": [

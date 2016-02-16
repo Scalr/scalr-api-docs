@@ -10,7 +10,7 @@
 
 ### `message` (optional) ###
 
-A human-readable representation of the message
+A human-readable representation of the message.
 
 
 Property of type: `string`.
@@ -20,7 +20,7 @@ Property of type: `string`.
 
 ### `code` (optional) ###
 
-A machine-readable representation of the message
+A machine-readable representation of the message.
 
 
 Property of type: `string`.
@@ -37,11 +37,11 @@ Property of type: `string`.
       "properties": {
         "message": {
           "type": "string", 
-          "description": "A human-readable representation of the message"
+          "description": "A human-readable representation of the message."
         }, 
         "code": {
           "type": "string", 
-          "description": "A machine-readable representation of the message"
+          "description": "A machine-readable representation of the message."
         }
       }
     }

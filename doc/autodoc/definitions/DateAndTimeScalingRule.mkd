@@ -1,0 +1,93 @@
+# `DateAndTimeScalingRule` #
+
+It defines the number of running instances for the specified time frames.
+
+## Polymorphism ##
+
+`DateAndTimeScalingRule` is a type that implements the [`ScalingRule`](./../definitions/ScalingRule.mkd) type.
+
+When an object of type [`ScalingRule`](./../definitions/ScalingRule.mkd) is expected, you can use one of type `DateAndTimeScalingRule`
+(or use any other implementation).
+
+
+
+
+## Properties ##
+
+### `schedule` (required) ###
+
+
+
+
+An array of 
+objects of type [`ScalingRuleTimeFrame`](./../definitions/ScalingRuleTimeFrame.mkd).
+
+
+### `ruleType` (required, create-only, filterable) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"DateAndTimeScalingRule"`
+
+
+### `name` (required, create-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "description": "It defines the number of running instances for the specified time frames.", 
+      "required": [
+        "name", 
+        "ruleType", 
+        "schedule"
+      ], 
+      "x-discriminator": "ruleType", 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/ScalingRule"
+      }, 
+      "properties": {
+        "ruleType": {
+          "enum": [
+            "BasicScalingRule", 
+            "LoadAveragesScalingRule", 
+            "FreeRamScalingRule", 
+            "UrlResponseTimeScalingRule", 
+            "SqsQueueSizeScalingRule", 
+            "DateAndTimeScalingRule", 
+            "BandWidthScalingRule"
+          ], 
+          "type": "string"
+        }, 
+        "name": {
+          "type": "string", 
+          "descritpion": "The name of the Scaling Metric."
+        }, 
+        "schedule": {
+          "items": {
+            "$ref": "#/definitions/ScalingRuleTimeFrame"
+          }, 
+          "type": "array"
+        }
+      }, 
+      "x-filterable": [
+        "name", 
+        "ruleType"
+      ]
+    }

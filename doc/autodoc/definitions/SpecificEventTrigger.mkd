@@ -1,6 +1,6 @@
 # `SpecificEventTrigger` #
 
-Triggers when a specific Event fires
+Triggers when a specific Event fires.
 
 ## Polymorphism ##
 
@@ -45,7 +45,7 @@ An object of type [`Event`](./../definitions/Event.mkd).
         "event"
       ], 
       "x-discriminator": "triggerType", 
-      "description": "Triggers when a specific Event fires", 
+      "description": "Triggers when a specific Event fires.", 
       "properties": {
         "event": {
           "$ref": "#/definitions/Event"

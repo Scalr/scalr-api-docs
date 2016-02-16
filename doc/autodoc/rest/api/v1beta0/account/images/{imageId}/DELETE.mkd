@@ -1,6 +1,6 @@
 # `DELETE /api/v1beta0/account/images/{imageId}/` #
 
-De-register an Image from the Account.
+Deregister an Image from the Account.
 
 ## Request Parameters #
 
@@ -40,7 +40,7 @@ Parameter of type: `boolean`.
 
 ### 200 ###
 
-Image scheduled for de-registration.
+Image has been deregistered.
 
 The response body is an object of type:
 [`DeleteSuccessResponse`](./../../../../../../definitions/DeleteSuccessResponse.mkd).
@@ -49,7 +49,7 @@ The response body is an object of type:
 
 ### 202 ###
 
-Image scheduled for de-registration and deletion.
+Image scheduled for deregistration and deletion from cloud.
 
 The response body is an object of type:
 [`DeleteSuccessResponse`](./../../../../../../definitions/DeleteSuccessResponse.mkd).
@@ -58,7 +58,7 @@ The response body is an object of type:
 
 ### 400 ###
 
-A client-side error was made
+A client-side error was made.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
@@ -72,7 +72,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 401 ###
 
-Request was not authenticated
+Request was not authenticated.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
@@ -84,7 +84,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 403 ###
 
-Insufficient permissions
+Insufficient permissions.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
@@ -97,19 +97,19 @@ The following errors **may** be returned by this endpoint.
 
 ### 404 ###
 
-Resource not found
+Resource not found.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
-+ `ObjectNotFound`: The URL you are trying to access does not exist Check the error message for more information.
++ `ObjectNotFound`: The URL you are trying to access does not exist. Check the error message for more information.
 
 
 ### 409 ###
 
-Conflict with current state
+Conflict with current state.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
@@ -122,7 +122,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 500 ###
 
-A server-side error occured
+A server-side error occured.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
@@ -135,7 +135,7 @@ The response body is an object of type:
 
     {
       "delete": {
-        "description": "De-register an Image from the Account.", 
+        "description": "Deregister an Image from the Account.", 
         "parameters": [
           {
             "required": false, 
@@ -147,13 +147,13 @@ The response body is an object of type:
         ], 
         "responses": {
           "200": {
-            "description": "Image scheduled for de-registration.", 
+            "description": "Image has been deregistered.", 
             "schema": {
               "$ref": "#/definitions/DeleteSuccessResponse"
             }
           }, 
           "202": {
-            "description": "Image scheduled for de-registration and deletion.", 
+            "description": "Image scheduled for deregistration and deletion from cloud.", 
             "schema": {
               "$ref": "#/definitions/DeleteSuccessResponse"
             }
@@ -173,7 +173,7 @@ The response body is an object of type:
                 "name": "BadRequest"
               }
             ], 
-            "description": "A client-side error was made", 
+            "description": "A client-side error was made.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -185,7 +185,7 @@ The response body is an object of type:
                 "name": "BadAuthentication"
               }
             ], 
-            "description": "Request was not authenticated", 
+            "description": "Request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -201,13 +201,13 @@ The response body is an object of type:
                 "name": "PermissionViolation"
               }
             ], 
-            "description": "Insufficient permissions", 
+            "description": "Insufficient permissions.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
           "500": {
-            "description": "A server-side error occured", 
+            "description": "A server-side error occured.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -223,7 +223,7 @@ The response body is an object of type:
                 "name": "UnicityViolation"
               }
             ], 
-            "description": "Conflict with current state", 
+            "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -232,15 +232,15 @@ The response body is an object of type:
             "x-errorCodes": [
               {
                 "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
+                "description": "The route you are trying to access does not exist.", 
                 "name": "EndpointNotFound"
               }, 
               {
-                "description": "The URL you are trying to access does not exist", 
+                "description": "The URL you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ], 
-            "description": "Resource not found", 
+            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -265,7 +265,7 @@ The response body is an object of type:
                 "name": "BadRequest"
               }
             ], 
-            "description": "A client-side error was made", 
+            "description": "A client-side error was made.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -277,7 +277,7 @@ The response body is an object of type:
                 "name": "BadAuthentication"
               }
             ], 
-            "description": "Request was not authenticated", 
+            "description": "Request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -293,13 +293,13 @@ The response body is an object of type:
                 "name": "PermissionViolation"
               }
             ], 
-            "description": "Insufficient permissions", 
+            "description": "Insufficient permissions.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
           "500": {
-            "description": "A server-side error occured", 
+            "description": "A server-side error occured.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -315,7 +315,7 @@ The response body is an object of type:
                 "name": "UnicityViolation"
               }
             ], 
-            "description": "Conflict with current state", 
+            "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -323,22 +323,22 @@ The response body is an object of type:
           "200": {
             "description": "The JSON representation of a Image object.", 
             "schema": {
-              "$ref": "#/definitions/ImageDetailResponse"
+              "$ref": "#/definitions/ImageDetailsResponse"
             }
           }, 
           "404": {
             "x-errorCodes": [
               {
                 "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
+                "description": "The route you are trying to access does not exist.", 
                 "name": "EndpointNotFound"
               }, 
               {
-                "description": "The URL you are trying to access does not exist", 
+                "description": "The URL you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ], 
-            "description": "Resource not found", 
+            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -386,7 +386,7 @@ The response body is an object of type:
                 "name": "BadRequest"
               }
             ], 
-            "description": "A client-side error was made", 
+            "description": "A client-side error was made.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -398,7 +398,7 @@ The response body is an object of type:
                 "name": "BadAuthentication"
               }
             ], 
-            "description": "Request was not authenticated", 
+            "description": "Request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -414,13 +414,13 @@ The response body is an object of type:
                 "name": "PermissionViolation"
               }
             ], 
-            "description": "Insufficient permissions", 
+            "description": "Insufficient permissions.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
           "500": {
-            "description": "A server-side error occured", 
+            "description": "A server-side error occured.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -436,7 +436,7 @@ The response body is an object of type:
                 "name": "UnicityViolation"
               }
             ], 
-            "description": "Conflict with current state", 
+            "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -444,22 +444,22 @@ The response body is an object of type:
           "200": {
             "description": "The JSON representation of a Image object.", 
             "schema": {
-              "$ref": "#/definitions/ImageDetailResponse"
+              "$ref": "#/definitions/ImageDetailsResponse"
             }
           }, 
           "404": {
             "x-errorCodes": [
               {
                 "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
+                "description": "The route you are trying to access does not exist.", 
                 "name": "EndpointNotFound"
               }, 
               {
-                "description": "The URL you are trying to access does not exist", 
+                "description": "The URL you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ], 
-            "description": "Resource not found", 
+            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }

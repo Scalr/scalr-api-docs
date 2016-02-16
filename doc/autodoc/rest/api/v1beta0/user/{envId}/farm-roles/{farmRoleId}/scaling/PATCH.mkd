@@ -10,7 +10,7 @@ Path parameters are included in the URL.
 
 #### `envId` ####
 
-The ID of the Environment scoping this request
+The ID of the Environment scoping this request.
 
 Parameter of type: `integer`.
 
@@ -50,13 +50,13 @@ An object of type: [`ScalingConfiguration`](./../../../../../../../../definition
 The JSON representation of a ScalingConfiguration object.
 
 The response body is an object of type:
-[`ScalingConfigurationDetailResponse`](./../../../../../../../../definitions/ScalingConfigurationDetailResponse.mkd).
+[`ScalingConfigurationDetailsResponse`](./../../../../../../../../definitions/ScalingConfigurationDetailsResponse.mkd).
 
 
 
 ### 400 ###
 
-A client-side error was made
+A client-side error was made.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
@@ -70,7 +70,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 401 ###
 
-Request was not authenticated
+Request was not authenticated.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
@@ -82,7 +82,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 403 ###
 
-Insufficient permissions
+Insufficient permissions.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
@@ -95,19 +95,19 @@ The following errors **may** be returned by this endpoint.
 
 ### 404 ###
 
-Resource not found
+Resource not found.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
-+ `ObjectNotFound`: The URL you are trying to access does not exist Check the error message for more information.
++ `ObjectNotFound`: The URL you are trying to access does not exist. Check the error message for more information.
 
 
 ### 409 ###
 
-Conflict with current state
+Conflict with current state.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
@@ -120,7 +120,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 500 ###
 
-A server-side error occured
+A server-side error occured.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
@@ -132,6 +132,115 @@ The response body is an object of type:
 ## Swagger Definition ##
 
     {
+      "post": {
+        "description": "Adds a new Scaling Rule.", 
+        "parameters": [
+          {
+            "required": true, 
+            "in": "body", 
+            "description": "The JSON representation of a ScalingRule object.", 
+            "name": "scalingRuleObject", 
+            "schema": {
+              "$ref": "#/definitions/ScalingRule"
+            }
+          }
+        ], 
+        "responses": {
+          "400": {
+            "x-errorCodes": [
+              {
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ], 
+            "description": "A client-side error was made.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "401": {
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ], 
+            "description": "Request was not authenticated.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "403": {
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ], 
+            "description": "Insufficient permissions.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "500": {
+            "description": "A server-side error occured.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "409": {
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }
+            ], 
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "201": {
+            "description": "The JSON representation of a ScalingConfiguration object.", 
+            "schema": {
+              "$ref": "#/definitions/ScalingConfigurationDetailsResponse"
+            }
+          }, 
+          "404": {
+            "x-errorCodes": [
+              {
+                "noDoc": true, 
+                "description": "The route you are trying to access does not exist.", 
+                "name": "EndpointNotFound"
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist.", 
+                "name": "ObjectNotFound"
+              }
+            ], 
+            "description": "Resource not found.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }
+        }
+      }, 
       "get": {
         "responses": {
           "400": {
@@ -149,7 +258,7 @@ The response body is an object of type:
                 "name": "BadRequest"
               }
             ], 
-            "description": "A client-side error was made", 
+            "description": "A client-side error was made.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -161,7 +270,7 @@ The response body is an object of type:
                 "name": "BadAuthentication"
               }
             ], 
-            "description": "Request was not authenticated", 
+            "description": "Request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -177,13 +286,13 @@ The response body is an object of type:
                 "name": "PermissionViolation"
               }
             ], 
-            "description": "Insufficient permissions", 
+            "description": "Insufficient permissions.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
           "500": {
-            "description": "A server-side error occured", 
+            "description": "A server-side error occured.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -199,7 +308,7 @@ The response body is an object of type:
                 "name": "UnicityViolation"
               }
             ], 
-            "description": "Conflict with current state", 
+            "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -207,22 +316,22 @@ The response body is an object of type:
           "200": {
             "description": "The JSON representation of a ScalingConfiguration object.", 
             "schema": {
-              "$ref": "#/definitions/ScalingConfigurationDetailResponse"
+              "$ref": "#/definitions/ScalingConfigurationDetailsResponse"
             }
           }, 
           "404": {
             "x-errorCodes": [
               {
                 "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
+                "description": "The route you are trying to access does not exist.", 
                 "name": "EndpointNotFound"
               }, 
               {
-                "description": "The URL you are trying to access does not exist", 
+                "description": "The URL you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ], 
-            "description": "Resource not found", 
+            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -233,7 +342,7 @@ The response body is an object of type:
         {
           "required": true, 
           "type": "integer", 
-          "description": "The ID of the Environment scoping this request", 
+          "description": "The ID of the Environment scoping this request.", 
           "in": "path", 
           "name": "envId"
         }, 
@@ -265,7 +374,7 @@ The response body is an object of type:
                 "name": "BadRequest"
               }
             ], 
-            "description": "A client-side error was made", 
+            "description": "A client-side error was made.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -277,7 +386,7 @@ The response body is an object of type:
                 "name": "BadAuthentication"
               }
             ], 
-            "description": "Request was not authenticated", 
+            "description": "Request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -293,13 +402,13 @@ The response body is an object of type:
                 "name": "PermissionViolation"
               }
             ], 
-            "description": "Insufficient permissions", 
+            "description": "Insufficient permissions.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
           "500": {
-            "description": "A server-side error occured", 
+            "description": "A server-side error occured.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -315,7 +424,7 @@ The response body is an object of type:
                 "name": "UnicityViolation"
               }
             ], 
-            "description": "Conflict with current state", 
+            "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -323,22 +432,22 @@ The response body is an object of type:
           "200": {
             "description": "The JSON representation of a ScalingConfiguration object.", 
             "schema": {
-              "$ref": "#/definitions/ScalingConfigurationDetailResponse"
+              "$ref": "#/definitions/ScalingConfigurationDetailsResponse"
             }
           }, 
           "404": {
             "x-errorCodes": [
               {
                 "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
+                "description": "The route you are trying to access does not exist.", 
                 "name": "EndpointNotFound"
               }, 
               {
-                "description": "The URL you are trying to access does not exist", 
+                "description": "The URL you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ], 
-            "description": "Resource not found", 
+            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }

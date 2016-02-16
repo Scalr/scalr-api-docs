@@ -1,4 +1,4 @@
-# `ProjectDetailResponse` #
+# `ScalingRuleDetailsResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`Project`](./../definitions/Project.mkd).
+An object of type [`ScalingRule`](./../definitions/ScalingRule.mkd).
 
 
 
@@ -48,15 +48,13 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/projects/`](./../rest/api/v1beta0/user/{envId}/projects/)
-  + [`/{envId}/projects/{projectId}/`](./../rest/api/v1beta0/user/{envId}/projects/{projectId}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/projects/{projectId}/", 
-        "/{envId}/projects/"
+        "/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/"
       ], 
       "properties": {
         "meta": {
@@ -64,7 +62,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/Project"
+          "$ref": "#/definitions/ScalingRule"
         }, 
         "errors": {
           "items": {
@@ -82,6 +80,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/Project"
+        "$ref": "#/definitions/ScalingRule"
       }
     }

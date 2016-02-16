@@ -1,0 +1,94 @@
+# `ScalingRuleTimeFrame` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `start` (required) ###
+
+Start time.
+
+
+Property of type: `string`.
+
+
+
+
+### `instanceCount` (required) ###
+
+The number of the instances which should be running.
+
+
+Property of type: `integer`.
+
+
+
+
+### `end` (required) ###
+
+End of the frame.
+
+
+Property of type: `string`.
+
+
+
+
+### `daysOfWeek` (required) ###
+
+The days of week which the rule is applied on.
+
+
+An array of 
+`string` objects.
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "required": [
+        "instanceCount", 
+        "start", 
+        "end", 
+        "daysOfWeek"
+      ], 
+      "properties": {
+        "end": {
+          "type": "string", 
+          "description": "End of the frame.", 
+          "format": "date-time"
+        }, 
+        "instanceCount": {
+          "type": "integer", 
+          "description": "The number of the instances which should be running."
+        }, 
+        "daysOfWeek": {
+          "items": {
+            "enum": [
+              "sun", 
+              "mon", 
+              "tue", 
+              "wed", 
+              "thu", 
+              "fri", 
+              "sat"
+            ], 
+            "type": "string"
+          }, 
+          "type": "array", 
+          "description": "The days of week which the rule is applied on."
+        }, 
+        "start": {
+          "type": "string", 
+          "description": "Start time.", 
+          "format": "date-time"
+        }
+      }
+    }

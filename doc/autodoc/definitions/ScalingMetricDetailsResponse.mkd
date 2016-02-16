@@ -1,4 +1,4 @@
-# `CostCenterDetailResponse` #
+# `ScalingMetricDetailsResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`CostCenter`](./../definitions/CostCenter.mkd).
+An object of type [`ScalingMetric`](./../definitions/ScalingMetric.mkd).
 
 
 
@@ -48,15 +48,15 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/account/cost-centers/{costCenterId}/)
-  + [`/{envId}/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/user/{envId}/cost-centers/{costCenterId}/)
+  + [`/{envId}/scaling-metrics/`](./../rest/api/v1beta0/user/{envId}/scaling-metrics/)
+  + [`/{envId}/scaling-metrics/{metricName}/`](./../rest/api/v1beta0/user/{envId}/scaling-metrics/{metricName}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/cost-centers/{costCenterId}/", 
-        "/{envId}/cost-centers/{costCenterId}/"
+        "/{envId}/scaling-metrics/", 
+        "/{envId}/scaling-metrics/{metricName}/"
       ], 
       "properties": {
         "meta": {
@@ -64,7 +64,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/CostCenter"
+          "$ref": "#/definitions/ScalingMetric"
         }, 
         "errors": {
           "items": {
@@ -82,6 +82,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/CostCenter"
+        "$ref": "#/definitions/ScalingMetric"
       }
     }

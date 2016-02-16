@@ -1,4 +1,4 @@
-# `ScalingConfigurationDetailResponse` #
+# `EnvironmentDetailsResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`ScalingConfiguration`](./../definitions/ScalingConfiguration.mkd).
+An object of type [`Environment`](./../definitions/Environment.mkd).
 
 
 
@@ -48,13 +48,15 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
+  + [`/environments/`](./../rest/api/v1beta0/account/environments/)
+  + [`/environments/{envId}/`](./../rest/api/v1beta0/account/environments/{envId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/scaling/"
+        "/environments/", 
+        "/environments/{envId}/"
       ], 
       "properties": {
         "meta": {
@@ -62,7 +64,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/ScalingConfiguration"
+          "$ref": "#/definitions/Environment"
         }, 
         "errors": {
           "items": {
@@ -80,6 +82,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/ScalingConfiguration"
+        "$ref": "#/definitions/Environment"
       }
     }

@@ -1,4 +1,4 @@
-# `CloudCredentialsDetailResponse` #
+# `ScriptDetailsResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`CloudCredentials`](./../definitions/CloudCredentials.mkd).
+An object of type [`Script`](./../definitions/Script.mkd).
 
 
 
@@ -48,21 +48,15 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/cloud-credentials/`](./../rest/api/v1beta0/account/cloud-credentials/)
-  + [`/cloud-credentials/{cloudCredentialsId}/`](./../rest/api/v1beta0/account/cloud-credentials/{cloudCredentialsId}/)
-  + [`/environments/{envId}/clouds/{cloud}/`](./../rest/api/v1beta0/account/environments/{envId}/clouds/{cloud}/)
-  + [`/{envId}/cloud-credentials/`](./../rest/api/v1beta0/user/{envId}/cloud-credentials/)
-  + [`/{envId}/cloud-credentials/{cloudCredentialsId}/`](./../rest/api/v1beta0/user/{envId}/cloud-credentials/{cloudCredentialsId}/)
+  + [`/{envId}/scripts/`](./../rest/api/v1beta0/user/{envId}/scripts/)
+  + [`/{envId}/scripts/{scriptId}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/cloud-credentials/", 
-        "/environments/{envId}/clouds/{cloud}/", 
-        "/cloud-credentials/{cloudCredentialsId}/", 
-        "/{envId}/cloud-credentials/{cloudCredentialsId}/", 
-        "/{envId}/cloud-credentials/"
+        "/{envId}/scripts/{scriptId}/", 
+        "/{envId}/scripts/"
       ], 
       "properties": {
         "meta": {
@@ -70,7 +64,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/CloudCredentials"
+          "$ref": "#/definitions/Script"
         }, 
         "errors": {
           "items": {
@@ -88,6 +82,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/CloudCredentials"
+        "$ref": "#/definitions/Script"
       }
     }

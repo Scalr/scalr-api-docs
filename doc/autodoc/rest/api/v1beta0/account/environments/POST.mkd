@@ -1,6 +1,6 @@
 # `POST /api/v1beta0/account/environments/` #
 
-Create a new Environment in the Account
+Create a new Environment in the Account.
 
 ## Request Parameters #
 
@@ -31,13 +31,13 @@ An object of type: [`Environment`](./../../../../../definitions/Environment.mkd)
 The JSON representation of a Environment object.
 
 The response body is an object of type:
-[`EnvironmentDetailResponse`](./../../../../../definitions/EnvironmentDetailResponse.mkd).
+[`EnvironmentDetailsResponse`](./../../../../../definitions/EnvironmentDetailsResponse.mkd).
 
 
 
 ### 400 ###
 
-A client-side error was made
+A client-side error was made.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
@@ -51,7 +51,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 401 ###
 
-Request was not authenticated
+Request was not authenticated.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
@@ -63,7 +63,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 403 ###
 
-Insufficient permissions
+Insufficient permissions.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
@@ -76,19 +76,19 @@ The following errors **may** be returned by this endpoint.
 
 ### 404 ###
 
-Resource not found
+Resource not found.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
-+ `ObjectNotFound`: The URL you are trying to access does not exist Check the error message for more information.
++ `ObjectNotFound`: The URL you are trying to access does not exist. Check the error message for more information.
 
 
 ### 409 ###
 
-Conflict with current state
+Conflict with current state.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
@@ -101,7 +101,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 500 ###
 
-A server-side error occured
+A server-side error occured.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
@@ -114,7 +114,7 @@ The response body is an object of type:
 
     {
       "post": {
-        "description": "Create a new Environment in the Account", 
+        "description": "Create a new Environment in the Account.", 
         "parameters": [
           {
             "required": true, 
@@ -142,7 +142,7 @@ The response body is an object of type:
                 "name": "BadRequest"
               }
             ], 
-            "description": "A client-side error was made", 
+            "description": "A client-side error was made.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -154,7 +154,7 @@ The response body is an object of type:
                 "name": "BadAuthentication"
               }
             ], 
-            "description": "Request was not authenticated", 
+            "description": "Request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -170,13 +170,13 @@ The response body is an object of type:
                 "name": "PermissionViolation"
               }
             ], 
-            "description": "Insufficient permissions", 
+            "description": "Insufficient permissions.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
           "500": {
-            "description": "A server-side error occured", 
+            "description": "A server-side error occured.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -192,7 +192,7 @@ The response body is an object of type:
                 "name": "UnicityViolation"
               }
             ], 
-            "description": "Conflict with current state", 
+            "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -200,22 +200,22 @@ The response body is an object of type:
           "201": {
             "description": "The JSON representation of a Environment object.", 
             "schema": {
-              "$ref": "#/definitions/EnvironmentDetailResponse"
+              "$ref": "#/definitions/EnvironmentDetailsResponse"
             }
           }, 
           "404": {
             "x-errorCodes": [
               {
                 "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
+                "description": "The route you are trying to access does not exist.", 
                 "name": "EndpointNotFound"
               }, 
               {
-                "description": "The URL you are trying to access does not exist", 
+                "description": "The URL you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ], 
-            "description": "Resource not found", 
+            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -223,7 +223,7 @@ The response body is an object of type:
         }
       }, 
       "get": {
-        "description": "List Environments available in this Account", 
+        "description": "List Environments available in this Account.", 
         "responses": {
           "400": {
             "x-errorCodes": [
@@ -240,7 +240,7 @@ The response body is an object of type:
                 "name": "BadRequest"
               }
             ], 
-            "description": "A client-side error was made", 
+            "description": "A client-side error was made.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -252,7 +252,7 @@ The response body is an object of type:
                 "name": "BadAuthentication"
               }
             ], 
-            "description": "Request was not authenticated", 
+            "description": "Request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -268,13 +268,13 @@ The response body is an object of type:
                 "name": "PermissionViolation"
               }
             ], 
-            "description": "Insufficient permissions", 
+            "description": "Insufficient permissions.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
           "500": {
-            "description": "A server-side error occured", 
+            "description": "A server-side error occured.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -290,7 +290,7 @@ The response body is an object of type:
                 "name": "UnicityViolation"
               }
             ], 
-            "description": "Conflict with current state", 
+            "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -305,15 +305,15 @@ The response body is an object of type:
             "x-errorCodes": [
               {
                 "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
+                "description": "The route you are trying to access does not exist.", 
                 "name": "EndpointNotFound"
               }, 
               {
-                "description": "The URL you are trying to access does not exist", 
+                "description": "The URL you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ], 
-            "description": "Resource not found", 
+            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }

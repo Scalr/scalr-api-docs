@@ -1,0 +1,129 @@
+# `BandWidthScalingRule` #
+
+It is used in combination with user defined Scaling Metrics.
+
+## Polymorphism ##
+
+`BandWidthScalingRule` is a type that implements the [`BasicScalingRule`](./../definitions/BasicScalingRule.mkd) type.
+
+When an object of type [`BasicScalingRule`](./../definitions/BasicScalingRule.mkd) is expected, you can use one of type `BandWidthScalingRule`
+(or use any other implementation).
+
+
+
+
+## Properties ##
+
+### `scaleUp` (required) ###
+
+Scale up threshold.
+
+
+Property of type: `integer`.
+
+
+
+
+### `scaleDown` (required) ###
+
+Scale down threshold.
+
+
+Property of type: `integer`.
+
+
+
+
+### `ruleType` (required, create-only, filterable) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"BandWidthScalingRule"`
+
+
+### `name` (required, create-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+### `direction` (required) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `direction` property:
+  + `inbound`
+  + `outbound`
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "description": "It is used in combination with user defined Scaling Metrics.", 
+      "required": [
+        "name", 
+        "ruleType", 
+        "scaleUp", 
+        "scaleDown", 
+        "direction"
+      ], 
+      "x-discriminator": "ruleType", 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/BasicScalingRule"
+      }, 
+      "properties": {
+        "direction": {
+          "enum": [
+            "inbound", 
+            "outbound"
+          ], 
+          "type": "string"
+        }, 
+        "ruleType": {
+          "enum": [
+            "BasicScalingRule", 
+            "LoadAveragesScalingRule", 
+            "FreeRamScalingRule", 
+            "UrlResponseTimeScalingRule", 
+            "SqsQueueSizeScalingRule", 
+            "DateAndTimeScalingRule", 
+            "BandWidthScalingRule"
+          ], 
+          "type": "string"
+        }, 
+        "scaleUp": {
+          "type": "integer", 
+          "description": "Scale up threshold."
+        }, 
+        "name": {
+          "type": "string", 
+          "descritpion": "The name of the Scaling Metric."
+        }, 
+        "scaleDown": {
+          "type": "integer", 
+          "description": "Scale down threshold."
+        }
+      }, 
+      "x-filterable": [
+        "name", 
+        "ruleType"
+      ]
+    }

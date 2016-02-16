@@ -1,4 +1,4 @@
-# `PlacementConfigurationDetailResponse` #
+# `RoleImageDetailsResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`PlacementConfiguration`](./../definitions/PlacementConfiguration.mkd).
+An object of type [`RoleImage`](./../definitions/RoleImage.mkd).
 
 
 
@@ -48,13 +48,19 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/placement/)
+  + [`/roles/{roleId}/images/`](./../rest/api/v1beta0/account/roles/{roleId}/images/)
+  + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/{envId}/roles/{roleId}/images/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/)
+  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/placement/"
+        "/{envId}/roles/{roleId}/images/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/roles/{roleId}/images/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/"
       ], 
       "properties": {
         "meta": {
@@ -62,7 +68,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/PlacementConfiguration"
+          "$ref": "#/definitions/RoleImage"
         }, 
         "errors": {
           "items": {
@@ -80,6 +86,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/PlacementConfiguration"
+        "$ref": "#/definitions/RoleImage"
       }
     }

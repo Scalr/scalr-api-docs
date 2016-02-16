@@ -38,6 +38,15 @@ Property of type: `boolean`.
 
 
 
+### `rules` (read-only) ###
+
+
+
+
+An array of 
+`string` objects.
+
+
 
 
 ## Used in ##
@@ -53,6 +62,14 @@ Property of type: `boolean`.
       "properties": {
         "minInstances": {
           "type": "integer"
+        }, 
+        "rules": {
+          "items": {
+            "type": "string", 
+            "description": "The list of the Scaling Metric's names."
+          }, 
+          "readOnly": true, 
+          "type": "array"
         }, 
         "enabled": {
           "type": "boolean"

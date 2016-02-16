@@ -1,0 +1,135 @@
+# `BasicScalingRule` #
+
+It is used in combination with user defined Scaling Metrics.
+
+## Polymorphism ##
+
+`BasicScalingRule` is a type that implements the [`ScalingRule`](./../definitions/ScalingRule.mkd) type.
+
+When an object of type [`ScalingRule`](./../definitions/ScalingRule.mkd) is expected, you can use one of type `BasicScalingRule`
+(or use any other implementation).
+
+## Abstract Type ##
+
+`BasicScalingRule` is an abstract type. When an object of type `BasicScalingRule` is expected, you must pass an object of
+one of the following types:
+
+  + [`FreeRamScalingRule`](./../definitions/FreeRamScalingRule.mkd)
+  + [`UrlResponseTimeScalingRule`](./../definitions/UrlResponseTimeScalingRule.mkd)
+  + [`BandWidthScalingRule`](./../definitions/BandWidthScalingRule.mkd)
+  + [`SqsQueueSizeScalingRule`](./../definitions/SqsQueueSizeScalingRule.mkd)
+  + [`LoadAveragesScalingRule`](./../definitions/LoadAveragesScalingRule.mkd)
+
+
+
+
+## Properties ##
+
+### `scaleUp` (required) ###
+
+Scale up threshold.
+
+
+Property of type: `integer`.
+
+
+
+
+### `scaleDown` (required) ###
+
+Scale down threshold.
+
+
+Property of type: `integer`.
+
+
+
+
+### `ruleType` (required, create-only, filterable) ###
+
+
+
+
+This `string` property is used for polymorphism. It **must** be set to: `"BasicScalingRule"`
+
+
+### `name` (required, create-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/FreeRamScalingRule"
+        }, 
+        {
+          "$ref": "#/definitions/UrlResponseTimeScalingRule"
+        }, 
+        {
+          "$ref": "#/definitions/BandWidthScalingRule"
+        }, 
+        {
+          "$ref": "#/definitions/SqsQueueSizeScalingRule"
+        }, 
+        {
+          "$ref": "#/definitions/LoadAveragesScalingRule"
+        }
+      ], 
+      "description": "It is used in combination with user defined Scaling Metrics.", 
+      "required": [
+        "name", 
+        "ruleType", 
+        "scaleUp", 
+        "scaleDown"
+      ], 
+      "x-discriminator": "ruleType", 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/ScalingRule"
+      }, 
+      "properties": {
+        "ruleType": {
+          "enum": [
+            "BasicScalingRule", 
+            "LoadAveragesScalingRule", 
+            "FreeRamScalingRule", 
+            "UrlResponseTimeScalingRule", 
+            "SqsQueueSizeScalingRule", 
+            "DateAndTimeScalingRule", 
+            "BandWidthScalingRule"
+          ], 
+          "type": "string"
+        }, 
+        "scaleUp": {
+          "type": "integer", 
+          "description": "Scale up threshold."
+        }, 
+        "name": {
+          "type": "string", 
+          "descritpion": "The name of the Scaling Metric."
+        }, 
+        "scaleDown": {
+          "type": "integer", 
+          "description": "Scale down threshold."
+        }
+      }, 
+      "x-filterable": [
+        "name", 
+        "ruleType"
+      ]
+    }

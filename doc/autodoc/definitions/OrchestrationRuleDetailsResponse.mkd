@@ -1,4 +1,4 @@
-# `OrchestrationRuleDetailResponse` #
+# `OrchestrationRuleDetailsResponse` #
 
 
 
@@ -61,14 +61,14 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
-        "/orchestration-rules/", 
-        "/orchestration-rules/{orchestrationRuleId}/", 
-        "/roles/{roleId}/orchestration-rules/", 
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/{envId}/roles/{roleId}/orchestration-rules/", 
         "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/"
+        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
+        "/orchestration-rules/", 
+        "/orchestration-rules/{orchestrationRuleId}/", 
+        "/roles/{roleId}/orchestration-rules/", 
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/"
       ], 
       "properties": {
         "meta": {

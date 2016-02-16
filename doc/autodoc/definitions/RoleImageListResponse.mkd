@@ -64,8 +64,8 @@ objects of type [`RoleImage`](./../definitions/RoleImage.mkd).
 
     {
       "x-usedIn": [
-        "/roles/{roleId}/images/", 
-        "/{envId}/roles/{roleId}/images/"
+        "/{envId}/roles/{roleId}/images/", 
+        "/roles/{roleId}/images/"
       ], 
       "properties": {
         "pagination": {

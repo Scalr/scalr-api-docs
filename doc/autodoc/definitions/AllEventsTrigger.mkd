@@ -1,6 +1,6 @@
 # `AllEventsTrigger` #
 
-Triggers when any Event fires
+Triggers when any Event fires.
 
 ## Polymorphism ##
 
@@ -35,7 +35,7 @@ This `string` property is used for polymorphism. It **must** be set to: `"AllEve
         "triggerType"
       ], 
       "x-discriminator": "triggerType", 
-      "description": "Triggers when any Event fires", 
+      "description": "Triggers when any Event fires.", 
       "properties": {
         "triggerType": {
           "enum": [
