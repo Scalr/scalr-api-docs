@@ -1,0 +1,51 @@
+# `ScalingRuleThresholds` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `scaleUp` (required) ###
+
+Scale up threshold.
+
+
+Property of type: `integer`.
+
+
+
+
+### `scaleDown` (required) ###
+
+Scale down threshold.
+
+
+Property of type: `integer`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "required": [
+        "scaleUp", 
+        "scaleDown"
+      ], 
+      "properties": {
+        "scaleUp": {
+          "type": "integer", 
+          "description": "Scale up threshold."
+        }, 
+        "scaleDown": {
+          "type": "integer", 
+          "description": "Scale down threshold."
+        }
+      }
+    }

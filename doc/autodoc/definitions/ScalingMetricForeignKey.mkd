@@ -1,0 +1,40 @@
+# `ScalingMetricForeignKey` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `name` (required, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "required": [
+        "name"
+      ], 
+      "properties": {
+        "name": {
+          "type": "string", 
+          "descritpion": "The name of the Scaling Metric."
+        }
+      }, 
+      "x-filterable": [
+        "name"
+      ]
+    }

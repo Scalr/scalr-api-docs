@@ -10,7 +10,7 @@
 
 ### `id` (required, create-only, filterable) ###
 
-The name of this custom event
+The name of this custom event.
 
 
 Property of type: `string`.
@@ -64,10 +64,10 @@ To filter on this field, use: `scope=...`.
         "id"
       ], 
       "x-usedIn": [
-        "/events/{eventId}/", 
-        "/events/", 
         "/{envId}/events/", 
-        "/{envId}/events/{eventId}/"
+        "/{envId}/events/{eventId}/", 
+        "/events/{eventId}/", 
+        "/events/"
       ], 
       "properties": {
         "scope": {
@@ -87,7 +87,7 @@ To filter on this field, use: `scope=...`.
         }, 
         "id": {
           "type": "string", 
-          "description": "The name of this custom event"
+          "description": "The name of this custom event."
         }
       }, 
       "x-filterable": [

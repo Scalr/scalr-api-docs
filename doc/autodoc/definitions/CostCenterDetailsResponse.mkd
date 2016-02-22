@@ -1,4 +1,4 @@
-# `ScriptVersionDetailResponse` #
+# `CostCenterDetailsResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`ScriptVersion`](./../definitions/ScriptVersion.mkd).
+An object of type [`CostCenter`](./../definitions/CostCenter.mkd).
 
 
 
@@ -48,15 +48,15 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
-  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+  + [`/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/account/cost-centers/{costCenterId}/)
+  + [`/{envId}/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/user/{envId}/cost-centers/{costCenterId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/scripts/{scriptId}/script-versions/", 
-        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
+        "/{envId}/cost-centers/{costCenterId}/", 
+        "/cost-centers/{costCenterId}/"
       ], 
       "properties": {
         "meta": {
@@ -64,7 +64,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/ScriptVersion"
+          "$ref": "#/definitions/CostCenter"
         }, 
         "errors": {
           "items": {
@@ -82,6 +82,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/ScriptVersion"
+        "$ref": "#/definitions/CostCenter"
       }
     }

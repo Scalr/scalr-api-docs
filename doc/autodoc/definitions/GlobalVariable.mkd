@@ -98,7 +98,7 @@ Property of type: `string`.
 
 ### `category` (optional) ###
 
-Category of the variable
+Category of the variable.
 
 
 Property of type: `string`.
@@ -164,19 +164,19 @@ Property of type: `string`.
         "name"
       ], 
       "x-usedIn": [
-        "/roles/{roleId}/global-variables/", 
-        "/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
         "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
         "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/{envId}/farms/{farmId}/global-variables/", 
         "/{envId}/roles/{roleId}/global-variables/", 
-        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/"
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
+        "/roles/{roleId}/global-variables/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/"
       ], 
       "properties": {
         "category": {
           "type": "string", 
-          "description": "Category of the variable"
+          "description": "Category of the variable."
         }, 
         "declaredIn": {
           "readOnly": true, 

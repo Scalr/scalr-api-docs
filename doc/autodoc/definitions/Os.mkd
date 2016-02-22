@@ -90,8 +90,8 @@ To filter on this field, use: `family=...`.
         "version"
       ], 
       "x-usedIn": [
-        "/os/{osId}/", 
-        "/{envId}/os/{osId}/"
+        "/{envId}/os/{osId}/", 
+        "/os/{osId}/"
       ], 
       "properties": {
         "generation": {

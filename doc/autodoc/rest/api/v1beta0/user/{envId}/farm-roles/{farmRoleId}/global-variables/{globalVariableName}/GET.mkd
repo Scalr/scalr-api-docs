@@ -1,6 +1,6 @@
 # `GET /api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/` #
 
-Retrieve a Global Variable's value in this Farm role's scope
+Retrieve a Global Variable's value in this Farm role's scope.
 
 ## Request Parameters #
 
@@ -10,7 +10,7 @@ Path parameters are included in the URL.
 
 #### `envId` ####
 
-The ID of the Environment scoping this request
+The ID of the Environment scoping this request.
 
 Parameter of type: `integer`.
 
@@ -45,13 +45,13 @@ Parameter of type: `string`.
 The JSON representation of a GlobalVariable object.
 
 The response body is an object of type:
-[`GlobalVariableDetailResponse`](./../../../../../../../../../definitions/GlobalVariableDetailResponse.mkd).
+[`GlobalVariableDetailsResponse`](./../../../../../../../../../definitions/GlobalVariableDetailsResponse.mkd).
 
 
 
 ### 400 ###
 
-A client-side error was made
+A client-side error was made.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../../definitions/ApiErrorResponse.mkd).
@@ -65,7 +65,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 401 ###
 
-Request was not authenticated
+Request was not authenticated.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../../definitions/ApiErrorResponse.mkd).
@@ -77,7 +77,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 403 ###
 
-Insufficient permissions
+Insufficient permissions.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../../definitions/ApiErrorResponse.mkd).
@@ -90,19 +90,19 @@ The following errors **may** be returned by this endpoint.
 
 ### 404 ###
 
-Resource not found
+Resource not found.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
-+ `ObjectNotFound`: The URL you are trying to access does not exist Check the error message for more information.
++ `ObjectNotFound`: The URL you are trying to access does not exist. Check the error message for more information.
 
 
 ### 409 ###
 
-Conflict with current state
+Conflict with current state.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../../definitions/ApiErrorResponse.mkd).
@@ -115,7 +115,7 @@ The following errors **may** be returned by this endpoint.
 
 ### 500 ###
 
-A server-side error occured
+A server-side error occured.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../../definitions/ApiErrorResponse.mkd).
@@ -128,7 +128,7 @@ The response body is an object of type:
 
     {
       "delete": {
-        "description": "Delete a Global Variable from this Farm role's scope", 
+        "description": "Delete a Global Variable from this Farm role's scope.", 
         "responses": {
           "400": {
             "x-errorCodes": [
@@ -145,7 +145,7 @@ The response body is an object of type:
                 "name": "BadRequest"
               }
             ], 
-            "description": "A client-side error was made", 
+            "description": "A client-side error was made.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -157,7 +157,7 @@ The response body is an object of type:
                 "name": "BadAuthentication"
               }
             ], 
-            "description": "Request was not authenticated", 
+            "description": "Request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -173,13 +173,13 @@ The response body is an object of type:
                 "name": "PermissionViolation"
               }
             ], 
-            "description": "Insufficient permissions", 
+            "description": "Insufficient permissions.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
           "500": {
-            "description": "A server-side error occured", 
+            "description": "A server-side error occured.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -195,13 +195,13 @@ The response body is an object of type:
                 "name": "UnicityViolation"
               }
             ], 
-            "description": "Conflict with current state", 
+            "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
           "200": {
-            "description": "Global Variable deleted", 
+            "description": "Global Variable deleted.", 
             "schema": {
               "$ref": "#/definitions/DeleteSuccessResponse"
             }
@@ -210,15 +210,15 @@ The response body is an object of type:
             "x-errorCodes": [
               {
                 "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
+                "description": "The route you are trying to access does not exist.", 
                 "name": "EndpointNotFound"
               }, 
               {
-                "description": "The URL you are trying to access does not exist", 
+                "description": "The URL you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ], 
-            "description": "Resource not found", 
+            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -226,7 +226,7 @@ The response body is an object of type:
         }
       }, 
       "get": {
-        "description": "Retrieve a Global Variable's value in this Farm role's scope", 
+        "description": "Retrieve a Global Variable's value in this Farm role's scope.", 
         "responses": {
           "400": {
             "x-errorCodes": [
@@ -243,7 +243,7 @@ The response body is an object of type:
                 "name": "BadRequest"
               }
             ], 
-            "description": "A client-side error was made", 
+            "description": "A client-side error was made.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -255,7 +255,7 @@ The response body is an object of type:
                 "name": "BadAuthentication"
               }
             ], 
-            "description": "Request was not authenticated", 
+            "description": "Request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -271,13 +271,13 @@ The response body is an object of type:
                 "name": "PermissionViolation"
               }
             ], 
-            "description": "Insufficient permissions", 
+            "description": "Insufficient permissions.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
           "500": {
-            "description": "A server-side error occured", 
+            "description": "A server-side error occured.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -293,7 +293,7 @@ The response body is an object of type:
                 "name": "UnicityViolation"
               }
             ], 
-            "description": "Conflict with current state", 
+            "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -301,22 +301,22 @@ The response body is an object of type:
           "200": {
             "description": "The JSON representation of a GlobalVariable object.", 
             "schema": {
-              "$ref": "#/definitions/GlobalVariableDetailResponse"
+              "$ref": "#/definitions/GlobalVariableDetailsResponse"
             }
           }, 
           "404": {
             "x-errorCodes": [
               {
                 "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
+                "description": "The route you are trying to access does not exist.", 
                 "name": "EndpointNotFound"
               }, 
               {
-                "description": "The URL you are trying to access does not exist", 
+                "description": "The URL you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ], 
-            "description": "Resource not found", 
+            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -327,7 +327,7 @@ The response body is an object of type:
         {
           "required": true, 
           "type": "integer", 
-          "description": "The ID of the Environment scoping this request", 
+          "description": "The ID of the Environment scoping this request.", 
           "in": "path", 
           "name": "envId"
         }, 
@@ -350,7 +350,7 @@ The response body is an object of type:
         }
       ], 
       "patch": {
-        "description": "Update a Global Variable's value in this Farm role's scope", 
+        "description": "Update a Global Variable's value in this Farm role's scope.", 
         "parameters": [
           {
             "required": true, 
@@ -378,7 +378,7 @@ The response body is an object of type:
                 "name": "BadRequest"
               }
             ], 
-            "description": "A client-side error was made", 
+            "description": "A client-side error was made.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -390,7 +390,7 @@ The response body is an object of type:
                 "name": "BadAuthentication"
               }
             ], 
-            "description": "Request was not authenticated", 
+            "description": "Request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -406,13 +406,13 @@ The response body is an object of type:
                 "name": "PermissionViolation"
               }
             ], 
-            "description": "Insufficient permissions", 
+            "description": "Insufficient permissions.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
           "500": {
-            "description": "A server-side error occured", 
+            "description": "A server-side error occured.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -428,7 +428,7 @@ The response body is an object of type:
                 "name": "UnicityViolation"
               }
             ], 
-            "description": "Conflict with current state", 
+            "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -436,22 +436,22 @@ The response body is an object of type:
           "200": {
             "description": "The JSON representation of a GlobalVariable object.", 
             "schema": {
-              "$ref": "#/definitions/GlobalVariableDetailResponse"
+              "$ref": "#/definitions/GlobalVariableDetailsResponse"
             }
           }, 
           "404": {
             "x-errorCodes": [
               {
                 "noDoc": true, 
-                "description": "The route you are trying to access does not exist", 
+                "description": "The route you are trying to access does not exist.", 
                 "name": "EndpointNotFound"
               }, 
               {
-                "description": "The URL you are trying to access does not exist", 
+                "description": "The URL you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ], 
-            "description": "Resource not found", 
+            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }

@@ -1,4 +1,4 @@
-# `FarmDetailResponse` #
+# `EventDetailsResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`Farm`](./../definitions/Farm.mkd).
+An object of type [`Event`](./../definitions/Event.mkd).
 
 
 
@@ -48,21 +48,19 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farms/`](./../rest/api/v1beta0/user/{envId}/farms/)
-  + [`/{envId}/farms/{farmId}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/)
-  + [`/{envId}/farms/{farmId}/actions/clone/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/clone/)
-  + [`/{envId}/farms/{farmId}/actions/launch/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/launch/)
-  + [`/{envId}/farms/{farmId}/actions/terminate/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/terminate/)
+  + [`/events/`](./../rest/api/v1beta0/account/events/)
+  + [`/events/{eventId}/`](./../rest/api/v1beta0/account/events/{eventId}/)
+  + [`/{envId}/events/`](./../rest/api/v1beta0/user/{envId}/events/)
+  + [`/{envId}/events/{eventId}/`](./../rest/api/v1beta0/user/{envId}/events/{eventId}/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/farms/{farmId}/", 
-        "/{envId}/farms/{farmId}/actions/terminate/", 
-        "/{envId}/farms/{farmId}/actions/launch/", 
-        "/{envId}/farms/", 
-        "/{envId}/farms/{farmId}/actions/clone/"
+        "/{envId}/events/", 
+        "/{envId}/events/{eventId}/", 
+        "/events/{eventId}/", 
+        "/events/"
       ], 
       "properties": {
         "meta": {
@@ -70,7 +68,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/Farm"
+          "$ref": "#/definitions/Event"
         }, 
         "errors": {
           "items": {
@@ -88,6 +86,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/Farm"
+        "$ref": "#/definitions/Event"
       }
     }

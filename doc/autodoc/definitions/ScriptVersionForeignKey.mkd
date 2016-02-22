@@ -10,7 +10,7 @@
 
 ### `script` (required, create-only, filterable) ###
 
-The Script this ScriptVersion is a version of
+The Script this ScriptVersion is a version of.
 
 
 An object of type [`ScriptForeignKey`](./../definitions/ScriptForeignKey.mkd).
@@ -45,7 +45,7 @@ Property of type: `integer`.
           "description": "The Script version number. NULL is interpreted as the Latest Version."
         }, 
         "script": {
-          "description": "The Script this ScriptVersion is a version of", 
+          "description": "The Script this ScriptVersion is a version of.", 
           "$ref": "#/definitions/ScriptForeignKey"
         }
       }, 

@@ -66,10 +66,10 @@ objects of type [`OrchestrationRule`](./../definitions/OrchestrationRule.mkd).
 
     {
       "x-usedIn": [
-        "/orchestration-rules/", 
-        "/roles/{roleId}/orchestration-rules/", 
         "/{envId}/roles/{roleId}/orchestration-rules/", 
-        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/"
+        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
+        "/orchestration-rules/", 
+        "/roles/{roleId}/orchestration-rules/"
       ], 
       "properties": {
         "pagination": {

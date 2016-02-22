@@ -64,8 +64,8 @@ objects of type [`CostCenter`](./../definitions/CostCenter.mkd).
 
     {
       "x-usedIn": [
-        "/cost-centers/", 
-        "/{envId}/cost-centers/"
+        "/{envId}/cost-centers/", 
+        "/cost-centers/"
       ], 
       "properties": {
         "pagination": {

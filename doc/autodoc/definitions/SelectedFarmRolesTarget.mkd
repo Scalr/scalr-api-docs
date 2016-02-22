@@ -1,6 +1,6 @@
 # `SelectedFarmRolesTarget` #
 
-Selects all Servers with specified Roles
+Selects all Servers with specified Roles.
 
 ## Polymorphism ##
 
@@ -44,7 +44,7 @@ objects of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd).
         "targetType"
       ], 
       "x-discriminator": "targetType", 
-      "description": "Selects all Servers with specified Roles", 
+      "description": "Selects all Servers with specified Roles.", 
       "properties": {
         "targetType": {
           "enum": [

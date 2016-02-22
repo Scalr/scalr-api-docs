@@ -10,7 +10,7 @@
 
 ### `id` (optional) ###
 
-Team ID
+Team ID.
 
 
 Property of type: `integer`.
@@ -33,7 +33,7 @@ Property of type: `integer`.
       "properties": {
         "id": {
           "type": "integer", 
-          "description": "Team ID"
+          "description": "Team ID."
         }
       }
     }
