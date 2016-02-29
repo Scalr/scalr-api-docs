@@ -164,14 +164,14 @@ Property of type: `string`.
         "name"
       ], 
       "x-usedIn": [
+        "/roles/{roleId}/global-variables/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
         "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
         "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
         "/{envId}/farms/{farmId}/global-variables/", 
         "/{envId}/roles/{roleId}/global-variables/", 
-        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
-        "/roles/{roleId}/global-variables/", 
-        "/roles/{roleId}/global-variables/{globalVariableName}/"
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/"
       ], 
       "properties": {
         "category": {

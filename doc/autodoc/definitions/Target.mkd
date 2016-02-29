@@ -11,8 +11,8 @@ one of the following types:
   + [`FarmTarget`](./../definitions/FarmTarget.mkd)
   + [`TriggeringFarmRoleTarget`](./../definitions/TriggeringFarmRoleTarget.mkd)
   + [`SelectedFarmRolesTarget`](./../definitions/SelectedFarmRolesTarget.mkd)
-  + [`NullTarget`](./../definitions/NullTarget.mkd)
   + [`TriggeringServerTarget`](./../definitions/TriggeringServerTarget.mkd)
+  + [`NullTarget`](./../definitions/NullTarget.mkd)
 
 
 
@@ -53,10 +53,10 @@ The following are valid values for the `targetType` property:
           "$ref": "#/definitions/SelectedFarmRolesTarget"
         }, 
         {
-          "$ref": "#/definitions/NullTarget"
+          "$ref": "#/definitions/TriggeringServerTarget"
         }, 
         {
-          "$ref": "#/definitions/TriggeringServerTarget"
+          "$ref": "#/definitions/NullTarget"
         }
       ], 
       "discriminator": "targetType", 

@@ -73,7 +73,14 @@ The following are valid values for the `direction` property:
 ## Swagger Definition ##
 
     {
+      "x-abstractType": {
+        "$ref": "#/definitions/BasicScalingRule"
+      }, 
       "description": "It is used in combination with user defined Scaling Metrics.", 
+      "x-filterable": [
+        "name", 
+        "ruleType"
+      ], 
       "required": [
         "name", 
         "ruleType", 
@@ -82,13 +89,6 @@ The following are valid values for the `direction` property:
         "direction"
       ], 
       "x-discriminator": "ruleType", 
-      "x-createOnly": [
-        "name", 
-        "ruleType"
-      ], 
-      "x-abstractType": {
-        "$ref": "#/definitions/BasicScalingRule"
-      }, 
       "properties": {
         "direction": {
           "enum": [
@@ -96,6 +96,14 @@ The following are valid values for the `direction` property:
             "outbound"
           ], 
           "type": "string"
+        }, 
+        "scaleDown": {
+          "type": "integer", 
+          "description": "Scale down threshold."
+        }, 
+        "scaleUp": {
+          "type": "integer", 
+          "description": "Scale up threshold."
         }, 
         "ruleType": {
           "enum": [
@@ -109,20 +117,12 @@ The following are valid values for the `direction` property:
           ], 
           "type": "string"
         }, 
-        "scaleUp": {
-          "type": "integer", 
-          "description": "Scale up threshold."
-        }, 
         "name": {
           "type": "string", 
           "descritpion": "The name of the Scaling Metric."
-        }, 
-        "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
         }
       }, 
-      "x-filterable": [
+      "x-createOnly": [
         "name", 
         "ruleType"
       ]

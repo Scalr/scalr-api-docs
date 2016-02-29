@@ -1,6 +1,6 @@
 # `PATCH /api/v1beta0/account/role-categories/{roleCategoryId}/` #
 
-Change Role Category attributes.
+Modifies the attributes of the specified Role Category.
 
 ## Request Parameters #
 
@@ -109,11 +109,24 @@ The following errors **may** be returned by this endpoint.
 
 + `ObjectInUse`: The changes you are trying to make aren't possible while this object is in use. Check the error message for more information.
 + `UnicityViolation`: The changes you are trying to make violate a unicity constraint. Check the error message for more information.
++ `Locked`: Some of the objects being changed is locked for changing. Check the error message for more information.
++ `NotEnabledPlatform`: Cloud platform is not enabled. Check the error message for more information.
++ `OperatingSystemMismatch`: The Operating system mismatch. Check the error message for more information.
++ `ConfigurationMismatch`: Some of the configuration settings cannot be applied, conflicts or wrong. Check the error message for more information.
 
 
 ### 500 ###
 
 A server-side error occured.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+
+### 501 ###
+
+Error is raised when the feature is not implemented in Scalr.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
@@ -126,8 +139,14 @@ The response body is an object of type:
 
     {
       "delete": {
-        "description": "Delete this Role Category from this Account.", 
+        "description": "Deletes the Role Category from the Account.", 
         "responses": {
+          "200": {
+            "description": "Successful deletion.", 
+            "schema": {
+              "$ref": "#/definitions/DeleteSuccessResponse"
+            }
+          }, 
           "400": {
             "x-errorCodes": [
               {
@@ -182,6 +201,12 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
+          "501": {
+            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "409": {
             "x-errorCodes": [
               {
@@ -191,17 +216,27 @@ The response body is an object of type:
               {
                 "description": "The changes you are trying to make violate a unicity constraint.", 
                 "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
               }
             ], 
             "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "200": {
-            "description": "Successful deletion.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
             }
           }, 
           "404": {
@@ -224,8 +259,14 @@ The response body is an object of type:
         }
       }, 
       "get": {
-        "description": "Return a JSON representation of a Role Category.", 
+        "description": "Describes detailed information about a specified Role Category.", 
         "responses": {
+          "200": {
+            "description": "The JSON representation of a RoleCategory object.", 
+            "schema": {
+              "$ref": "#/definitions/RoleCategoryDetailsResponse"
+            }
+          }, 
           "400": {
             "x-errorCodes": [
               {
@@ -280,6 +321,12 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
+          "501": {
+            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "409": {
             "x-errorCodes": [
               {
@@ -289,17 +336,27 @@ The response body is an object of type:
               {
                 "description": "The changes you are trying to make violate a unicity constraint.", 
                 "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
               }
             ], 
             "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "200": {
-            "description": "The JSON representation of a RoleCategory object.", 
-            "schema": {
-              "$ref": "#/definitions/RoleCategoryDetailsResponse"
             }
           }, 
           "404": {
@@ -334,7 +391,7 @@ The response body is an object of type:
         }
       ], 
       "patch": {
-        "description": "Change Role Category attributes.", 
+        "description": "Modifies the attributes of the specified Role Category.", 
         "parameters": [
           {
             "required": true, 
@@ -347,6 +404,12 @@ The response body is an object of type:
           }
         ], 
         "responses": {
+          "200": {
+            "description": "The JSON representation of a RoleCategory object.", 
+            "schema": {
+              "$ref": "#/definitions/RoleCategoryDetailsResponse"
+            }
+          }, 
           "400": {
             "x-errorCodes": [
               {
@@ -401,6 +464,12 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
+          "501": {
+            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "409": {
             "x-errorCodes": [
               {
@@ -410,17 +479,27 @@ The response body is an object of type:
               {
                 "description": "The changes you are trying to make violate a unicity constraint.", 
                 "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
               }
             ], 
             "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "200": {
-            "description": "The JSON representation of a RoleCategory object.", 
-            "schema": {
-              "$ref": "#/definitions/RoleCategoryDetailsResponse"
             }
           }, 
           "404": {

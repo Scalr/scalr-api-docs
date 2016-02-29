@@ -107,12 +107,6 @@ e.g.: `farm=...`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "role", 
-        "platform", 
-        "placement", 
-        "instance"
-      ], 
       "x-usedIn": [
         "/{envId}/farms/{farmId}/farm-roles/", 
         "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
@@ -126,15 +120,12 @@ e.g.: `farm=...`.
         "/{envId}/farm-roles/{farmRoleId}/placement/"
       ], 
       "properties": {
-        "instance": {
-          "$ref": "#/definitions/InstanceConfiguration"
-        }, 
         "placement": {
           "$ref": "#/definitions/PlacementConfiguration"
         }, 
-        "alias": {
+        "platform": {
           "type": "string", 
-          "description": "The Alias for this Farm Role. If this isn't provided, it will default to the Role's name (possibly with '-n' appended if the Role name is already taken)"
+          "description": "Farm role platform."
         }, 
         "farm": {
           "readOnly": true, 
@@ -144,9 +135,12 @@ e.g.: `farm=...`.
         "scaling": {
           "$ref": "#/definitions/ScalingConfiguration"
         }, 
-        "platform": {
+        "instance": {
+          "$ref": "#/definitions/InstanceConfiguration"
+        }, 
+        "alias": {
           "type": "string", 
-          "description": "Farm role platform."
+          "description": "The Alias for this Farm Role. If this isn't provided, it will default to the Role's name (possibly with '-n' appended if the Role name is already taken)"
         }, 
         "role": {
           "$ref": "#/definitions/RoleForeignKey"
@@ -161,5 +155,11 @@ e.g.: `farm=...`.
         "farm", 
         "role", 
         "platform"
+      ], 
+      "required": [
+        "role", 
+        "platform", 
+        "placement", 
+        "instance"
       ]
     }

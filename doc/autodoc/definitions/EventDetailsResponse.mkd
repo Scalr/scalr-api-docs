@@ -57,10 +57,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
-        "/{envId}/events/", 
-        "/{envId}/events/{eventId}/", 
         "/events/{eventId}/", 
-        "/events/"
+        "/events/", 
+        "/{envId}/events/", 
+        "/{envId}/events/{eventId}/"
       ], 
       "properties": {
         "meta": {

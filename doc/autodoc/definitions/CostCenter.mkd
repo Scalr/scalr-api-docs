@@ -55,8 +55,8 @@ To filter on this field, use: `billingCode=...`.
         "name"
       ], 
       "x-usedIn": [
-        "/{envId}/cost-centers/{costCenterId}/", 
-        "/cost-centers/{costCenterId}/"
+        "/cost-centers/{costCenterId}/", 
+        "/{envId}/cost-centers/{costCenterId}/"
       ], 
       "properties": {
         "id": {

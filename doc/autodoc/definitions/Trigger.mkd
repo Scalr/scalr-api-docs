@@ -8,8 +8,8 @@
 `Trigger` is an abstract type. When an object of type `Trigger` is expected, you must pass an object of
 one of the following types:
 
-  + [`AllEventsTrigger`](./../definitions/AllEventsTrigger.mkd)
   + [`SpecificEventTrigger`](./../definitions/SpecificEventTrigger.mkd)
+  + [`AllEventsTrigger`](./../definitions/AllEventsTrigger.mkd)
 
 
 
@@ -38,10 +38,10 @@ The following are valid values for the `triggerType` property:
     {
       "x-concreteTypes": [
         {
-          "$ref": "#/definitions/AllEventsTrigger"
+          "$ref": "#/definitions/SpecificEventTrigger"
         }, 
         {
-          "$ref": "#/definitions/SpecificEventTrigger"
+          "$ref": "#/definitions/AllEventsTrigger"
         }
       ], 
       "discriminator": "triggerType", 

@@ -34,36 +34,6 @@ Property of type: `string`.
 To filter on this field, use: `name=...`.
 
 
-### `scope` (required, read-only, filterable) ###
-
-
-
-
-Property of type: `string`.
-
- 
-The following are valid values for the `scope` property:
-  + `scalr`
-  + `account`
-  + `environment`
-  + `farm`
-  + `farmrole`
-  + `server`
-
-To filter on this field, use: `scope=...`.
-
-
-### `id` (required, read-only, filterable) ###
-
-
-
-
-Property of type: `integer`.
-
-
-To filter on this field, use: `id=...`.
-
-
 ### `timeoutDefault` (optional) ###
 
 
@@ -95,6 +65,25 @@ Property of type: `boolean`.
 To filter on this field, use: `blockingDefault=...`.
 
 
+### `scope` (read-only, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `scope` property:
+  + `scalr`
+  + `account`
+  + `environment`
+  + `farm`
+  + `farmrole`
+  + `server`
+
+To filter on this field, use: `scope=...`.
+
+
 ### `lastChanged` (read-only) ###
 
 
@@ -103,6 +92,17 @@ To filter on this field, use: `blockingDefault=...`.
 Property of type: `string`.
 
 
+
+
+### `id` (read-only, filterable) ###
+
+
+
+
+Property of type: `integer`.
+
+
+To filter on this field, use: `id=...`.
 
 
 ### `added` (read-only) ###
@@ -119,6 +119,10 @@ Property of type: `string`.
 
 ## Used in ##
 
+  + [`/scripts/`](./../rest/api/v1beta0/account/scripts/)
+  + [`/scripts/{scriptId}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/)
+  + [`/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/)
+  + [`/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
   + [`/{envId}/scripts/`](./../rest/api/v1beta0/user/{envId}/scripts/)
   + [`/{envId}/scripts/{scriptId}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/)
   + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
@@ -128,12 +132,14 @@ Property of type: `string`.
 
     {
       "required": [
-        "id", 
         "name", 
-        "scope", 
         "osType"
       ], 
       "x-usedIn": [
+        "/scripts/{scriptId}/script-versions/", 
+        "/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/scripts/", 
+        "/scripts/{scriptId}/", 
         "/{envId}/scripts/{scriptId}/script-versions/", 
         "/{envId}/scripts/{scriptId}/", 
         "/{envId}/scripts/", 

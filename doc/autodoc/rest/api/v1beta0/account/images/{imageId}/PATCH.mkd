@@ -1,6 +1,6 @@
 # `PATCH /api/v1beta0/account/images/{imageId}/` #
 
-Change image attributes. Only the name be can changed.
+Changes Image attributes. Only the name be can changed.
 
 ## Request Parameters #
 
@@ -109,11 +109,24 @@ The following errors **may** be returned by this endpoint.
 
 + `ObjectInUse`: The changes you are trying to make aren't possible while this object is in use. Check the error message for more information.
 + `UnicityViolation`: The changes you are trying to make violate a unicity constraint. Check the error message for more information.
++ `Locked`: Some of the objects being changed is locked for changing. Check the error message for more information.
++ `NotEnabledPlatform`: Cloud platform is not enabled. Check the error message for more information.
++ `OperatingSystemMismatch`: The Operating system mismatch. Check the error message for more information.
++ `ConfigurationMismatch`: Some of the configuration settings cannot be applied, conflicts or wrong. Check the error message for more information.
 
 
 ### 500 ###
 
 A server-side error occured.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+
+### 501 ###
+
+Error is raised when the feature is not implemented in Scalr.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
@@ -126,7 +139,7 @@ The response body is an object of type:
 
     {
       "delete": {
-        "description": "Deregister an Image from the Account.", 
+        "description": "Deregisters an Image from the Account.", 
         "parameters": [
           {
             "required": false, 
@@ -138,7 +151,7 @@ The response body is an object of type:
         ], 
         "responses": {
           "200": {
-            "description": "Image has been deregistered.", 
+            "description": "Successful deletion.", 
             "schema": {
               "$ref": "#/definitions/DeleteSuccessResponse"
             }
@@ -203,6 +216,12 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
+          "501": {
+            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "409": {
             "x-errorCodes": [
               {
@@ -212,6 +231,22 @@ The response body is an object of type:
               {
                 "description": "The changes you are trying to make violate a unicity constraint.", 
                 "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
               }
             ], 
             "description": "Conflict with current state.", 
@@ -239,8 +274,14 @@ The response body is an object of type:
         }
       }, 
       "get": {
-        "description": "Retrieve an Image.", 
+        "description": "Retrieves an Image.", 
         "responses": {
+          "200": {
+            "description": "The JSON representation of a Image object.", 
+            "schema": {
+              "$ref": "#/definitions/ImageDetailsResponse"
+            }
+          }, 
           "400": {
             "x-errorCodes": [
               {
@@ -295,6 +336,12 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
+          "501": {
+            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "409": {
             "x-errorCodes": [
               {
@@ -304,17 +351,27 @@ The response body is an object of type:
               {
                 "description": "The changes you are trying to make violate a unicity constraint.", 
                 "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
               }
             ], 
             "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "200": {
-            "description": "The JSON representation of a Image object.", 
-            "schema": {
-              "$ref": "#/definitions/ImageDetailsResponse"
             }
           }, 
           "404": {
@@ -349,7 +406,7 @@ The response body is an object of type:
         }
       ], 
       "patch": {
-        "description": "Change image attributes. Only the name be can changed.", 
+        "description": "Changes Image attributes. Only the name be can changed.", 
         "parameters": [
           {
             "required": true, 
@@ -362,6 +419,12 @@ The response body is an object of type:
           }
         ], 
         "responses": {
+          "200": {
+            "description": "The JSON representation of a Image object.", 
+            "schema": {
+              "$ref": "#/definitions/ImageDetailsResponse"
+            }
+          }, 
           "400": {
             "x-errorCodes": [
               {
@@ -416,6 +479,12 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
+          "501": {
+            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "409": {
             "x-errorCodes": [
               {
@@ -425,17 +494,27 @@ The response body is an object of type:
               {
                 "description": "The changes you are trying to make violate a unicity constraint.", 
                 "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
               }
             ], 
             "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "200": {
-            "description": "The JSON representation of a Image object.", 
-            "schema": {
-              "$ref": "#/definitions/ImageDetailsResponse"
             }
           }, 
           "404": {

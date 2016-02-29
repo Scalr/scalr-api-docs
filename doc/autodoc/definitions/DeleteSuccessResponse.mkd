@@ -61,6 +61,8 @@ Property of type: `string`.
   + [`/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/{globalVariableName}/)
   + [`/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/)
   + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/scripts/{scriptId}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/)
+  + [`/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/)
   + [`/{envId}/cloud-credentials/{cloudCredentialsId}/`](./../rest/api/v1beta0/user/{envId}/cloud-credentials/{cloudCredentialsId}/)
   + [`/{envId}/events/{eventId}/`](./../rest/api/v1beta0/user/{envId}/events/{eventId}/)
   + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/)
@@ -83,6 +85,20 @@ Property of type: `string`.
 
     {
       "x-usedIn": [
+        "/events/{eventId}/", 
+        "/scripts/{scriptId}/script-versions/", 
+        "/roles/{roleId}/", 
+        "/images/{imageId}/", 
+        "/role-categories/{roleCategoryId}/", 
+        "/cloud-credentials/{cloudCredentialsId}/", 
+        "/orchestration-rules/{orchestrationRuleId}/", 
+        "/scripts/{scriptId}/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/environments/{envId}/clouds/{cloud}/", 
+        "/environments/{envId}/teams/{teamId}/", 
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/roles/{roleId}/images/{imageId}/", 
+        "/environments/{envId}/", 
         "/{envId}/scripts/{scriptId}/script-versions/", 
         "/{envId}/scripts/{scriptId}/", 
         "/{envId}/roles/{roleId}/", 
@@ -99,19 +115,7 @@ Property of type: `string`.
         "/{envId}/events/{eventId}/", 
         "/{envId}/images/{imageId}/", 
         "/{envId}/role-categories/{roleCategoryId}/", 
-        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
-        "/events/{eventId}/", 
-        "/orchestration-rules/{orchestrationRuleId}/", 
-        "/images/{imageId}/", 
-        "/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/environments/{envId}/teams/{teamId}/", 
-        "/roles/{roleId}/", 
-        "/environments/{envId}/clouds/{cloud}/", 
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/role-categories/{roleCategoryId}/", 
-        "/roles/{roleId}/images/{imageId}/", 
-        "/cloud-credentials/{cloudCredentialsId}/", 
-        "/environments/{envId}/"
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/"
       ], 
       "description": "Common envelope.", 
       "properties": {

@@ -53,6 +53,8 @@ Property of type: `string`.
 
 ## Used in ##
 
+  + [`/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/)
+  + [`/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
   + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
   + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
 
@@ -64,6 +66,8 @@ Property of type: `string`.
         "body"
       ], 
       "x-usedIn": [
+        "/scripts/{scriptId}/script-versions/", 
+        "/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
         "/{envId}/scripts/{scriptId}/script-versions/", 
         "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
       ], 

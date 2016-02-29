@@ -64,8 +64,8 @@ objects of type [`Role`](./../definitions/Role.mkd).
 
     {
       "x-usedIn": [
-        "/{envId}/roles/", 
-        "/roles/"
+        "/roles/", 
+        "/{envId}/roles/"
       ], 
       "properties": {
         "pagination": {

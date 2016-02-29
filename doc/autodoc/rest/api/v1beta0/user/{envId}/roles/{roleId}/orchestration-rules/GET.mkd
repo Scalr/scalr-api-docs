@@ -1,6 +1,6 @@
 # `GET /api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/` #
 
-List Orchestration Rules associated with the Role, including Rules from other Scopes (those are read-only).
+Describes Orchestration Rules associated with the Role, including Rules from other Scopes (those are read-only).
 
 ## Request Parameters #
 
@@ -104,11 +104,24 @@ The following errors **may** be returned by this endpoint.
 
 + `ObjectInUse`: The changes you are trying to make aren't possible while this object is in use. Check the error message for more information.
 + `UnicityViolation`: The changes you are trying to make violate a unicity constraint. Check the error message for more information.
++ `Locked`: Some of the objects being changed is locked for changing. Check the error message for more information.
++ `NotEnabledPlatform`: Cloud platform is not enabled. Check the error message for more information.
++ `OperatingSystemMismatch`: The Operating system mismatch. Check the error message for more information.
++ `ConfigurationMismatch`: Some of the configuration settings cannot be applied, conflicts or wrong. Check the error message for more information.
 
 
 ### 500 ###
 
 A server-side error occured.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+
+### 501 ###
+
+Error is raised when the feature is not implemented in Scalr.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
@@ -121,7 +134,7 @@ The response body is an object of type:
 
     {
       "post": {
-        "description": "Associate a new Orchestration Rule with the Role.", 
+        "description": "Associates a new Orchestration Rule with the Role.", 
         "parameters": [
           {
             "required": true, 
@@ -134,6 +147,12 @@ The response body is an object of type:
           }
         ], 
         "responses": {
+          "201": {
+            "description": "The JSON representation of a OrchestrationRule object.", 
+            "schema": {
+              "$ref": "#/definitions/OrchestrationRuleDetailsResponse"
+            }
+          }, 
           "400": {
             "x-errorCodes": [
               {
@@ -188,6 +207,12 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
+          "501": {
+            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "409": {
             "x-errorCodes": [
               {
@@ -197,17 +222,27 @@ The response body is an object of type:
               {
                 "description": "The changes you are trying to make violate a unicity constraint.", 
                 "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
               }
             ], 
             "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "201": {
-            "description": "The JSON representation of a OrchestrationRule object.", 
-            "schema": {
-              "$ref": "#/definitions/OrchestrationRuleDetailsResponse"
             }
           }, 
           "404": {
@@ -249,8 +284,14 @@ The response body is an object of type:
         }
       ], 
       "get": {
-        "description": "List Orchestration Rules associated with the Role, including Rules from other Scopes (those are read-only).", 
+        "description": "Describes Orchestration Rules associated with the Role, including Rules from other Scopes (those are read-only).", 
         "responses": {
+          "200": {
+            "description": "A list of OrchestrationRule objects.", 
+            "schema": {
+              "$ref": "#/definitions/OrchestrationRuleListResponse"
+            }
+          }, 
           "400": {
             "x-errorCodes": [
               {
@@ -305,6 +346,12 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
+          "501": {
+            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "409": {
             "x-errorCodes": [
               {
@@ -314,17 +361,27 @@ The response body is an object of type:
               {
                 "description": "The changes you are trying to make violate a unicity constraint.", 
                 "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
               }
             ], 
             "description": "Conflict with current state.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "200": {
-            "description": "A list of OrchestrationRule objects.", 
-            "schema": {
-              "$ref": "#/definitions/OrchestrationRuleListResponse"
             }
           }, 
           "404": {

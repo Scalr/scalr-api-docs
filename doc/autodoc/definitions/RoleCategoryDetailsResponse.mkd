@@ -57,10 +57,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
-        "/{envId}/role-categories/", 
-        "/{envId}/role-categories/{roleCategoryId}/", 
+        "/role-categories/{roleCategoryId}/", 
         "/role-categories/", 
-        "/role-categories/{roleCategoryId}/"
+        "/{envId}/role-categories/", 
+        "/{envId}/role-categories/{roleCategoryId}/"
       ], 
       "properties": {
         "meta": {

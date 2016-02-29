@@ -48,6 +48,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
+  + [`/scripts/`](./../rest/api/v1beta0/account/scripts/)
+  + [`/scripts/{scriptId}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/)
   + [`/{envId}/scripts/`](./../rest/api/v1beta0/user/{envId}/scripts/)
   + [`/{envId}/scripts/{scriptId}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/)
 
@@ -55,6 +57,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
+        "/scripts/", 
+        "/scripts/{scriptId}/", 
         "/{envId}/scripts/{scriptId}/", 
         "/{envId}/scripts/"
       ], 

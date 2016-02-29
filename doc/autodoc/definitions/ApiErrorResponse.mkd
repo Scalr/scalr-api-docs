@@ -69,6 +69,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/actions/replace/)
   + [`/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/)
   + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/scripts/`](./../rest/api/v1beta0/account/scripts/)
+  + [`/scripts/{scriptId}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/)
+  + [`/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/)
+  + [`/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
   + [`/{envId}/cloud-credentials/`](./../rest/api/v1beta0/user/{envId}/cloud-credentials/)
   + [`/{envId}/cloud-credentials/{cloudCredentialsId}/`](./../rest/api/v1beta0/user/{envId}/cloud-credentials/{cloudCredentialsId}/)
   + [`/{envId}/cost-centers/`](./../rest/api/v1beta0/user/{envId}/cost-centers/)
@@ -121,6 +125,40 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
+        "/events/{eventId}/", 
+        "/roles/{roleId}/global-variables/", 
+        "/scripts/{scriptId}/script-versions/", 
+        "/cost-centers/{costCenterId}/", 
+        "/cloud-credentials/", 
+        "/roles/{roleId}/orchestration-rules/", 
+        "/roles/{roleId}/", 
+        "/roles/{roleId}/images/", 
+        "/environments/{envId}/teams/", 
+        "/images/{imageId}/", 
+        "/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/role-categories/{roleCategoryId}/", 
+        "/cloud-credentials/{cloudCredentialsId}/", 
+        "/cost-centers/", 
+        "/scripts/", 
+        "/orchestration-rules/{orchestrationRuleId}/", 
+        "/role-categories/", 
+        "/orchestration-rules/", 
+        "/scripts/{scriptId}/", 
+        "/environments/", 
+        "/os/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/environments/{envId}/clouds/{cloud}/", 
+        "/environments/{envId}/teams/{teamId}/", 
+        "/images/{imageId}/actions/copy/", 
+        "/environments/{envId}/clouds/", 
+        "/images/", 
+        "/events/", 
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/os/{osId}/", 
+        "/roles/{roleId}/images/{imageId}/", 
+        "/environments/{envId}/", 
+        "/roles/", 
         "/{envId}/scripts/{scriptId}/script-versions/", 
         "/{envId}/os/", 
         "/{envId}/scaling-metrics/", 
@@ -167,37 +205,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/role-categories/{roleCategoryId}/", 
         "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
         "/{envId}/farms/", 
-        "/{envId}/farms/{farmId}/actions/clone/", 
-        "/events/{eventId}/", 
-        "/role-categories/", 
-        "/orchestration-rules/", 
-        "/roles/{roleId}/images/", 
-        "/roles/{roleId}/global-variables/", 
-        "/environments/", 
-        "/orchestration-rules/{orchestrationRuleId}/", 
-        "/os/", 
-        "/images/{imageId}/", 
-        "/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/cost-centers/{costCenterId}/", 
-        "/cloud-credentials/", 
-        "/roles/{roleId}/orchestration-rules/", 
-        "/environments/{envId}/teams/{teamId}/", 
-        "/images/{imageId}/actions/copy/", 
-        "/roles/{roleId}/", 
-        "/environments/{envId}/clouds/", 
-        "/environments/{envId}/clouds/{cloud}/", 
-        "/images/", 
-        "/environments/{envId}/teams/", 
-        "/events/", 
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/os/{osId}/", 
-        "/role-categories/{roleCategoryId}/", 
-        "/roles/{roleId}/images/{imageId}/", 
-        "/cloud-credentials/{cloudCredentialsId}/", 
-        "/cost-centers/", 
-        "/environments/{envId}/", 
-        "/roles/"
+        "/{envId}/farms/{farmId}/actions/clone/"
       ], 
       "description": "Common envelope.", 
       "properties": {

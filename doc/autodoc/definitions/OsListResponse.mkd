@@ -64,8 +64,8 @@ objects of type [`Os`](./../definitions/Os.mkd).
 
     {
       "x-usedIn": [
-        "/{envId}/os/", 
-        "/os/"
+        "/os/", 
+        "/{envId}/os/"
       ], 
       "properties": {
         "pagination": {

@@ -75,9 +75,6 @@ An object of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd
         "region": {
           "type": "string"
         }, 
-        "router": {
-          "$ref": "#/definitions/FarmRoleForeignKey"
-        }, 
         "placementConfigurationType": {
           "enum": [
             "AwsClassicPlacementConfiguration", 
@@ -87,6 +84,9 @@ An object of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd
             "GcePlacementConfiguration"
           ], 
           "type": "string"
+        }, 
+        "router": {
+          "$ref": "#/definitions/FarmRoleForeignKey"
         }
       }
     }

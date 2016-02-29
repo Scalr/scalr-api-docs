@@ -57,12 +57,14 @@ objects of type [`ScriptVersion`](./../definitions/ScriptVersion.mkd).
 
 ## Used in ##
 
+  + [`/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/)
   + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
+        "/scripts/{scriptId}/script-versions/", 
         "/{envId}/scripts/{scriptId}/script-versions/"
       ], 
       "properties": {

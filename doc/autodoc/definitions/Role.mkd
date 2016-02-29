@@ -155,6 +155,15 @@ To filter on this field, use: `id=...`.
         "os"
       ], 
       "x-usedIn": [
+        "/roles/{roleId}/global-variables/", 
+        "/roles/{roleId}/orchestration-rules/", 
+        "/roles/{roleId}/", 
+        "/roles/{roleId}/images/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/roles/{roleId}/images/{imageId}/", 
+        "/roles/", 
         "/{envId}/roles/{roleId}/", 
         "/{envId}/roles/{roleId}/images/{imageId}/", 
         "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
@@ -163,16 +172,7 @@ To filter on this field, use: `id=...`.
         "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/{envId}/roles/", 
         "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/roles/{roleId}/global-variables/", 
-        "/roles/{roleId}/images/", 
-        "/roles/{roleId}/global-variables/", 
-        "/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/roles/{roleId}/orchestration-rules/", 
-        "/roles/{roleId}/", 
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/roles/{roleId}/images/{imageId}/", 
-        "/roles/"
+        "/{envId}/roles/{roleId}/global-variables/"
       ], 
       "properties": {
         "category": {
