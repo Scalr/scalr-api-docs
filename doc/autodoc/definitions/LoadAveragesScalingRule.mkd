@@ -69,14 +69,7 @@ Property of type: `integer`.
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/BasicScalingRule"
-      }, 
       "description": "It is used in combination with user defined Scaling Metrics.", 
-      "x-filterable": [
-        "name", 
-        "ruleType"
-      ], 
       "required": [
         "name", 
         "ruleType", 
@@ -85,6 +78,13 @@ Property of type: `integer`.
         "calculatingPeriod"
       ], 
       "x-discriminator": "ruleType", 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/BasicScalingRule"
+      }, 
       "properties": {
         "ruleType": {
           "enum": [
@@ -102,10 +102,6 @@ Property of type: `integer`.
           "type": "integer", 
           "description": "Period in minutes which is used to aggregate the Metric Value."
         }, 
-        "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
-        }, 
         "scaleUp": {
           "type": "integer", 
           "description": "Scale up threshold."
@@ -113,9 +109,13 @@ Property of type: `integer`.
         "name": {
           "type": "string", 
           "descritpion": "The name of the Scaling Metric."
+        }, 
+        "scaleDown": {
+          "type": "integer", 
+          "description": "Scale down threshold."
         }
       }, 
-      "x-createOnly": [
+      "x-filterable": [
         "name", 
         "ruleType"
       ]

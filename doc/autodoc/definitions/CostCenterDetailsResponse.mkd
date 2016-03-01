@@ -55,8 +55,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
-        "/cost-centers/{costCenterId}/", 
-        "/{envId}/cost-centers/{costCenterId}/"
+        "/{envId}/cost-centers/{costCenterId}/", 
+        "/cost-centers/{costCenterId}/"
       ], 
       "properties": {
         "meta": {

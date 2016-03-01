@@ -1,4 +1,4 @@
-# `RoleDetailsResponse` #
+# `ServerSummaryDetailsResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`Role`](./../definitions/Role.mkd).
+An object of type [`ServerSummary`](./../definitions/ServerSummary.mkd).
 
 
 
@@ -48,19 +48,13 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/roles/`](./../rest/api/v1beta0/account/roles/)
-  + [`/roles/{roleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/)
-  + [`/{envId}/roles/`](./../rest/api/v1beta0/user/{envId}/roles/)
-  + [`/{envId}/roles/{roleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/actions/import-server/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/actions/import-server/)
 
 ## Swagger Definition ##
 
     {
       "x-usedIn": [
-        "/{envId}/roles/{roleId}/", 
-        "/{envId}/roles/", 
-        "/roles/{roleId}/", 
-        "/roles/"
+        "/{envId}/farm-roles/{farmRoleId}/actions/import-server/"
       ], 
       "properties": {
         "meta": {
@@ -68,7 +62,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer"
         }, 
         "data": {
-          "$ref": "#/definitions/Role"
+          "$ref": "#/definitions/ServerSummary"
         }, 
         "errors": {
           "items": {
@@ -86,6 +80,6 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/Role"
+        "$ref": "#/definitions/ServerSummary"
       }
     }

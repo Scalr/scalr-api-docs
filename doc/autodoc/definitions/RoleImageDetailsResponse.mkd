@@ -57,10 +57,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
-        "/roles/{roleId}/images/", 
-        "/roles/{roleId}/images/{imageId}/actions/replace/", 
         "/{envId}/roles/{roleId}/images/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/"
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/roles/{roleId}/images/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/"
       ], 
       "properties": {
         "meta": {

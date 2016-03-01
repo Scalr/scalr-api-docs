@@ -60,6 +60,15 @@ An array of
         "daysOfWeek"
       ], 
       "properties": {
+        "end": {
+          "type": "string", 
+          "description": "End of the frame.", 
+          "format": "date-time"
+        }, 
+        "instanceCount": {
+          "type": "integer", 
+          "description": "The number of the instances which should be running."
+        }, 
         "daysOfWeek": {
           "items": {
             "enum": [
@@ -75,15 +84,6 @@ An array of
           }, 
           "type": "array", 
           "description": "The days of week which the rule is applied on."
-        }, 
-        "instanceCount": {
-          "type": "integer", 
-          "description": "The number of the instances which should be running."
-        }, 
-        "end": {
-          "type": "string", 
-          "description": "End of the frame.", 
-          "format": "date-time"
         }, 
         "start": {
           "type": "string", 

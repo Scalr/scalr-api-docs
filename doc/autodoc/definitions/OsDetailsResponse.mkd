@@ -55,8 +55,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
-        "/os/{osId}/", 
-        "/{envId}/os/{osId}/"
+        "/{envId}/os/{osId}/", 
+        "/os/{osId}/"
       ], 
       "properties": {
         "meta": {

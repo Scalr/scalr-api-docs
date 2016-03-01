@@ -66,10 +66,10 @@ Property of type: `string`.
         "body"
       ], 
       "x-usedIn": [
-        "/scripts/{scriptId}/script-versions/", 
-        "/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
         "/{envId}/scripts/{scriptId}/script-versions/", 
-        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
+        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/scripts/{scriptId}/script-versions/", 
+        "/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
       ], 
       "properties": {
         "body": {

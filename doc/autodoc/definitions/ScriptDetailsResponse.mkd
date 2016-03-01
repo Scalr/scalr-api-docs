@@ -57,10 +57,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
     {
       "x-usedIn": [
-        "/scripts/", 
-        "/scripts/{scriptId}/", 
         "/{envId}/scripts/{scriptId}/", 
-        "/{envId}/scripts/"
+        "/{envId}/scripts/", 
+        "/scripts/", 
+        "/scripts/{scriptId}/"
       ], 
       "properties": {
         "meta": {

@@ -100,6 +100,12 @@ The following are valid values for the `scope` property:
 ## Swagger Definition ##
 
     {
+      "required": [
+        "name", 
+        "retrieveMethod", 
+        "filePath", 
+        "function"
+      ], 
       "x-usedIn": [
         "/{envId}/scaling-metrics/", 
         "/{envId}/scaling-metrics/{metricName}/"
@@ -115,14 +121,6 @@ The following are valid values for the `scope` property:
           "type": "string", 
           "description": "Aggregate function to use when executing decision logic."
         }, 
-        "retrieveMethod": {
-          "enum": [
-            "read", 
-            "execute"
-          ], 
-          "type": "string", 
-          "description": "The operation on the File that should be performed to obtain the value of the Metric."
-        }, 
         "name": {
           "type": "string", 
           "descritpion": "The name of the Scaling Metric."
@@ -130,6 +128,18 @@ The following are valid values for the `scope` property:
         "filePath": {
           "type": "string", 
           "descritpion": "Path to the File"
+        }, 
+        "inverted": {
+          "type": "boolean", 
+          "description": "Whether this metric uses inverted logic. In case of the inversion it scales up when the value goes under instead of scaling down."
+        }, 
+        "retrieveMethod": {
+          "enum": [
+            "read", 
+            "execute"
+          ], 
+          "type": "string", 
+          "description": "The operation on the File that should be performed to obtain the value of the Metric."
         }, 
         "scope": {
           "readOnly": true, 
@@ -142,10 +152,6 @@ The following are valid values for the `scope` property:
             "server"
           ], 
           "type": "string"
-        }, 
-        "inverted": {
-          "type": "boolean", 
-          "description": "Whether this metric uses inverted logic. In case of the inversion it scales up when the value goes under instead of scaling down."
         }
       }, 
       "x-filterable": [
@@ -153,11 +159,5 @@ The following are valid values for the `scope` property:
         "retrieveMethod", 
         "function", 
         "inverted"
-      ], 
-      "required": [
-        "name", 
-        "retrieveMethod", 
-        "filePath", 
-        "function"
       ]
     }

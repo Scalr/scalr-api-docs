@@ -65,18 +65,18 @@ To filter on this field, use: `name=...`.
           "$ref": "#/definitions/DateAndTimeScalingRule"
         }
       ], 
-      "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/scaling/", 
-        "/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/"
+      "required": [
+        "name", 
+        "ruleType"
       ], 
-      "x-filterable": [
+      "x-createOnly": [
         "name", 
         "ruleType"
       ], 
       "discriminator": "ruleType", 
-      "required": [
-        "name", 
-        "ruleType"
+      "x-usedIn": [
+        "/{envId}/farm-roles/{farmRoleId}/scaling/", 
+        "/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/"
       ], 
       "properties": {
         "ruleType": {
@@ -96,7 +96,7 @@ To filter on this field, use: `name=...`.
           "descritpion": "The name of the Scaling Metric."
         }
       }, 
-      "x-createOnly": [
+      "x-filterable": [
         "name", 
         "ruleType"
       ]

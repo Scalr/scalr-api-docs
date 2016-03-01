@@ -263,16 +263,16 @@ Property of type: `string`.
         "os"
       ], 
       "x-usedIn": [
-        "/images/{imageId}/", 
-        "/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/images/{imageId}/actions/copy/", 
-        "/images/", 
-        "/roles/{roleId}/images/{imageId}/", 
         "/{envId}/images/{imageId}/actions/copy/", 
         "/{envId}/roles/{roleId}/images/{imageId}/", 
         "/{envId}/images/", 
         "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/{envId}/images/{imageId}/"
+        "/{envId}/images/{imageId}/", 
+        "/images/{imageId}/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/images/{imageId}/actions/copy/", 
+        "/images/", 
+        "/roles/{roleId}/images/{imageId}/"
       ], 
       "properties": {
         "status": {

@@ -127,6 +127,7 @@ The following errors **may** be returned by this endpoint.
 + `NotEnabledPlatform`: Cloud platform is not enabled. Check the error message for more information.
 + `OperatingSystemMismatch`: The Operating system mismatch. Check the error message for more information.
 + `ConfigurationMismatch`: Some of the configuration settings cannot be applied, conflicts or wrong. Check the error message for more information.
++ `Deprecated`: Some of the object or action is deprecated Check the error message for more information.
 
 
 ### 500 ###
@@ -147,6 +148,15 @@ The response body is an object of type:
 
 
 
+### 503 ###
+
+The service is currently unavailable.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+
 
 
 ## Swagger Definition ##
@@ -155,6 +165,42 @@ The response body is an object of type:
       "delete": {
         "description": "Deletes a Global Variable from this Farm role's scope.", 
         "responses": {
+          "409": {
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
+              }, 
+              {
+                "description": "Some of the object or action is deprecated", 
+                "name": "Deprecated"
+              }
+            ], 
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "200": {
             "description": "Successful deletion.", 
             "schema": {
@@ -221,34 +267,8 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
-          "409": {
-            "x-errorCodes": [
-              {
-                "description": "The changes you are trying to make aren't possible while this object is in use.", 
-                "name": "ObjectInUse"
-              }, 
-              {
-                "description": "The changes you are trying to make violate a unicity constraint.", 
-                "name": "UnicityViolation"
-              }, 
-              {
-                "description": "Some of the objects being changed is locked for changing.", 
-                "name": "Locked"
-              }, 
-              {
-                "description": "Cloud platform is not enabled.", 
-                "name": "NotEnabledPlatform"
-              }, 
-              {
-                "description": "The Operating system mismatch.", 
-                "name": "OperatingSystemMismatch"
-              }, 
-              {
-                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
-                "name": "ConfigurationMismatch"
-              }
-            ], 
-            "description": "Conflict with current state.", 
+          "503": {
+            "description": "The service is currently unavailable.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -275,6 +295,42 @@ The response body is an object of type:
       "get": {
         "description": "Retrieves a Global Variable's value in this Farm role's scope.", 
         "responses": {
+          "409": {
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
+              }, 
+              {
+                "description": "Some of the object or action is deprecated", 
+                "name": "Deprecated"
+              }
+            ], 
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "200": {
             "description": "The JSON representation of a GlobalVariable object.", 
             "schema": {
@@ -341,34 +397,8 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
-          "409": {
-            "x-errorCodes": [
-              {
-                "description": "The changes you are trying to make aren't possible while this object is in use.", 
-                "name": "ObjectInUse"
-              }, 
-              {
-                "description": "The changes you are trying to make violate a unicity constraint.", 
-                "name": "UnicityViolation"
-              }, 
-              {
-                "description": "Some of the objects being changed is locked for changing.", 
-                "name": "Locked"
-              }, 
-              {
-                "description": "Cloud platform is not enabled.", 
-                "name": "NotEnabledPlatform"
-              }, 
-              {
-                "description": "The Operating system mismatch.", 
-                "name": "OperatingSystemMismatch"
-              }, 
-              {
-                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
-                "name": "ConfigurationMismatch"
-              }
-            ], 
-            "description": "Conflict with current state.", 
+          "503": {
+            "description": "The service is currently unavailable.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -432,6 +462,42 @@ The response body is an object of type:
           }
         ], 
         "responses": {
+          "409": {
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
+              }, 
+              {
+                "description": "Some of the object or action is deprecated", 
+                "name": "Deprecated"
+              }
+            ], 
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "200": {
             "description": "The JSON representation of a GlobalVariable object.", 
             "schema": {
@@ -498,34 +564,8 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
-          "409": {
-            "x-errorCodes": [
-              {
-                "description": "The changes you are trying to make aren't possible while this object is in use.", 
-                "name": "ObjectInUse"
-              }, 
-              {
-                "description": "The changes you are trying to make violate a unicity constraint.", 
-                "name": "UnicityViolation"
-              }, 
-              {
-                "description": "Some of the objects being changed is locked for changing.", 
-                "name": "Locked"
-              }, 
-              {
-                "description": "Cloud platform is not enabled.", 
-                "name": "NotEnabledPlatform"
-              }, 
-              {
-                "description": "The Operating system mismatch.", 
-                "name": "OperatingSystemMismatch"
-              }, 
-              {
-                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
-                "name": "ConfigurationMismatch"
-              }
-            ], 
-            "description": "Conflict with current state.", 
+          "503": {
+            "description": "The service is currently unavailable.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
