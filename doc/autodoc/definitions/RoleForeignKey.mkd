@@ -28,19 +28,19 @@ Property of type: `integer`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "id"
-      ], 
       "x-references": {
         "$ref": "#/definitions/Role"
       }, 
-      "x-derived": {
-        "$ref": "#/definitions/Role"
-      }, 
+      "required": [
+        "id"
+      ], 
       "properties": {
         "id": {
           "readOnly": true, 
           "type": "integer"
         }
+      }, 
+      "x-derived": {
+        "$ref": "#/definitions/Role"
       }
     }

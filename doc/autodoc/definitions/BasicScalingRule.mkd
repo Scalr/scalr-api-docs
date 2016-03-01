@@ -115,10 +115,6 @@ To filter on this field, use: `name=...`.
           ], 
           "type": "string"
         }, 
-        "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
-        }, 
         "scaleUp": {
           "type": "integer", 
           "description": "Scale up threshold."
@@ -126,6 +122,10 @@ To filter on this field, use: `name=...`.
         "name": {
           "type": "string", 
           "descritpion": "The name of the Scaling Metric."
+        }, 
+        "scaleDown": {
+          "type": "integer", 
+          "description": "Scale down threshold."
         }
       }, 
       "x-filterable": [

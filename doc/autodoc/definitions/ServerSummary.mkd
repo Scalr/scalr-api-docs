@@ -1,0 +1,174 @@
+# `ServerSummary` #
+
+JSON Representation of the Scalr Server.
+
+
+
+
+
+## Properties ##
+
+### `status` (read-only, filterable) ###
+
+Server status.
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `status` property:
+  + `temporary`
+  + `running`
+  + `pending`
+  + `pending_launch`
+  + `initializing`
+  + `importing`
+  + `terminated`
+  + `pending_terminate`
+  + `suspended`
+  + `pending_suspend`
+  + `resuming`
+
+To filter on this field, use: `status=...`.
+
+
+### `id` (read-only, filterable) ###
+
+Identifier of the Scalr Server.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `id=...`.
+
+
+### `farmRole` (read-only) ###
+
+Identifier of the Farm Role
+
+
+An object of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd).
+
+
+
+### `farm` (read-only) ###
+
+Identifier of the Farm
+
+
+An object of type [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd).
+
+
+
+### `cloudPlatform` (read-only, filterable) ###
+
+Cloud Platform this resources resides in.
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `cloudPlatform` property:
+  + `ec2`
+  + `gce`
+  + `azure`
+  + `cloudstack`
+  + `idcf`
+  + `openstack`
+  + `ocs`
+  + `rackspacenguk`
+  + `rackspacengus`
+  + `hpcloud`
+  + `mirantis`
+  + `vio`
+  + `cisco`
+
+To filter on this field, use: `cloudPlatform=...`.
+
+
+### `cloudLocation` (read-only, filterable) ###
+
+More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `cloudLocation=...`.
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "x-filterable": [
+        "id", 
+        "status", 
+        "cloudPlatform", 
+        "cloudLocation"
+      ], 
+      "properties": {
+        "status": {
+          "readOnly": true, 
+          "enum": [
+            "temporary", 
+            "running", 
+            "pending", 
+            "pending_launch", 
+            "initializing", 
+            "importing", 
+            "terminated", 
+            "pending_terminate", 
+            "suspended", 
+            "pending_suspend", 
+            "resuming"
+          ], 
+          "type": "string", 
+          "description": "Server status."
+        }, 
+        "farm": {
+          "readOnly": true, 
+          "description": "Identifier of the Farm", 
+          "$ref": "#/definitions/FarmForeignKey"
+        }, 
+        "farmRole": {
+          "readOnly": true, 
+          "description": "Identifier of the Farm Role", 
+          "$ref": "#/definitions/FarmRoleForeignKey"
+        }, 
+        "cloudLocation": {
+          "readOnly": true, 
+          "type": "string", 
+          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`."
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "string", 
+          "description": "Identifier of the Scalr Server."
+        }, 
+        "cloudPlatform": {
+          "readOnly": true, 
+          "enum": [
+            "ec2", 
+            "gce", 
+            "azure", 
+            "cloudstack", 
+            "idcf", 
+            "openstack", 
+            "ocs", 
+            "rackspacenguk", 
+            "rackspacengus", 
+            "hpcloud", 
+            "mirantis", 
+            "vio", 
+            "cisco"
+          ], 
+          "type": "string", 
+          "description": "Cloud Platform this resources resides in."
+        }
+      }, 
+      "description": "JSON Representation of the Scalr Server."
+    }

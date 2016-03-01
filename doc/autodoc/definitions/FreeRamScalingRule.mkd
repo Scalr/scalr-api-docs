@@ -69,14 +69,7 @@ Property of type: `boolean`.
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/BasicScalingRule"
-      }, 
       "description": "It is used in combination with user defined Scaling Metrics.", 
-      "x-filterable": [
-        "name", 
-        "ruleType"
-      ], 
       "required": [
         "name", 
         "ruleType", 
@@ -84,6 +77,13 @@ Property of type: `boolean`.
         "scaleDown"
       ], 
       "x-discriminator": "ruleType", 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/BasicScalingRule"
+      }, 
       "properties": {
         "useCachedRam": {
           "descripiton": "Whether it should use cached RAM in addition to free RAM as scaling metric.", 
@@ -101,10 +101,6 @@ Property of type: `boolean`.
           ], 
           "type": "string"
         }, 
-        "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
-        }, 
         "scaleUp": {
           "type": "integer", 
           "description": "Scale up threshold."
@@ -112,9 +108,13 @@ Property of type: `boolean`.
         "name": {
           "type": "string", 
           "descritpion": "The name of the Scaling Metric."
+        }, 
+        "scaleDown": {
+          "type": "integer", 
+          "description": "Scale down threshold."
         }
       }, 
-      "x-createOnly": [
+      "x-filterable": [
         "name", 
         "ruleType"
       ]

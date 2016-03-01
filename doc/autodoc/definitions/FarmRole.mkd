@@ -48,22 +48,22 @@ An object of type [`InstanceConfiguration`](./../definitions/InstanceConfigurati
 
 
 
-### `scaling` (optional) ###
-
-
-
-
-An object of type [`ScalingConfiguration`](./../definitions/ScalingConfiguration.mkd).
-
-
-
-### `alias` (optional) ###
+### `alias` (required) ###
 
 The Alias for this Farm Role. If this isn't provided, it will default to the Role's name (possibly with '-n' appended if the Role name is already taken)
 
 
 Property of type: `string`.
 
+
+
+
+### `scaling` (optional) ###
+
+
+
+
+An object of type [`ScalingConfiguration`](./../definitions/ScalingConfiguration.mkd).
 
 
 
@@ -94,6 +94,7 @@ e.g.: `farm=...`.
 ## Used in ##
 
   + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/actions/import-server/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/actions/import-server/)
   + [`/{envId}/farm-roles/{farmRoleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/)
   + [`/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/)
   + [`/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/instance/)
@@ -107,9 +108,17 @@ e.g.: `farm=...`.
 ## Swagger Definition ##
 
     {
+      "required": [
+        "role", 
+        "platform", 
+        "placement", 
+        "instance", 
+        "alias"
+      ], 
       "x-usedIn": [
         "/{envId}/farms/{farmId}/farm-roles/", 
         "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
+        "/{envId}/farm-roles/{farmRoleId}/actions/import-server/", 
         "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
         "/{envId}/farm-roles/{farmRoleId}/scaling/", 
         "/{envId}/farm-roles/{farmRoleId}/instance/", 
@@ -120,12 +129,15 @@ e.g.: `farm=...`.
         "/{envId}/farm-roles/{farmRoleId}/placement/"
       ], 
       "properties": {
+        "instance": {
+          "$ref": "#/definitions/InstanceConfiguration"
+        }, 
         "placement": {
           "$ref": "#/definitions/PlacementConfiguration"
         }, 
-        "platform": {
+        "alias": {
           "type": "string", 
-          "description": "Farm role platform."
+          "description": "The Alias for this Farm Role. If this isn't provided, it will default to the Role's name (possibly with '-n' appended if the Role name is already taken)"
         }, 
         "farm": {
           "readOnly": true, 
@@ -135,12 +147,9 @@ e.g.: `farm=...`.
         "scaling": {
           "$ref": "#/definitions/ScalingConfiguration"
         }, 
-        "instance": {
-          "$ref": "#/definitions/InstanceConfiguration"
-        }, 
-        "alias": {
+        "platform": {
           "type": "string", 
-          "description": "The Alias for this Farm Role. If this isn't provided, it will default to the Role's name (possibly with '-n' appended if the Role name is already taken)"
+          "description": "Farm role platform."
         }, 
         "role": {
           "$ref": "#/definitions/RoleForeignKey"
@@ -155,11 +164,5 @@ e.g.: `farm=...`.
         "farm", 
         "role", 
         "platform"
-      ], 
-      "required": [
-        "role", 
-        "platform", 
-        "placement", 
-        "instance"
       ]
     }

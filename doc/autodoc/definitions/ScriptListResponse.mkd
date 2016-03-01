@@ -64,8 +64,8 @@ objects of type [`Script`](./../definitions/Script.mkd).
 
     {
       "x-usedIn": [
-        "/scripts/", 
-        "/{envId}/scripts/"
+        "/{envId}/scripts/", 
+        "/scripts/"
       ], 
       "properties": {
         "pagination": {

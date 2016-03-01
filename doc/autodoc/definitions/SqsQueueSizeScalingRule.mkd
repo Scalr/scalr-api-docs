@@ -69,14 +69,7 @@ To filter on this field, use: `name=...`.
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/BasicScalingRule"
-      }, 
       "description": "It is used in combination with user defined Scaling Metrics.", 
-      "x-filterable": [
-        "name", 
-        "ruleType"
-      ], 
       "required": [
         "name", 
         "ruleType", 
@@ -85,6 +78,13 @@ To filter on this field, use: `name=...`.
         "queue"
       ], 
       "x-discriminator": "ruleType", 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/BasicScalingRule"
+      }, 
       "properties": {
         "queue": {
           "type": "string", 
@@ -102,10 +102,6 @@ To filter on this field, use: `name=...`.
           ], 
           "type": "string"
         }, 
-        "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
-        }, 
         "scaleUp": {
           "type": "integer", 
           "description": "Scale up threshold."
@@ -113,9 +109,13 @@ To filter on this field, use: `name=...`.
         "name": {
           "type": "string", 
           "descritpion": "The name of the Scaling Metric."
+        }, 
+        "scaleDown": {
+          "type": "integer", 
+          "description": "Scale down threshold."
         }
       }, 
-      "x-createOnly": [
+      "x-filterable": [
         "name", 
         "ruleType"
       ]

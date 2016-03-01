@@ -64,8 +64,8 @@ objects of type [`ScriptVersion`](./../definitions/ScriptVersion.mkd).
 
     {
       "x-usedIn": [
-        "/scripts/{scriptId}/script-versions/", 
-        "/{envId}/scripts/{scriptId}/script-versions/"
+        "/{envId}/scripts/{scriptId}/script-versions/", 
+        "/scripts/{scriptId}/script-versions/"
       ], 
       "properties": {
         "pagination": {

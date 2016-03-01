@@ -48,20 +48,20 @@ To filter on this field, use: `name=...`.
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/ScalingRule"
-      }, 
       "description": "It defines the number of running instances for the specified time frames.", 
-      "x-filterable": [
-        "name", 
-        "ruleType"
-      ], 
       "required": [
         "name", 
         "ruleType", 
         "schedule"
       ], 
       "x-discriminator": "ruleType", 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/ScalingRule"
+      }, 
       "properties": {
         "ruleType": {
           "enum": [
@@ -86,7 +86,7 @@ To filter on this field, use: `name=...`.
           "type": "array"
         }
       }, 
-      "x-createOnly": [
+      "x-filterable": [
         "name", 
         "ruleType"
       ]

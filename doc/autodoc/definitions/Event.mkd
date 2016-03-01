@@ -64,10 +64,10 @@ To filter on this field, use: `scope=...`.
         "id"
       ], 
       "x-usedIn": [
-        "/events/{eventId}/", 
-        "/events/", 
         "/{envId}/events/", 
-        "/{envId}/events/{eventId}/"
+        "/{envId}/events/{eventId}/", 
+        "/events/{eventId}/", 
+        "/events/"
       ], 
       "properties": {
         "scope": {

@@ -85,20 +85,6 @@ Property of type: `string`.
 
     {
       "x-usedIn": [
-        "/events/{eventId}/", 
-        "/scripts/{scriptId}/script-versions/", 
-        "/roles/{roleId}/", 
-        "/images/{imageId}/", 
-        "/role-categories/{roleCategoryId}/", 
-        "/cloud-credentials/{cloudCredentialsId}/", 
-        "/orchestration-rules/{orchestrationRuleId}/", 
-        "/scripts/{scriptId}/", 
-        "/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/environments/{envId}/clouds/{cloud}/", 
-        "/environments/{envId}/teams/{teamId}/", 
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/roles/{roleId}/images/{imageId}/", 
-        "/environments/{envId}/", 
         "/{envId}/scripts/{scriptId}/script-versions/", 
         "/{envId}/scripts/{scriptId}/", 
         "/{envId}/roles/{roleId}/", 
@@ -115,7 +101,21 @@ Property of type: `string`.
         "/{envId}/events/{eventId}/", 
         "/{envId}/images/{imageId}/", 
         "/{envId}/role-categories/{roleCategoryId}/", 
-        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/"
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
+        "/events/{eventId}/", 
+        "/scripts/{scriptId}/script-versions/", 
+        "/roles/{roleId}/", 
+        "/images/{imageId}/", 
+        "/role-categories/{roleCategoryId}/", 
+        "/cloud-credentials/{cloudCredentialsId}/", 
+        "/orchestration-rules/{orchestrationRuleId}/", 
+        "/scripts/{scriptId}/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/environments/{envId}/clouds/{cloud}/", 
+        "/environments/{envId}/teams/{teamId}/", 
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/roles/{roleId}/images/{imageId}/", 
+        "/environments/{envId}/"
       ], 
       "description": "Common envelope.", 
       "properties": {

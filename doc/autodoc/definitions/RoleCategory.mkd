@@ -65,10 +65,10 @@ To filter on this field, use: `id=...`.
         "name"
       ], 
       "x-usedIn": [
-        "/role-categories/{roleCategoryId}/", 
-        "/role-categories/", 
         "/{envId}/role-categories/", 
-        "/{envId}/role-categories/{roleCategoryId}/"
+        "/{envId}/role-categories/{roleCategoryId}/", 
+        "/role-categories/{roleCategoryId}/", 
+        "/role-categories/"
       ], 
       "properties": {
         "scope": {
