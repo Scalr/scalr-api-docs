@@ -25,15 +25,27 @@ Parameter of type: `integer`.
 
 
 
-### Query Parameters ###
 
-Query parameters are passed as GET parameters (e.g. `?query=value`).
 
-#### `cloudServerId` ####
+### Request Body ###
+
+The request body parameter is passed as the body of the request.
+
+#### `importServerRequest` ####
+
+Import Server request data.
+
+Parameter of type: `object`.
+
+### ImportServerRequest properties ###
+
+### `cloudServerId` (required) ###
 
 Identifier of the instance on the cloud to import.
 
-Parameter of type: `string`.
+
+Property of type: `string`.
+
 
 
 
@@ -159,11 +171,22 @@ The response body is an object of type:
         "description": "Imports the specified server from the cloud to Scalr Farm Role.", 
         "parameters": [
           {
+            "schema": {
+              "required": [
+                "cloudServerId"
+              ], 
+              "properties": {
+                "cloudServerId": {
+                  "type": "string", 
+                  "description": "Identifier of the instance on the cloud to import."
+                }
+              }
+            }, 
+            "description": "Import Server request data.", 
+            "in": "body", 
             "required": true, 
-            "type": "string", 
-            "description": "Identifier of the instance on the cloud to import.", 
-            "in": "query", 
-            "name": "cloudServerId"
+            "type": "object", 
+            "name": "importServerRequest"
           }
         ], 
         "responses": {

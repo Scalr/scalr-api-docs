@@ -25,15 +25,27 @@ Parameter of type: `integer`.
 
 
 
-### Query Parameters ###
 
-Query parameters are passed as GET parameters (e.g. `?query=value`).
 
-#### `name` ####
+### Request Body ###
+
+The request body parameter is passed as the body of the request.
+
+#### `cloneFarmRequest` ####
+
+Clone Farm options.
+
+Parameter of type: `object`.
+
+### CloneFarmRequest properties ###
+
+### `name` (required) ###
 
 The name of a new Farm.
 
-Parameter of type: `string`.
+
+Property of type: `string`.
+
 
 
 
@@ -159,11 +171,22 @@ The response body is an object of type:
         "description": "Clones specified Farm.", 
         "parameters": [
           {
+            "schema": {
+              "required": [
+                "name"
+              ], 
+              "properties": {
+                "name": {
+                  "type": "string", 
+                  "description": "The name of a new Farm."
+                }
+              }
+            }, 
+            "description": "Clone Farm options.", 
+            "in": "body", 
             "required": true, 
-            "type": "string", 
-            "description": "The name of a new Farm.", 
-            "in": "query", 
-            "name": "name"
+            "type": "object", 
+            "name": "cloneFarmRequest"
           }
         ], 
         "responses": {
