@@ -25,15 +25,27 @@ Parameter of type: `integer`.
 
 
 
-### Query Parameters ###
 
-Query parameters are passed as GET parameters (e.g. `?query=value`).
 
-#### `force` ####
+### Request Body ###
+
+The request body parameter is passed as the body of the request.
+
+#### `terminateFarmRequest` ####
+
+Terminate Farm options.
+
+Parameter of type: `object`.
+
+### TerminateFarmRequest properties ###
+
+### `force` (required) ###
 
 Skip all shutdown routines (Do not process the BeforeHostTerminate event).
 
-Parameter of type: `boolean`.
+
+Property of type: `boolean`.
+
 
 
 
@@ -159,11 +171,22 @@ The response body is an object of type:
         "description": "Appoints farm termination.", 
         "parameters": [
           {
+            "schema": {
+              "required": [
+                "force"
+              ], 
+              "properties": {
+                "force": {
+                  "type": "boolean", 
+                  "description": "Skip all shutdown routines (Do not process the BeforeHostTerminate event)."
+                }
+              }
+            }, 
+            "description": "Terminate Farm options.", 
+            "in": "body", 
             "required": false, 
-            "type": "boolean", 
-            "description": "Skip all shutdown routines (Do not process the BeforeHostTerminate event).", 
-            "in": "query", 
-            "name": "force"
+            "type": "object", 
+            "name": "terminateFarmRequest"
           }
         ], 
         "responses": {
