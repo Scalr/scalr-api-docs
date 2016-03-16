@@ -28,13 +28,6 @@ This `string` property is used for polymorphism. It **must** be set to: `"NullTa
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/Target"
-      }, 
-      "required": [
-        "targetType"
-      ], 
-      "x-discriminator": "targetType", 
       "description": "Selects no Server at all.", 
       "properties": {
         "targetType": {
@@ -47,5 +40,12 @@ This `string` property is used for polymorphism. It **must** be set to: `"NullTa
           ], 
           "type": "string"
         }
-      }
+      }, 
+      "required": [
+        "targetType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/Target"
+      }, 
+      "x-discriminator": "targetType"
     }

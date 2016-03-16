@@ -46,15 +46,7 @@ The following are valid values for the `instanceConfigurationType` property:
 ## Swagger Definition ##
 
     {
-      "x-concreteTypes": [
-        {
-          "$ref": "#/definitions/AwsInstanceConfiguration"
-        }
-      ], 
       "discriminator": "instanceConfigurationType", 
-      "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/instance/"
-      ], 
       "properties": {
         "instanceConfigurationType": {
           "enum": [
@@ -69,5 +61,13 @@ The following are valid values for the `instanceConfigurationType` property:
       "required": [
         "instanceConfigurationType", 
         "instanceType"
+      ], 
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/AwsInstanceConfiguration"
+        }
+      ], 
+      "x-usedIn": [
+        "/{envId}/farm-roles/{farmRoleId}/instance/"
       ]
     }

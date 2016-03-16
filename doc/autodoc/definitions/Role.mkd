@@ -149,50 +149,7 @@ To filter on this field, use: `id=...`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "name", 
-        "category", 
-        "os"
-      ], 
-      "x-usedIn": [
-        "/{envId}/roles/{roleId}/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/", 
-        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/{envId}/roles/{roleId}/orchestration-rules/", 
-        "/{envId}/roles/{roleId}/images/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/{envId}/roles/", 
-        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/roles/{roleId}/global-variables/", 
-        "/roles/{roleId}/global-variables/", 
-        "/roles/{roleId}/orchestration-rules/", 
-        "/roles/{roleId}/", 
-        "/roles/{roleId}/images/", 
-        "/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/roles/{roleId}/images/{imageId}/", 
-        "/roles/"
-      ], 
       "properties": {
-        "category": {
-          "$ref": "#/definitions/RoleCategoryForeignKey"
-        }, 
-        "description": {
-          "type": "string"
-        }, 
-        "useScalrAgent": {
-          "type": "boolean", 
-          "description": "Using Scalarizr (Scalr agent)."
-        }, 
-        "deprecated": {
-          "type": "boolean", 
-          "description": "Whether the Role is deprecated."
-        }, 
-        "quickStart": {
-          "type": "boolean", 
-          "description": "Whether it is QuickStart Role."
-        }, 
         "builtinAutomation": {
           "items": {
             "enum": [
@@ -215,8 +172,31 @@ To filter on this field, use: `id=...`.
           }, 
           "type": "array"
         }, 
-        "scope": {
+        "category": {
+          "$ref": "#/definitions/RoleCategoryForeignKey"
+        }, 
+        "deprecated": {
+          "description": "Whether the Role is deprecated.", 
+          "type": "boolean"
+        }, 
+        "description": {
+          "type": "string"
+        }, 
+        "id": {
           "readOnly": true, 
+          "type": "integer"
+        }, 
+        "name": {
+          "type": "string"
+        }, 
+        "os": {
+          "$ref": "#/definitions/OsForeignKey"
+        }, 
+        "quickStart": {
+          "description": "Whether it is QuickStart Role.", 
+          "type": "boolean"
+        }, 
+        "scope": {
           "enum": [
             "scalr", 
             "account", 
@@ -225,32 +205,52 @@ To filter on this field, use: `id=...`.
             "farmrole", 
             "server"
           ], 
-          "type": "string"
-        }, 
-        "os": {
-          "$ref": "#/definitions/OsForeignKey"
-        }, 
-        "id": {
           "readOnly": true, 
-          "type": "integer"
-        }, 
-        "name": {
           "type": "string"
+        }, 
+        "useScalrAgent": {
+          "description": "Using Scalarizr (Scalr agent).", 
+          "type": "boolean"
         }
       }, 
+      "required": [
+        "category", 
+        "name", 
+        "os"
+      ], 
+      "x-createOnly": [
+        "builtinAutomation", 
+        "useScalrAgent"
+      ], 
       "x-filterable": [
+        "builtinAutomation", 
+        "category", 
+        "deprecated", 
         "id", 
         "name", 
         "os", 
-        "category", 
-        "scope", 
         "quickStart", 
-        "deprecated", 
-        "useScalrAgent", 
-        "builtinAutomation"
+        "scope", 
+        "useScalrAgent"
       ], 
-      "x-createOnly": [
-        "useScalrAgent", 
-        "builtinAutomation"
+      "x-usedIn": [
+        "/roles/", 
+        "/roles/{roleId}/", 
+        "/roles/{roleId}/global-variables/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/roles/{roleId}/images/", 
+        "/roles/{roleId}/images/{imageId}/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/roles/{roleId}/orchestration-rules/", 
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/{envId}/roles/", 
+        "/{envId}/roles/{roleId}/", 
+        "/{envId}/roles/{roleId}/global-variables/", 
+        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/{envId}/roles/{roleId}/images/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/"
       ]
     }

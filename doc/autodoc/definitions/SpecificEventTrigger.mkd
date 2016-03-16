@@ -37,14 +37,6 @@ An object of type [`Event`](./../definitions/Event.mkd).
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/Trigger"
-      }, 
-      "required": [
-        "triggerType", 
-        "event"
-      ], 
-      "x-discriminator": "triggerType", 
       "description": "Triggers when a specific Event fires.", 
       "properties": {
         "event": {
@@ -57,5 +49,13 @@ An object of type [`Event`](./../definitions/Event.mkd).
           ], 
           "type": "string"
         }
-      }
+      }, 
+      "required": [
+        "event", 
+        "triggerType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/Trigger"
+      }, 
+      "x-discriminator": "triggerType"
     }

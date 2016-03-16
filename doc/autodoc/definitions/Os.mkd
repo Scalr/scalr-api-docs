@@ -82,28 +82,7 @@ To filter on this field, use: `family=...`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "id", 
-        "name", 
-        "family", 
-        "generation", 
-        "version"
-      ], 
-      "x-usedIn": [
-        "/{envId}/os/{osId}/", 
-        "/os/{osId}/"
-      ], 
       "properties": {
-        "generation": {
-          "type": "string"
-        }, 
-        "version": {
-          "type": "string"
-        }, 
-        "id": {
-          "type": "string", 
-          "description": "An ID uniquely identifying this OS in Scalr."
-        }, 
         "family": {
           "enum": [
             "oel", 
@@ -117,15 +96,36 @@ To filter on this field, use: `family=...`.
           ], 
           "type": "string"
         }, 
+        "generation": {
+          "type": "string"
+        }, 
+        "id": {
+          "description": "An ID uniquely identifying this OS in Scalr.", 
+          "type": "string"
+        }, 
         "name": {
-          "type": "string", 
-          "description": "A human-readable name for this OS."
+          "description": "A human-readable name for this OS.", 
+          "type": "string"
+        }, 
+        "version": {
+          "type": "string"
         }
       }, 
-      "x-filterable": [
+      "required": [
+        "family", 
+        "generation", 
         "id", 
         "name", 
+        "version"
+      ], 
+      "x-filterable": [
         "family", 
-        "generation"
+        "generation", 
+        "id", 
+        "name"
+      ], 
+      "x-usedIn": [
+        "/os/{osId}/", 
+        "/{envId}/os/{osId}/"
       ]
     }

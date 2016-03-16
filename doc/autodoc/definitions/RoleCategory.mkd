@@ -61,18 +61,15 @@ To filter on this field, use: `id=...`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "name"
-      ], 
-      "x-usedIn": [
-        "/{envId}/role-categories/", 
-        "/{envId}/role-categories/{roleCategoryId}/", 
-        "/role-categories/{roleCategoryId}/", 
-        "/role-categories/"
-      ], 
       "properties": {
-        "scope": {
+        "id": {
           "readOnly": true, 
+          "type": "integer"
+        }, 
+        "name": {
+          "type": "string"
+        }, 
+        "scope": {
           "enum": [
             "scalr", 
             "account", 
@@ -81,22 +78,25 @@ To filter on this field, use: `id=...`.
             "farmrole", 
             "server"
           ], 
-          "type": "string"
-        }, 
-        "id": {
           "readOnly": true, 
-          "type": "integer"
-        }, 
-        "name": {
           "type": "string"
         }
       }, 
+      "required": [
+        "name"
+      ], 
+      "x-createOnly": [
+        "name"
+      ], 
       "x-filterable": [
         "id", 
         "name", 
         "scope"
       ], 
-      "x-createOnly": [
-        "name"
+      "x-usedIn": [
+        "/role-categories/", 
+        "/role-categories/{roleCategoryId}/", 
+        "/{envId}/role-categories/", 
+        "/{envId}/role-categories/{roleCategoryId}/"
       ]
     }

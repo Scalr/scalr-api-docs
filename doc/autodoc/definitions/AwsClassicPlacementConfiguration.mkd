@@ -47,24 +47,13 @@ An array of
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/PlacementConfiguration"
-      }, 
-      "required": [
-        "placementConfigurationType", 
-        "region"
-      ], 
-      "x-discriminator": "placementConfigurationType", 
       "properties": {
-        "region": {
-          "type": "string"
-        }, 
         "availabilityZones": {
+          "description": "The list of available zones. If it's empty array - will be distributed equally, if availabilityZone property is not present or it's NULL - means will be chosen by AWS.", 
           "items": {
             "type": "string"
           }, 
-          "type": "array", 
-          "description": "The list of available zones. If it's empty array - will be distributed equally, if availabilityZone property is not present or it's NULL - means will be chosen by AWS."
+          "type": "array"
         }, 
         "placementConfigurationType": {
           "enum": [
@@ -75,6 +64,17 @@ An array of
             "GcePlacementConfiguration"
           ], 
           "type": "string"
+        }, 
+        "region": {
+          "type": "string"
         }
-      }
+      }, 
+      "required": [
+        "placementConfigurationType", 
+        "region"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/PlacementConfiguration"
+      }, 
+      "x-discriminator": "placementConfigurationType"
     }

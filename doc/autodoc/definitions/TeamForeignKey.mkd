@@ -27,13 +27,13 @@ Property of type: `integer`.
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/environments/{envId}/teams/"
-      ], 
       "properties": {
         "id": {
-          "type": "integer", 
-          "description": "Team ID."
+          "description": "Team ID.", 
+          "type": "integer"
         }
-      }
+      }, 
+      "x-usedIn": [
+        "/environments/{envId}/teams/"
+      ]
     }

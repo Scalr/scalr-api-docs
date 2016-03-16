@@ -34,18 +34,18 @@ Property of type: `integer`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "scaleUp", 
-        "scaleDown"
-      ], 
       "properties": {
-        "scaleUp": {
-          "type": "integer", 
-          "description": "Scale up threshold."
-        }, 
         "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
+          "description": "Scale down threshold.", 
+          "type": "integer"
+        }, 
+        "scaleUp": {
+          "description": "Scale up threshold.", 
+          "type": "integer"
         }
-      }
+      }, 
+      "required": [
+        "scaleDown", 
+        "scaleUp"
+      ]
     }

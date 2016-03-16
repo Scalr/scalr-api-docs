@@ -49,20 +49,11 @@ To filter on this field, use: `name=...`.
 
     {
       "description": "It defines the number of running instances for the specified time frames.", 
-      "required": [
-        "name", 
-        "ruleType", 
-        "schedule"
-      ], 
-      "x-discriminator": "ruleType", 
-      "x-createOnly": [
-        "name", 
-        "ruleType"
-      ], 
-      "x-abstractType": {
-        "$ref": "#/definitions/ScalingRule"
-      }, 
       "properties": {
+        "name": {
+          "descritpion": "The name of the Scaling Metric.", 
+          "type": "string"
+        }, 
         "ruleType": {
           "enum": [
             "BasicScalingRule", 
@@ -75,10 +66,6 @@ To filter on this field, use: `name=...`.
           ], 
           "type": "string"
         }, 
-        "name": {
-          "type": "string", 
-          "descritpion": "The name of the Scaling Metric."
-        }, 
         "schedule": {
           "items": {
             "$ref": "#/definitions/ScalingRuleTimeFrame"
@@ -86,6 +73,19 @@ To filter on this field, use: `name=...`.
           "type": "array"
         }
       }, 
+      "required": [
+        "name", 
+        "ruleType", 
+        "schedule"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/ScalingRule"
+      }, 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-discriminator": "ruleType", 
       "x-filterable": [
         "name", 
         "ruleType"

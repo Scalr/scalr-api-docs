@@ -37,19 +37,7 @@ This `string` property is used for polymorphism. It **must** be set to: `"Script
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/Action"
-      }, 
-      "required": [
-        "actionType", 
-        "scriptVersion"
-      ], 
-      "x-discriminator": "actionType", 
       "properties": {
-        "scriptVersion": {
-          "description": "ScriptVersion to execute.", 
-          "$ref": "#/definitions/ScriptVersionForeignKey"
-        }, 
         "actionType": {
           "enum": [
             "ScriptAction", 
@@ -57,6 +45,18 @@ This `string` property is used for polymorphism. It **must** be set to: `"Script
             "ChefAction"
           ], 
           "type": "string"
+        }, 
+        "scriptVersion": {
+          "$ref": "#/definitions/ScriptVersionForeignKey", 
+          "description": "ScriptVersion to execute."
         }
-      }
+      }, 
+      "required": [
+        "actionType", 
+        "scriptVersion"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/Action"
+      }, 
+      "x-discriminator": "actionType"
     }

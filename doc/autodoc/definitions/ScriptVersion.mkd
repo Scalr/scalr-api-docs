@@ -61,40 +61,40 @@ Property of type: `string`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "script", 
-        "body"
-      ], 
-      "x-usedIn": [
-        "/{envId}/scripts/{scriptId}/script-versions/", 
-        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
-        "/scripts/{scriptId}/script-versions/", 
-        "/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
-      ], 
       "properties": {
-        "body": {
-          "type": "string", 
-          "description": "The contents of this ScriptVersion, those will be validated as per the Script's OS Type."
-        }, 
         "added": {
+          "format": "date-time", 
           "readOnly": true, 
-          "type": "string", 
-          "format": "date-time"
+          "type": "string"
         }, 
-        "version": {
-          "readOnly": true, 
-          "type": "integer", 
-          "description": "The Script version number. NULL is interpreted as the Latest Version."
+        "body": {
+          "description": "The contents of this ScriptVersion, those will be validated as per the Script's OS Type.", 
+          "type": "string"
         }, 
         "script": {
-          "description": "The Script this ScriptVersion is a version of.", 
-          "$ref": "#/definitions/ScriptForeignKey"
+          "$ref": "#/definitions/ScriptForeignKey", 
+          "description": "The Script this ScriptVersion is a version of."
+        }, 
+        "version": {
+          "description": "The Script version number. NULL is interpreted as the Latest Version.", 
+          "readOnly": true, 
+          "type": "integer"
         }
       }, 
-      "x-filterable": [
+      "required": [
+        "body", 
         "script"
       ], 
       "x-createOnly": [
         "script"
+      ], 
+      "x-filterable": [
+        "script"
+      ], 
+      "x-usedIn": [
+        "/scripts/{scriptId}/script-versions/", 
+        "/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/{envId}/scripts/{scriptId}/script-versions/", 
+        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
       ]
     }

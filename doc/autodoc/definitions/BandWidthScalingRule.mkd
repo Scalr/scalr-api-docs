@@ -74,27 +74,16 @@ The following are valid values for the `direction` property:
 
     {
       "description": "It is used in combination with user defined Scaling Metrics.", 
-      "required": [
-        "name", 
-        "ruleType", 
-        "scaleUp", 
-        "scaleDown", 
-        "direction"
-      ], 
-      "x-discriminator": "ruleType", 
-      "x-createOnly": [
-        "name", 
-        "ruleType"
-      ], 
-      "x-abstractType": {
-        "$ref": "#/definitions/BasicScalingRule"
-      }, 
       "properties": {
         "direction": {
           "enum": [
             "inbound", 
             "outbound"
           ], 
+          "type": "string"
+        }, 
+        "name": {
+          "descritpion": "The name of the Scaling Metric.", 
           "type": "string"
         }, 
         "ruleType": {
@@ -109,19 +98,30 @@ The following are valid values for the `direction` property:
           ], 
           "type": "string"
         }, 
-        "scaleUp": {
-          "type": "integer", 
-          "description": "Scale up threshold."
-        }, 
-        "name": {
-          "type": "string", 
-          "descritpion": "The name of the Scaling Metric."
-        }, 
         "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
+          "description": "Scale down threshold.", 
+          "type": "integer"
+        }, 
+        "scaleUp": {
+          "description": "Scale up threshold.", 
+          "type": "integer"
         }
       }, 
+      "required": [
+        "direction", 
+        "name", 
+        "ruleType", 
+        "scaleDown", 
+        "scaleUp"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/BasicScalingRule"
+      }, 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-discriminator": "ruleType", 
       "x-filterable": [
         "name", 
         "ruleType"

@@ -55,19 +55,13 @@ To filter on this field, use: `cloudLocation=...`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "cloudPlatform"
-      ], 
-      "x-usedIn": [
-        "/{envId}/images/{imageId}/actions/copy/", 
-        "/images/{imageId}/actions/copy/"
-      ], 
       "properties": {
         "cloudLocation": {
-          "type": "string", 
-          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`."
+          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.", 
+          "type": "string"
         }, 
         "cloudPlatform": {
+          "description": "Cloud Platform this resources resides in.", 
           "enum": [
             "ec2", 
             "gce", 
@@ -83,12 +77,18 @@ To filter on this field, use: `cloudLocation=...`.
             "vio", 
             "cisco"
           ], 
-          "type": "string", 
-          "description": "Cloud Platform this resources resides in."
+          "type": "string"
         }
       }, 
+      "required": [
+        "cloudPlatform"
+      ], 
       "x-filterable": [
-        "cloudPlatform", 
-        "cloudLocation"
+        "cloudLocation", 
+        "cloudPlatform"
+      ], 
+      "x-usedIn": [
+        "/images/{imageId}/actions/copy/", 
+        "/{envId}/images/{imageId}/actions/copy/"
       ]
     }

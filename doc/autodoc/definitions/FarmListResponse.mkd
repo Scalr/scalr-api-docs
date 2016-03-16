@@ -62,18 +62,7 @@ objects of type [`Farm`](./../definitions/Farm.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/farms/"
-      ], 
       "properties": {
-        "pagination": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiPagination"
-        }, 
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "items": {
             "$ref": "#/definitions/Farm"
@@ -88,6 +77,14 @@ objects of type [`Farm`](./../definitions/Farm.mkd).
           "readOnly": true, 
           "type": "array"
         }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
+        }, 
+        "pagination": {
+          "$ref": "#/definitions/ApiPagination", 
+          "readOnly": true
+        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -98,5 +95,8 @@ objects of type [`Farm`](./../definitions/Farm.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/Farm"
-      }
+      }, 
+      "x-usedIn": [
+        "/{envId}/farms/"
+      ]
     }

@@ -26,8 +26,8 @@ Property of type: `integer`.
     {
       "properties": {
         "id": {
-          "type": "integer", 
-          "description": "User ID."
+          "description": "User ID.", 
+          "type": "integer"
         }
       }
     }

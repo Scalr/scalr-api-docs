@@ -62,18 +62,7 @@ objects of type [`ScalingMetric`](./../definitions/ScalingMetric.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/scaling-metrics/"
-      ], 
       "properties": {
-        "pagination": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiPagination"
-        }, 
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "items": {
             "$ref": "#/definitions/ScalingMetric"
@@ -88,6 +77,14 @@ objects of type [`ScalingMetric`](./../definitions/ScalingMetric.mkd).
           "readOnly": true, 
           "type": "array"
         }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
+        }, 
+        "pagination": {
+          "$ref": "#/definitions/ApiPagination", 
+          "readOnly": true
+        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -98,5 +95,8 @@ objects of type [`ScalingMetric`](./../definitions/ScalingMetric.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/ScalingMetric"
-      }
+      }, 
+      "x-usedIn": [
+        "/{envId}/scaling-metrics/"
+      ]
     }

@@ -255,76 +255,12 @@ Property of type: `string`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "name", 
-        "cloudPlatform", 
-        "cloudImageId", 
-        "architecture", 
-        "os"
-      ], 
-      "x-usedIn": [
-        "/{envId}/images/{imageId}/actions/copy/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/", 
-        "/{envId}/images/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/{envId}/images/{imageId}/", 
-        "/images/{imageId}/", 
-        "/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/images/{imageId}/actions/copy/", 
-        "/images/", 
-        "/roles/{roleId}/images/{imageId}/"
-      ], 
       "properties": {
-        "status": {
-          "readOnly": true, 
-          "enum": [
-            "active", 
-            "pending_delete", 
-            "failed"
-          ], 
-          "type": "string", 
-          "description": "Current status for this Image. That `failed` means deletion failed."
-        }, 
         "added": {
-          "readOnly": true, 
-          "type": "string", 
           "description": "Date and time when this Image was created.", 
-          "format": "date-time"
-        }, 
-        "cloudImageId": {
+          "format": "date-time", 
+          "readOnly": true, 
           "type": "string"
-        }, 
-        "name": {
-          "type": "string"
-        }, 
-        "statusError": {
-          "readOnly": true, 
-          "type": "string", 
-          "description": "If the Image is in a failed state, this indicates why."
-        }, 
-        "deprecated": {
-          "readOnly": true, 
-          "type": "boolean", 
-          "description": "Whether this Image is deprecated."
-        }, 
-        "lastUsed": {
-          "readOnly": true, 
-          "type": "string", 
-          "description": "Date and time when this Image was last used.", 
-          "format": "date-time"
-        }, 
-        "source": {
-          "readOnly": true, 
-          "enum": [
-            "Manual", 
-            "BundleTask"
-          ], 
-          "type": "string", 
-          "description": "Indicates how this Image was created."
-        }, 
-        "cloudLocation": {
-          "type": "string", 
-          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`."
         }, 
         "architecture": {
           "enum": [
@@ -333,16 +269,19 @@ Property of type: `string`.
           ], 
           "type": "string"
         }, 
-        "scalrAgentInstalled": {
-          "type": "boolean", 
-          "description": "Scalarizer is installed."
+        "cloudImageId": {
+          "type": "string"
         }, 
-        "type": {
-          "readOnly": true, 
-          "type": "string", 
-          "description": "(Only used on EC2 currently) Whether this Image is HVM or EBS."
+        "cloudInitInstalled": {
+          "description": "Install scalarizr via cloud-init at instance launch.", 
+          "type": "boolean"
+        }, 
+        "cloudLocation": {
+          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.", 
+          "type": "string"
         }, 
         "cloudPlatform": {
+          "description": "Cloud Platform this resources resides in.", 
           "enum": [
             "ec2", 
             "gce", 
@@ -358,11 +297,34 @@ Property of type: `string`.
             "vio", 
             "cisco"
           ], 
-          "type": "string", 
-          "description": "Cloud Platform this resources resides in."
+          "type": "string"
+        }, 
+        "deprecated": {
+          "description": "Whether this Image is deprecated.", 
+          "readOnly": true, 
+          "type": "boolean"
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "lastUsed": {
+          "description": "Date and time when this Image was last used.", 
+          "format": "date-time", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "name": {
+          "type": "string"
+        }, 
+        "os": {
+          "$ref": "#/definitions/OsForeignKey"
+        }, 
+        "scalrAgentInstalled": {
+          "description": "Scalarizer is installed.", 
+          "type": "boolean"
         }, 
         "scope": {
-          "readOnly": true, 
           "enum": [
             "scalr", 
             "account", 
@@ -371,41 +333,79 @@ Property of type: `string`.
             "farmrole", 
             "server"
           ], 
-          "type": "string"
-        }, 
-        "cloudInitInstalled": {
-          "type": "boolean", 
-          "description": "Install scalarizr via cloud-init at instance launch."
-        }, 
-        "os": {
-          "$ref": "#/definitions/OsForeignKey"
-        }, 
-        "id": {
           "readOnly": true, 
           "type": "string"
         }, 
         "size": {
           "readOnly": true, 
           "type": "integer"
+        }, 
+        "source": {
+          "description": "Indicates how this Image was created.", 
+          "enum": [
+            "Manual", 
+            "BundleTask"
+          ], 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "status": {
+          "description": "Current status for this Image. That `failed` means deletion failed.", 
+          "enum": [
+            "active", 
+            "pending_delete", 
+            "failed"
+          ], 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "statusError": {
+          "description": "If the Image is in a failed state, this indicates why.", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "type": {
+          "description": "(Only used on EC2 currently) Whether this Image is HVM or EBS.", 
+          "readOnly": true, 
+          "type": "string"
         }
       }, 
-      "x-filterable": [
-        "id", 
-        "name", 
-        "scope", 
-        "cloudPlatform", 
-        "cloudLocation", 
-        "cloudImageId", 
+      "required": [
         "architecture", 
-        "source", 
-        "status", 
-        "deprecated", 
-        "os", 
-        "scalrAgentInstalled", 
-        "cloudInitInstalled"
+        "cloudImageId", 
+        "cloudPlatform", 
+        "name", 
+        "os"
       ], 
       "x-createOnly": [
+        "cloudInitInstalled", 
+        "scalrAgentInstalled"
+      ], 
+      "x-filterable": [
+        "architecture", 
+        "cloudImageId", 
+        "cloudInitInstalled", 
+        "cloudLocation", 
+        "cloudPlatform", 
+        "deprecated", 
+        "id", 
+        "name", 
+        "os", 
         "scalrAgentInstalled", 
-        "cloudInitInstalled"
+        "scope", 
+        "source", 
+        "status"
+      ], 
+      "x-usedIn": [
+        "/images/", 
+        "/images/{imageId}/", 
+        "/images/{imageId}/actions/copy/", 
+        "/roles/{roleId}/images/{imageId}/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/{envId}/images/", 
+        "/{envId}/images/{imageId}/", 
+        "/{envId}/images/{imageId}/actions/copy/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/"
       ]
     }

@@ -70,22 +70,15 @@ Property of type: `integer`.
 
     {
       "description": "It is used in combination with user defined Scaling Metrics.", 
-      "required": [
-        "name", 
-        "ruleType", 
-        "scaleUp", 
-        "scaleDown", 
-        "calculatingPeriod"
-      ], 
-      "x-discriminator": "ruleType", 
-      "x-createOnly": [
-        "name", 
-        "ruleType"
-      ], 
-      "x-abstractType": {
-        "$ref": "#/definitions/BasicScalingRule"
-      }, 
       "properties": {
+        "calculatingPeriod": {
+          "description": "Period in minutes which is used to aggregate the Metric Value.", 
+          "type": "integer"
+        }, 
+        "name": {
+          "descritpion": "The name of the Scaling Metric.", 
+          "type": "string"
+        }, 
         "ruleType": {
           "enum": [
             "BasicScalingRule", 
@@ -98,23 +91,30 @@ Property of type: `integer`.
           ], 
           "type": "string"
         }, 
-        "calculatingPeriod": {
-          "type": "integer", 
-          "description": "Period in minutes which is used to aggregate the Metric Value."
+        "scaleDown": {
+          "description": "Scale down threshold.", 
+          "type": "integer"
         }, 
         "scaleUp": {
-          "type": "integer", 
-          "description": "Scale up threshold."
-        }, 
-        "name": {
-          "type": "string", 
-          "descritpion": "The name of the Scaling Metric."
-        }, 
-        "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
+          "description": "Scale up threshold.", 
+          "type": "integer"
         }
       }, 
+      "required": [
+        "calculatingPeriod", 
+        "name", 
+        "ruleType", 
+        "scaleDown", 
+        "scaleUp"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/BasicScalingRule"
+      }, 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-discriminator": "ruleType", 
       "x-filterable": [
         "name", 
         "ruleType"

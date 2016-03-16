@@ -47,26 +47,26 @@ Property of type: `boolean`.
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/InstanceConfiguration"
-      }, 
-      "required": [
-        "instanceConfigurationType", 
-        "instanceType"
-      ], 
-      "x-discriminator": "instanceConfigurationType", 
       "properties": {
+        "ebsOptimized": {
+          "type": "boolean"
+        }, 
         "instanceConfigurationType": {
           "enum": [
             "AwsInstanceConfiguration"
           ], 
           "type": "string"
         }, 
-        "ebsOptimized": {
-          "type": "boolean"
-        }, 
         "instanceType": {
           "$ref": "#/definitions/CloudInstanceType"
         }
-      }
+      }, 
+      "required": [
+        "instanceConfigurationType", 
+        "instanceType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/InstanceConfiguration"
+      }, 
+      "x-discriminator": "instanceConfigurationType"
     }

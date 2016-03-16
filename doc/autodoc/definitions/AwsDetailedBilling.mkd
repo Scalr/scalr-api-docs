@@ -45,17 +45,17 @@ Property of type: `string`.
 
     {
       "properties": {
-        "payerAccount": {
-          "type": "string", 
-          "description": "Payer AWS account number."
+        "bucket": {
+          "description": "Billing bucket name.", 
+          "type": "string"
         }, 
         "cloudLocation": {
-          "type": "string", 
-          "description": "Billing bucket region."
+          "description": "Billing bucket region.", 
+          "type": "string"
         }, 
-        "bucket": {
-          "type": "string", 
-          "description": "Billing bucket name."
+        "payerAccount": {
+          "description": "Payer AWS account number.", 
+          "type": "string"
         }
       }
     }

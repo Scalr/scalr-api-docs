@@ -70,24 +70,10 @@ Property of type: `boolean`.
 
     {
       "description": "It is used in combination with user defined Scaling Metrics.", 
-      "required": [
-        "name", 
-        "ruleType", 
-        "scaleUp", 
-        "scaleDown"
-      ], 
-      "x-discriminator": "ruleType", 
-      "x-createOnly": [
-        "name", 
-        "ruleType"
-      ], 
-      "x-abstractType": {
-        "$ref": "#/definitions/BasicScalingRule"
-      }, 
       "properties": {
-        "useCachedRam": {
-          "descripiton": "Whether it should use cached RAM in addition to free RAM as scaling metric.", 
-          "type": "boolean"
+        "name": {
+          "descritpion": "The name of the Scaling Metric.", 
+          "type": "string"
         }, 
         "ruleType": {
           "enum": [
@@ -101,19 +87,33 @@ Property of type: `boolean`.
           ], 
           "type": "string"
         }, 
-        "scaleUp": {
-          "type": "integer", 
-          "description": "Scale up threshold."
-        }, 
-        "name": {
-          "type": "string", 
-          "descritpion": "The name of the Scaling Metric."
-        }, 
         "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
+          "description": "Scale down threshold.", 
+          "type": "integer"
+        }, 
+        "scaleUp": {
+          "description": "Scale up threshold.", 
+          "type": "integer"
+        }, 
+        "useCachedRam": {
+          "descripiton": "Whether it should use cached RAM in addition to free RAM as scaling metric.", 
+          "type": "boolean"
         }
       }, 
+      "required": [
+        "name", 
+        "ruleType", 
+        "scaleDown", 
+        "scaleUp"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/BasicScalingRule"
+      }, 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-discriminator": "ruleType", 
       "x-filterable": [
         "name", 
         "ruleType"

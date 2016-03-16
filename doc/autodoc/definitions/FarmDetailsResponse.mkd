@@ -57,18 +57,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/farms/{farmId}/", 
-        "/{envId}/farms/{farmId}/actions/terminate/", 
-        "/{envId}/farms/{farmId}/actions/launch/", 
-        "/{envId}/farms/", 
-        "/{envId}/farms/{farmId}/actions/clone/"
-      ], 
       "properties": {
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "$ref": "#/definitions/Farm"
         }, 
@@ -78,6 +67,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           }, 
           "readOnly": true, 
           "type": "array"
+        }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
         }, 
         "warnings": {
           "items": {
@@ -89,5 +82,12 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/Farm"
-      }
+      }, 
+      "x-usedIn": [
+        "/{envId}/farms/", 
+        "/{envId}/farms/{farmId}/", 
+        "/{envId}/farms/{farmId}/actions/clone/", 
+        "/{envId}/farms/{farmId}/actions/launch/", 
+        "/{envId}/farms/{farmId}/actions/terminate/"
+      ]
     }

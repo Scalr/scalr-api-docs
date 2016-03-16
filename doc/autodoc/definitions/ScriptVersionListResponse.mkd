@@ -63,19 +63,7 @@ objects of type [`ScriptVersion`](./../definitions/ScriptVersion.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/scripts/{scriptId}/script-versions/", 
-        "/scripts/{scriptId}/script-versions/"
-      ], 
       "properties": {
-        "pagination": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiPagination"
-        }, 
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "items": {
             "$ref": "#/definitions/ScriptVersion"
@@ -90,6 +78,14 @@ objects of type [`ScriptVersion`](./../definitions/ScriptVersion.mkd).
           "readOnly": true, 
           "type": "array"
         }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
+        }, 
+        "pagination": {
+          "$ref": "#/definitions/ApiPagination", 
+          "readOnly": true
+        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -100,5 +96,9 @@ objects of type [`ScriptVersion`](./../definitions/ScriptVersion.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/ScriptVersion"
-      }
+      }, 
+      "x-usedIn": [
+        "/scripts/{scriptId}/script-versions/", 
+        "/{envId}/scripts/{scriptId}/script-versions/"
+      ]
     }

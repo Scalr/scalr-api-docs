@@ -35,11 +35,11 @@ Property of type: `string`.
 
     {
       "properties": {
-        "region": {
-          "type": "string"
-        }, 
         "id": {
           "readOnly": true, 
+          "type": "string"
+        }, 
+        "region": {
           "type": "string"
         }
       }

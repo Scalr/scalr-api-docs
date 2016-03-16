@@ -62,18 +62,7 @@ objects of type [`FarmRole`](./../definitions/FarmRole.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/farms/{farmId}/farm-roles/"
-      ], 
       "properties": {
-        "pagination": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiPagination"
-        }, 
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "items": {
             "$ref": "#/definitions/FarmRole"
@@ -88,6 +77,14 @@ objects of type [`FarmRole`](./../definitions/FarmRole.mkd).
           "readOnly": true, 
           "type": "array"
         }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
+        }, 
+        "pagination": {
+          "$ref": "#/definitions/ApiPagination", 
+          "readOnly": true
+        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -98,5 +95,8 @@ objects of type [`FarmRole`](./../definitions/FarmRole.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/FarmRole"
-      }
+      }, 
+      "x-usedIn": [
+        "/{envId}/farms/{farmId}/farm-roles/"
+      ]
     }

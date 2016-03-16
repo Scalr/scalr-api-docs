@@ -53,14 +53,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/instance/"
-      ], 
       "properties": {
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "$ref": "#/definitions/InstanceConfiguration"
         }, 
@@ -70,6 +63,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           }, 
           "readOnly": true, 
           "type": "array"
+        }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
         }, 
         "warnings": {
           "items": {
@@ -81,5 +78,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/InstanceConfiguration"
-      }
+      }, 
+      "x-usedIn": [
+        "/{envId}/farm-roles/{farmRoleId}/instance/"
+      ]
     }

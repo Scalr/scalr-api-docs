@@ -28,18 +28,18 @@ Property of type: `string`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "id"
-      ], 
-      "x-references": {
-        "$ref": "#/definitions/CostCenter"
-      }, 
-      "x-derived": {
-        "$ref": "#/definitions/CostCenter"
-      }, 
       "properties": {
         "id": {
           "type": "string"
         }
+      }, 
+      "required": [
+        "id"
+      ], 
+      "x-derived": {
+        "$ref": "#/definitions/CostCenter"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/CostCenter"
       }
     }

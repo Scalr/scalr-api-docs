@@ -65,21 +65,7 @@ objects of type [`GlobalVariable`](./../definitions/GlobalVariable.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
-        "/{envId}/farms/{farmId}/global-variables/", 
-        "/{envId}/roles/{roleId}/global-variables/", 
-        "/roles/{roleId}/global-variables/"
-      ], 
       "properties": {
-        "pagination": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiPagination"
-        }, 
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "items": {
             "$ref": "#/definitions/GlobalVariable"
@@ -94,6 +80,14 @@ objects of type [`GlobalVariable`](./../definitions/GlobalVariable.mkd).
           "readOnly": true, 
           "type": "array"
         }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
+        }, 
+        "pagination": {
+          "$ref": "#/definitions/ApiPagination", 
+          "readOnly": true
+        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -104,5 +98,11 @@ objects of type [`GlobalVariable`](./../definitions/GlobalVariable.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/GlobalVariable"
-      }
+      }, 
+      "x-usedIn": [
+        "/roles/{roleId}/global-variables/", 
+        "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
+        "/{envId}/farms/{farmId}/global-variables/", 
+        "/{envId}/roles/{roleId}/global-variables/"
+      ]
     }

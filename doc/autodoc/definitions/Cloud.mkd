@@ -49,10 +49,8 @@ The following are valid values for the `cloud` property:
 
     {
       "properties": {
-        "credentials": {
-          "$ref": "#/definitions/CloudCredentialsForeignKey"
-        }, 
         "cloud": {
+          "description": "Cloud Platform this resources resides in.", 
           "enum": [
             "ec2", 
             "gce", 
@@ -68,8 +66,10 @@ The following are valid values for the `cloud` property:
             "vio", 
             "cisco"
           ], 
-          "type": "string", 
-          "description": "Cloud Platform this resources resides in."
+          "type": "string"
+        }, 
+        "credentials": {
+          "$ref": "#/definitions/CloudCredentialsForeignKey"
         }
       }
     }

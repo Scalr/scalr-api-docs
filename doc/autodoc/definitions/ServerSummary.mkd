@@ -104,53 +104,15 @@ To filter on this field, use: `cloudLocation=...`.
 ## Swagger Definition ##
 
     {
-      "x-filterable": [
-        "id", 
-        "status", 
-        "cloudPlatform", 
-        "cloudLocation"
-      ], 
+      "description": "JSON Representation of the Scalr Server.", 
       "properties": {
-        "status": {
-          "readOnly": true, 
-          "enum": [
-            "temporary", 
-            "running", 
-            "pending", 
-            "pending_launch", 
-            "initializing", 
-            "importing", 
-            "terminated", 
-            "pending_terminate", 
-            "suspended", 
-            "pending_suspend", 
-            "resuming"
-          ], 
-          "type": "string", 
-          "description": "Server status."
-        }, 
-        "farm": {
-          "readOnly": true, 
-          "description": "Identifier of the Farm", 
-          "$ref": "#/definitions/FarmForeignKey"
-        }, 
-        "farmRole": {
-          "readOnly": true, 
-          "description": "Identifier of the Farm Role", 
-          "$ref": "#/definitions/FarmRoleForeignKey"
-        }, 
         "cloudLocation": {
+          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.", 
           "readOnly": true, 
-          "type": "string", 
-          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`."
-        }, 
-        "id": {
-          "readOnly": true, 
-          "type": "string", 
-          "description": "Identifier of the Scalr Server."
+          "type": "string"
         }, 
         "cloudPlatform": {
-          "readOnly": true, 
+          "description": "Cloud Platform this resources resides in.", 
           "enum": [
             "ec2", 
             "gce", 
@@ -166,9 +128,47 @@ To filter on this field, use: `cloudLocation=...`.
             "vio", 
             "cisco"
           ], 
-          "type": "string", 
-          "description": "Cloud Platform this resources resides in."
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "farm": {
+          "$ref": "#/definitions/FarmForeignKey", 
+          "description": "Identifier of the Farm", 
+          "readOnly": true
+        }, 
+        "farmRole": {
+          "$ref": "#/definitions/FarmRoleForeignKey", 
+          "description": "Identifier of the Farm Role", 
+          "readOnly": true
+        }, 
+        "id": {
+          "description": "Identifier of the Scalr Server.", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "status": {
+          "description": "Server status.", 
+          "enum": [
+            "temporary", 
+            "running", 
+            "pending", 
+            "pending_launch", 
+            "initializing", 
+            "importing", 
+            "terminated", 
+            "pending_terminate", 
+            "suspended", 
+            "pending_suspend", 
+            "resuming"
+          ], 
+          "readOnly": true, 
+          "type": "string"
         }
       }, 
-      "description": "JSON Representation of the Scalr Server."
+      "x-filterable": [
+        "cloudLocation", 
+        "cloudPlatform", 
+        "id", 
+        "status"
+      ]
     }

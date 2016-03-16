@@ -63,19 +63,7 @@ objects of type [`Image`](./../definitions/Image.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/images/", 
-        "/images/"
-      ], 
       "properties": {
-        "pagination": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiPagination"
-        }, 
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "items": {
             "$ref": "#/definitions/Image"
@@ -90,6 +78,14 @@ objects of type [`Image`](./../definitions/Image.mkd).
           "readOnly": true, 
           "type": "array"
         }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
+        }, 
+        "pagination": {
+          "$ref": "#/definitions/ApiPagination", 
+          "readOnly": true
+        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -100,5 +96,9 @@ objects of type [`Image`](./../definitions/Image.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/Image"
-      }
+      }, 
+      "x-usedIn": [
+        "/images/", 
+        "/{envId}/images/"
+      ]
     }

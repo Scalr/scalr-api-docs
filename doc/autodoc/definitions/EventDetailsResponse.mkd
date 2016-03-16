@@ -56,17 +56,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/events/", 
-        "/{envId}/events/{eventId}/", 
-        "/events/{eventId}/", 
-        "/events/"
-      ], 
       "properties": {
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "$ref": "#/definitions/Event"
         }, 
@@ -76,6 +66,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           }, 
           "readOnly": true, 
           "type": "array"
+        }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
         }, 
         "warnings": {
           "items": {
@@ -87,5 +81,11 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/Event"
-      }
+      }, 
+      "x-usedIn": [
+        "/events/", 
+        "/events/{eventId}/", 
+        "/{envId}/events/", 
+        "/{envId}/events/{eventId}/"
+      ]
     }

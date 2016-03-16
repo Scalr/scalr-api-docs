@@ -160,88 +160,88 @@ Property of type: `string`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "name"
-      ], 
-      "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
-        "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/farms/{farmId}/global-variables/", 
-        "/{envId}/roles/{roleId}/global-variables/", 
-        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
-        "/roles/{roleId}/global-variables/", 
-        "/roles/{roleId}/global-variables/{globalVariableName}/"
-      ], 
       "properties": {
         "category": {
-          "type": "string", 
-          "description": "Category of the variable."
-        }, 
-        "declaredIn": {
-          "readOnly": true, 
-          "enum": [
-            "scalr", 
-            "account", 
-            "environment", 
-            "farm", 
-            "farmrole", 
-            "server"
-          ], 
-          "type": "string", 
-          "description": "Whether this variable is declared in the current scope."
-        }, 
-        "outputFormat": {
-          "type": "string", 
-          "description": "The formatting to apply when formatting this variable. This is read-only if `declaredIn` is not the current scope."
-        }, 
-        "locked": {
-          "type": "boolean", 
-          "description": "Whether this variable is locked in inner scopes. This is read-only if `declaredIn` is not the current scope."
-        }, 
-        "description": {
-          "type": "string", 
-          "description": "A description that explains what this Global Variable is used for."
-        }, 
-        "value": {
-          "type": "string", 
-          "description": "The value declared in the current scope for this variable.  null allows inheritance. Any other value overrides inheritance.  This is ignored if `declaredIn` is not the current scope."
-        }, 
-        "requiredIn": {
-          "enum": [
-            "scalr", 
-            "account", 
-            "environment", 
-            "farm", 
-            "farmrole", 
-            "server"
-          ], 
-          "type": "string", 
-          "description": "The scope where this variable is required. This is read-only if `declaredIn` is not the current scope."
-        }, 
-        "computedValue": {
-          "readOnly": true, 
-          "type": "string", 
-          "description": "The value computed by Scalr for this variable."
-        }, 
-        "validationPattern": {
-          "type": "string", 
-          "description": "A validation pattern to apply in inner scopes. This is read-only if `declaredIn` is not the current scope."
+          "description": "Category of the variable.", 
+          "type": "string"
         }, 
         "computedCategory": {
+          "description": "The category computed by Scalr for this variable.", 
           "readOnly": true, 
-          "type": "string", 
-          "description": "The category computed by Scalr for this variable."
+          "type": "string"
+        }, 
+        "computedValue": {
+          "description": "The value computed by Scalr for this variable.", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "declaredIn": {
+          "description": "Whether this variable is declared in the current scope.", 
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "server"
+          ], 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "description": {
+          "description": "A description that explains what this Global Variable is used for.", 
+          "type": "string"
         }, 
         "hidden": {
-          "type": "boolean", 
-          "description": "Whether this variable is hidden in inner scopes. This is read-only if `declaredIn` is not the current scope."
+          "description": "Whether this variable is hidden in inner scopes. This is read-only if `declaredIn` is not the current scope.", 
+          "type": "boolean"
+        }, 
+        "locked": {
+          "description": "Whether this variable is locked in inner scopes. This is read-only if `declaredIn` is not the current scope.", 
+          "type": "boolean"
         }, 
         "name": {
           "type": "string"
+        }, 
+        "outputFormat": {
+          "description": "The formatting to apply when formatting this variable. This is read-only if `declaredIn` is not the current scope.", 
+          "type": "string"
+        }, 
+        "requiredIn": {
+          "description": "The scope where this variable is required. This is read-only if `declaredIn` is not the current scope.", 
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "server"
+          ], 
+          "type": "string"
+        }, 
+        "validationPattern": {
+          "description": "A validation pattern to apply in inner scopes. This is read-only if `declaredIn` is not the current scope.", 
+          "type": "string"
+        }, 
+        "value": {
+          "description": "The value declared in the current scope for this variable.  null allows inheritance. Any other value overrides inheritance.  This is ignored if `declaredIn` is not the current scope.", 
+          "type": "string"
         }
       }, 
+      "required": [
+        "name"
+      ], 
       "x-createOnly": [
         "name"
+      ], 
+      "x-usedIn": [
+        "/roles/{roleId}/global-variables/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
+        "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
+        "/{envId}/farms/{farmId}/global-variables/", 
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
+        "/{envId}/roles/{roleId}/global-variables/", 
+        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/"
       ]
     }

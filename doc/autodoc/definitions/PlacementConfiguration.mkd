@@ -8,8 +8,8 @@
 `PlacementConfiguration` is an abstract type. When an object of type `PlacementConfiguration` is expected, you must pass an object of
 one of the following types:
 
-  + [`AwsVpcPlacementConfiguration`](./../definitions/AwsVpcPlacementConfiguration.mkd)
   + [`AwsClassicPlacementConfiguration`](./../definitions/AwsClassicPlacementConfiguration.mkd)
+  + [`AwsVpcPlacementConfiguration`](./../definitions/AwsVpcPlacementConfiguration.mkd)
 
 
 
@@ -52,22 +52,8 @@ The following are valid values for the `placementConfigurationType` property:
 ## Swagger Definition ##
 
     {
-      "x-concreteTypes": [
-        {
-          "$ref": "#/definitions/AwsVpcPlacementConfiguration"
-        }, 
-        {
-          "$ref": "#/definitions/AwsClassicPlacementConfiguration"
-        }
-      ], 
       "discriminator": "placementConfigurationType", 
-      "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/placement/"
-      ], 
       "properties": {
-        "region": {
-          "type": "string"
-        }, 
         "placementConfigurationType": {
           "enum": [
             "AwsClassicPlacementConfiguration", 
@@ -77,10 +63,24 @@ The following are valid values for the `placementConfigurationType` property:
             "GcePlacementConfiguration"
           ], 
           "type": "string"
+        }, 
+        "region": {
+          "type": "string"
         }
       }, 
       "required": [
         "placementConfigurationType", 
         "region"
+      ], 
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/AwsClassicPlacementConfiguration"
+        }, 
+        {
+          "$ref": "#/definitions/AwsVpcPlacementConfiguration"
+        }
+      ], 
+      "x-usedIn": [
+        "/{envId}/farm-roles/{farmRoleId}/placement/"
       ]
     }

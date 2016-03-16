@@ -35,24 +35,24 @@ Property of type: `integer`.
 ## Swagger Definition ##
 
     {
+      "properties": {
+        "script": {
+          "$ref": "#/definitions/ScriptForeignKey", 
+          "description": "The Script this ScriptVersion is a version of."
+        }, 
+        "version": {
+          "description": "The Script version number. NULL is interpreted as the Latest Version.", 
+          "readOnly": true, 
+          "type": "integer"
+        }
+      }, 
       "required": [
         "script"
       ], 
-      "properties": {
-        "version": {
-          "readOnly": true, 
-          "type": "integer", 
-          "description": "The Script version number. NULL is interpreted as the Latest Version."
-        }, 
-        "script": {
-          "description": "The Script this ScriptVersion is a version of.", 
-          "$ref": "#/definitions/ScriptForeignKey"
-        }
-      }, 
-      "x-filterable": [
+      "x-createOnly": [
         "script"
       ], 
-      "x-createOnly": [
+      "x-filterable": [
         "script"
       ]
     }

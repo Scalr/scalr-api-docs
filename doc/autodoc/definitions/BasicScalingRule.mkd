@@ -14,11 +14,11 @@ When an object of type [`ScalingRule`](./../definitions/ScalingRule.mkd) is expe
 `BasicScalingRule` is an abstract type. When an object of type `BasicScalingRule` is expected, you must pass an object of
 one of the following types:
 
-  + [`FreeRamScalingRule`](./../definitions/FreeRamScalingRule.mkd)
-  + [`UrlResponseTimeScalingRule`](./../definitions/UrlResponseTimeScalingRule.mkd)
   + [`BandWidthScalingRule`](./../definitions/BandWidthScalingRule.mkd)
-  + [`SqsQueueSizeScalingRule`](./../definitions/SqsQueueSizeScalingRule.mkd)
+  + [`FreeRamScalingRule`](./../definitions/FreeRamScalingRule.mkd)
   + [`LoadAveragesScalingRule`](./../definitions/LoadAveragesScalingRule.mkd)
+  + [`SqsQueueSizeScalingRule`](./../definitions/SqsQueueSizeScalingRule.mkd)
+  + [`UrlResponseTimeScalingRule`](./../definitions/UrlResponseTimeScalingRule.mkd)
 
 
 
@@ -70,39 +70,12 @@ To filter on this field, use: `name=...`.
 ## Swagger Definition ##
 
     {
-      "x-concreteTypes": [
-        {
-          "$ref": "#/definitions/FreeRamScalingRule"
-        }, 
-        {
-          "$ref": "#/definitions/UrlResponseTimeScalingRule"
-        }, 
-        {
-          "$ref": "#/definitions/BandWidthScalingRule"
-        }, 
-        {
-          "$ref": "#/definitions/SqsQueueSizeScalingRule"
-        }, 
-        {
-          "$ref": "#/definitions/LoadAveragesScalingRule"
-        }
-      ], 
       "description": "It is used in combination with user defined Scaling Metrics.", 
-      "required": [
-        "name", 
-        "ruleType", 
-        "scaleUp", 
-        "scaleDown"
-      ], 
-      "x-discriminator": "ruleType", 
-      "x-createOnly": [
-        "name", 
-        "ruleType"
-      ], 
-      "x-abstractType": {
-        "$ref": "#/definitions/ScalingRule"
-      }, 
       "properties": {
+        "name": {
+          "descritpion": "The name of the Scaling Metric.", 
+          "type": "string"
+        }, 
         "ruleType": {
           "enum": [
             "BasicScalingRule", 
@@ -115,19 +88,46 @@ To filter on this field, use: `name=...`.
           ], 
           "type": "string"
         }, 
-        "scaleUp": {
-          "type": "integer", 
-          "description": "Scale up threshold."
-        }, 
-        "name": {
-          "type": "string", 
-          "descritpion": "The name of the Scaling Metric."
-        }, 
         "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
+          "description": "Scale down threshold.", 
+          "type": "integer"
+        }, 
+        "scaleUp": {
+          "description": "Scale up threshold.", 
+          "type": "integer"
         }
       }, 
+      "required": [
+        "name", 
+        "ruleType", 
+        "scaleDown", 
+        "scaleUp"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/ScalingRule"
+      }, 
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/BandWidthScalingRule"
+        }, 
+        {
+          "$ref": "#/definitions/FreeRamScalingRule"
+        }, 
+        {
+          "$ref": "#/definitions/LoadAveragesScalingRule"
+        }, 
+        {
+          "$ref": "#/definitions/SqsQueueSizeScalingRule"
+        }, 
+        {
+          "$ref": "#/definitions/UrlResponseTimeScalingRule"
+        }
+      ], 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-discriminator": "ruleType", 
       "x-filterable": [
         "name", 
         "ruleType"

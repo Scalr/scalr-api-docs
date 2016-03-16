@@ -70,24 +70,9 @@ To filter on this field, use: `name=...`.
 
     {
       "description": "It is used in combination with user defined Scaling Metrics.", 
-      "required": [
-        "name", 
-        "ruleType", 
-        "scaleUp", 
-        "scaleDown", 
-        "url"
-      ], 
-      "x-discriminator": "ruleType", 
-      "x-createOnly": [
-        "name", 
-        "ruleType"
-      ], 
-      "x-abstractType": {
-        "$ref": "#/definitions/BasicScalingRule"
-      }, 
       "properties": {
-        "url": {
-          "desctiption": "URL to check", 
+        "name": {
+          "descritpion": "The name of the Scaling Metric.", 
           "type": "string"
         }, 
         "ruleType": {
@@ -102,19 +87,34 @@ To filter on this field, use: `name=...`.
           ], 
           "type": "string"
         }, 
-        "scaleUp": {
-          "type": "integer", 
-          "description": "Scale up threshold."
-        }, 
-        "name": {
-          "type": "string", 
-          "descritpion": "The name of the Scaling Metric."
-        }, 
         "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
+          "description": "Scale down threshold.", 
+          "type": "integer"
+        }, 
+        "scaleUp": {
+          "description": "Scale up threshold.", 
+          "type": "integer"
+        }, 
+        "url": {
+          "desctiption": "URL to check", 
+          "type": "string"
         }
       }, 
+      "required": [
+        "name", 
+        "ruleType", 
+        "scaleDown", 
+        "scaleUp", 
+        "url"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/BasicScalingRule"
+      }, 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-discriminator": "ruleType", 
       "x-filterable": [
         "name", 
         "ruleType"

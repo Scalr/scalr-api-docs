@@ -77,43 +77,43 @@ To filter on this field, use: `added=...`.
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/environments/", 
-        "/environments/{envId}/"
-      ], 
-      "x-required": [
-        "name", 
-        "costCenter"
-      ], 
       "properties": {
+        "added": {
+          "format": "date-time", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "costCenter": {
+          "$ref": "#/definitions/CostCenterForeignKey"
+        }, 
+        "id": {
+          "readOnly": true, 
+          "type": "int"
+        }, 
+        "name": {
+          "type": "string"
+        }, 
         "status": {
           "enum": [
             "active", 
             "inactive"
           ], 
           "type": "string"
-        }, 
-        "added": {
-          "readOnly": true, 
-          "type": "string", 
-          "format": "date-time"
-        }, 
-        "id": {
-          "readOnly": true, 
-          "type": "int"
-        }, 
-        "costCenter": {
-          "$ref": "#/definitions/CostCenterForeignKey"
-        }, 
-        "name": {
-          "type": "string"
         }
       }, 
       "x-filterable": [
+        "added", 
+        "costCenter", 
         "id", 
         "name", 
-        "added", 
-        "status", 
-        "costCenter"
+        "status"
+      ], 
+      "x-required": [
+        "costCenter", 
+        "name"
+      ], 
+      "x-usedIn": [
+        "/environments/", 
+        "/environments/{envId}/"
       ]
     }

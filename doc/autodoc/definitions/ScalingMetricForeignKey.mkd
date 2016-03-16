@@ -25,15 +25,15 @@ To filter on this field, use: `name=...`.
 ## Swagger Definition ##
 
     {
+      "properties": {
+        "name": {
+          "descritpion": "The name of the Scaling Metric.", 
+          "type": "string"
+        }
+      }, 
       "required": [
         "name"
       ], 
-      "properties": {
-        "name": {
-          "type": "string", 
-          "descritpion": "The name of the Scaling Metric."
-        }
-      }, 
       "x-filterable": [
         "name"
       ]

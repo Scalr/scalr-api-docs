@@ -70,25 +70,14 @@ To filter on this field, use: `name=...`.
 
     {
       "description": "It is used in combination with user defined Scaling Metrics.", 
-      "required": [
-        "name", 
-        "ruleType", 
-        "scaleUp", 
-        "scaleDown", 
-        "queue"
-      ], 
-      "x-discriminator": "ruleType", 
-      "x-createOnly": [
-        "name", 
-        "ruleType"
-      ], 
-      "x-abstractType": {
-        "$ref": "#/definitions/BasicScalingRule"
-      }, 
       "properties": {
+        "name": {
+          "descritpion": "The name of the Scaling Metric.", 
+          "type": "string"
+        }, 
         "queue": {
-          "type": "string", 
-          "description": "The AWS SQS queue name."
+          "description": "The AWS SQS queue name.", 
+          "type": "string"
         }, 
         "ruleType": {
           "enum": [
@@ -102,19 +91,30 @@ To filter on this field, use: `name=...`.
           ], 
           "type": "string"
         }, 
-        "scaleUp": {
-          "type": "integer", 
-          "description": "Scale up threshold."
-        }, 
-        "name": {
-          "type": "string", 
-          "descritpion": "The name of the Scaling Metric."
-        }, 
         "scaleDown": {
-          "type": "integer", 
-          "description": "Scale down threshold."
+          "description": "Scale down threshold.", 
+          "type": "integer"
+        }, 
+        "scaleUp": {
+          "description": "Scale up threshold.", 
+          "type": "integer"
         }
       }, 
+      "required": [
+        "name", 
+        "queue", 
+        "ruleType", 
+        "scaleDown", 
+        "scaleUp"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/BasicScalingRule"
+      }, 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-discriminator": "ruleType", 
       "x-filterable": [
         "name", 
         "ruleType"

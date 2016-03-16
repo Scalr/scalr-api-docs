@@ -26,8 +26,8 @@ Property of type: `string`.
     {
       "properties": {
         "sample": {
-          "type": "string", 
-          "description": "Actual properties TBD."
+          "description": "Actual properties TBD.", 
+          "type": "string"
         }
       }
     }

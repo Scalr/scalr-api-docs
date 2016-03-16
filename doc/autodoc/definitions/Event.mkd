@@ -60,18 +60,15 @@ To filter on this field, use: `scope=...`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "id"
-      ], 
-      "x-usedIn": [
-        "/{envId}/events/", 
-        "/{envId}/events/{eventId}/", 
-        "/events/{eventId}/", 
-        "/events/"
-      ], 
       "properties": {
+        "description": {
+          "type": "string"
+        }, 
+        "id": {
+          "description": "The name of this custom event.", 
+          "type": "string"
+        }, 
         "scope": {
-          "readOnly": true, 
           "enum": [
             "scalr", 
             "account", 
@@ -80,21 +77,24 @@ To filter on this field, use: `scope=...`.
             "farmrole", 
             "server"
           ], 
+          "readOnly": true, 
           "type": "string"
-        }, 
-        "description": {
-          "type": "string"
-        }, 
-        "id": {
-          "type": "string", 
-          "description": "The name of this custom event."
         }
       }, 
+      "required": [
+        "id"
+      ], 
+      "x-createOnly": [
+        "id"
+      ], 
       "x-filterable": [
         "id", 
         "scope"
       ], 
-      "x-createOnly": [
-        "id"
+      "x-usedIn": [
+        "/events/", 
+        "/events/{eventId}/", 
+        "/{envId}/events/", 
+        "/{envId}/events/{eventId}/"
       ]
     }

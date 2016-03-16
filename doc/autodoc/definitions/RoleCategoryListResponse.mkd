@@ -63,19 +63,7 @@ objects of type [`RoleCategory`](./../definitions/RoleCategory.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/role-categories/", 
-        "/role-categories/"
-      ], 
       "properties": {
-        "pagination": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiPagination"
-        }, 
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "items": {
             "$ref": "#/definitions/RoleCategory"
@@ -90,6 +78,14 @@ objects of type [`RoleCategory`](./../definitions/RoleCategory.mkd).
           "readOnly": true, 
           "type": "array"
         }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
+        }, 
+        "pagination": {
+          "$ref": "#/definitions/ApiPagination", 
+          "readOnly": true
+        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -100,5 +96,9 @@ objects of type [`RoleCategory`](./../definitions/RoleCategory.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/RoleCategory"
-      }
+      }, 
+      "x-usedIn": [
+        "/role-categories/", 
+        "/{envId}/role-categories/"
+      ]
     }

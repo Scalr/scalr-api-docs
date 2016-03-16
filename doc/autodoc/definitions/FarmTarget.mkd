@@ -28,13 +28,6 @@ This `string` property is used for polymorphism. It **must** be set to: `"FarmTa
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/Target"
-      }, 
-      "required": [
-        "targetType"
-      ], 
-      "x-discriminator": "targetType", 
       "description": "Selects all Servers of the triggering Server's Farm", 
       "properties": {
         "targetType": {
@@ -47,5 +40,12 @@ This `string` property is used for polymorphism. It **must** be set to: `"FarmTa
           ], 
           "type": "string"
         }
-      }
+      }, 
+      "required": [
+        "targetType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/Target"
+      }, 
+      "x-discriminator": "targetType"
     }

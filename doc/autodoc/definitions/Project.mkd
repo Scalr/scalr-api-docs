@@ -82,46 +82,46 @@ To filter on this field, use: `id=...`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "costCenter", 
-        "billingCode", 
-        "leadEmail", 
-        "name"
-      ], 
-      "x-usedIn": [
-        "/{envId}/projects/{projectId}/", 
-        "/{envId}/projects/"
-      ], 
       "properties": {
-        "description": {
-          "type": "string"
-        }, 
-        "leadEmail": {
-          "type": "string"
-        }, 
         "billingCode": {
           "type": "string"
         }, 
         "costCenter": {
           "$ref": "#/definitions/CostCenterForeignKey"
         }, 
+        "description": {
+          "type": "string"
+        }, 
         "id": {
           "readOnly": true, 
+          "type": "string"
+        }, 
+        "leadEmail": {
           "type": "string"
         }, 
         "name": {
           "type": "string"
         }
       }, 
-      "x-filterable": [
-        "id", 
-        "name", 
+      "required": [
+        "billingCode", 
         "costCenter", 
-        "billingCode"
+        "leadEmail", 
+        "name"
       ], 
       "x-createOnly": [
-        "costCenter", 
         "billingCode", 
+        "costCenter", 
         "leadEmail"
+      ], 
+      "x-filterable": [
+        "billingCode", 
+        "costCenter", 
+        "id", 
+        "name"
+      ], 
+      "x-usedIn": [
+        "/{envId}/projects/", 
+        "/{envId}/projects/{projectId}/"
       ]
     }

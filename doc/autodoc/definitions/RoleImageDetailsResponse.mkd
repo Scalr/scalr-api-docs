@@ -56,17 +56,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/roles/{roleId}/images/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/roles/{roleId}/images/", 
-        "/roles/{roleId}/images/{imageId}/actions/replace/"
-      ], 
       "properties": {
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "$ref": "#/definitions/RoleImage"
         }, 
@@ -76,6 +66,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           }, 
           "readOnly": true, 
           "type": "array"
+        }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
         }, 
         "warnings": {
           "items": {
@@ -87,5 +81,11 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/RoleImage"
-      }
+      }, 
+      "x-usedIn": [
+        "/roles/{roleId}/images/", 
+        "/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/{envId}/roles/{roleId}/images/", 
+        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/"
+      ]
     }

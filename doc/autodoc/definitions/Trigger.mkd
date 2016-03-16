@@ -36,18 +36,7 @@ The following are valid values for the `triggerType` property:
 ## Swagger Definition ##
 
     {
-      "x-concreteTypes": [
-        {
-          "$ref": "#/definitions/AllEventsTrigger"
-        }, 
-        {
-          "$ref": "#/definitions/SpecificEventTrigger"
-        }
-      ], 
       "discriminator": "triggerType", 
-      "required": [
-        "triggerType"
-      ], 
       "properties": {
         "triggerType": {
           "enum": [
@@ -56,5 +45,16 @@ The following are valid values for the `triggerType` property:
           ], 
           "type": "string"
         }
-      }
+      }, 
+      "required": [
+        "triggerType"
+      ], 
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/AllEventsTrigger"
+        }, 
+        {
+          "$ref": "#/definitions/SpecificEventTrigger"
+        }
+      ]
     }

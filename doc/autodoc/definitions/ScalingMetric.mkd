@@ -100,49 +100,38 @@ The following are valid values for the `scope` property:
 ## Swagger Definition ##
 
     {
-      "required": [
-        "name", 
-        "retrieveMethod", 
-        "filePath", 
-        "function"
-      ], 
-      "x-usedIn": [
-        "/{envId}/scaling-metrics/", 
-        "/{envId}/scaling-metrics/{metricName}/"
-      ], 
       "properties": {
+        "filePath": {
+          "descritpion": "Path to the File", 
+          "type": "string"
+        }, 
         "function": {
+          "description": "Aggregate function to use when executing decision logic.", 
           "enum": [
             "average", 
             "sum", 
             "min", 
             "max"
           ], 
-          "type": "string", 
-          "description": "Aggregate function to use when executing decision logic."
-        }, 
-        "name": {
-          "type": "string", 
-          "descritpion": "The name of the Scaling Metric."
-        }, 
-        "filePath": {
-          "type": "string", 
-          "descritpion": "Path to the File"
+          "type": "string"
         }, 
         "inverted": {
-          "type": "boolean", 
-          "description": "Whether this metric uses inverted logic. In case of the inversion it scales up when the value goes under instead of scaling down."
+          "description": "Whether this metric uses inverted logic. In case of the inversion it scales up when the value goes under instead of scaling down.", 
+          "type": "boolean"
+        }, 
+        "name": {
+          "descritpion": "The name of the Scaling Metric.", 
+          "type": "string"
         }, 
         "retrieveMethod": {
+          "description": "The operation on the File that should be performed to obtain the value of the Metric.", 
           "enum": [
             "read", 
             "execute"
           ], 
-          "type": "string", 
-          "description": "The operation on the File that should be performed to obtain the value of the Metric."
+          "type": "string"
         }, 
         "scope": {
-          "readOnly": true, 
           "enum": [
             "scalr", 
             "account", 
@@ -151,13 +140,24 @@ The following are valid values for the `scope` property:
             "farmrole", 
             "server"
           ], 
+          "readOnly": true, 
           "type": "string"
         }
       }, 
-      "x-filterable": [
-        "name", 
-        "retrieveMethod", 
+      "required": [
+        "filePath", 
         "function", 
-        "inverted"
+        "name", 
+        "retrieveMethod"
+      ], 
+      "x-filterable": [
+        "function", 
+        "inverted", 
+        "name", 
+        "retrieveMethod"
+      ], 
+      "x-usedIn": [
+        "/{envId}/scaling-metrics/", 
+        "/{envId}/scaling-metrics/{metricName}/"
       ]
     }

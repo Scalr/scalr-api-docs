@@ -38,19 +38,7 @@ This `string` property is used for polymorphism. It **must** be set to: `"UriAct
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/Action"
-      }, 
-      "required": [
-        "actionType", 
-        "path"
-      ], 
-      "x-discriminator": "actionType", 
       "properties": {
-        "path": {
-          "type": "string", 
-          "description": "Path or URL to the script to execute."
-        }, 
         "actionType": {
           "enum": [
             "ScriptAction", 
@@ -58,6 +46,18 @@ This `string` property is used for polymorphism. It **must** be set to: `"UriAct
             "ChefAction"
           ], 
           "type": "string"
+        }, 
+        "path": {
+          "description": "Path or URL to the script to execute.", 
+          "type": "string"
         }
-      }
+      }, 
+      "required": [
+        "actionType", 
+        "path"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/Action"
+      }, 
+      "x-discriminator": "actionType"
     }

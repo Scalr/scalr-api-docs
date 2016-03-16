@@ -37,15 +37,14 @@ objects of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd).
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/Target"
-      }, 
-      "required": [
-        "targetType"
-      ], 
-      "x-discriminator": "targetType", 
       "description": "Selects all Servers with specified Roles.", 
       "properties": {
+        "roles": {
+          "items": {
+            "$ref": "#/definitions/FarmRoleForeignKey"
+          }, 
+          "type": "array"
+        }, 
         "targetType": {
           "enum": [
             "NullTarget", 
@@ -55,12 +54,13 @@ objects of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd).
             "FarmTarget"
           ], 
           "type": "string"
-        }, 
-        "roles": {
-          "items": {
-            "$ref": "#/definitions/FarmRoleForeignKey"
-          }, 
-          "type": "array"
         }
-      }
+      }, 
+      "required": [
+        "targetType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/Target"
+      }, 
+      "x-discriminator": "targetType"
     }

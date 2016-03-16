@@ -56,17 +56,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/roles/{roleId}/", 
-        "/{envId}/roles/", 
-        "/roles/{roleId}/", 
-        "/roles/"
-      ], 
       "properties": {
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "$ref": "#/definitions/Role"
         }, 
@@ -76,6 +66,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           }, 
           "readOnly": true, 
           "type": "array"
+        }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
         }, 
         "warnings": {
           "items": {
@@ -87,5 +81,11 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/Role"
-      }
+      }, 
+      "x-usedIn": [
+        "/roles/", 
+        "/roles/{roleId}/", 
+        "/{envId}/roles/", 
+        "/{envId}/roles/{roleId}/"
+      ]
     }

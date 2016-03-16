@@ -60,21 +60,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
-        "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/farms/{farmId}/global-variables/", 
-        "/{envId}/roles/{roleId}/global-variables/", 
-        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
-        "/roles/{roleId}/global-variables/", 
-        "/roles/{roleId}/global-variables/{globalVariableName}/"
-      ], 
       "properties": {
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "$ref": "#/definitions/GlobalVariable"
         }, 
@@ -84,6 +70,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           }, 
           "readOnly": true, 
           "type": "array"
+        }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
         }, 
         "warnings": {
           "items": {
@@ -95,5 +85,15 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/GlobalVariable"
-      }
+      }, 
+      "x-usedIn": [
+        "/roles/{roleId}/global-variables/", 
+        "/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
+        "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
+        "/{envId}/farms/{farmId}/global-variables/", 
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
+        "/{envId}/roles/{roleId}/global-variables/", 
+        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/"
+      ]
     }

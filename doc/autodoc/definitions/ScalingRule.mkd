@@ -57,28 +57,12 @@ To filter on this field, use: `name=...`.
 ## Swagger Definition ##
 
     {
-      "x-concreteTypes": [
-        {
-          "$ref": "#/definitions/BasicScalingRule"
-        }, 
-        {
-          "$ref": "#/definitions/DateAndTimeScalingRule"
-        }
-      ], 
-      "required": [
-        "name", 
-        "ruleType"
-      ], 
-      "x-createOnly": [
-        "name", 
-        "ruleType"
-      ], 
       "discriminator": "ruleType", 
-      "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/scaling/", 
-        "/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/"
-      ], 
       "properties": {
+        "name": {
+          "descritpion": "The name of the Scaling Metric.", 
+          "type": "string"
+        }, 
         "ruleType": {
           "enum": [
             "BasicScalingRule", 
@@ -90,14 +74,30 @@ To filter on this field, use: `name=...`.
             "BandWidthScalingRule"
           ], 
           "type": "string"
-        }, 
-        "name": {
-          "type": "string", 
-          "descritpion": "The name of the Scaling Metric."
         }
       }, 
+      "required": [
+        "name", 
+        "ruleType"
+      ], 
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/BasicScalingRule"
+        }, 
+        {
+          "$ref": "#/definitions/DateAndTimeScalingRule"
+        }
+      ], 
+      "x-createOnly": [
+        "name", 
+        "ruleType"
+      ], 
       "x-filterable": [
         "name", 
         "ruleType"
+      ], 
+      "x-usedIn": [
+        "/{envId}/farm-roles/{farmRoleId}/scaling/", 
+        "/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/"
       ]
     }

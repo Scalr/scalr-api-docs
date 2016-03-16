@@ -9,9 +9,9 @@
 one of the following types:
 
   + [`FarmTarget`](./../definitions/FarmTarget.mkd)
-  + [`TriggeringFarmRoleTarget`](./../definitions/TriggeringFarmRoleTarget.mkd)
-  + [`SelectedFarmRolesTarget`](./../definitions/SelectedFarmRolesTarget.mkd)
   + [`NullTarget`](./../definitions/NullTarget.mkd)
+  + [`SelectedFarmRolesTarget`](./../definitions/SelectedFarmRolesTarget.mkd)
+  + [`TriggeringFarmRoleTarget`](./../definitions/TriggeringFarmRoleTarget.mkd)
   + [`TriggeringServerTarget`](./../definitions/TriggeringServerTarget.mkd)
 
 
@@ -42,27 +42,7 @@ The following are valid values for the `targetType` property:
 ## Swagger Definition ##
 
     {
-      "x-concreteTypes": [
-        {
-          "$ref": "#/definitions/FarmTarget"
-        }, 
-        {
-          "$ref": "#/definitions/TriggeringFarmRoleTarget"
-        }, 
-        {
-          "$ref": "#/definitions/SelectedFarmRolesTarget"
-        }, 
-        {
-          "$ref": "#/definitions/NullTarget"
-        }, 
-        {
-          "$ref": "#/definitions/TriggeringServerTarget"
-        }
-      ], 
       "discriminator": "targetType", 
-      "required": [
-        "targetType"
-      ], 
       "properties": {
         "targetType": {
           "enum": [
@@ -74,5 +54,25 @@ The following are valid values for the `targetType` property:
           ], 
           "type": "string"
         }
-      }
+      }, 
+      "required": [
+        "targetType"
+      ], 
+      "x-concreteTypes": [
+        {
+          "$ref": "#/definitions/FarmTarget"
+        }, 
+        {
+          "$ref": "#/definitions/NullTarget"
+        }, 
+        {
+          "$ref": "#/definitions/SelectedFarmRolesTarget"
+        }, 
+        {
+          "$ref": "#/definitions/TriggeringFarmRoleTarget"
+        }, 
+        {
+          "$ref": "#/definitions/TriggeringServerTarget"
+        }
+      ]
     }

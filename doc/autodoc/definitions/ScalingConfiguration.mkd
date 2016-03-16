@@ -56,26 +56,26 @@ An array of
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/scaling/"
-      ], 
       "properties": {
-        "minInstances": {
-          "type": "integer"
-        }, 
-        "rules": {
-          "items": {
-            "type": "string", 
-            "description": "The list of the Scaling Metric's names."
-          }, 
-          "readOnly": true, 
-          "type": "array"
-        }, 
         "enabled": {
           "type": "boolean"
         }, 
         "maxInstances": {
           "type": "integer"
+        }, 
+        "minInstances": {
+          "type": "integer"
+        }, 
+        "rules": {
+          "items": {
+            "description": "The list of the Scaling Metric's names.", 
+            "type": "string"
+          }, 
+          "readOnly": true, 
+          "type": "array"
         }
-      }
+      }, 
+      "x-usedIn": [
+        "/{envId}/farm-roles/{farmRoleId}/scaling/"
+      ]
     }

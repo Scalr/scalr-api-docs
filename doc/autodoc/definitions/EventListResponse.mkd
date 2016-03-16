@@ -63,19 +63,7 @@ objects of type [`Event`](./../definitions/Event.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/events/", 
-        "/events/"
-      ], 
       "properties": {
-        "pagination": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiPagination"
-        }, 
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "items": {
             "$ref": "#/definitions/Event"
@@ -90,6 +78,14 @@ objects of type [`Event`](./../definitions/Event.mkd).
           "readOnly": true, 
           "type": "array"
         }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
+        }, 
+        "pagination": {
+          "$ref": "#/definitions/ApiPagination", 
+          "readOnly": true
+        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -100,5 +96,9 @@ objects of type [`Event`](./../definitions/Event.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/Event"
-      }
+      }, 
+      "x-usedIn": [
+        "/events/", 
+        "/{envId}/events/"
+      ]
     }

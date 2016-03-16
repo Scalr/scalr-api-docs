@@ -123,49 +123,27 @@ To filter on this field, use: `id=...`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "trigger", 
-        "action", 
-        "target"
-      ], 
-      "x-usedIn": [
-        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/{envId}/roles/{roleId}/orchestration-rules/", 
-        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
-        "/roles/{roleId}/orchestration-rules/", 
-        "/orchestration-rules/{orchestrationRuleId}/", 
-        "/orchestration-rules/", 
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/"
-      ], 
       "properties": {
-        "target": {
-          "$ref": "#/definitions/Target"
-        }, 
-        "runAs": {
-          "type": "string", 
-          "descrition": "User the Orchestration Rule should execute as. Defaults to root / Administrator when null."
-        }, 
-        "order": {
-          "type": "integer", 
-          "description": "When should this Orchestration Rule execute relative to other Orchestration Rules that use the same triggeringEvent? Default is relative to existing Rules."
-        }, 
-        "trigger": {
-          "$ref": "#/definitions/Trigger"
-        }, 
-        "timeout": {
-          "type": "integer", 
-          "description": "How long should Scalr wait before aborting the execution of this Orchestration Rule? Defaults to the action's default when null."
-        }, 
-        "blocking": {
-          "type": "boolean", 
-          "description": "Should this Orchestration Rule's execution delay the execution of further Orchestration Rules and triggering of further Events? Defaults to the action's default when null."
-        }, 
         "action": {
           "$ref": "#/definitions/Action"
         }, 
-        "scope": {
+        "blocking": {
+          "description": "Should this Orchestration Rule's execution delay the execution of further Orchestration Rules and triggering of further Events? Defaults to the action's default when null.", 
+          "type": "boolean"
+        }, 
+        "id": {
           "readOnly": true, 
+          "type": "integer"
+        }, 
+        "order": {
+          "description": "When should this Orchestration Rule execute relative to other Orchestration Rules that use the same triggeringEvent? Default is relative to existing Rules.", 
+          "type": "integer"
+        }, 
+        "runAs": {
+          "descrition": "User the Orchestration Rule should execute as. Defaults to root / Administrator when null.", 
+          "type": "string"
+        }, 
+        "scope": {
           "enum": [
             "scalr", 
             "account", 
@@ -174,17 +152,39 @@ To filter on this field, use: `id=...`.
             "farmrole", 
             "server"
           ], 
+          "readOnly": true, 
           "type": "string"
         }, 
-        "id": {
-          "readOnly": true, 
+        "target": {
+          "$ref": "#/definitions/Target"
+        }, 
+        "timeout": {
+          "description": "How long should Scalr wait before aborting the execution of this Orchestration Rule? Defaults to the action's default when null.", 
           "type": "integer"
+        }, 
+        "trigger": {
+          "$ref": "#/definitions/Trigger"
         }
       }, 
+      "required": [
+        "action", 
+        "target", 
+        "trigger"
+      ], 
       "x-filterable": [
-        "id", 
         "blocking", 
+        "id", 
         "order", 
         "runAs"
+      ], 
+      "x-usedIn": [
+        "/orchestration-rules/", 
+        "/orchestration-rules/{orchestrationRuleId}/", 
+        "/roles/{roleId}/orchestration-rules/", 
+        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
+        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/"
       ]
     }

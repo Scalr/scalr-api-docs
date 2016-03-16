@@ -128,6 +128,15 @@ The response body is an object of type:
 
 
 
+### 503 ###
+
+The service is currently unavailable.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+
 
 
 ## Swagger Definition ##
@@ -136,6 +145,38 @@ The response body is an object of type:
       "delete": {
         "description": "Dis-associates the Image from the Role.", 
         "responses": {
+          "409": {
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
+              }
+            ], 
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "200": {
             "description": "Successful deletion.", 
             "schema": {
@@ -202,34 +243,8 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
-          "409": {
-            "x-errorCodes": [
-              {
-                "description": "The changes you are trying to make aren't possible while this object is in use.", 
-                "name": "ObjectInUse"
-              }, 
-              {
-                "description": "The changes you are trying to make violate a unicity constraint.", 
-                "name": "UnicityViolation"
-              }, 
-              {
-                "description": "Some of the objects being changed is locked for changing.", 
-                "name": "Locked"
-              }, 
-              {
-                "description": "Cloud platform is not enabled.", 
-                "name": "NotEnabledPlatform"
-              }, 
-              {
-                "description": "The Operating system mismatch.", 
-                "name": "OperatingSystemMismatch"
-              }, 
-              {
-                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
-                "name": "ConfigurationMismatch"
-              }
-            ], 
-            "description": "Conflict with current state.", 
+          "503": {
+            "description": "The service is currently unavailable.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -278,6 +293,38 @@ The response body is an object of type:
       "get": {
         "description": "Redirects to the Image.", 
         "responses": {
+          "409": {
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
+              }
+            ], 
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
           "200": {
             "description": "Redirects to the Image.", 
             "schema": {
@@ -344,34 +391,8 @@ The response body is an object of type:
               "$ref": "#/definitions/ApiErrorResponse"
             }
           }, 
-          "409": {
-            "x-errorCodes": [
-              {
-                "description": "The changes you are trying to make aren't possible while this object is in use.", 
-                "name": "ObjectInUse"
-              }, 
-              {
-                "description": "The changes you are trying to make violate a unicity constraint.", 
-                "name": "UnicityViolation"
-              }, 
-              {
-                "description": "Some of the objects being changed is locked for changing.", 
-                "name": "Locked"
-              }, 
-              {
-                "description": "Cloud platform is not enabled.", 
-                "name": "NotEnabledPlatform"
-              }, 
-              {
-                "description": "The Operating system mismatch.", 
-                "name": "OperatingSystemMismatch"
-              }, 
-              {
-                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
-                "name": "ConfigurationMismatch"
-              }
-            ], 
-            "description": "Conflict with current state.", 
+          "503": {
+            "description": "The service is currently unavailable.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }

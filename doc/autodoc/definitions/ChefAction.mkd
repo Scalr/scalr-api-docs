@@ -28,13 +28,6 @@ This `string` property is used for polymorphism. It **must** be set to: `"ChefAc
 ## Swagger Definition ##
 
     {
-      "x-abstractType": {
-        "$ref": "#/definitions/Action"
-      }, 
-      "required": [
-        "actionType"
-      ], 
-      "x-discriminator": "actionType", 
       "properties": {
         "actionType": {
           "enum": [
@@ -44,5 +37,12 @@ This `string` property is used for polymorphism. It **must** be set to: `"ChefAc
           ], 
           "type": "string"
         }
-      }
+      }, 
+      "required": [
+        "actionType"
+      ], 
+      "x-abstractType": {
+        "$ref": "#/definitions/Action"
+      }, 
+      "x-discriminator": "actionType"
     }

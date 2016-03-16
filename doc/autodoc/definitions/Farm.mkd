@@ -125,40 +125,13 @@ To filter on this field, use: `id=...`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "name", 
-        "project"
-      ], 
-      "x-usedIn": [
-        "/{envId}/farms/{farmId}/farm-roles/", 
-        "/{envId}/farms/{farmId}/", 
-        "/{envId}/farms/{farmId}/actions/terminate/", 
-        "/{envId}/farms/{farmId}/global-variables/", 
-        "/{envId}/farms/{farmId}/actions/launch/", 
-        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
-        "/{envId}/farms/", 
-        "/{envId}/farms/{farmId}/actions/clone/"
-      ], 
       "properties": {
         "description": {
           "type": "string"
         }, 
-        "project": {
-          "$ref": "#/definitions/ProjectForeignKey"
-        }, 
-        "vpc": {
-          "$ref": "#/definitions/CloudAwsVpcForeignKey"
-        }, 
-        "timezone": {
-          "type": "string"
-        }, 
-        "owner": {
-          "description": "Identifier of the User who owns the Farm.", 
-          "$ref": "#/definitions/UserForeignKey"
-        }, 
-        "teamOwner": {
-          "description": "Identifier of the Team who owns the Farm.", 
-          "$ref": "#/definitions/TeamForeignKey"
+        "id": {
+          "readOnly": true, 
+          "type": "integer"
         }, 
         "launchOrder": {
           "enum": [
@@ -167,21 +140,48 @@ To filter on this field, use: `id=...`.
           ], 
           "type": "string"
         }, 
-        "id": {
-          "readOnly": true, 
-          "type": "integer"
-        }, 
         "name": {
           "type": "string"
+        }, 
+        "owner": {
+          "$ref": "#/definitions/UserForeignKey", 
+          "description": "Identifier of the User who owns the Farm."
+        }, 
+        "project": {
+          "$ref": "#/definitions/ProjectForeignKey"
+        }, 
+        "teamOwner": {
+          "$ref": "#/definitions/TeamForeignKey", 
+          "description": "Identifier of the Team who owns the Farm."
+        }, 
+        "timezone": {
+          "type": "string"
+        }, 
+        "vpc": {
+          "$ref": "#/definitions/CloudAwsVpcForeignKey"
         }
       }, 
+      "required": [
+        "name", 
+        "project"
+      ], 
       "x-filterable": [
         "id", 
-        "name", 
-        "vpc", 
-        "project", 
         "launchOrder", 
+        "name", 
         "owner", 
-        "teamOwner"
+        "project", 
+        "teamOwner", 
+        "vpc"
+      ], 
+      "x-usedIn": [
+        "/{envId}/farms/", 
+        "/{envId}/farms/{farmId}/", 
+        "/{envId}/farms/{farmId}/actions/clone/", 
+        "/{envId}/farms/{farmId}/actions/launch/", 
+        "/{envId}/farms/{farmId}/actions/terminate/", 
+        "/{envId}/farms/{farmId}/farm-roles/", 
+        "/{envId}/farms/{farmId}/global-variables/", 
+        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/"
       ]
     }

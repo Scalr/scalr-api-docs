@@ -38,6 +38,20 @@ The following are valid values for the `actionType` property:
 ## Swagger Definition ##
 
     {
+      "discriminator": "actionType", 
+      "properties": {
+        "actionType": {
+          "enum": [
+            "ScriptAction", 
+            "UriAction", 
+            "ChefAction"
+          ], 
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "actionType"
+      ], 
       "x-concreteTypes": [
         {
           "$ref": "#/definitions/ChefAction"
@@ -48,19 +62,5 @@ The following are valid values for the `actionType` property:
         {
           "$ref": "#/definitions/UriAction"
         }
-      ], 
-      "discriminator": "actionType", 
-      "required": [
-        "actionType"
-      ], 
-      "properties": {
-        "actionType": {
-          "enum": [
-            "ScriptAction", 
-            "UriAction", 
-            "ChefAction"
-          ], 
-          "type": "string"
-        }
-      }
+      ]
     }

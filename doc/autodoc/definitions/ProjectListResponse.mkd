@@ -62,18 +62,7 @@ objects of type [`Project`](./../definitions/Project.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/projects/"
-      ], 
       "properties": {
-        "pagination": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiPagination"
-        }, 
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "items": {
             "$ref": "#/definitions/Project"
@@ -88,6 +77,14 @@ objects of type [`Project`](./../definitions/Project.mkd).
           "readOnly": true, 
           "type": "array"
         }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
+        }, 
+        "pagination": {
+          "$ref": "#/definitions/ApiPagination", 
+          "readOnly": true
+        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -98,5 +95,8 @@ objects of type [`Project`](./../definitions/Project.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/Project"
-      }
+      }, 
+      "x-usedIn": [
+        "/{envId}/projects/"
+      ]
     }

@@ -28,18 +28,18 @@ Property of type: `integer`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "id"
-      ], 
-      "x-references": {
-        "$ref": "#/definitions/Script"
-      }, 
-      "x-derived": {
-        "$ref": "#/definitions/Script"
-      }, 
       "properties": {
         "id": {
           "type": "integer"
         }
+      }, 
+      "required": [
+        "id"
+      ], 
+      "x-derived": {
+        "$ref": "#/definitions/Script"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/Script"
       }
     }

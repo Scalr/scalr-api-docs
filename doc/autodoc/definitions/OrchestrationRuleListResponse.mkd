@@ -65,21 +65,7 @@ objects of type [`OrchestrationRule`](./../definitions/OrchestrationRule.mkd).
 ## Swagger Definition ##
 
     {
-      "x-usedIn": [
-        "/{envId}/roles/{roleId}/orchestration-rules/", 
-        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
-        "/roles/{roleId}/orchestration-rules/", 
-        "/orchestration-rules/"
-      ], 
       "properties": {
-        "pagination": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiPagination"
-        }, 
-        "meta": {
-          "readOnly": true, 
-          "$ref": "#/definitions/ApiMetaContainer"
-        }, 
         "data": {
           "items": {
             "$ref": "#/definitions/OrchestrationRule"
@@ -94,6 +80,14 @@ objects of type [`OrchestrationRule`](./../definitions/OrchestrationRule.mkd).
           "readOnly": true, 
           "type": "array"
         }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
+        }, 
+        "pagination": {
+          "$ref": "#/definitions/ApiPagination", 
+          "readOnly": true
+        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -104,5 +98,11 @@ objects of type [`OrchestrationRule`](./../definitions/OrchestrationRule.mkd).
       }, 
       "x-derived": {
         "$ref": "#/definitions/OrchestrationRule"
-      }
+      }, 
+      "x-usedIn": [
+        "/orchestration-rules/", 
+        "/roles/{roleId}/orchestration-rules/", 
+        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
+        "/{envId}/roles/{roleId}/orchestration-rules/"
+      ]
     }

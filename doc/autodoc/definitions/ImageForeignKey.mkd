@@ -28,18 +28,18 @@ Property of type: `string`.
 ## Swagger Definition ##
 
     {
-      "required": [
-        "id"
-      ], 
-      "x-references": {
-        "$ref": "#/definitions/Image"
-      }, 
-      "x-derived": {
-        "$ref": "#/definitions/Image"
-      }, 
       "properties": {
         "id": {
           "type": "string"
         }
+      }, 
+      "required": [
+        "id"
+      ], 
+      "x-derived": {
+        "$ref": "#/definitions/Image"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/Image"
       }
     }
