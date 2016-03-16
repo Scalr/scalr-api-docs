@@ -135,178 +135,9 @@ The response body is an object of type:
 ## Swagger Definition ##
 
     {
-      "post": {
-        "description": "Creates a new Role Category in the Account.", 
-        "parameters": [
-          {
-            "required": true, 
-            "in": "body", 
-            "description": "The JSON representation of a RoleCategory object.", 
-            "name": "roleCategoryObject", 
-            "schema": {
-              "$ref": "#/definitions/RoleCategory"
-            }
-          }
-        ], 
-        "responses": {
-          "409": {
-            "x-errorCodes": [
-              {
-                "description": "The changes you are trying to make aren't possible while this object is in use.", 
-                "name": "ObjectInUse"
-              }, 
-              {
-                "description": "The changes you are trying to make violate a unicity constraint.", 
-                "name": "UnicityViolation"
-              }, 
-              {
-                "description": "Some of the objects being changed is locked for changing.", 
-                "name": "Locked"
-              }, 
-              {
-                "description": "Cloud platform is not enabled.", 
-                "name": "NotEnabledPlatform"
-              }, 
-              {
-                "description": "The Operating system mismatch.", 
-                "name": "OperatingSystemMismatch"
-              }, 
-              {
-                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
-                "name": "ConfigurationMismatch"
-              }
-            ], 
-            "description": "Conflict with current state.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "201": {
-            "description": "The JSON representation of a RoleCategory object.", 
-            "schema": {
-              "$ref": "#/definitions/RoleCategoryDetailsResponse"
-            }
-          }, 
-          "400": {
-            "x-errorCodes": [
-              {
-                "description": "Your request is structurally incorrect, and was not understood by the API.", 
-                "name": "InvalidStructure"
-              }, 
-              {
-                "description": "Your request was understood by the API, but included data that is not acceptable.", 
-                "name": "InvalidValue"
-              }, 
-              {
-                "description": "Your request wasn't understood by the API.", 
-                "name": "BadRequest"
-              }
-            ], 
-            "description": "A client-side error was made.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "401": {
-            "x-errorCodes": [
-              {
-                "description": "Your request authentication failed to validate.", 
-                "name": "BadAuthentication"
-              }
-            ], 
-            "description": "Request was not authenticated.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "403": {
-            "x-errorCodes": [
-              {
-                "description": "Your request should be made in a different Scope.", 
-                "name": "ScopeViolation"
-              }, 
-              {
-                "description": "Your request requires permissions you do not have.", 
-                "name": "PermissionViolation"
-              }
-            ], 
-            "description": "Insufficient permissions.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "500": {
-            "description": "A server-side error occured.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "501": {
-            "description": "Error is raised when the feature is not implemented in Scalr.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "503": {
-            "description": "The service is currently unavailable.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "404": {
-            "x-errorCodes": [
-              {
-                "noDoc": true, 
-                "description": "The route you are trying to access does not exist.", 
-                "name": "EndpointNotFound"
-              }, 
-              {
-                "description": "The URL you are trying to access does not exist.", 
-                "name": "ObjectNotFound"
-              }
-            ], 
-            "description": "Resource not found.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }
-        }
-      }, 
       "get": {
         "description": "Describes Role Categories available in the Account.", 
         "responses": {
-          "409": {
-            "x-errorCodes": [
-              {
-                "description": "The changes you are trying to make aren't possible while this object is in use.", 
-                "name": "ObjectInUse"
-              }, 
-              {
-                "description": "The changes you are trying to make violate a unicity constraint.", 
-                "name": "UnicityViolation"
-              }, 
-              {
-                "description": "Some of the objects being changed is locked for changing.", 
-                "name": "Locked"
-              }, 
-              {
-                "description": "Cloud platform is not enabled.", 
-                "name": "NotEnabledPlatform"
-              }, 
-              {
-                "description": "The Operating system mismatch.", 
-                "name": "OperatingSystemMismatch"
-              }, 
-              {
-                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
-                "name": "ConfigurationMismatch"
-              }
-            ], 
-            "description": "Conflict with current state.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
           "200": {
             "description": "A list of RoleCategory objects.", 
             "schema": {
@@ -314,6 +145,10 @@ The response body is an object of type:
             }
           }, 
           "400": {
+            "description": "A client-side error was made.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
             "x-errorCodes": [
               {
                 "description": "Your request is structurally incorrect, and was not understood by the API.", 
@@ -327,25 +162,25 @@ The response body is an object of type:
                 "description": "Your request wasn't understood by the API.", 
                 "name": "BadRequest"
               }
-            ], 
-            "description": "A client-side error was made.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
+            ]
           }, 
           "401": {
+            "description": "Request was not authenticated.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
             "x-errorCodes": [
               {
                 "description": "Your request authentication failed to validate.", 
                 "name": "BadAuthentication"
               }
-            ], 
-            "description": "Request was not authenticated.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
+            ]
           }, 
           "403": {
+            "description": "Insufficient permissions.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
             "x-errorCodes": [
               {
                 "description": "Your request should be made in a different Scope.", 
@@ -355,11 +190,56 @@ The response body is an object of type:
                 "description": "Your request requires permissions you do not have.", 
                 "name": "PermissionViolation"
               }
-            ], 
-            "description": "Insufficient permissions.", 
+            ]
+          }, 
+          "404": {
+            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
-            }
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "The route you are trying to access does not exist.", 
+                "name": "EndpointNotFound", 
+                "noDoc": true
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist.", 
+                "name": "ObjectNotFound"
+              }
+            ]
+          }, 
+          "409": {
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
+              }
+            ]
           }, 
           "500": {
             "description": "A server-side error occured.", 
@@ -378,20 +258,140 @@ The response body is an object of type:
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
+          }
+        }
+      }, 
+      "post": {
+        "description": "Creates a new Role Category in the Account.", 
+        "parameters": [
+          {
+            "description": "The JSON representation of a RoleCategory object.", 
+            "in": "body", 
+            "name": "roleCategoryObject", 
+            "required": true, 
+            "schema": {
+              "$ref": "#/definitions/RoleCategory"
+            }
+          }
+        ], 
+        "responses": {
+          "201": {
+            "description": "The JSON representation of a RoleCategory object.", 
+            "schema": {
+              "$ref": "#/definitions/RoleCategoryDetailsResponse"
+            }
           }, 
-          "404": {
+          "400": {
+            "description": "A client-side error was made.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
             "x-errorCodes": [
               {
-                "noDoc": true, 
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ]
+          }, 
+          "401": {
+            "description": "Request was not authenticated.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ]
+          }, 
+          "403": {
+            "description": "Insufficient permissions.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ]
+          }, 
+          "404": {
+            "description": "Resource not found.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
                 "description": "The route you are trying to access does not exist.", 
-                "name": "EndpointNotFound"
+                "name": "EndpointNotFound", 
+                "noDoc": true
               }, 
               {
                 "description": "The URL you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
-            ], 
-            "description": "Resource not found.", 
+            ]
+          }, 
+          "409": {
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
+              }
+            ]
+          }, 
+          "500": {
+            "description": "A server-side error occured.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "501": {
+            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "503": {
+            "description": "The service is currently unavailable.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }

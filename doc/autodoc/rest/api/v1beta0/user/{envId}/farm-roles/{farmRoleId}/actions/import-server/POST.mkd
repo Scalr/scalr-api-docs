@@ -167,30 +167,124 @@ The response body is an object of type:
 ## Swagger Definition ##
 
     {
+      "parameters": [
+        {
+          "description": "The ID of the Environment scoping this request.", 
+          "in": "path", 
+          "name": "envId", 
+          "required": true, 
+          "type": "integer"
+        }, 
+        {
+          "description": "The ID of a FarmRole object.", 
+          "in": "path", 
+          "name": "farmRoleId", 
+          "required": true, 
+          "type": "integer", 
+          "x-references": {
+            "$ref": "#/definitions/FarmRole"
+          }
+        }
+      ], 
       "post": {
         "description": "Imports the specified server from the cloud to Scalr Farm Role.", 
         "parameters": [
           {
-            "schema": {
-              "required": [
-                "cloudServerId"
-              ], 
-              "properties": {
-                "cloudServerId": {
-                  "type": "string", 
-                  "description": "Identifier of the instance on the cloud to import."
-                }
-              }
-            }, 
             "description": "Import Server request data.", 
             "in": "body", 
+            "name": "importServerRequest", 
             "required": true, 
-            "type": "object", 
-            "name": "importServerRequest"
+            "schema": {
+              "properties": {
+                "cloudServerId": {
+                  "description": "Identifier of the instance on the cloud to import.", 
+                  "type": "string"
+                }
+              }, 
+              "required": [
+                "cloudServerId"
+              ]
+            }, 
+            "type": "object"
           }
         ], 
         "responses": {
+          "201": {
+            "description": "The JSON representation of a ServerSummary object.", 
+            "schema": {
+              "$ref": "#/definitions/ServerSummaryDetailsResponse"
+            }
+          }, 
+          "400": {
+            "description": "A client-side error was made.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ]
+          }, 
+          "401": {
+            "description": "Request was not authenticated.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ]
+          }, 
+          "403": {
+            "description": "Insufficient permissions.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ]
+          }, 
+          "404": {
+            "description": "Resource not found.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "The route you are trying to access does not exist.", 
+                "name": "EndpointNotFound", 
+                "noDoc": true
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist.", 
+                "name": "ObjectNotFound"
+              }
+            ]
+          }, 
           "409": {
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
             "x-errorCodes": [
               {
                 "description": "The changes you are trying to make aren't possible while this object is in use.", 
@@ -220,65 +314,7 @@ The response body is an object of type:
                 "description": "Some of the object or action is deprecated", 
                 "name": "Deprecated"
               }
-            ], 
-            "description": "Conflict with current state.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "201": {
-            "description": "The JSON representation of a ServerSummary object.", 
-            "schema": {
-              "$ref": "#/definitions/ServerSummaryDetailsResponse"
-            }
-          }, 
-          "400": {
-            "x-errorCodes": [
-              {
-                "description": "Your request is structurally incorrect, and was not understood by the API.", 
-                "name": "InvalidStructure"
-              }, 
-              {
-                "description": "Your request was understood by the API, but included data that is not acceptable.", 
-                "name": "InvalidValue"
-              }, 
-              {
-                "description": "Your request wasn't understood by the API.", 
-                "name": "BadRequest"
-              }
-            ], 
-            "description": "A client-side error was made.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "401": {
-            "x-errorCodes": [
-              {
-                "description": "Your request authentication failed to validate.", 
-                "name": "BadAuthentication"
-              }
-            ], 
-            "description": "Request was not authenticated.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "403": {
-            "x-errorCodes": [
-              {
-                "description": "Your request should be made in a different Scope.", 
-                "name": "ScopeViolation"
-              }, 
-              {
-                "description": "Your request requires permissions you do not have.", 
-                "name": "PermissionViolation"
-              }
-            ], 
-            "description": "Insufficient permissions.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
+            ]
           }, 
           "500": {
             "description": "A server-side error occured.", 
@@ -297,43 +333,7 @@ The response body is an object of type:
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
-          }, 
-          "404": {
-            "x-errorCodes": [
-              {
-                "noDoc": true, 
-                "description": "The route you are trying to access does not exist.", 
-                "name": "EndpointNotFound"
-              }, 
-              {
-                "description": "The URL you are trying to access does not exist.", 
-                "name": "ObjectNotFound"
-              }
-            ], 
-            "description": "Resource not found.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
           }
         }
-      }, 
-      "parameters": [
-        {
-          "required": true, 
-          "type": "integer", 
-          "description": "The ID of the Environment scoping this request.", 
-          "in": "path", 
-          "name": "envId"
-        }, 
-        {
-          "x-references": {
-            "$ref": "#/definitions/FarmRole"
-          }, 
-          "description": "The ID of a FarmRole object.", 
-          "in": "path", 
-          "required": true, 
-          "type": "integer", 
-          "name": "farmRoleId"
-        }
-      ]
+      }
     }

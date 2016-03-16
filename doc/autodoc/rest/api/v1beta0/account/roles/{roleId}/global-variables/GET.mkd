@@ -135,21 +135,85 @@ The response body is an object of type:
 ## Swagger Definition ##
 
     {
-      "post": {
-        "description": "Declares a new Global Variable for the Role.", 
-        "parameters": [
-          {
-            "required": true, 
-            "in": "body", 
-            "description": "The JSON representation of a GlobalVariable object.", 
-            "name": "globalVariableObject", 
-            "schema": {
-              "$ref": "#/definitions/GlobalVariable"
-            }
-          }
-        ], 
+      "get": {
+        "description": "Describes all Global Variables associated with the Role.", 
         "responses": {
+          "200": {
+            "description": "A list of GlobalVariable objects.", 
+            "schema": {
+              "$ref": "#/definitions/GlobalVariableListResponse"
+            }
+          }, 
+          "400": {
+            "description": "A client-side error was made.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ]
+          }, 
+          "401": {
+            "description": "Request was not authenticated.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ]
+          }, 
+          "403": {
+            "description": "Insufficient permissions.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ]
+          }, 
+          "404": {
+            "description": "Resource not found.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "The route you are trying to access does not exist.", 
+                "name": "EndpointNotFound", 
+                "noDoc": true
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist.", 
+                "name": "ObjectNotFound"
+              }
+            ]
+          }, 
           "409": {
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
             "x-errorCodes": [
               {
                 "description": "The changes you are trying to make aren't possible while this object is in use.", 
@@ -175,65 +239,7 @@ The response body is an object of type:
                 "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
                 "name": "ConfigurationMismatch"
               }
-            ], 
-            "description": "Conflict with current state.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "201": {
-            "description": "The JSON representation of a GlobalVariable object.", 
-            "schema": {
-              "$ref": "#/definitions/GlobalVariableDetailsResponse"
-            }
-          }, 
-          "400": {
-            "x-errorCodes": [
-              {
-                "description": "Your request is structurally incorrect, and was not understood by the API.", 
-                "name": "InvalidStructure"
-              }, 
-              {
-                "description": "Your request was understood by the API, but included data that is not acceptable.", 
-                "name": "InvalidValue"
-              }, 
-              {
-                "description": "Your request wasn't understood by the API.", 
-                "name": "BadRequest"
-              }
-            ], 
-            "description": "A client-side error was made.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "401": {
-            "x-errorCodes": [
-              {
-                "description": "Your request authentication failed to validate.", 
-                "name": "BadAuthentication"
-              }
-            ], 
-            "description": "Request was not authenticated.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "403": {
-            "x-errorCodes": [
-              {
-                "description": "Your request should be made in a different Scope.", 
-                "name": "ScopeViolation"
-              }, 
-              {
-                "description": "Your request requires permissions you do not have.", 
-                "name": "PermissionViolation"
-              }
-            ], 
-            "description": "Insufficient permissions.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
+            ]
           }, 
           "500": {
             "description": "A server-side error occured.", 
@@ -249,23 +255,6 @@ The response body is an object of type:
           }, 
           "503": {
             "description": "The service is currently unavailable.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "404": {
-            "x-errorCodes": [
-              {
-                "noDoc": true, 
-                "description": "The route you are trying to access does not exist.", 
-                "name": "EndpointNotFound"
-              }, 
-              {
-                "description": "The URL you are trying to access does not exist.", 
-                "name": "ObjectNotFound"
-              }
-            ], 
-            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -274,20 +263,106 @@ The response body is an object of type:
       }, 
       "parameters": [
         {
-          "x-references": {
-            "$ref": "#/definitions/Role"
-          }, 
           "description": "The ID of a Role object.", 
           "in": "path", 
+          "name": "roleId", 
           "required": true, 
           "type": "integer", 
-          "name": "roleId"
+          "x-references": {
+            "$ref": "#/definitions/Role"
+          }
         }
       ], 
-      "get": {
-        "description": "Describes all Global Variables associated with the Role.", 
+      "post": {
+        "description": "Declares a new Global Variable for the Role.", 
+        "parameters": [
+          {
+            "description": "The JSON representation of a GlobalVariable object.", 
+            "in": "body", 
+            "name": "globalVariableObject", 
+            "required": true, 
+            "schema": {
+              "$ref": "#/definitions/GlobalVariable"
+            }
+          }
+        ], 
         "responses": {
+          "201": {
+            "description": "The JSON representation of a GlobalVariable object.", 
+            "schema": {
+              "$ref": "#/definitions/GlobalVariableDetailsResponse"
+            }
+          }, 
+          "400": {
+            "description": "A client-side error was made.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ]
+          }, 
+          "401": {
+            "description": "Request was not authenticated.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ]
+          }, 
+          "403": {
+            "description": "Insufficient permissions.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ]
+          }, 
+          "404": {
+            "description": "Resource not found.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "The route you are trying to access does not exist.", 
+                "name": "EndpointNotFound", 
+                "noDoc": true
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist.", 
+                "name": "ObjectNotFound"
+              }
+            ]
+          }, 
           "409": {
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
             "x-errorCodes": [
               {
                 "description": "The changes you are trying to make aren't possible while this object is in use.", 
@@ -313,65 +388,7 @@ The response body is an object of type:
                 "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
                 "name": "ConfigurationMismatch"
               }
-            ], 
-            "description": "Conflict with current state.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "200": {
-            "description": "A list of GlobalVariable objects.", 
-            "schema": {
-              "$ref": "#/definitions/GlobalVariableListResponse"
-            }
-          }, 
-          "400": {
-            "x-errorCodes": [
-              {
-                "description": "Your request is structurally incorrect, and was not understood by the API.", 
-                "name": "InvalidStructure"
-              }, 
-              {
-                "description": "Your request was understood by the API, but included data that is not acceptable.", 
-                "name": "InvalidValue"
-              }, 
-              {
-                "description": "Your request wasn't understood by the API.", 
-                "name": "BadRequest"
-              }
-            ], 
-            "description": "A client-side error was made.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "401": {
-            "x-errorCodes": [
-              {
-                "description": "Your request authentication failed to validate.", 
-                "name": "BadAuthentication"
-              }
-            ], 
-            "description": "Request was not authenticated.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "403": {
-            "x-errorCodes": [
-              {
-                "description": "Your request should be made in a different Scope.", 
-                "name": "ScopeViolation"
-              }, 
-              {
-                "description": "Your request requires permissions you do not have.", 
-                "name": "PermissionViolation"
-              }
-            ], 
-            "description": "Insufficient permissions.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
+            ]
           }, 
           "500": {
             "description": "A server-side error occured.", 
@@ -387,23 +404,6 @@ The response body is an object of type:
           }, 
           "503": {
             "description": "The service is currently unavailable.", 
-            "schema": {
-              "$ref": "#/definitions/ApiErrorResponse"
-            }
-          }, 
-          "404": {
-            "x-errorCodes": [
-              {
-                "noDoc": true, 
-                "description": "The route you are trying to access does not exist.", 
-                "name": "EndpointNotFound"
-              }, 
-              {
-                "description": "The URL you are trying to access does not exist.", 
-                "name": "ObjectNotFound"
-              }
-            ], 
-            "description": "Resource not found.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
