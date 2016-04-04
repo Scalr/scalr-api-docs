@@ -41,7 +41,7 @@ To filter on this field, pass the `id` property of the [`CloudAwsVpcForeignKey`]
 e.g.: `vpc=...`.
 
 
-### `timezone` (optional) ###
+### `timezone` (optional, filterable) ###
 
 
 
@@ -49,17 +49,16 @@ e.g.: `vpc=...`.
 Property of type: `string`.
 
 
+To filter on this field, use: `timezone=...`.
 
 
-### `teamOwner` (optional, filterable) ###
+### `teams` (optional, filterable) ###
 
-Identifier of the Team who owns the Farm.
+List of the Teams that have access to the Farm.
 
 
-An object of type [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd).
-
-To filter on this field, pass the `id` property of the [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd) object you are referencing,
-e.g.: `teamOwner=...`.
+An array of 
+objects of type [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd).
 
 
 ### `owner` (optional, filterable) ###
@@ -150,9 +149,12 @@ To filter on this field, use: `id=...`.
         "project": {
           "$ref": "#/definitions/ProjectForeignKey"
         }, 
-        "teamOwner": {
-          "$ref": "#/definitions/TeamForeignKey", 
-          "description": "Identifier of the Team who owns the Farm."
+        "teams": {
+          "description": "List of the Teams that have access to the Farm.", 
+          "items": {
+            "$ref": "#/definitions/TeamForeignKey"
+          }, 
+          "type": "array"
         }, 
         "timezone": {
           "type": "string"
@@ -171,7 +173,8 @@ To filter on this field, use: `id=...`.
         "name", 
         "owner", 
         "project", 
-        "teamOwner", 
+        "teams", 
+        "timezone", 
         "vpc"
       ], 
       "x-usedIn": [

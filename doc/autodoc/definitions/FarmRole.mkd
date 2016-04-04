@@ -21,7 +21,7 @@ e.g.: `role=...`.
 
 ### `platform` (required, filterable) ###
 
-Farm role platform.
+Farm Role platform.
 
 
 Property of type: `string`.
@@ -129,7 +129,7 @@ e.g.: `farm=...`.
           "$ref": "#/definitions/PlacementConfiguration"
         }, 
         "platform": {
-          "description": "Farm role platform.", 
+          "description": "Farm Role platform.", 
           "type": "string"
         }, 
         "role": {

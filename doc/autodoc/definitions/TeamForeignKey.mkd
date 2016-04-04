@@ -8,9 +8,9 @@
 
 ## Properties ##
 
-### `id` (optional) ###
+### `id` (read-only) ###
 
-Team ID.
+Identifier of the Team.
 
 
 Property of type: `integer`.
@@ -20,20 +20,15 @@ Property of type: `integer`.
 
 
 
-## Used in ##
-
-  + [`/environments/{envId}/teams/`](./../rest/api/v1beta0/account/environments/{envId}/teams/)
 
 ## Swagger Definition ##
 
     {
       "properties": {
         "id": {
-          "description": "Team ID.", 
+          "description": "Identifier of the Team.", 
+          "readOnly": true, 
           "type": "integer"
         }
-      }, 
-      "x-usedIn": [
-        "/environments/{envId}/teams/"
-      ]
+      }
     }

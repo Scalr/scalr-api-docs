@@ -24,12 +24,12 @@ Parameter of type: `integer`.
 
 The request body parameter is passed as the body of the request.
 
-#### `teamForeignKeyObject` ####
+#### `teamObject` ####
 
-The JSON representation of a TeamForeignKey object.
+The JSON representation of a Team object.
 
 
-An object of type: [`TeamForeignKey`](./../../../../../../../definitions/TeamForeignKey.mkd).
+An object of type: [`Team`](./../../../../../../../definitions/Team.mkd).
 
 
 
@@ -40,10 +40,10 @@ An object of type: [`TeamForeignKey`](./../../../../../../../definitions/TeamFor
 
 ### 201 ###
 
-A foreign key to the Team object.
+The JSON representation of a Team object.
 
 The response body is an object of type:
-[`TeamForeignKey`](./../../../../../../../definitions/TeamForeignKey.mkd).
+[`TeamDetailsResponse`](./../../../../../../../definitions/TeamDetailsResponse.mkd).
 
 
 
@@ -151,9 +151,9 @@ The response body is an object of type:
         "description": "List of Teams that have access to this Environment.", 
         "responses": {
           "200": {
-            "description": "A list of TeamForeignKey objects.", 
+            "description": "A list of Team objects.", 
             "schema": {
-              "$ref": "#/definitions/TeamForeignKeyListResponse"
+              "$ref": "#/definitions/TeamListResponse"
             }
           }, 
           "400": {
@@ -286,20 +286,20 @@ The response body is an object of type:
         "description": "Allows the Team access to the Environment.", 
         "parameters": [
           {
-            "description": "The JSON representation of a TeamForeignKey object.", 
+            "description": "The JSON representation of a Team object.", 
             "in": "body", 
-            "name": "teamForeignKeyObject", 
+            "name": "teamObject", 
             "required": true, 
             "schema": {
-              "$ref": "#/definitions/TeamForeignKey"
+              "$ref": "#/definitions/Team"
             }
           }
         ], 
         "responses": {
           "201": {
-            "description": "A foreign key to the Team object.", 
+            "description": "The JSON representation of a Team object.", 
             "schema": {
-              "$ref": "#/definitions/TeamForeignKey"
+              "$ref": "#/definitions/TeamDetailsResponse"
             }
           }, 
           "400": {
