@@ -19,6 +19,7 @@ Property of type: `string`.
 The following are valid values for the `retrieveMethod` property:
   + `read`
   + `execute`
+  + `url-request`
 
 To filter on this field, use: `retrieveMethod=...`.
 
@@ -127,7 +128,8 @@ The following are valid values for the `scope` property:
           "description": "The operation on the File that should be performed to obtain the value of the Metric.", 
           "enum": [
             "read", 
-            "execute"
+            "execute", 
+            "url-request"
           ], 
           "type": "string"
         }, 

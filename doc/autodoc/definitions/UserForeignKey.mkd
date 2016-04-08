@@ -10,7 +10,7 @@
 
 ### `id` (optional) ###
 
-User ID.
+Identifier of the User.
 
 
 Property of type: `integer`.
@@ -26,7 +26,7 @@ Property of type: `integer`.
     {
       "properties": {
         "id": {
-          "description": "User ID.", 
+          "description": "Identifier of the User.", 
           "type": "integer"
         }
       }

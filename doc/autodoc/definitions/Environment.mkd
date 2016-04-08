@@ -8,6 +8,28 @@
 
 ## Properties ##
 
+### `name` (required, filterable) ###
+
+
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `name=...`.
+
+
+### `costCenter` (required, filterable) ###
+
+
+
+
+An object of type [`CostCenterForeignKey`](./../definitions/CostCenterForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`CostCenterForeignKey`](./../definitions/CostCenterForeignKey.mkd) object you are referencing,
+e.g.: `costCenter=...`.
+
+
 ### `status` (optional, filterable) ###
 
 
@@ -21,28 +43,6 @@ The following are valid values for the `status` property:
   + `inactive`
 
 To filter on this field, use: `status=...`.
-
-
-### `name` (optional, filterable) ###
-
-
-
-
-Property of type: `string`.
-
-
-To filter on this field, use: `name=...`.
-
-
-### `costCenter` (optional, filterable) ###
-
-
-
-
-An object of type [`CostCenterForeignKey`](./../definitions/CostCenterForeignKey.mkd).
-
-To filter on this field, pass the `id` property of the [`CostCenterForeignKey`](./../definitions/CostCenterForeignKey.mkd) object you are referencing,
-e.g.: `costCenter=...`.
 
 
 ### `id` (read-only, filterable) ###
@@ -101,16 +101,16 @@ To filter on this field, use: `added=...`.
           "type": "string"
         }
       }, 
+      "required": [
+        "costCenter", 
+        "name"
+      ], 
       "x-filterable": [
         "added", 
         "costCenter", 
         "id", 
         "name", 
         "status"
-      ], 
-      "x-required": [
-        "costCenter", 
-        "name"
       ], 
       "x-usedIn": [
         "/environments/", 

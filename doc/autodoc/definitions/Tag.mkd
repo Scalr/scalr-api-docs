@@ -1,0 +1,51 @@
+# `Tag` #
+
+JSON Representation of the Tag.
+
+
+
+
+
+## Properties ##
+
+### `key` (required) ###
+
+The Tag key.
+
+
+Property of type: `string`.
+
+
+
+
+### `value` (optional) ###
+
+The Tag value.
+
+
+Property of type: `string`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "description": "JSON Representation of the Tag.", 
+      "properties": {
+        "key": {
+          "description": "The Tag key.", 
+          "type": "string"
+        }, 
+        "value": {
+          "description": "The Tag value.", 
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "key"
+      ]
+    }

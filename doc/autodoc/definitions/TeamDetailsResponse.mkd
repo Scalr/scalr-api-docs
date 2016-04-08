@@ -1,4 +1,4 @@
-# `TeamForeignKeyListResponse` #
+# `TeamDetailsResponse` #
 
 
 
@@ -8,6 +8,15 @@
 
 ## Properties ##
 
+### `data` (optional) ###
+
+
+
+
+An object of type [`Team`](./../definitions/Team.mkd).
+
+
+
 ### `warnings` (read-only) ###
 
 
@@ -15,15 +24,6 @@
 
 An array of 
 objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
-
-
-### `pagination` (read-only) ###
-
-
-
-
-An object of type [`ApiPagination`](./../definitions/ApiPagination.mkd).
-
 
 
 ### `meta` (read-only) ###
@@ -44,15 +44,6 @@ An array of
 objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 
-### `data` (read-only) ###
-
-
-
-
-An array of 
-objects of type [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd).
-
-
 
 
 ## Used in ##
@@ -64,11 +55,7 @@ objects of type [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd).
     {
       "properties": {
         "data": {
-          "items": {
-            "$ref": "#/definitions/TeamForeignKey"
-          }, 
-          "readOnly": true, 
-          "type": "array"
+          "$ref": "#/definitions/Team"
         }, 
         "errors": {
           "items": {
@@ -81,10 +68,6 @@ objects of type [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd).
           "$ref": "#/definitions/ApiMetaContainer", 
           "readOnly": true
         }, 
-        "pagination": {
-          "$ref": "#/definitions/ApiPagination", 
-          "readOnly": true
-        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -94,7 +77,7 @@ objects of type [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/TeamForeignKey"
+        "$ref": "#/definitions/Team"
       }, 
       "x-usedIn": [
         "/environments/{envId}/teams/"

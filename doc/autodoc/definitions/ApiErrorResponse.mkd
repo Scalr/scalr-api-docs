@@ -73,6 +73,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/scripts/{scriptId}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/)
   + [`/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/)
   + [`/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+  + [`/teams/`](./../rest/api/v1beta0/account/teams/)
   + [`/{envId}/cloud-credentials/`](./../rest/api/v1beta0/user/{envId}/cloud-credentials/)
   + [`/{envId}/cloud-credentials/{cloudCredentialsId}/`](./../rest/api/v1beta0/user/{envId}/cloud-credentials/{cloudCredentialsId}/)
   + [`/{envId}/cost-centers/`](./../rest/api/v1beta0/user/{envId}/cost-centers/)
@@ -181,6 +182,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/scripts/{scriptId}/", 
         "/scripts/{scriptId}/script-versions/", 
         "/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/teams/", 
         "/{envId}/cloud-credentials/", 
         "/{envId}/cloud-credentials/{cloudCredentialsId}/", 
         "/{envId}/cost-centers/", 

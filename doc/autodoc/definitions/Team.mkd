@@ -1,0 +1,70 @@
+# `Team` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `name` (optional) ###
+
+The name of the Team.
+
+
+Property of type: `string`.
+
+
+
+
+### `description` (optional) ###
+
+Description of the Team.
+
+
+Property of type: `string`.
+
+
+
+
+### `id` (read-only) ###
+
+Identifier of the Team.
+
+
+Property of type: `integer`.
+
+
+
+
+
+
+## Used in ##
+
+  + [`/environments/{envId}/teams/`](./../rest/api/v1beta0/account/environments/{envId}/teams/)
+  + [`/environments/{envId}/teams/{teamId}/`](./../rest/api/v1beta0/account/environments/{envId}/teams/{teamId}/)
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "description": {
+          "description": "Description of the Team.", 
+          "type": "string"
+        }, 
+        "id": {
+          "description": "Identifier of the Team.", 
+          "readOnly": true, 
+          "type": "integer"
+        }, 
+        "name": {
+          "description": "The name of the Team.", 
+          "type": "string"
+        }
+      }, 
+      "x-usedIn": [
+        "/environments/{envId}/teams/", 
+        "/environments/{envId}/teams/{teamId}/"
+      ]
+    }
