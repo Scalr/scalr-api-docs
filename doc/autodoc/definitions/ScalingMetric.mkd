@@ -73,7 +73,7 @@ Property of type: `boolean`.
 To filter on this field, use: `inverted=...`.
 
 
-### `scope` (read-only) ###
+### `scope` (read-only, filterable) ###
 
 
 
@@ -87,8 +87,10 @@ The following are valid values for the `scope` property:
   + `environment`
   + `farm`
   + `farmrole`
+  + `role`
   + `server`
 
+To filter on this field, use: `scope=...`.
 
 
 
@@ -140,6 +142,7 @@ The following are valid values for the `scope` property:
             "environment", 
             "farm", 
             "farmrole", 
+            "role", 
             "server"
           ], 
           "readOnly": true, 
@@ -156,7 +159,8 @@ The following are valid values for the `scope` property:
         "function", 
         "inverted", 
         "name", 
-        "retrieveMethod"
+        "retrieveMethod", 
+        "scope"
       ], 
       "x-usedIn": [
         "/{envId}/scaling-metrics/", 

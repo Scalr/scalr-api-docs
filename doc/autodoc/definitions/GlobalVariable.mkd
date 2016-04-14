@@ -52,6 +52,7 @@ The following are valid values for the `requiredIn` property:
   + `environment`
   + `farm`
   + `farmrole`
+  + `role`
   + `server`
 
 
@@ -120,6 +121,7 @@ The following are valid values for the `declaredIn` property:
   + `environment`
   + `farm`
   + `farmrole`
+  + `role`
   + `server`
 
 
@@ -183,6 +185,7 @@ Property of type: `string`.
             "environment", 
             "farm", 
             "farmrole", 
+            "role", 
             "server"
           ], 
           "readOnly": true, 
@@ -215,6 +218,7 @@ Property of type: `string`.
             "environment", 
             "farm", 
             "farmrole", 
+            "role", 
             "server"
           ], 
           "type": "string"

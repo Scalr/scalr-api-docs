@@ -1,4 +1,4 @@
-# `TeamDetailsResponse` #
+# `EnvironmentTeamDetailsResponse` #
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-An object of type [`Team`](./../definitions/Team.mkd).
+An object of type [`EnvironmentTeam`](./../definitions/EnvironmentTeam.mkd).
 
 
 
@@ -48,15 +48,14 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 ## Used in ##
 
-  + [`/teams/`](./../rest/api/v1beta0/account/teams/)
-  + [`/teams/{teamId}/`](./../rest/api/v1beta0/account/teams/{teamId}/)
+  + [`/environments/{envId}/teams/`](./../rest/api/v1beta0/account/environments/{envId}/teams/)
 
 ## Swagger Definition ##
 
     {
       "properties": {
         "data": {
-          "$ref": "#/definitions/Team"
+          "$ref": "#/definitions/EnvironmentTeam"
         }, 
         "errors": {
           "items": {
@@ -78,10 +77,9 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/Team"
+        "$ref": "#/definitions/EnvironmentTeam"
       }, 
       "x-usedIn": [
-        "/teams/", 
-        "/teams/{teamId}/"
+        "/environments/{envId}/teams/"
       ]
     }

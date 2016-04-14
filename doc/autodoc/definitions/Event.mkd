@@ -43,6 +43,7 @@ The following are valid values for the `scope` property:
   + `environment`
   + `farm`
   + `farmrole`
+  + `role`
   + `server`
 
 To filter on this field, use: `scope=...`.
@@ -75,6 +76,7 @@ To filter on this field, use: `scope=...`.
             "environment", 
             "farm", 
             "farmrole", 
+            "role", 
             "server"
           ], 
           "readOnly": true, 

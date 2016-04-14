@@ -1,0 +1,63 @@
+# `EnvironmentTeam` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `team` (required, filterable) ###
+
+Identifier of the Team.
+
+
+An object of type [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`TeamForeignKey`](./../definitions/TeamForeignKey.mkd) object you are referencing,
+e.g.: `team=...`.
+
+
+### `defaultAclRole` (read-only, filterable) ###
+
+Default ACL Role which overrides Team's default ACL Role for the Environment.  If it's ommited Team's default ACL Role will be applied.  Beware that default ACL Role is only applied for Users which get Team membership without explicitly defined ACL Role.
+
+
+An object of type [`AclRoleForeignKey`](./../definitions/AclRoleForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`AclRoleForeignKey`](./../definitions/AclRoleForeignKey.mkd) object you are referencing,
+e.g.: `defaultAclRole=...`.
+
+
+
+
+## Used in ##
+
+  + [`/environments/{envId}/teams/`](./../rest/api/v1beta0/account/environments/{envId}/teams/)
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "defaultAclRole": {
+          "$ref": "#/definitions/AclRoleForeignKey", 
+          "description": "Default ACL Role which overrides Team's default ACL Role for the Environment.  If it's ommited Team's default ACL Role will be applied.  Beware that default ACL Role is only applied for Users which get Team membership without explicitly defined ACL Role.", 
+          "readOnly": true
+        }, 
+        "team": {
+          "$ref": "#/definitions/TeamForeignKey", 
+          "description": "Identifier of the Team."
+        }
+      }, 
+      "required": [
+        "team"
+      ], 
+      "x-filterable": [
+        "defaultAclRole", 
+        "team"
+      ], 
+      "x-usedIn": [
+        "/environments/{envId}/teams/"
+      ]
+    }

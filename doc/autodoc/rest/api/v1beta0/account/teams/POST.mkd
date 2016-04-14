@@ -1,23 +1,23 @@
-# `GET /api/v1beta0/account/environments/{envId}/teams/` #
+# `POST /api/v1beta0/account/teams/` #
 
-List of Teams that have access to this Environment.
+Creates a new Team in the Account.
 
 ## Request Parameters #
 
-### Path Parameters ###
-
-Path parameters are included in the URL.
-
-#### `envId` ####
-
-The ID of the Environment being accessed.
-
-Parameter of type: `integer`.
 
 
 
 
+### Request Body ###
 
+The request body parameter is passed as the body of the request.
+
+#### `teamObject` ####
+
+The JSON representation of a Team object.
+
+
+An object of type: [`Team`](./../../../../../definitions/Team.mkd).
 
 
 
@@ -26,12 +26,12 @@ Parameter of type: `integer`.
 ## Responses ##
 
 
-### 200 ###
+### 201 ###
 
-A list of EnvironmentTeam objects.
+The JSON representation of a Team object.
 
 The response body is an object of type:
-[`EnvironmentTeamListResponse`](./../../../../../../../definitions/EnvironmentTeamListResponse.mkd).
+[`TeamDetailsResponse`](./../../../../../definitions/TeamDetailsResponse.mkd).
 
 
 
@@ -40,7 +40,7 @@ The response body is an object of type:
 A client-side error was made.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -54,7 +54,7 @@ The following errors **may** be returned by this endpoint.
 Request was not authenticated.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -66,7 +66,7 @@ The following errors **may** be returned by this endpoint.
 Insufficient permissions.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -79,7 +79,7 @@ The following errors **may** be returned by this endpoint.
 Resource not found.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -91,7 +91,7 @@ The following errors **may** be returned by this endpoint.
 Conflict with current state.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -108,7 +108,7 @@ The following errors **may** be returned by this endpoint.
 A server-side error occured.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -117,7 +117,7 @@ The response body is an object of type:
 Error is raised when the feature is not implemented in Scalr.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -126,7 +126,7 @@ The response body is an object of type:
 The service is currently unavailable.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -136,12 +136,12 @@ The response body is an object of type:
 
     {
       "get": {
-        "description": "List of Teams that have access to this Environment.", 
+        "description": "Describes the Account Teams.", 
         "responses": {
           "200": {
-            "description": "A list of EnvironmentTeam objects.", 
+            "description": "A list of Team objects.", 
             "schema": {
-              "$ref": "#/definitions/EnvironmentTeamListResponse"
+              "$ref": "#/definitions/TeamListResponse"
             }
           }, 
           "400": {
@@ -261,33 +261,24 @@ The response body is an object of type:
           }
         }
       }, 
-      "parameters": [
-        {
-          "description": "The ID of the Environment being accessed.", 
-          "in": "path", 
-          "name": "envId", 
-          "required": true, 
-          "type": "integer"
-        }
-      ], 
       "post": {
-        "description": "Allows the Team access to the Environment.", 
+        "description": "Creates a new Team in the Account.", 
         "parameters": [
           {
-            "description": "The JSON representation of a EnvironmentTeam object.", 
+            "description": "The JSON representation of a Team object.", 
             "in": "body", 
-            "name": "environmentTeamObject", 
+            "name": "teamObject", 
             "required": true, 
             "schema": {
-              "$ref": "#/definitions/EnvironmentTeam"
+              "$ref": "#/definitions/Team"
             }
           }
         ], 
         "responses": {
           "201": {
-            "description": "The JSON representation of a EnvironmentTeam object.", 
+            "description": "The JSON representation of a Team object.", 
             "schema": {
-              "$ref": "#/definitions/EnvironmentTeamDetailsResponse"
+              "$ref": "#/definitions/TeamDetailsResponse"
             }
           }, 
           "400": {

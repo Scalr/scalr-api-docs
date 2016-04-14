@@ -1,4 +1,4 @@
-# `TeamDetailsResponse` #
+# `EnvironmentTeamListResponse` #
 
 
 
@@ -8,15 +8,6 @@
 
 ## Properties ##
 
-### `data` (optional) ###
-
-
-
-
-An object of type [`Team`](./../definitions/Team.mkd).
-
-
-
 ### `warnings` (read-only) ###
 
 
@@ -24,6 +15,15 @@ An object of type [`Team`](./../definitions/Team.mkd).
 
 An array of 
 objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `pagination` (read-only) ###
+
+
+
+
+An object of type [`ApiPagination`](./../definitions/ApiPagination.mkd).
+
 
 
 ### `meta` (read-only) ###
@@ -44,19 +44,31 @@ An array of
 objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 
+### `data` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`EnvironmentTeam`](./../definitions/EnvironmentTeam.mkd).
+
+
 
 
 ## Used in ##
 
-  + [`/teams/`](./../rest/api/v1beta0/account/teams/)
-  + [`/teams/{teamId}/`](./../rest/api/v1beta0/account/teams/{teamId}/)
+  + [`/environments/{envId}/teams/`](./../rest/api/v1beta0/account/environments/{envId}/teams/)
 
 ## Swagger Definition ##
 
     {
       "properties": {
         "data": {
-          "$ref": "#/definitions/Team"
+          "items": {
+            "$ref": "#/definitions/EnvironmentTeam"
+          }, 
+          "readOnly": true, 
+          "type": "array"
         }, 
         "errors": {
           "items": {
@@ -69,6 +81,10 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
           "$ref": "#/definitions/ApiMetaContainer", 
           "readOnly": true
         }, 
+        "pagination": {
+          "$ref": "#/definitions/ApiPagination", 
+          "readOnly": true
+        }, 
         "warnings": {
           "items": {
             "$ref": "#/definitions/ApiMessage"
@@ -78,10 +94,9 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         }
       }, 
       "x-derived": {
-        "$ref": "#/definitions/Team"
+        "$ref": "#/definitions/EnvironmentTeam"
       }, 
       "x-usedIn": [
-        "/teams/", 
-        "/teams/{teamId}/"
+        "/environments/{envId}/teams/"
       ]
     }

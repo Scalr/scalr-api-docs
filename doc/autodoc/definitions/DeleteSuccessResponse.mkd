@@ -63,6 +63,7 @@ Property of type: `string`.
   + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
   + [`/scripts/{scriptId}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/)
   + [`/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/)
+  + [`/teams/{teamId}/`](./../rest/api/v1beta0/account/teams/{teamId}/)
   + [`/{envId}/cloud-credentials/{cloudCredentialsId}/`](./../rest/api/v1beta0/user/{envId}/cloud-credentials/{cloudCredentialsId}/)
   + [`/{envId}/events/{eventId}/`](./../rest/api/v1beta0/user/{envId}/events/{eventId}/)
   + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/)
@@ -124,6 +125,7 @@ Property of type: `string`.
         "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/scripts/{scriptId}/", 
         "/scripts/{scriptId}/script-versions/", 
+        "/teams/{teamId}/", 
         "/{envId}/cloud-credentials/{cloudCredentialsId}/", 
         "/{envId}/events/{eventId}/", 
         "/{envId}/farm-roles/{farmRoleId}/", 

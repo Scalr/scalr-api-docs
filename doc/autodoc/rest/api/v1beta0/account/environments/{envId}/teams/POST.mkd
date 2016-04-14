@@ -24,12 +24,12 @@ Parameter of type: `integer`.
 
 The request body parameter is passed as the body of the request.
 
-#### `teamObject` ####
+#### `environmentTeamObject` ####
 
-The JSON representation of a Team object.
+The JSON representation of a EnvironmentTeam object.
 
 
-An object of type: [`Team`](./../../../../../../../definitions/Team.mkd).
+An object of type: [`EnvironmentTeam`](./../../../../../../../definitions/EnvironmentTeam.mkd).
 
 
 
@@ -40,10 +40,10 @@ An object of type: [`Team`](./../../../../../../../definitions/Team.mkd).
 
 ### 201 ###
 
-The JSON representation of a Team object.
+The JSON representation of a EnvironmentTeam object.
 
 The response body is an object of type:
-[`TeamDetailsResponse`](./../../../../../../../definitions/TeamDetailsResponse.mkd).
+[`EnvironmentTeamDetailsResponse`](./../../../../../../../definitions/EnvironmentTeamDetailsResponse.mkd).
 
 
 
@@ -151,9 +151,9 @@ The response body is an object of type:
         "description": "List of Teams that have access to this Environment.", 
         "responses": {
           "200": {
-            "description": "A list of Team objects.", 
+            "description": "A list of EnvironmentTeam objects.", 
             "schema": {
-              "$ref": "#/definitions/TeamListResponse"
+              "$ref": "#/definitions/EnvironmentTeamListResponse"
             }
           }, 
           "400": {
@@ -286,20 +286,20 @@ The response body is an object of type:
         "description": "Allows the Team access to the Environment.", 
         "parameters": [
           {
-            "description": "The JSON representation of a Team object.", 
+            "description": "The JSON representation of a EnvironmentTeam object.", 
             "in": "body", 
-            "name": "teamObject", 
+            "name": "environmentTeamObject", 
             "required": true, 
             "schema": {
-              "$ref": "#/definitions/Team"
+              "$ref": "#/definitions/EnvironmentTeam"
             }
           }
         ], 
         "responses": {
           "201": {
-            "description": "The JSON representation of a Team object.", 
+            "description": "The JSON representation of a EnvironmentTeam object.", 
             "schema": {
-              "$ref": "#/definitions/TeamDetailsResponse"
+              "$ref": "#/definitions/EnvironmentTeamDetailsResponse"
             }
           }, 
           "400": {
