@@ -418,6 +418,7 @@ The response body is an object of type:
           "description": "The name of the cloud.", 
           "in": "path", 
           "name": "cloud", 
+          "pattern": "\\w+", 
           "required": true, 
           "type": "string"
         }

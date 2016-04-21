@@ -92,6 +92,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/placement/)
   + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
   + [`/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/servers/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/servers/)
   + [`/{envId}/farms/`](./../rest/api/v1beta0/user/{envId}/farms/)
   + [`/{envId}/farms/{farmId}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/)
   + [`/{envId}/farms/{farmId}/actions/clone/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/actions/clone/)
@@ -100,6 +101,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
   + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/)
   + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
+  + [`/{envId}/farms/{farmId}/servers/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/servers/)
   + [`/{envId}/images/`](./../rest/api/v1beta0/user/{envId}/images/)
   + [`/{envId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/)
   + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/actions/copy/)
@@ -124,6 +126,12 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/{envId}/scripts/{scriptId}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/)
   + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
   + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+  + [`/{envId}/servers/`](./../rest/api/v1beta0/user/{envId}/servers/)
+  + [`/{envId}/servers/{serverId}/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/)
+  + [`/{envId}/servers/{serverId}/actions/reboot/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/reboot/)
+  + [`/{envId}/servers/{serverId}/actions/resume/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/resume/)
+  + [`/{envId}/servers/{serverId}/actions/suspend/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/suspend/)
+  + [`/{envId}/servers/{serverId}/actions/terminate/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/terminate/)
 
 ## Swagger Definition ##
 
@@ -203,6 +211,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/farm-roles/{farmRoleId}/placement/", 
         "/{envId}/farm-roles/{farmRoleId}/scaling/", 
         "/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/", 
+        "/{envId}/farm-roles/{farmRoleId}/servers/", 
         "/{envId}/farms/", 
         "/{envId}/farms/{farmId}/", 
         "/{envId}/farms/{farmId}/actions/clone/", 
@@ -211,6 +220,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/farms/{farmId}/farm-roles/", 
         "/{envId}/farms/{farmId}/global-variables/", 
         "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
+        "/{envId}/farms/{farmId}/servers/", 
         "/{envId}/images/", 
         "/{envId}/images/{imageId}/", 
         "/{envId}/images/{imageId}/actions/copy/", 
@@ -234,6 +244,12 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/{envId}/scripts/", 
         "/{envId}/scripts/{scriptId}/", 
         "/{envId}/scripts/{scriptId}/script-versions/", 
-        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
+        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/{envId}/servers/", 
+        "/{envId}/servers/{serverId}/", 
+        "/{envId}/servers/{serverId}/actions/reboot/", 
+        "/{envId}/servers/{serverId}/actions/resume/", 
+        "/{envId}/servers/{serverId}/actions/suspend/", 
+        "/{envId}/servers/{serverId}/actions/terminate/"
       ]
     }

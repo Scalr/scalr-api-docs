@@ -14,7 +14,7 @@ Note that you can pass a complete [`Os`](./../definitions/Os.mkd) object as well
 
 ### `id` (required) ###
 
-
+An ID uniquely identifying this OS in Scalr.
 
 
 Property of type: `string`.
@@ -30,6 +30,7 @@ Property of type: `string`.
     {
       "properties": {
         "id": {
+          "description": "An ID uniquely identifying this OS in Scalr.", 
           "type": "string"
         }
       }, 

@@ -8,7 +8,7 @@
 
 ## Properties ##
 
-### `id` (optional) ###
+### `id` (required) ###
 
 Identifier of the User.
 
@@ -29,5 +29,8 @@ Property of type: `integer`.
           "description": "Identifier of the User.", 
           "type": "integer"
         }
-      }
+      }, 
+      "required": [
+        "id"
+      ]
     }

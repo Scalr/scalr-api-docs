@@ -57,6 +57,9 @@ To filter on this field, use: `billingCode=...`.
           "type": "string"
         }, 
         "id": {
+          "maxLength": 36, 
+          "minLength": 36, 
+          "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
           "readOnly": true, 
           "type": "string"
         }, 

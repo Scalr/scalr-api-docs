@@ -8,15 +8,6 @@
 
 ## Properties ##
 
-### `data` (optional) ###
-
-
-
-
-An object of type [`RoleCategory`](./../definitions/RoleCategory.mkd).
-
-
-
 ### `warnings` (read-only) ###
 
 
@@ -44,6 +35,15 @@ An array of
 objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 
+### `data` (read-only) ###
+
+
+
+
+An object of type [`RoleCategory`](./../definitions/RoleCategory.mkd).
+
+
+
 
 
 ## Used in ##
@@ -58,7 +58,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
     {
       "properties": {
         "data": {
-          "$ref": "#/definitions/RoleCategory"
+          "$ref": "#/definitions/RoleCategory", 
+          "readOnly": true
         }, 
         "errors": {
           "items": {

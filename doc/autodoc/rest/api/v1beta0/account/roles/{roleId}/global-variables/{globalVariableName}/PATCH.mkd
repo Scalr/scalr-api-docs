@@ -420,7 +420,10 @@ The response body is an object of type:
         {
           "description": "The name of the Global Variable being accessed.", 
           "in": "path", 
+          "maxLength": 128, 
+          "minLength": 2, 
           "name": "globalVariableName", 
+          "pattern": "\\w+", 
           "required": true, 
           "type": "string"
         }

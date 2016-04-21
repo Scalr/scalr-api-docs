@@ -21,7 +21,7 @@ To filter on this field, use: `name=...`.
 
 ### `defaultAclRole` (required, filterable) ###
 
-Default ACL Role for the Team.  It is applied only for Users which get membership in a Team whithout explicitly defined ACL Role.
+Default ACL Role for the Team. It is applied only for Users which get membership in a Team whithout explicitly defined ACL Role.
 
 
 An object of type [`AclRoleForeignKey`](./../definitions/AclRoleForeignKey.mkd).
@@ -65,7 +65,7 @@ To filter on this field, use: `id=...`.
       "properties": {
         "defaultAclRole": {
           "$ref": "#/definitions/AclRoleForeignKey", 
-          "description": "Default ACL Role for the Team.  It is applied only for Users which get membership in a Team whithout explicitly defined ACL Role."
+          "description": "Default ACL Role for the Team. It is applied only for Users which get membership in a Team whithout explicitly defined ACL Role."
         }, 
         "description": {
           "description": "Description of the Team.", 

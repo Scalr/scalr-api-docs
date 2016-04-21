@@ -103,6 +103,7 @@ e.g.: `farm=...`.
   + [`/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/placement/)
   + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
   + [`/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/)
+  + [`/{envId}/farm-roles/{farmRoleId}/servers/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/servers/)
   + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
 
 ## Swagger Definition ##
@@ -163,6 +164,7 @@ e.g.: `farm=...`.
         "/{envId}/farm-roles/{farmRoleId}/placement/", 
         "/{envId}/farm-roles/{farmRoleId}/scaling/", 
         "/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/", 
+        "/{envId}/farm-roles/{farmRoleId}/servers/", 
         "/{envId}/farms/{farmId}/farm-roles/"
       ]
     }

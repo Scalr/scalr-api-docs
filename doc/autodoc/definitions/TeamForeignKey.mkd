@@ -4,11 +4,15 @@
 
 
 
+## Reference ##
+
+`TeamForeignKey` is used when a reference to an object of type [`Team`](./../definitions/Team.mkd) is expected.
+Note that you can pass a complete [`Team`](./../definitions/Team.mkd) object as well.
 
 
 ## Properties ##
 
-### `id` (read-only) ###
+### `id` (required) ###
 
 Identifier of the Team.
 
@@ -27,8 +31,16 @@ Property of type: `integer`.
       "properties": {
         "id": {
           "description": "Identifier of the Team.", 
-          "readOnly": true, 
           "type": "integer"
         }
+      }, 
+      "required": [
+        "id"
+      ], 
+      "x-derived": {
+        "$ref": "#/definitions/Team"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/Team"
       }
     }

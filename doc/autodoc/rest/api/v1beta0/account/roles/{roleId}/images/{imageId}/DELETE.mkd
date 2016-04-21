@@ -408,7 +408,10 @@ The response body is an object of type:
         {
           "description": "The ID of a Image object.", 
           "in": "path", 
+          "maxLength": 36, 
+          "minLength": 36, 
           "name": "imageId", 
+          "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
           "required": true, 
           "type": "string", 
           "x-references": {

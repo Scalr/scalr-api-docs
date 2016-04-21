@@ -1,0 +1,283 @@
+# `GET /api/v1beta0/user/{envId}/servers/` #
+
+Describes all Servers from the Environment.
+
+## Request Parameters #
+
+### Path Parameters ###
+
+Path parameters are included in the URL.
+
+#### `envId` ####
+
+The ID of the Environment scoping this request.
+
+Parameter of type: `integer`.
+
+
+
+
+
+
+
+
+
+
+## Responses ##
+
+
+### 200 ###
+
+A list of ServerSummary objects.
+
+The response body is an object of type:
+[`ServerSummaryListResponse`](./../../../../../../definitions/ServerSummaryListResponse.mkd).
+
+
+
+### 400 ###
+
+A client-side error was made.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `InvalidStructure`: Your request is structurally incorrect, and was not understood by the API. Check the error message for more information.
++ `InvalidValue`: Your request was understood by the API, but included data that is not acceptable. Check the error message for more information.
++ `BadRequest`: Your request wasn't understood by the API. Check the error message for more information.
+
+
+### 401 ###
+
+Request was not authenticated.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `BadAuthentication`: Your request authentication failed to validate. Check the error message for more information.
+
+
+### 403 ###
+
+Insufficient permissions.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `ScopeViolation`: Your request should be made in a different Scope. Check the error message for more information.
++ `PermissionViolation`: Your request requires permissions you do not have. Check the error message for more information.
+
+
+### 404 ###
+
+Resource not found.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `ObjectNotFound`: The URL you are trying to access does not exist. Check the error message for more information.
+
+
+### 409 ###
+
+Conflict with current state.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `ObjectInUse`: The changes you are trying to make aren't possible while this object is in use. Check the error message for more information.
++ `UnicityViolation`: The changes you are trying to make violate a unicity constraint. Check the error message for more information.
++ `Locked`: Some of the objects being changed is locked for changing. Check the error message for more information.
++ `NotEnabledPlatform`: Cloud platform is not enabled. Check the error message for more information.
++ `OperatingSystemMismatch`: The Operating system mismatch. Check the error message for more information.
++ `ConfigurationMismatch`: Some of the configuration settings cannot be applied, conflicts or wrong. Check the error message for more information.
++ `Deprecated`: Some of the object or action is deprecated. Check the error message for more information.
++ `UnacceptableState`: The action can't be perfomed due to object's state. Check the error message for more information.
+
+
+### 500 ###
+
+A server-side error occured.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+
+### 501 ###
+
+Error is raised when the feature is not implemented in Scalr.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+
+### 503 ###
+
+The service is currently unavailable.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "get": {
+        "description": "Describes all Servers from the Environment.", 
+        "responses": {
+          "200": {
+            "description": "A list of ServerSummary objects.", 
+            "schema": {
+              "$ref": "#/definitions/ServerSummaryListResponse"
+            }
+          }, 
+          "400": {
+            "description": "A client-side error was made.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ]
+          }, 
+          "401": {
+            "description": "Request was not authenticated.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ]
+          }, 
+          "403": {
+            "description": "Insufficient permissions.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ]
+          }, 
+          "404": {
+            "description": "Resource not found.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "The route you are trying to access does not exist.", 
+                "name": "EndpointNotFound", 
+                "noDoc": true
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist.", 
+                "name": "ObjectNotFound"
+              }
+            ]
+          }, 
+          "409": {
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
+              }, 
+              {
+                "description": "Some of the object or action is deprecated.", 
+                "name": "Deprecated"
+              }, 
+              {
+                "description": "The action can't be perfomed due to object's state.", 
+                "name": "UnacceptableState"
+              }
+            ]
+          }, 
+          "500": {
+            "description": "A server-side error occured.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "501": {
+            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "503": {
+            "description": "The service is currently unavailable.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }
+        }
+      }, 
+      "parameters": [
+        {
+          "description": "The ID of the Environment scoping this request.", 
+          "in": "path", 
+          "name": "envId", 
+          "required": true, 
+          "type": "integer"
+        }
+      ]
+    }

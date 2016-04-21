@@ -8,7 +8,7 @@
 
 ## Properties ##
 
-### `name` (required, create-only, filterable) ###
+### `name` (required, filterable) ###
 
 
 
@@ -85,9 +85,6 @@ To filter on this field, use: `id=...`.
         }
       }, 
       "required": [
-        "name"
-      ], 
-      "x-createOnly": [
         "name"
       ], 
       "x-filterable": [

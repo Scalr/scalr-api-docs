@@ -120,7 +120,8 @@ The following errors **may** be returned by this endpoint.
 + `NotEnabledPlatform`: Cloud platform is not enabled. Check the error message for more information.
 + `OperatingSystemMismatch`: The Operating system mismatch. Check the error message for more information.
 + `ConfigurationMismatch`: Some of the configuration settings cannot be applied, conflicts or wrong. Check the error message for more information.
-+ `Deprecated`: Some of the object or action is deprecated Check the error message for more information.
++ `Deprecated`: Some of the object or action is deprecated. Check the error message for more information.
++ `UnacceptableState`: The action can't be perfomed due to object's state. Check the error message for more information.
 
 
 ### 500 ###
@@ -275,8 +276,12 @@ The response body is an object of type:
                 "name": "ConfigurationMismatch"
               }, 
               {
-                "description": "Some of the object or action is deprecated", 
+                "description": "Some of the object or action is deprecated.", 
                 "name": "Deprecated"
+              }, 
+              {
+                "description": "The action can't be perfomed due to object's state.", 
+                "name": "UnacceptableState"
               }
             ]
           }, 
@@ -405,8 +410,12 @@ The response body is an object of type:
                 "name": "ConfigurationMismatch"
               }, 
               {
-                "description": "Some of the object or action is deprecated", 
+                "description": "Some of the object or action is deprecated.", 
                 "name": "Deprecated"
+              }, 
+              {
+                "description": "The action can't be perfomed due to object's state.", 
+                "name": "UnacceptableState"
               }
             ]
           }, 
@@ -441,7 +450,10 @@ The response body is an object of type:
         {
           "description": "The ID of a Image object.", 
           "in": "path", 
+          "maxLength": 36, 
+          "minLength": 36, 
           "name": "imageId", 
+          "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
           "required": true, 
           "type": "string", 
           "x-references": {
@@ -565,8 +577,12 @@ The response body is an object of type:
                 "name": "ConfigurationMismatch"
               }, 
               {
-                "description": "Some of the object or action is deprecated", 
+                "description": "Some of the object or action is deprecated.", 
                 "name": "Deprecated"
+              }, 
+              {
+                "description": "The action can't be perfomed due to object's state.", 
+                "name": "UnacceptableState"
               }
             ]
           }, 

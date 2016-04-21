@@ -8,15 +8,6 @@
 
 ## Properties ##
 
-### `data` (optional) ###
-
-
-
-
-An object of type [`Team`](./../definitions/Team.mkd).
-
-
-
 ### `warnings` (read-only) ###
 
 
@@ -44,6 +35,15 @@ An array of
 objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 
+### `data` (read-only) ###
+
+
+
+
+An object of type [`Team`](./../definitions/Team.mkd).
+
+
+
 
 
 ## Used in ##
@@ -56,7 +56,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
     {
       "properties": {
         "data": {
-          "$ref": "#/definitions/Team"
+          "$ref": "#/definitions/Team", 
+          "readOnly": true
         }, 
         "errors": {
           "items": {

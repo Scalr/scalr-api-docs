@@ -67,6 +67,7 @@ To filter on this field, use: `scope=...`.
         }, 
         "id": {
           "description": "The name of this custom event.", 
+          "pattern": "[A-Za-z0-9]+", 
           "type": "string"
         }, 
         "scope": {

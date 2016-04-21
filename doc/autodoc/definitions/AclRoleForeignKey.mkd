@@ -14,7 +14,7 @@ Note that you can pass a complete [`AclRole`](./../definitions/AclRole.mkd) obje
 
 ### `id` (required) ###
 
-
+Unique identifier of ACL Role object.
 
 
 Property of type: `string`.
@@ -30,6 +30,7 @@ Property of type: `string`.
     {
       "properties": {
         "id": {
+          "description": "Unique identifier of ACL Role object.", 
           "type": "string"
         }
       }, 

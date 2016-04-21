@@ -4,11 +4,15 @@
 
 
 
+## Reference ##
+
+`FarmRoleForeignKey` is used when a reference to an object of type [`FarmRole`](./../definitions/FarmRole.mkd) is expected.
+Note that you can pass a complete [`FarmRole`](./../definitions/FarmRole.mkd) object as well.
 
 
 ## Properties ##
 
-### `id` (read-only) ###
+### `id` (required) ###
 
 
 
@@ -26,8 +30,16 @@ Property of type: `integer`.
     {
       "properties": {
         "id": {
-          "readOnly": true, 
           "type": "integer"
         }
+      }, 
+      "required": [
+        "id"
+      ], 
+      "x-derived": {
+        "$ref": "#/definitions/FarmRole"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/FarmRole"
       }
     }

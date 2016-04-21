@@ -50,7 +50,7 @@ To filter on this field, use: `status=...`.
 
 
 
-Property of type: `int`.
+Property of type: `integer`.
 
 
 To filter on this field, use: `id=...`.
@@ -88,7 +88,7 @@ To filter on this field, use: `added=...`.
         }, 
         "id": {
           "readOnly": true, 
-          "type": "int"
+          "type": "integer"
         }, 
         "name": {
           "type": "string"

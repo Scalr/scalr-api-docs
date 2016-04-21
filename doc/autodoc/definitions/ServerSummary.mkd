@@ -8,6 +8,16 @@ JSON Representation of the Scalr Server.
 
 ## Properties ##
 
+### `type` (read-only) ###
+
+The type of the instance.
+
+
+Property of type: `string`.
+
+
+
+
 ### `status` (read-only, filterable) ###
 
 Server status.
@@ -26,10 +36,48 @@ The following are valid values for the `status` property:
   + `terminated`
   + `pending_terminate`
   + `suspended`
-  + `pending_suspend`
   + `resuming`
 
 To filter on this field, use: `status=...`.
+
+
+### `publicIp` (read-only, filterable) ###
+
+IP address of the public network interface of the Server.
+
+
+An array of 
+`string` objects.
+
+
+### `privateIp` (read-only, filterable) ###
+
+IP address of the private network interface of the Server.
+
+
+An array of 
+`string` objects.
+
+
+### `launched` (read-only) ###
+
+The date and time the Server was launched.
+
+
+Property of type: `string`.
+
+
+
+
+### `index` (read-only, filterable) ###
+
+The index of the Server in the Farm Role.
+
+
+Property of type: `integer`.
+
+
+To filter on this field, use: `index=...`.
 
 
 ### `id` (read-only, filterable) ###
@@ -143,8 +191,38 @@ To filter on this field, use: `cloudLocation=...`.
         }, 
         "id": {
           "description": "Identifier of the Scalr Server.", 
+          "maxLength": 36, 
+          "minLength": 36, 
+          "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
           "readOnly": true, 
           "type": "string"
+        }, 
+        "index": {
+          "description": "The index of the Server in the Farm Role.", 
+          "readOnly": true, 
+          "type": "integer"
+        }, 
+        "launched": {
+          "description": "The date and time the Server was launched.", 
+          "format": "date-time", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "privateIp": {
+          "description": "IP address of the private network interface of the Server.", 
+          "items": {
+            "type": "string"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "publicIp": {
+          "description": "IP address of the public network interface of the Server.", 
+          "items": {
+            "type": "string"
+          }, 
+          "readOnly": true, 
+          "type": "array"
         }, 
         "status": {
           "description": "Server status.", 
@@ -158,9 +236,13 @@ To filter on this field, use: `cloudLocation=...`.
             "terminated", 
             "pending_terminate", 
             "suspended", 
-            "pending_suspend", 
             "resuming"
           ], 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "type": {
+          "description": "The type of the instance.", 
           "readOnly": true, 
           "type": "string"
         }
@@ -169,6 +251,9 @@ To filter on this field, use: `cloudLocation=...`.
         "cloudLocation", 
         "cloudPlatform", 
         "id", 
+        "index", 
+        "privateIp", 
+        "publicIp", 
         "status"
       ]
     }

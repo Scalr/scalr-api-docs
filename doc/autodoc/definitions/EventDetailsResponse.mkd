@@ -8,15 +8,6 @@
 
 ## Properties ##
 
-### `data` (optional) ###
-
-
-
-
-An object of type [`Event`](./../definitions/Event.mkd).
-
-
-
 ### `warnings` (read-only) ###
 
 
@@ -44,6 +35,15 @@ An array of
 objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 
 
+### `data` (read-only) ###
+
+
+
+
+An object of type [`Event`](./../definitions/Event.mkd).
+
+
+
 
 
 ## Used in ##
@@ -58,7 +58,8 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
     {
       "properties": {
         "data": {
-          "$ref": "#/definitions/Event"
+          "$ref": "#/definitions/Event", 
+          "readOnly": true
         }, 
         "errors": {
           "items": {

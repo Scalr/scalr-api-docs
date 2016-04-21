@@ -392,6 +392,7 @@ The response body is an object of type:
           "description": "The ID of a Event object.", 
           "in": "path", 
           "name": "eventId", 
+          "pattern": "[A-Za-z0-9]+", 
           "required": true, 
           "type": "string", 
           "x-references": {

@@ -1,0 +1,94 @@
+# `ServerDetailsResponse` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `warnings` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `meta` (read-only) ###
+
+
+
+
+An object of type [`ApiMetaContainer`](./../definitions/ApiMetaContainer.mkd).
+
+
+
+### `errors` (read-only) ###
+
+
+
+
+An array of 
+objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
+
+
+### `data` (read-only) ###
+
+
+
+
+An object of type [`Server`](./../definitions/Server.mkd).
+
+
+
+
+
+## Used in ##
+
+  + [`/{envId}/servers/{serverId}/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/)
+  + [`/{envId}/servers/{serverId}/actions/reboot/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/reboot/)
+  + [`/{envId}/servers/{serverId}/actions/resume/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/resume/)
+  + [`/{envId}/servers/{serverId}/actions/suspend/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/suspend/)
+  + [`/{envId}/servers/{serverId}/actions/terminate/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/terminate/)
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "data": {
+          "$ref": "#/definitions/Server", 
+          "readOnly": true
+        }, 
+        "errors": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "meta": {
+          "$ref": "#/definitions/ApiMetaContainer", 
+          "readOnly": true
+        }, 
+        "warnings": {
+          "items": {
+            "$ref": "#/definitions/ApiMessage"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }
+      }, 
+      "x-derived": {
+        "$ref": "#/definitions/Server"
+      }, 
+      "x-usedIn": [
+        "/{envId}/servers/{serverId}/", 
+        "/{envId}/servers/{serverId}/actions/reboot/", 
+        "/{envId}/servers/{serverId}/actions/resume/", 
+        "/{envId}/servers/{serverId}/actions/suspend/", 
+        "/{envId}/servers/{serverId}/actions/terminate/"
+      ]
+    }
