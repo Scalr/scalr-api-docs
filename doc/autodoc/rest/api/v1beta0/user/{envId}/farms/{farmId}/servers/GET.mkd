@@ -35,10 +35,10 @@ Parameter of type: `integer`.
 
 ### 200 ###
 
-A list of Server objects.
+A list of ServerSummary objects.
 
 The response body is an object of type:
-[`ServerListResponse`](./../../../../../../../../definitions/ServerListResponse.mkd).
+[`ServerSummaryListResponse`](./../../../../../../../../definitions/ServerSummaryListResponse.mkd).
 
 
 
@@ -148,9 +148,9 @@ The response body is an object of type:
         "description": "Describes all Servers which correspond to the Farm.", 
         "responses": {
           "200": {
-            "description": "A list of Server objects.", 
+            "description": "A list of ServerSummary objects.", 
             "schema": {
-              "$ref": "#/definitions/ServerListResponse"
+              "$ref": "#/definitions/ServerSummaryListResponse"
             }
           }, 
           "400": {

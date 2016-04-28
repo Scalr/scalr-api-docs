@@ -17,7 +17,7 @@ Parameter of type: `integer`.
 
 #### `serverId` ####
 
-The ID of a Server object.
+The identifier of the Server.
 
 Parameter of type: `string`.
 
@@ -35,10 +35,10 @@ Parameter of type: `string`.
 
 ### 200 ###
 
-The JSON representation of a Server object.
+The JSON representation of a ServerSummary object.
 
 The response body is an object of type:
-[`ServerDetailsResponse`](./../../../../../../../../../definitions/ServerDetailsResponse.mkd).
+[`ServerSummaryDetailsResponse`](./../../../../../../../../../definitions/ServerSummaryDetailsResponse.mkd).
 
 
 
@@ -153,26 +153,23 @@ The response body is an object of type:
           "type": "integer"
         }, 
         {
-          "description": "The ID of a Server object.", 
+          "description": "The identifier of the Server.", 
           "in": "path", 
           "maxLength": 36, 
           "minLength": 36, 
           "name": "serverId", 
           "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
           "required": true, 
-          "type": "string", 
-          "x-references": {
-            "$ref": "#/definitions/Server"
-          }
+          "type": "string"
         }
       ], 
       "post": {
         "description": "Suspends a Server.", 
         "responses": {
           "200": {
-            "description": "The JSON representation of a Server object.", 
+            "description": "The JSON representation of a ServerSummary object.", 
             "schema": {
-              "$ref": "#/definitions/ServerDetailsResponse"
+              "$ref": "#/definitions/ServerSummaryDetailsResponse"
             }
           }, 
           "400": {
