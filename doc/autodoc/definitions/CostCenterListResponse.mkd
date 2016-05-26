@@ -57,8 +57,8 @@ objects of type [`CostCenter`](./../definitions/CostCenter.mkd).
 
 ## Used in ##
 
-  + [`/cost-centers/`](./../rest/api/v1beta0/account/cost-centers/)
-  + [`/{envId}/cost-centers/`](./../rest/api/v1beta0/user/{envId}/cost-centers/)
+  + [`/account/cost-centers/`](./../rest/api/v1beta0/account/cost-centers/)
+  + [`/user/{envId}/cost-centers/`](./../rest/api/v1beta0/user/{envId}/cost-centers/)
 
 ## Swagger Definition ##
 
@@ -98,7 +98,7 @@ objects of type [`CostCenter`](./../definitions/CostCenter.mkd).
         "$ref": "#/definitions/CostCenter"
       }, 
       "x-usedIn": [
-        "/cost-centers/", 
-        "/{envId}/cost-centers/"
+        "/account/cost-centers/", 
+        "/user/{envId}/cost-centers/"
       ]
     }

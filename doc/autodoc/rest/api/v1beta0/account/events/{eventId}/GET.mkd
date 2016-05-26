@@ -138,11 +138,8 @@ The response body is an object of type:
       "delete": {
         "description": "Deletes the Event from the Account.", 
         "responses": {
-          "200": {
-            "description": "Successful deletion.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
+          "204": {
+            "description": "Successful deletion."
           }, 
           "400": {
             "description": "A client-side error was made.", 
@@ -391,6 +388,7 @@ The response body is an object of type:
         {
           "description": "The ID of a Event object.", 
           "in": "path", 
+          "maxLength": 25, 
           "name": "eventId", 
           "pattern": "[A-Za-z0-9]+", 
           "required": true, 

@@ -76,8 +76,9 @@ To filter on this field, use: `family=...`.
 
 ## Used in ##
 
-  + [`/os/{osId}/`](./../rest/api/v1beta0/account/os/{osId}/)
-  + [`/{envId}/os/{osId}/`](./../rest/api/v1beta0/user/{envId}/os/{osId}/)
+  + [`/account/os/{osId}/`](./../rest/api/v1beta0/account/os/{osId}/)
+  + [`/global/os/{osId}/`](./../rest/api/v1beta0/global/os/{osId}/)
+  + [`/user/{envId}/os/{osId}/`](./../rest/api/v1beta0/user/{envId}/os/{osId}/)
 
 ## Swagger Definition ##
 
@@ -126,7 +127,8 @@ To filter on this field, use: `family=...`.
         "name"
       ], 
       "x-usedIn": [
-        "/os/{osId}/", 
-        "/{envId}/os/{osId}/"
+        "/account/os/{osId}/", 
+        "/global/os/{osId}/", 
+        "/user/{envId}/os/{osId}/"
       ]
     }

@@ -55,9 +55,9 @@ To filter on this field, use: `id=...`.
 
 ## Used in ##
 
-  + [`/environments/{envId}/teams/{teamId}/`](./../rest/api/v1beta0/account/environments/{envId}/teams/{teamId}/)
-  + [`/teams/`](./../rest/api/v1beta0/account/teams/)
-  + [`/teams/{teamId}/`](./../rest/api/v1beta0/account/teams/{teamId}/)
+  + [`/account/environments/{envId}/teams/{teamId}/`](./../rest/api/v1beta0/account/environments/{envId}/teams/{teamId}/)
+  + [`/account/teams/`](./../rest/api/v1beta0/account/teams/)
+  + [`/account/teams/{teamId}/`](./../rest/api/v1beta0/account/teams/{teamId}/)
 
 ## Swagger Definition ##
 
@@ -91,8 +91,8 @@ To filter on this field, use: `id=...`.
         "name"
       ], 
       "x-usedIn": [
-        "/environments/{envId}/teams/{teamId}/", 
-        "/teams/", 
-        "/teams/{teamId}/"
+        "/account/environments/{envId}/teams/{teamId}/", 
+        "/account/teams/", 
+        "/account/teams/{teamId}/"
       ]
     }

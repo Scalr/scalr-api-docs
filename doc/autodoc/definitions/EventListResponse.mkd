@@ -57,8 +57,8 @@ objects of type [`Event`](./../definitions/Event.mkd).
 
 ## Used in ##
 
-  + [`/events/`](./../rest/api/v1beta0/account/events/)
-  + [`/{envId}/events/`](./../rest/api/v1beta0/user/{envId}/events/)
+  + [`/account/events/`](./../rest/api/v1beta0/account/events/)
+  + [`/user/{envId}/events/`](./../rest/api/v1beta0/user/{envId}/events/)
 
 ## Swagger Definition ##
 
@@ -98,7 +98,7 @@ objects of type [`Event`](./../definitions/Event.mkd).
         "$ref": "#/definitions/Event"
       }, 
       "x-usedIn": [
-        "/events/", 
-        "/{envId}/events/"
+        "/account/events/", 
+        "/user/{envId}/events/"
       ]
     }

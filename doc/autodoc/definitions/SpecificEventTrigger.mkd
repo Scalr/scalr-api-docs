@@ -27,7 +27,7 @@ This `string` property is used for polymorphism. It **must** be set to: `"Specif
 
 
 
-An object of type [`Event`](./../definitions/Event.mkd).
+An object of type [`EventForeignKey`](./../definitions/EventForeignKey.mkd).
 
 
 
@@ -40,7 +40,7 @@ An object of type [`Event`](./../definitions/Event.mkd).
       "description": "Triggers when a specific Event fires.", 
       "properties": {
         "event": {
-          "$ref": "#/definitions/Event"
+          "$ref": "#/definitions/EventForeignKey"
         }, 
         "triggerType": {
           "enum": [

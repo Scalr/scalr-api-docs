@@ -147,11 +147,8 @@ The response body is an object of type:
       "delete": {
         "description": "Removes the specified Farm Role.", 
         "responses": {
-          "200": {
-            "description": "Farm Role deleted.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
+          "204": {
+            "description": "Farm Role deleted."
           }, 
           "400": {
             "description": "A client-side error was made.", 

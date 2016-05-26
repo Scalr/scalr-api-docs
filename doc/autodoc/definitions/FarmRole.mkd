@@ -93,18 +93,18 @@ e.g.: `farm=...`.
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/)
-  + [`/{envId}/farm-roles/{farmRoleId}/actions/import-server/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/actions/import-server/)
-  + [`/{envId}/farm-roles/{farmRoleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/)
-  + [`/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/)
-  + [`/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/instance/)
-  + [`/{envId}/farm-roles/{farmRoleId}/orchestration-rules/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/)
-  + [`/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/)
-  + [`/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/placement/)
-  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
-  + [`/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/)
-  + [`/{envId}/farm-roles/{farmRoleId}/servers/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/servers/)
-  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/actions/import-server/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/actions/import-server/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/instance/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/placement/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/servers/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/servers/)
+  + [`/user/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
 
 ## Swagger Definition ##
 
@@ -154,17 +154,17 @@ e.g.: `farm=...`.
         "role"
       ], 
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/", 
-        "/{envId}/farm-roles/{farmRoleId}/actions/import-server/", 
-        "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
-        "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/farm-roles/{farmRoleId}/instance/", 
-        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
-        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/{envId}/farm-roles/{farmRoleId}/placement/", 
-        "/{envId}/farm-roles/{farmRoleId}/scaling/", 
-        "/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/", 
-        "/{envId}/farm-roles/{farmRoleId}/servers/", 
-        "/{envId}/farms/{farmId}/farm-roles/"
+        "/user/{envId}/farm-roles/{farmRoleId}/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/actions/import-server/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/global-variables/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/instance/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/placement/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/scaling/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/servers/", 
+        "/user/{envId}/farms/{farmId}/farm-roles/"
       ]
     }

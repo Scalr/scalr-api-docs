@@ -48,7 +48,7 @@ An object of type [`ScalingConfiguration`](./../definitions/ScalingConfiguration
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
 
 ## Swagger Definition ##
 
@@ -81,6 +81,6 @@ An object of type [`ScalingConfiguration`](./../definitions/ScalingConfiguration
         "$ref": "#/definitions/ScalingConfiguration"
       }, 
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/scaling/"
+        "/user/{envId}/farm-roles/{farmRoleId}/scaling/"
       ]
     }

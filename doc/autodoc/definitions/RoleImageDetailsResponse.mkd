@@ -48,10 +48,12 @@ An object of type [`RoleImage`](./../definitions/RoleImage.mkd).
 
 ## Used in ##
 
-  + [`/roles/{roleId}/images/`](./../rest/api/v1beta0/account/roles/{roleId}/images/)
-  + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/actions/replace/)
-  + [`/{envId}/roles/{roleId}/images/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/account/roles/{roleId}/images/`](./../rest/api/v1beta0/account/roles/{roleId}/images/)
+  + [`/account/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/global/roles/{roleId}/images/`](./../rest/api/v1beta0/global/roles/{roleId}/images/)
+  + [`/global/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/global/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/user/{envId}/roles/{roleId}/images/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/)
+  + [`/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
 
 ## Swagger Definition ##
 
@@ -84,9 +86,11 @@ An object of type [`RoleImage`](./../definitions/RoleImage.mkd).
         "$ref": "#/definitions/RoleImage"
       }, 
       "x-usedIn": [
-        "/roles/{roleId}/images/", 
-        "/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/{envId}/roles/{roleId}/images/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/"
+        "/account/roles/{roleId}/images/", 
+        "/account/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/global/roles/{roleId}/images/", 
+        "/global/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/user/{envId}/roles/{roleId}/images/", 
+        "/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/"
       ]
     }

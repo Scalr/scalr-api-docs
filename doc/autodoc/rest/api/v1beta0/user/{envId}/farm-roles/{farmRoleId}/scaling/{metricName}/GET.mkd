@@ -154,11 +154,8 @@ The response body is an object of type:
       "delete": {
         "description": "Deletes the Scaling rules from the Farm Role.", 
         "responses": {
-          "200": {
-            "description": "Successful deletion.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
+          "204": {
+            "description": "Successful deletion."
           }, 
           "400": {
             "description": "A client-side error was made.", 

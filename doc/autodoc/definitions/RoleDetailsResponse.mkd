@@ -48,10 +48,12 @@ An object of type [`Role`](./../definitions/Role.mkd).
 
 ## Used in ##
 
-  + [`/roles/`](./../rest/api/v1beta0/account/roles/)
-  + [`/roles/{roleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/)
-  + [`/{envId}/roles/`](./../rest/api/v1beta0/user/{envId}/roles/)
-  + [`/{envId}/roles/{roleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/)
+  + [`/account/roles/`](./../rest/api/v1beta0/account/roles/)
+  + [`/account/roles/{roleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/)
+  + [`/global/roles/`](./../rest/api/v1beta0/global/roles/)
+  + [`/global/roles/{roleId}/`](./../rest/api/v1beta0/global/roles/{roleId}/)
+  + [`/user/{envId}/roles/`](./../rest/api/v1beta0/user/{envId}/roles/)
+  + [`/user/{envId}/roles/{roleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/)
 
 ## Swagger Definition ##
 
@@ -84,9 +86,11 @@ An object of type [`Role`](./../definitions/Role.mkd).
         "$ref": "#/definitions/Role"
       }, 
       "x-usedIn": [
-        "/roles/", 
-        "/roles/{roleId}/", 
-        "/{envId}/roles/", 
-        "/{envId}/roles/{roleId}/"
+        "/account/roles/", 
+        "/account/roles/{roleId}/", 
+        "/global/roles/", 
+        "/global/roles/{roleId}/", 
+        "/user/{envId}/roles/", 
+        "/user/{envId}/roles/{roleId}/"
       ]
     }

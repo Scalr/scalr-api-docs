@@ -156,17 +156,11 @@ The response body is an object of type:
           }
         ], 
         "responses": {
-          "200": {
-            "description": "Successful deletion.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
-          }, 
           "202": {
-            "description": "Image scheduled for deregistration and deletion from cloud.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
+            "description": "Image scheduled for deregistration and deletion from cloud."
+          }, 
+          "204": {
+            "description": "Successful deletion."
           }, 
           "400": {
             "description": "A client-side error was made.", 

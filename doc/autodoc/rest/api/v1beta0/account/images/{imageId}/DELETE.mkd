@@ -18,18 +18,6 @@ Parameter of type: `string`.
 
 
 
-### Query Parameters ###
-
-Query parameters are passed as GET parameters (e.g. `?query=value`).
-
-#### `deleteFromCloud` ####
-
-Attempt to delete this Image from the Cloud.
-
-Parameter of type: `boolean`.
-
-
-
 
 
 
@@ -38,21 +26,10 @@ Parameter of type: `boolean`.
 ## Responses ##
 
 
-### 200 ###
+### 204 ###
 
 Successful deletion.
 
-The response body is an object of type:
-[`DeleteSuccessResponse`](./../../../../../../definitions/DeleteSuccessResponse.mkd).
-
-
-
-### 202 ###
-
-Image scheduled for deregistration and deletion from cloud.
-
-The response body is an object of type:
-[`DeleteSuccessResponse`](./../../../../../../definitions/DeleteSuccessResponse.mkd).
 
 
 
@@ -158,27 +135,9 @@ The response body is an object of type:
     {
       "delete": {
         "description": "Deregisters an Image from the Account.", 
-        "parameters": [
-          {
-            "description": "Attempt to delete this Image from the Cloud.", 
-            "in": "query", 
-            "name": "deleteFromCloud", 
-            "required": false, 
-            "type": "boolean"
-          }
-        ], 
         "responses": {
-          "200": {
-            "description": "Successful deletion.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
-          }, 
-          "202": {
-            "description": "Image scheduled for deregistration and deletion from cloud.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
+          "204": {
+            "description": "Successful deletion."
           }, 
           "400": {
             "description": "A client-side error was made.", 

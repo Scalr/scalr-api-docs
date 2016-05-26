@@ -48,8 +48,8 @@ An object of type [`FarmRole`](./../definitions/FarmRole.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/)
-  + [`/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/)
+  + [`/user/{envId}/farms/{farmId}/farm-roles/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/farm-roles/)
 
 ## Swagger Definition ##
 
@@ -82,7 +82,7 @@ An object of type [`FarmRole`](./../definitions/FarmRole.mkd).
         "$ref": "#/definitions/FarmRole"
       }, 
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/", 
-        "/{envId}/farms/{farmId}/farm-roles/"
+        "/user/{envId}/farm-roles/{farmRoleId}/", 
+        "/user/{envId}/farms/{farmId}/farm-roles/"
       ]
     }

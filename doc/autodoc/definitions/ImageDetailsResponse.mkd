@@ -48,14 +48,16 @@ An object of type [`Image`](./../definitions/Image.mkd).
 
 ## Used in ##
 
-  + [`/images/`](./../rest/api/v1beta0/account/images/)
-  + [`/images/{imageId}/`](./../rest/api/v1beta0/account/images/{imageId}/)
-  + [`/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/account/images/{imageId}/actions/copy/)
-  + [`/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/)
-  + [`/{envId}/images/`](./../rest/api/v1beta0/user/{envId}/images/)
-  + [`/{envId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/)
-  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/actions/copy/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/)
+  + [`/account/images/`](./../rest/api/v1beta0/account/images/)
+  + [`/account/images/{imageId}/`](./../rest/api/v1beta0/account/images/{imageId}/)
+  + [`/account/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/)
+  + [`/global/images/`](./../rest/api/v1beta0/global/images/)
+  + [`/global/images/{imageId}/`](./../rest/api/v1beta0/global/images/{imageId}/)
+  + [`/global/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/global/roles/{roleId}/images/{imageId}/)
+  + [`/user/{envId}/images/`](./../rest/api/v1beta0/user/{envId}/images/)
+  + [`/user/{envId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/)
+  + [`/user/{envId}/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/actions/copy/)
+  + [`/user/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/)
 
 ## Swagger Definition ##
 
@@ -88,13 +90,15 @@ An object of type [`Image`](./../definitions/Image.mkd).
         "$ref": "#/definitions/Image"
       }, 
       "x-usedIn": [
-        "/images/", 
-        "/images/{imageId}/", 
-        "/images/{imageId}/actions/copy/", 
-        "/roles/{roleId}/images/{imageId}/", 
-        "/{envId}/images/", 
-        "/{envId}/images/{imageId}/", 
-        "/{envId}/images/{imageId}/actions/copy/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/"
+        "/account/images/", 
+        "/account/images/{imageId}/", 
+        "/account/roles/{roleId}/images/{imageId}/", 
+        "/global/images/", 
+        "/global/images/{imageId}/", 
+        "/global/roles/{roleId}/images/{imageId}/", 
+        "/user/{envId}/images/", 
+        "/user/{envId}/images/{imageId}/", 
+        "/user/{envId}/images/{imageId}/actions/copy/", 
+        "/user/{envId}/roles/{roleId}/images/{imageId}/"
       ]
     }

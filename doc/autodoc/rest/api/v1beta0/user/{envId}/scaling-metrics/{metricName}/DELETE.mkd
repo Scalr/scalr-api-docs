@@ -33,12 +33,10 @@ Parameter of type: `string`.
 ## Responses ##
 
 
-### 200 ###
+### 204 ###
 
 Successful deletion.
 
-The response body is an object of type:
-[`DeleteSuccessResponse`](./../../../../../../../definitions/DeleteSuccessResponse.mkd).
 
 
 
@@ -147,11 +145,8 @@ The response body is an object of type:
       "delete": {
         "description": "Deletes the specified Scaling metric.", 
         "responses": {
-          "200": {
-            "description": "Successful deletion.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
+          "204": {
+            "description": "Successful deletion."
           }, 
           "400": {
             "description": "A client-side error was made.", 

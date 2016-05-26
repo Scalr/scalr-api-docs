@@ -57,8 +57,8 @@ objects of type [`Script`](./../definitions/Script.mkd).
 
 ## Used in ##
 
-  + [`/scripts/`](./../rest/api/v1beta0/account/scripts/)
-  + [`/{envId}/scripts/`](./../rest/api/v1beta0/user/{envId}/scripts/)
+  + [`/account/scripts/`](./../rest/api/v1beta0/account/scripts/)
+  + [`/user/{envId}/scripts/`](./../rest/api/v1beta0/user/{envId}/scripts/)
 
 ## Swagger Definition ##
 
@@ -98,7 +98,7 @@ objects of type [`Script`](./../definitions/Script.mkd).
         "$ref": "#/definitions/Script"
       }, 
       "x-usedIn": [
-        "/scripts/", 
-        "/{envId}/scripts/"
+        "/account/scripts/", 
+        "/user/{envId}/scripts/"
       ]
     }

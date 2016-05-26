@@ -48,10 +48,10 @@ An object of type [`Script`](./../definitions/Script.mkd).
 
 ## Used in ##
 
-  + [`/scripts/`](./../rest/api/v1beta0/account/scripts/)
-  + [`/scripts/{scriptId}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/)
-  + [`/{envId}/scripts/`](./../rest/api/v1beta0/user/{envId}/scripts/)
-  + [`/{envId}/scripts/{scriptId}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/)
+  + [`/account/scripts/`](./../rest/api/v1beta0/account/scripts/)
+  + [`/account/scripts/{scriptId}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/)
+  + [`/user/{envId}/scripts/`](./../rest/api/v1beta0/user/{envId}/scripts/)
+  + [`/user/{envId}/scripts/{scriptId}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/)
 
 ## Swagger Definition ##
 
@@ -84,9 +84,9 @@ An object of type [`Script`](./../definitions/Script.mkd).
         "$ref": "#/definitions/Script"
       }, 
       "x-usedIn": [
-        "/scripts/", 
-        "/scripts/{scriptId}/", 
-        "/{envId}/scripts/", 
-        "/{envId}/scripts/{scriptId}/"
+        "/account/scripts/", 
+        "/account/scripts/{scriptId}/", 
+        "/user/{envId}/scripts/", 
+        "/user/{envId}/scripts/{scriptId}/"
       ]
     }

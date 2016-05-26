@@ -53,10 +53,10 @@ To filter on this field, use: `scope=...`.
 
 ## Used in ##
 
-  + [`/events/`](./../rest/api/v1beta0/account/events/)
-  + [`/events/{eventId}/`](./../rest/api/v1beta0/account/events/{eventId}/)
-  + [`/{envId}/events/`](./../rest/api/v1beta0/user/{envId}/events/)
-  + [`/{envId}/events/{eventId}/`](./../rest/api/v1beta0/user/{envId}/events/{eventId}/)
+  + [`/account/events/`](./../rest/api/v1beta0/account/events/)
+  + [`/account/events/{eventId}/`](./../rest/api/v1beta0/account/events/{eventId}/)
+  + [`/user/{envId}/events/`](./../rest/api/v1beta0/user/{envId}/events/)
+  + [`/user/{envId}/events/{eventId}/`](./../rest/api/v1beta0/user/{envId}/events/{eventId}/)
 
 ## Swagger Definition ##
 
@@ -67,6 +67,7 @@ To filter on this field, use: `scope=...`.
         }, 
         "id": {
           "description": "The name of this custom event.", 
+          "maxLength": 25, 
           "pattern": "[A-Za-z0-9]+", 
           "type": "string"
         }, 
@@ -95,9 +96,9 @@ To filter on this field, use: `scope=...`.
         "scope"
       ], 
       "x-usedIn": [
-        "/events/", 
-        "/events/{eventId}/", 
-        "/{envId}/events/", 
-        "/{envId}/events/{eventId}/"
+        "/account/events/", 
+        "/account/events/{eventId}/", 
+        "/user/{envId}/events/", 
+        "/user/{envId}/events/{eventId}/"
       ]
     }

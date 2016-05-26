@@ -48,10 +48,10 @@ An object of type [`ScriptVersion`](./../definitions/ScriptVersion.mkd).
 
 ## Used in ##
 
-  + [`/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/)
-  + [`/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
-  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
-  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+  + [`/account/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/)
+  + [`/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+  + [`/user/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
+  + [`/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
 
 ## Swagger Definition ##
 
@@ -84,9 +84,9 @@ An object of type [`ScriptVersion`](./../definitions/ScriptVersion.mkd).
         "$ref": "#/definitions/ScriptVersion"
       }, 
       "x-usedIn": [
-        "/scripts/{scriptId}/script-versions/", 
-        "/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
-        "/{envId}/scripts/{scriptId}/script-versions/", 
-        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
+        "/account/scripts/{scriptId}/script-versions/", 
+        "/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/user/{envId}/scripts/{scriptId}/script-versions/", 
+        "/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
       ]
     }

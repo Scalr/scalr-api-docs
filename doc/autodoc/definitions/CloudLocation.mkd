@@ -49,8 +49,7 @@ To filter on this field, use: `cloudLocation=...`.
 
 ## Used in ##
 
-  + [`/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/account/images/{imageId}/actions/copy/)
-  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/actions/copy/)
+  + [`/user/{envId}/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/actions/copy/)
 
 ## Swagger Definition ##
 
@@ -88,7 +87,6 @@ To filter on this field, use: `cloudLocation=...`.
         "cloudPlatform"
       ], 
       "x-usedIn": [
-        "/images/{imageId}/actions/copy/", 
-        "/{envId}/images/{imageId}/actions/copy/"
+        "/user/{envId}/images/{imageId}/actions/copy/"
       ]
     }

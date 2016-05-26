@@ -48,7 +48,7 @@ An object of type [`InstanceConfiguration`](./../definitions/InstanceConfigurati
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/instance/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/instance/)
 
 ## Swagger Definition ##
 
@@ -81,6 +81,6 @@ An object of type [`InstanceConfiguration`](./../definitions/InstanceConfigurati
         "$ref": "#/definitions/InstanceConfiguration"
       }, 
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/instance/"
+        "/user/{envId}/farm-roles/{farmRoleId}/instance/"
       ]
     }

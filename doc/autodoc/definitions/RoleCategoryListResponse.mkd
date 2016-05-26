@@ -57,8 +57,9 @@ objects of type [`RoleCategory`](./../definitions/RoleCategory.mkd).
 
 ## Used in ##
 
-  + [`/role-categories/`](./../rest/api/v1beta0/account/role-categories/)
-  + [`/{envId}/role-categories/`](./../rest/api/v1beta0/user/{envId}/role-categories/)
+  + [`/account/role-categories/`](./../rest/api/v1beta0/account/role-categories/)
+  + [`/global/role-categories/`](./../rest/api/v1beta0/global/role-categories/)
+  + [`/user/{envId}/role-categories/`](./../rest/api/v1beta0/user/{envId}/role-categories/)
 
 ## Swagger Definition ##
 
@@ -98,7 +99,8 @@ objects of type [`RoleCategory`](./../definitions/RoleCategory.mkd).
         "$ref": "#/definitions/RoleCategory"
       }, 
       "x-usedIn": [
-        "/role-categories/", 
-        "/{envId}/role-categories/"
+        "/account/role-categories/", 
+        "/global/role-categories/", 
+        "/user/{envId}/role-categories/"
       ]
     }

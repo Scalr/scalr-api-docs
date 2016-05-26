@@ -57,7 +57,7 @@ objects of type [`AclRole`](./../definitions/AclRole.mkd).
 
 ## Used in ##
 
-  + [`/acl-roles/`](./../rest/api/v1beta0/account/acl-roles/)
+  + [`/account/acl-roles/`](./../rest/api/v1beta0/account/acl-roles/)
 
 ## Swagger Definition ##
 
@@ -97,6 +97,6 @@ objects of type [`AclRole`](./../definitions/AclRole.mkd).
         "$ref": "#/definitions/AclRole"
       }, 
       "x-usedIn": [
-        "/acl-roles/"
+        "/account/acl-roles/"
       ]
     }

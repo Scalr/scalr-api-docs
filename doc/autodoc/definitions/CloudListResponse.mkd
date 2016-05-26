@@ -57,7 +57,7 @@ objects of type [`Cloud`](./../definitions/Cloud.mkd).
 
 ## Used in ##
 
-  + [`/environments/{envId}/clouds/`](./../rest/api/v1beta0/account/environments/{envId}/clouds/)
+  + [`/account/environments/{envId}/clouds/`](./../rest/api/v1beta0/account/environments/{envId}/clouds/)
 
 ## Swagger Definition ##
 
@@ -97,6 +97,6 @@ objects of type [`Cloud`](./../definitions/Cloud.mkd).
         "$ref": "#/definitions/Cloud"
       }, 
       "x-usedIn": [
-        "/environments/{envId}/clouds/"
+        "/account/environments/{envId}/clouds/"
       ]
     }

@@ -57,7 +57,7 @@ objects of type [`Team`](./../definitions/Team.mkd).
 
 ## Used in ##
 
-  + [`/teams/`](./../rest/api/v1beta0/account/teams/)
+  + [`/account/teams/`](./../rest/api/v1beta0/account/teams/)
 
 ## Swagger Definition ##
 
@@ -97,6 +97,6 @@ objects of type [`Team`](./../definitions/Team.mkd).
         "$ref": "#/definitions/Team"
       }, 
       "x-usedIn": [
-        "/teams/"
+        "/account/teams/"
       ]
     }

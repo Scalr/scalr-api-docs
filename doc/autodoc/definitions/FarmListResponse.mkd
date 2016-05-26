@@ -57,7 +57,7 @@ objects of type [`Farm`](./../definitions/Farm.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farms/`](./../rest/api/v1beta0/user/{envId}/farms/)
+  + [`/user/{envId}/farms/`](./../rest/api/v1beta0/user/{envId}/farms/)
 
 ## Swagger Definition ##
 
@@ -97,6 +97,6 @@ objects of type [`Farm`](./../definitions/Farm.mkd).
         "$ref": "#/definitions/Farm"
       }, 
       "x-usedIn": [
-        "/{envId}/farms/"
+        "/user/{envId}/farms/"
       ]
     }

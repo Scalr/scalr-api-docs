@@ -51,7 +51,7 @@ An array of
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
 
 ## Swagger Definition ##
 
@@ -76,6 +76,6 @@ An array of
         }
       }, 
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/scaling/"
+        "/user/{envId}/farm-roles/{farmRoleId}/scaling/"
       ]
     }

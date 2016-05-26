@@ -82,6 +82,26 @@ The following are valid values for the `architecture` property:
 To filter on this field, use: `architecture=...`.
 
 
+### `type` (optional) ###
+
+(Only used on EC2 currently) Whether this Image is HVM or EBS. At the Environment scope this property is read-only.
+
+
+Property of type: `string`.
+
+
+
+
+### `size` (optional) ###
+
+At the Environment scope this property is read-only.
+
+
+Property of type: `integer`.
+
+
+
+
 ### `scalrAgentInstalled` (create-only, filterable) ###
 
 Scalarizer is installed.
@@ -113,16 +133,6 @@ Property of type: `boolean`.
 
 
 To filter on this field, use: `cloudInitInstalled=...`.
-
-
-### `type` (read-only) ###
-
-(Only used on EC2 currently) Whether this Image is HVM or EBS.
-
-
-Property of type: `string`.
-
-
 
 
 ### `statusError` (read-only) ###
@@ -164,16 +174,6 @@ The following are valid values for the `source` property:
   + `BundleTask`
 
 To filter on this field, use: `source=...`.
-
-
-### `size` (read-only) ###
-
-
-
-
-Property of type: `integer`.
-
-
 
 
 ### `scope` (read-only, filterable) ###
@@ -242,16 +242,19 @@ Property of type: `string`.
 
 ## Used in ##
 
-  + [`/images/`](./../rest/api/v1beta0/account/images/)
-  + [`/images/{imageId}/`](./../rest/api/v1beta0/account/images/{imageId}/)
-  + [`/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/account/images/{imageId}/actions/copy/)
-  + [`/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/)
-  + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/actions/replace/)
-  + [`/{envId}/images/`](./../rest/api/v1beta0/user/{envId}/images/)
-  + [`/{envId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/)
-  + [`/{envId}/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/actions/copy/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/account/images/`](./../rest/api/v1beta0/account/images/)
+  + [`/account/images/{imageId}/`](./../rest/api/v1beta0/account/images/{imageId}/)
+  + [`/account/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/)
+  + [`/account/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/global/images/`](./../rest/api/v1beta0/global/images/)
+  + [`/global/images/{imageId}/`](./../rest/api/v1beta0/global/images/{imageId}/)
+  + [`/global/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/global/roles/{roleId}/images/{imageId}/)
+  + [`/global/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/global/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/user/{envId}/images/`](./../rest/api/v1beta0/user/{envId}/images/)
+  + [`/user/{envId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/)
+  + [`/user/{envId}/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/actions/copy/)
+  + [`/user/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/)
+  + [`/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
 
 ## Swagger Definition ##
 
@@ -342,7 +345,7 @@ Property of type: `string`.
           "type": "string"
         }, 
         "size": {
-          "readOnly": true, 
+          "description": "At the Environment scope this property is read-only.", 
           "type": "integer"
         }, 
         "source": {
@@ -370,8 +373,7 @@ Property of type: `string`.
           "type": "string"
         }, 
         "type": {
-          "description": "(Only used on EC2 currently) Whether this Image is HVM or EBS.", 
-          "readOnly": true, 
+          "description": "(Only used on EC2 currently) Whether this Image is HVM or EBS. At the Environment scope this property is read-only.", 
           "type": "string"
         }
       }, 
@@ -402,15 +404,18 @@ Property of type: `string`.
         "status"
       ], 
       "x-usedIn": [
-        "/images/", 
-        "/images/{imageId}/", 
-        "/images/{imageId}/actions/copy/", 
-        "/roles/{roleId}/images/{imageId}/", 
-        "/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/{envId}/images/", 
-        "/{envId}/images/{imageId}/", 
-        "/{envId}/images/{imageId}/actions/copy/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/"
+        "/account/images/", 
+        "/account/images/{imageId}/", 
+        "/account/roles/{roleId}/images/{imageId}/", 
+        "/account/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/global/images/", 
+        "/global/images/{imageId}/", 
+        "/global/roles/{roleId}/images/{imageId}/", 
+        "/global/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/user/{envId}/images/", 
+        "/user/{envId}/images/{imageId}/", 
+        "/user/{envId}/images/{imageId}/actions/copy/", 
+        "/user/{envId}/roles/{roleId}/images/{imageId}/", 
+        "/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/"
       ]
     }

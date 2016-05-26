@@ -57,8 +57,9 @@ objects of type [`Os`](./../definitions/Os.mkd).
 
 ## Used in ##
 
-  + [`/os/`](./../rest/api/v1beta0/account/os/)
-  + [`/{envId}/os/`](./../rest/api/v1beta0/user/{envId}/os/)
+  + [`/account/os/`](./../rest/api/v1beta0/account/os/)
+  + [`/global/os/`](./../rest/api/v1beta0/global/os/)
+  + [`/user/{envId}/os/`](./../rest/api/v1beta0/user/{envId}/os/)
 
 ## Swagger Definition ##
 
@@ -98,7 +99,8 @@ objects of type [`Os`](./../definitions/Os.mkd).
         "$ref": "#/definitions/Os"
       }, 
       "x-usedIn": [
-        "/os/", 
-        "/{envId}/os/"
+        "/account/os/", 
+        "/global/os/", 
+        "/user/{envId}/os/"
       ]
     }

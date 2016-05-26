@@ -52,6 +52,17 @@ Property of type: `boolean`.
 To filter on this field, use: `useScalrAgent=...`.
 
 
+### `quickStartGroup` (optional, filterable) ###
+
+The name of the QuickStart Group.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `quickStartGroup=...`.
+
+
 ### `quickStart` (optional, filterable) ###
 
 Whether it is QuickStart Role.
@@ -128,24 +139,33 @@ To filter on this field, use: `id=...`.
 
 ## Used in ##
 
-  + [`/roles/`](./../rest/api/v1beta0/account/roles/)
-  + [`/roles/{roleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/)
-  + [`/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/)
-  + [`/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/{globalVariableName}/)
-  + [`/roles/{roleId}/images/`](./../rest/api/v1beta0/account/roles/{roleId}/images/)
-  + [`/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/)
-  + [`/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/actions/replace/)
-  + [`/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/)
-  + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
-  + [`/{envId}/roles/`](./../rest/api/v1beta0/user/{envId}/roles/)
-  + [`/{envId}/roles/{roleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/)
-  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/)
-  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/{globalVariableName}/)
-  + [`/{envId}/roles/{roleId}/images/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/)
-  + [`/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
-  + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/)
-  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/account/roles/`](./../rest/api/v1beta0/account/roles/)
+  + [`/account/roles/{roleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/)
+  + [`/account/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/)
+  + [`/account/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/{globalVariableName}/)
+  + [`/account/roles/{roleId}/images/`](./../rest/api/v1beta0/account/roles/{roleId}/images/)
+  + [`/account/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/)
+  + [`/account/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/account/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/account/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/)
+  + [`/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/global/roles/`](./../rest/api/v1beta0/global/roles/)
+  + [`/global/roles/{roleId}/`](./../rest/api/v1beta0/global/roles/{roleId}/)
+  + [`/global/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/global/roles/{roleId}/global-variables/)
+  + [`/global/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/global/roles/{roleId}/global-variables/{globalVariableName}/)
+  + [`/global/roles/{roleId}/images/`](./../rest/api/v1beta0/global/roles/{roleId}/images/)
+  + [`/global/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/global/roles/{roleId}/images/{imageId}/)
+  + [`/global/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/global/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/global/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/global/roles/{roleId}/orchestration-rules/)
+  + [`/global/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/global/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/user/{envId}/roles/`](./../rest/api/v1beta0/user/{envId}/roles/)
+  + [`/user/{envId}/roles/{roleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/)
+  + [`/user/{envId}/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/)
+  + [`/user/{envId}/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/{globalVariableName}/)
+  + [`/user/{envId}/roles/{roleId}/images/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/)
+  + [`/user/{envId}/roles/{roleId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/)
+  + [`/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/)
+  + [`/user/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/)
+  + [`/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
 
 ## Swagger Definition ##
 
@@ -197,6 +217,10 @@ To filter on this field, use: `id=...`.
           "description": "Whether it is QuickStart Role.", 
           "type": "boolean"
         }, 
+        "quickStartGroup": {
+          "description": "The name of the QuickStart Group.", 
+          "type": "string"
+        }, 
         "scope": {
           "enum": [
             "scalr", 
@@ -232,27 +256,37 @@ To filter on this field, use: `id=...`.
         "name", 
         "os", 
         "quickStart", 
+        "quickStartGroup", 
         "scope", 
         "useScalrAgent"
       ], 
       "x-usedIn": [
-        "/roles/", 
-        "/roles/{roleId}/", 
-        "/roles/{roleId}/global-variables/", 
-        "/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/roles/{roleId}/images/", 
-        "/roles/{roleId}/images/{imageId}/", 
-        "/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/roles/{roleId}/orchestration-rules/", 
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/{envId}/roles/", 
-        "/{envId}/roles/{roleId}/", 
-        "/{envId}/roles/{roleId}/global-variables/", 
-        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/roles/{roleId}/images/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/", 
-        "/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
-        "/{envId}/roles/{roleId}/orchestration-rules/", 
-        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/"
+        "/account/roles/", 
+        "/account/roles/{roleId}/", 
+        "/account/roles/{roleId}/global-variables/", 
+        "/account/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/account/roles/{roleId}/images/", 
+        "/account/roles/{roleId}/images/{imageId}/", 
+        "/account/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/account/roles/{roleId}/orchestration-rules/", 
+        "/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/global/roles/", 
+        "/global/roles/{roleId}/", 
+        "/global/roles/{roleId}/global-variables/", 
+        "/global/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/global/roles/{roleId}/images/", 
+        "/global/roles/{roleId}/images/{imageId}/", 
+        "/global/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/global/roles/{roleId}/orchestration-rules/", 
+        "/global/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/user/{envId}/roles/", 
+        "/user/{envId}/roles/{roleId}/", 
+        "/user/{envId}/roles/{roleId}/global-variables/", 
+        "/user/{envId}/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/user/{envId}/roles/{roleId}/images/", 
+        "/user/{envId}/roles/{roleId}/images/{imageId}/", 
+        "/user/{envId}/roles/{roleId}/images/{imageId}/actions/replace/", 
+        "/user/{envId}/roles/{roleId}/orchestration-rules/", 
+        "/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/"
       ]
     }

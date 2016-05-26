@@ -1,0 +1,46 @@
+# `EventForeignKey` #
+
+
+
+
+
+## Reference ##
+
+`EventForeignKey` is used when a reference to an object of type [`Event`](./../definitions/Event.mkd) is expected.
+Note that you can pass a complete [`Event`](./../definitions/Event.mkd) object as well.
+
+
+## Properties ##
+
+### `id` (required) ###
+
+The name of this custom event.
+
+
+Property of type: `string`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "id": {
+          "description": "The name of this custom event.", 
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "id"
+      ], 
+      "x-derived": {
+        "$ref": "#/definitions/Event"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/Event"
+      }
+    }

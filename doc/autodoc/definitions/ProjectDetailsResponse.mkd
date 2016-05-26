@@ -48,8 +48,8 @@ An object of type [`Project`](./../definitions/Project.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/projects/`](./../rest/api/v1beta0/user/{envId}/projects/)
-  + [`/{envId}/projects/{projectId}/`](./../rest/api/v1beta0/user/{envId}/projects/{projectId}/)
+  + [`/user/{envId}/projects/`](./../rest/api/v1beta0/user/{envId}/projects/)
+  + [`/user/{envId}/projects/{projectId}/`](./../rest/api/v1beta0/user/{envId}/projects/{projectId}/)
 
 ## Swagger Definition ##
 
@@ -82,7 +82,7 @@ An object of type [`Project`](./../definitions/Project.mkd).
         "$ref": "#/definitions/Project"
       }, 
       "x-usedIn": [
-        "/{envId}/projects/", 
-        "/{envId}/projects/{projectId}/"
+        "/user/{envId}/projects/", 
+        "/user/{envId}/projects/{projectId}/"
       ]
     }

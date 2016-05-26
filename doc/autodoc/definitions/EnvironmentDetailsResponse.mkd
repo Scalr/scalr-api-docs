@@ -48,8 +48,8 @@ An object of type [`Environment`](./../definitions/Environment.mkd).
 
 ## Used in ##
 
-  + [`/environments/`](./../rest/api/v1beta0/account/environments/)
-  + [`/environments/{envId}/`](./../rest/api/v1beta0/account/environments/{envId}/)
+  + [`/account/environments/`](./../rest/api/v1beta0/account/environments/)
+  + [`/account/environments/{envId}/`](./../rest/api/v1beta0/account/environments/{envId}/)
 
 ## Swagger Definition ##
 
@@ -82,7 +82,7 @@ An object of type [`Environment`](./../definitions/Environment.mkd).
         "$ref": "#/definitions/Environment"
       }, 
       "x-usedIn": [
-        "/environments/", 
-        "/environments/{envId}/"
+        "/account/environments/", 
+        "/account/environments/{envId}/"
       ]
     }

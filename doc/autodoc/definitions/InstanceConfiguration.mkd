@@ -41,7 +41,7 @@ The following are valid values for the `instanceConfigurationType` property:
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/instance/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/instance/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/instance/)
 
 ## Swagger Definition ##
 
@@ -68,6 +68,6 @@ The following are valid values for the `instanceConfigurationType` property:
         }
       ], 
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/instance/"
+        "/user/{envId}/farm-roles/{farmRoleId}/instance/"
       ]
     }

@@ -33,12 +33,10 @@ Parameter of type: `integer`.
 ## Responses ##
 
 
-### 200 ###
+### 204 ###
 
 Farm deleted.
 
-The response body is an object of type:
-[`DeleteSuccessResponse`](./../../../../../../../definitions/DeleteSuccessResponse.mkd).
 
 
 
@@ -147,11 +145,8 @@ The response body is an object of type:
       "delete": {
         "description": "Deletes the Farm from the Environment.", 
         "responses": {
-          "200": {
-            "description": "Farm deleted.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
+          "204": {
+            "description": "Farm deleted."
           }, 
           "400": {
             "description": "A client-side error was made.", 

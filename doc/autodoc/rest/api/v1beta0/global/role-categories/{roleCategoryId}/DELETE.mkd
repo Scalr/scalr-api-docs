@@ -1,6 +1,6 @@
-# `DELETE /api/v1beta0/account/scripts/{scriptId}/script-versions/` #
+# `DELETE /api/v1beta0/global/role-categories/{roleCategoryId}/` #
 
-Deletes the Script Version from the Script.
+Deletes the Role Category from the global scope.
 
 ## Request Parameters #
 
@@ -8,9 +8,9 @@ Deletes the Script Version from the Script.
 
 Path parameters are included in the URL.
 
-#### `scriptId` ####
+#### `roleCategoryId` ####
 
-The ID of a Script object.
+The ID of a RoleCategory object.
 
 Parameter of type: `integer`.
 
@@ -26,12 +26,10 @@ Parameter of type: `integer`.
 ## Responses ##
 
 
-### 200 ###
+### 204 ###
 
 Successful deletion.
 
-The response body is an object of type:
-[`DeleteSuccessResponse`](./../../../../../../../definitions/DeleteSuccessResponse.mkd).
 
 
 
@@ -40,7 +38,7 @@ The response body is an object of type:
 A client-side error was made.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -54,7 +52,7 @@ The following errors **may** be returned by this endpoint.
 Request was not authenticated.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -66,7 +64,7 @@ The following errors **may** be returned by this endpoint.
 Insufficient permissions.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -79,7 +77,7 @@ The following errors **may** be returned by this endpoint.
 Resource not found.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -91,7 +89,7 @@ The following errors **may** be returned by this endpoint.
 Conflict with current state.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -108,7 +106,7 @@ The following errors **may** be returned by this endpoint.
 A server-side error occured.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -117,7 +115,7 @@ The response body is an object of type:
 Error is raised when the feature is not implemented in Scalr.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -126,7 +124,7 @@ The response body is an object of type:
 The service is currently unavailable.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -136,13 +134,10 @@ The response body is an object of type:
 
     {
       "delete": {
-        "description": "Deletes the Script Version from the Script.", 
+        "description": "Deletes the Role Category from the global scope.", 
         "responses": {
-          "200": {
-            "description": "Successful deletion.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
+          "204": {
+            "description": "Successful deletion."
           }, 
           "400": {
             "description": "A client-side error was made.", 
@@ -262,12 +257,12 @@ The response body is an object of type:
         }
       }, 
       "get": {
-        "description": "Describes all versions for the specified Script.", 
+        "description": "Describes detailed information about a specified Role Category.", 
         "responses": {
           "200": {
-            "description": "A list of ScriptVersion objects.", 
+            "description": "The JSON representation of a RoleCategory object.", 
             "schema": {
-              "$ref": "#/definitions/ScriptVersionListResponse"
+              "$ref": "#/definitions/RoleCategoryDetailsResponse"
             }
           }, 
           "400": {
@@ -389,34 +384,34 @@ The response body is an object of type:
       }, 
       "parameters": [
         {
-          "description": "The ID of a Script object.", 
+          "description": "The ID of a RoleCategory object.", 
           "in": "path", 
-          "name": "scriptId", 
+          "name": "roleCategoryId", 
           "required": true, 
           "type": "integer", 
           "x-references": {
-            "$ref": "#/definitions/Script"
+            "$ref": "#/definitions/RoleCategory"
           }
         }
       ], 
-      "post": {
-        "description": "Creates a new Script Version for the Script.", 
+      "patch": {
+        "description": "Modifies the attributes of the specified Role Category.", 
         "parameters": [
           {
-            "description": "The JSON representation of a ScriptVersion object.", 
+            "description": "The JSON representation of a RoleCategory object.", 
             "in": "body", 
-            "name": "scriptVersionObject", 
+            "name": "roleCategoryObject", 
             "required": true, 
             "schema": {
-              "$ref": "#/definitions/ScriptVersion"
+              "$ref": "#/definitions/RoleCategory"
             }
           }
         ], 
         "responses": {
-          "201": {
-            "description": "The JSON representation of a ScriptVersion object.", 
+          "200": {
+            "description": "The JSON representation of a RoleCategory object.", 
             "schema": {
-              "$ref": "#/definitions/ScriptVersionDetailsResponse"
+              "$ref": "#/definitions/RoleCategoryDetailsResponse"
             }
           }, 
           "400": {

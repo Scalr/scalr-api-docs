@@ -48,12 +48,12 @@ An object of type [`ServerSummary`](./../definitions/ServerSummary.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/actions/import-server/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/actions/import-server/)
-  + [`/{envId}/servers/{serverId}/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/)
-  + [`/{envId}/servers/{serverId}/actions/reboot/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/reboot/)
-  + [`/{envId}/servers/{serverId}/actions/resume/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/resume/)
-  + [`/{envId}/servers/{serverId}/actions/suspend/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/suspend/)
-  + [`/{envId}/servers/{serverId}/actions/terminate/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/terminate/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/actions/import-server/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/actions/import-server/)
+  + [`/user/{envId}/servers/{serverId}/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/)
+  + [`/user/{envId}/servers/{serverId}/actions/reboot/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/reboot/)
+  + [`/user/{envId}/servers/{serverId}/actions/resume/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/resume/)
+  + [`/user/{envId}/servers/{serverId}/actions/suspend/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/suspend/)
+  + [`/user/{envId}/servers/{serverId}/actions/terminate/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/terminate/)
 
 ## Swagger Definition ##
 
@@ -86,11 +86,11 @@ An object of type [`ServerSummary`](./../definitions/ServerSummary.mkd).
         "$ref": "#/definitions/ServerSummary"
       }, 
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/actions/import-server/", 
-        "/{envId}/servers/{serverId}/", 
-        "/{envId}/servers/{serverId}/actions/reboot/", 
-        "/{envId}/servers/{serverId}/actions/resume/", 
-        "/{envId}/servers/{serverId}/actions/suspend/", 
-        "/{envId}/servers/{serverId}/actions/terminate/"
+        "/user/{envId}/farm-roles/{farmRoleId}/actions/import-server/", 
+        "/user/{envId}/servers/{serverId}/", 
+        "/user/{envId}/servers/{serverId}/actions/reboot/", 
+        "/user/{envId}/servers/{serverId}/actions/resume/", 
+        "/user/{envId}/servers/{serverId}/actions/suspend/", 
+        "/user/{envId}/servers/{serverId}/actions/terminate/"
       ]
     }

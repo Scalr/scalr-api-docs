@@ -33,12 +33,10 @@ Parameter of type: `integer`.
 ## Responses ##
 
 
-### 200 ###
+### 204 ###
 
 Successful deletion.
 
-The response body is an object of type:
-[`DeleteSuccessResponse`](./../../../../../../../../definitions/DeleteSuccessResponse.mkd).
 
 
 
@@ -145,11 +143,8 @@ The response body is an object of type:
       "delete": {
         "description": "Deny access of the Team to the Environment.", 
         "responses": {
-          "200": {
-            "description": "Successful deletion.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
+          "204": {
+            "description": "Successful deletion."
           }, 
           "400": {
             "description": "A client-side error was made.", 

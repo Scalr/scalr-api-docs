@@ -1,6 +1,6 @@
-# `DELETE /api/v1beta0/user/{envId}/cloud-credentials/{cloudCredentialsId}/` #
+# `DELETE /api/v1beta0/global/images/{imageId}/` #
 
-Deletes the specified Cloud Credentials from the Environment.
+Deregisters an Image from the global scope.
 
 ## Request Parameters #
 
@@ -8,16 +8,9 @@ Deletes the specified Cloud Credentials from the Environment.
 
 Path parameters are included in the URL.
 
-#### `envId` ####
+#### `imageId` ####
 
-The ID of the Environment scoping this request.
-
-Parameter of type: `integer`.
-
-
-#### `cloudCredentialsId` ####
-
-The ID of a CloudCredentials object.
+The ID of a Image object.
 
 Parameter of type: `string`.
 
@@ -33,12 +26,10 @@ Parameter of type: `string`.
 ## Responses ##
 
 
-### 200 ###
+### 204 ###
 
 Successful deletion.
 
-The response body is an object of type:
-[`DeleteSuccessResponse`](./../../../../../../../definitions/DeleteSuccessResponse.mkd).
 
 
 
@@ -47,7 +38,7 @@ The response body is an object of type:
 A client-side error was made.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -61,7 +52,7 @@ The following errors **may** be returned by this endpoint.
 Request was not authenticated.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -73,7 +64,7 @@ The following errors **may** be returned by this endpoint.
 Insufficient permissions.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -86,7 +77,7 @@ The following errors **may** be returned by this endpoint.
 Resource not found.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -98,7 +89,7 @@ The following errors **may** be returned by this endpoint.
 Conflict with current state.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -108,8 +99,6 @@ The following errors **may** be returned by this endpoint.
 + `NotEnabledPlatform`: Cloud platform is not enabled. Check the error message for more information.
 + `OperatingSystemMismatch`: The Operating system mismatch. Check the error message for more information.
 + `ConfigurationMismatch`: Some of the configuration settings cannot be applied, conflicts or wrong. Check the error message for more information.
-+ `Deprecated`: Some of the object or action is deprecated. Check the error message for more information.
-+ `UnacceptableState`: The action can't be perfomed due to object's state. Check the error message for more information.
 
 
 ### 500 ###
@@ -117,7 +106,7 @@ The following errors **may** be returned by this endpoint.
 A server-side error occured.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -126,7 +115,7 @@ The response body is an object of type:
 Error is raised when the feature is not implemented in Scalr.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -135,7 +124,7 @@ The response body is an object of type:
 The service is currently unavailable.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -145,13 +134,10 @@ The response body is an object of type:
 
     {
       "delete": {
-        "description": "Deletes the specified Cloud Credentials from the Environment.", 
+        "description": "Deregisters an Image from the global scope.", 
         "responses": {
-          "200": {
-            "description": "Successful deletion.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
+          "204": {
+            "description": "Successful deletion."
           }, 
           "400": {
             "description": "A client-side error was made.", 
@@ -247,14 +233,6 @@ The response body is an object of type:
               {
                 "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
                 "name": "ConfigurationMismatch"
-              }, 
-              {
-                "description": "Some of the object or action is deprecated.", 
-                "name": "Deprecated"
-              }, 
-              {
-                "description": "The action can't be perfomed due to object's state.", 
-                "name": "UnacceptableState"
               }
             ]
           }, 
@@ -279,12 +257,12 @@ The response body is an object of type:
         }
       }, 
       "get": {
-        "description": "Gets detailed information about specified Cloud Credentials. You can only obtain information about Cloud Credentials from the Environment scope.", 
+        "description": "Retrieves an Image.", 
         "responses": {
           "200": {
-            "description": "The JSON representation of a CloudCredentials object.", 
+            "description": "The JSON representation of a Image object.", 
             "schema": {
-              "$ref": "#/definitions/CloudCredentialsDetailsResponse"
+              "$ref": "#/definitions/ImageDetailsResponse"
             }
           }, 
           "400": {
@@ -381,14 +359,6 @@ The response body is an object of type:
               {
                 "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
                 "name": "ConfigurationMismatch"
-              }, 
-              {
-                "description": "Some of the object or action is deprecated.", 
-                "name": "Deprecated"
-              }, 
-              {
-                "description": "The action can't be perfomed due to object's state.", 
-                "name": "UnacceptableState"
               }
             ]
           }, 
@@ -414,44 +384,37 @@ The response body is an object of type:
       }, 
       "parameters": [
         {
-          "description": "The ID of the Environment scoping this request.", 
+          "description": "The ID of a Image object.", 
           "in": "path", 
-          "name": "envId", 
-          "required": true, 
-          "type": "integer"
-        }, 
-        {
-          "description": "The ID of a CloudCredentials object.", 
-          "in": "path", 
-          "maxLength": 12, 
-          "minLength": 12, 
-          "name": "cloudCredentialsId", 
-          "pattern": "[A-Fa-f0-9]+", 
+          "maxLength": 36, 
+          "minLength": 36, 
+          "name": "imageId", 
+          "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
           "required": true, 
           "type": "string", 
           "x-references": {
-            "$ref": "#/definitions/CloudCredentials"
+            "$ref": "#/definitions/Image"
           }
         }
       ], 
       "patch": {
-        "description": "Modifies Cloud Credentials attributes.", 
+        "description": "Changes Image attributes. Only the name be can changed.", 
         "parameters": [
           {
-            "description": "The JSON representation of a CloudCredentials object.", 
+            "description": "The updated definition.", 
             "in": "body", 
-            "name": "cloudCredentialsObject", 
+            "name": "image", 
             "required": true, 
             "schema": {
-              "$ref": "#/definitions/CloudCredentials"
+              "$ref": "#/definitions/Image"
             }
           }
         ], 
         "responses": {
           "200": {
-            "description": "The JSON representation of a CloudCredentials object.", 
+            "description": "The JSON representation of a Image object.", 
             "schema": {
-              "$ref": "#/definitions/CloudCredentialsDetailsResponse"
+              "$ref": "#/definitions/ImageDetailsResponse"
             }
           }, 
           "400": {
@@ -548,14 +511,6 @@ The response body is an object of type:
               {
                 "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
                 "name": "ConfigurationMismatch"
-              }, 
-              {
-                "description": "Some of the object or action is deprecated.", 
-                "name": "Deprecated"
-              }, 
-              {
-                "description": "The action can't be perfomed due to object's state.", 
-                "name": "UnacceptableState"
               }
             ]
           }, 

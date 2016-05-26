@@ -1,6 +1,6 @@
-# `POST /api/v1beta0/account/images/{imageId}/actions/copy/` #
+# `POST /api/v1beta0/global/roles/{roleId}/images/` #
 
-Copies an image from one EC2 region to another.
+Associates a new Image with this Role. This may fail if an existing Image conflicts with the Image you are trying to add (i.e. they are in the same location).
 
 ## Request Parameters #
 
@@ -8,11 +8,11 @@ Copies an image from one EC2 region to another.
 
 Path parameters are included in the URL.
 
-#### `imageId` ####
+#### `roleId` ####
 
-The ID of a Image object.
+The ID of a Role object.
 
-Parameter of type: `string`.
+Parameter of type: `integer`.
 
 
 
@@ -24,12 +24,12 @@ Parameter of type: `string`.
 
 The request body parameter is passed as the body of the request.
 
-#### `copyTo` ####
+#### `roleImageObject` ####
 
-The EC2 region to copy this Image to.
+The JSON representation of a RoleImage object.
 
 
-An object of type: [`CloudLocation`](./../../../../../../../../definitions/CloudLocation.mkd).
+An object of type: [`RoleImage`](./../../../../../../../definitions/RoleImage.mkd).
 
 
 
@@ -38,12 +38,12 @@ An object of type: [`CloudLocation`](./../../../../../../../../definitions/Cloud
 ## Responses ##
 
 
-### 202 ###
+### 201 ###
 
-The JSON representation of a Image object.
+The JSON representation of a RoleImage object.
 
 The response body is an object of type:
-[`ImageDetailsResponse`](./../../../../../../../../definitions/ImageDetailsResponse.mkd).
+[`RoleImageDetailsResponse`](./../../../../../../../definitions/RoleImageDetailsResponse.mkd).
 
 
 
@@ -52,7 +52,7 @@ The response body is an object of type:
 A client-side error was made.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -66,7 +66,7 @@ The following errors **may** be returned by this endpoint.
 Request was not authenticated.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -78,7 +78,7 @@ The following errors **may** be returned by this endpoint.
 Insufficient permissions.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -91,7 +91,7 @@ The following errors **may** be returned by this endpoint.
 Resource not found.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -103,7 +103,7 @@ The following errors **may** be returned by this endpoint.
 Conflict with current state.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
@@ -120,7 +120,7 @@ The following errors **may** be returned by this endpoint.
 A server-side error occured.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -129,7 +129,7 @@ The response body is an object of type:
 Error is raised when the feature is not implemented in Scalr.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -138,7 +138,7 @@ The response body is an object of type:
 The service is currently unavailable.
 
 The response body is an object of type:
-[`ApiErrorResponse`](./../../../../../../../../definitions/ApiErrorResponse.mkd).
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
 
 
 
@@ -147,39 +147,162 @@ The response body is an object of type:
 ## Swagger Definition ##
 
     {
+      "get": {
+        "description": "Describes all Images associated with the specified Role.", 
+        "responses": {
+          "200": {
+            "description": "A list of RoleImage objects.", 
+            "schema": {
+              "$ref": "#/definitions/RoleImageListResponse"
+            }
+          }, 
+          "400": {
+            "description": "A client-side error was made.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "name": "InvalidStructure"
+              }, 
+              {
+                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "name": "InvalidValue"
+              }, 
+              {
+                "description": "Your request wasn't understood by the API.", 
+                "name": "BadRequest"
+              }
+            ]
+          }, 
+          "401": {
+            "description": "Request was not authenticated.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request authentication failed to validate.", 
+                "name": "BadAuthentication"
+              }
+            ]
+          }, 
+          "403": {
+            "description": "Insufficient permissions.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Your request should be made in a different Scope.", 
+                "name": "ScopeViolation"
+              }, 
+              {
+                "description": "Your request requires permissions you do not have.", 
+                "name": "PermissionViolation"
+              }
+            ]
+          }, 
+          "404": {
+            "description": "Resource not found.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "The route you are trying to access does not exist.", 
+                "name": "EndpointNotFound", 
+                "noDoc": true
+              }, 
+              {
+                "description": "The URL you are trying to access does not exist.", 
+                "name": "ObjectNotFound"
+              }
+            ]
+          }, 
+          "409": {
+            "description": "Conflict with current state.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "name": "ObjectInUse"
+              }, 
+              {
+                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "name": "UnicityViolation"
+              }, 
+              {
+                "description": "Some of the objects being changed is locked for changing.", 
+                "name": "Locked"
+              }, 
+              {
+                "description": "Cloud platform is not enabled.", 
+                "name": "NotEnabledPlatform"
+              }, 
+              {
+                "description": "The Operating system mismatch.", 
+                "name": "OperatingSystemMismatch"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "ConfigurationMismatch"
+              }
+            ]
+          }, 
+          "500": {
+            "description": "A server-side error occured.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "501": {
+            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }, 
+          "503": {
+            "description": "The service is currently unavailable.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }
+          }
+        }
+      }, 
       "parameters": [
         {
-          "description": "The ID of a Image object.", 
+          "description": "The ID of a Role object.", 
           "in": "path", 
-          "maxLength": 36, 
-          "minLength": 36, 
-          "name": "imageId", 
-          "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
+          "name": "roleId", 
           "required": true, 
-          "type": "string", 
+          "type": "integer", 
           "x-references": {
-            "$ref": "#/definitions/Image"
+            "$ref": "#/definitions/Role"
           }
         }
       ], 
       "post": {
-        "description": "Copies an image from one EC2 region to another.", 
+        "description": "Associates a new Image with this Role. This may fail if an existing Image conflicts with the Image you are trying to add (i.e. they are in the same location).", 
         "parameters": [
           {
-            "description": "The EC2 region to copy this Image to.", 
+            "description": "The JSON representation of a RoleImage object.", 
             "in": "body", 
-            "name": "copyTo", 
+            "name": "roleImageObject", 
             "required": true, 
             "schema": {
-              "$ref": "#/definitions/CloudLocation"
+              "$ref": "#/definitions/RoleImage"
             }
           }
         ], 
         "responses": {
-          "202": {
-            "description": "The JSON representation of a Image object.", 
+          "201": {
+            "description": "The JSON representation of a RoleImage object.", 
             "schema": {
-              "$ref": "#/definitions/ImageDetailsResponse"
+              "$ref": "#/definitions/RoleImageDetailsResponse"
             }
           }, 
           "400": {

@@ -97,8 +97,8 @@ To filter on this field, use: `scope=...`.
 
 ## Used in ##
 
-  + [`/{envId}/scaling-metrics/`](./../rest/api/v1beta0/user/{envId}/scaling-metrics/)
-  + [`/{envId}/scaling-metrics/{metricName}/`](./../rest/api/v1beta0/user/{envId}/scaling-metrics/{metricName}/)
+  + [`/user/{envId}/scaling-metrics/`](./../rest/api/v1beta0/user/{envId}/scaling-metrics/)
+  + [`/user/{envId}/scaling-metrics/{metricName}/`](./../rest/api/v1beta0/user/{envId}/scaling-metrics/{metricName}/)
 
 ## Swagger Definition ##
 
@@ -163,7 +163,7 @@ To filter on this field, use: `scope=...`.
         "scope"
       ], 
       "x-usedIn": [
-        "/{envId}/scaling-metrics/", 
-        "/{envId}/scaling-metrics/{metricName}/"
+        "/user/{envId}/scaling-metrics/", 
+        "/user/{envId}/scaling-metrics/{metricName}/"
       ]
     }

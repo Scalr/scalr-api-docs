@@ -47,7 +47,7 @@ The following are valid values for the `placementConfigurationType` property:
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/placement/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/placement/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/placement/)
 
 ## Swagger Definition ##
 
@@ -81,6 +81,6 @@ The following are valid values for the `placementConfigurationType` property:
         }
       ], 
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/placement/"
+        "/user/{envId}/farm-roles/{farmRoleId}/placement/"
       ]
     }

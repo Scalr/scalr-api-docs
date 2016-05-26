@@ -54,10 +54,12 @@ To filter on this field, use: `id=...`.
 
 ## Used in ##
 
-  + [`/role-categories/`](./../rest/api/v1beta0/account/role-categories/)
-  + [`/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/account/role-categories/{roleCategoryId}/)
-  + [`/{envId}/role-categories/`](./../rest/api/v1beta0/user/{envId}/role-categories/)
-  + [`/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/user/{envId}/role-categories/{roleCategoryId}/)
+  + [`/account/role-categories/`](./../rest/api/v1beta0/account/role-categories/)
+  + [`/account/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/account/role-categories/{roleCategoryId}/)
+  + [`/global/role-categories/`](./../rest/api/v1beta0/global/role-categories/)
+  + [`/global/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/global/role-categories/{roleCategoryId}/)
+  + [`/user/{envId}/role-categories/`](./../rest/api/v1beta0/user/{envId}/role-categories/)
+  + [`/user/{envId}/role-categories/{roleCategoryId}/`](./../rest/api/v1beta0/user/{envId}/role-categories/{roleCategoryId}/)
 
 ## Swagger Definition ##
 
@@ -93,9 +95,11 @@ To filter on this field, use: `id=...`.
         "scope"
       ], 
       "x-usedIn": [
-        "/role-categories/", 
-        "/role-categories/{roleCategoryId}/", 
-        "/{envId}/role-categories/", 
-        "/{envId}/role-categories/{roleCategoryId}/"
+        "/account/role-categories/", 
+        "/account/role-categories/{roleCategoryId}/", 
+        "/global/role-categories/", 
+        "/global/role-categories/{roleCategoryId}/", 
+        "/user/{envId}/role-categories/", 
+        "/user/{envId}/role-categories/{roleCategoryId}/"
       ]
     }

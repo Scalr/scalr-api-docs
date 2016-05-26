@@ -48,10 +48,10 @@ An object of type [`Event`](./../definitions/Event.mkd).
 
 ## Used in ##
 
-  + [`/events/`](./../rest/api/v1beta0/account/events/)
-  + [`/events/{eventId}/`](./../rest/api/v1beta0/account/events/{eventId}/)
-  + [`/{envId}/events/`](./../rest/api/v1beta0/user/{envId}/events/)
-  + [`/{envId}/events/{eventId}/`](./../rest/api/v1beta0/user/{envId}/events/{eventId}/)
+  + [`/account/events/`](./../rest/api/v1beta0/account/events/)
+  + [`/account/events/{eventId}/`](./../rest/api/v1beta0/account/events/{eventId}/)
+  + [`/user/{envId}/events/`](./../rest/api/v1beta0/user/{envId}/events/)
+  + [`/user/{envId}/events/{eventId}/`](./../rest/api/v1beta0/user/{envId}/events/{eventId}/)
 
 ## Swagger Definition ##
 
@@ -84,9 +84,9 @@ An object of type [`Event`](./../definitions/Event.mkd).
         "$ref": "#/definitions/Event"
       }, 
       "x-usedIn": [
-        "/events/", 
-        "/events/{eventId}/", 
-        "/{envId}/events/", 
-        "/{envId}/events/{eventId}/"
+        "/account/events/", 
+        "/account/events/{eventId}/", 
+        "/user/{envId}/events/", 
+        "/user/{envId}/events/{eventId}/"
       ]
     }

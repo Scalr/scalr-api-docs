@@ -48,8 +48,8 @@ An object of type [`Team`](./../definitions/Team.mkd).
 
 ## Used in ##
 
-  + [`/teams/`](./../rest/api/v1beta0/account/teams/)
-  + [`/teams/{teamId}/`](./../rest/api/v1beta0/account/teams/{teamId}/)
+  + [`/account/teams/`](./../rest/api/v1beta0/account/teams/)
+  + [`/account/teams/{teamId}/`](./../rest/api/v1beta0/account/teams/{teamId}/)
 
 ## Swagger Definition ##
 
@@ -82,7 +82,7 @@ An object of type [`Team`](./../definitions/Team.mkd).
         "$ref": "#/definitions/Team"
       }, 
       "x-usedIn": [
-        "/teams/", 
-        "/teams/{teamId}/"
+        "/account/teams/", 
+        "/account/teams/{teamId}/"
       ]
     }

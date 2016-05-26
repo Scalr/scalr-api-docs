@@ -76,8 +76,8 @@ To filter on this field, use: `id=...`.
 
 ## Used in ##
 
-  + [`/{envId}/projects/`](./../rest/api/v1beta0/user/{envId}/projects/)
-  + [`/{envId}/projects/{projectId}/`](./../rest/api/v1beta0/user/{envId}/projects/{projectId}/)
+  + [`/user/{envId}/projects/`](./../rest/api/v1beta0/user/{envId}/projects/)
+  + [`/user/{envId}/projects/{projectId}/`](./../rest/api/v1beta0/user/{envId}/projects/{projectId}/)
 
 ## Swagger Definition ##
 
@@ -124,7 +124,7 @@ To filter on this field, use: `id=...`.
         "name"
       ], 
       "x-usedIn": [
-        "/{envId}/projects/", 
-        "/{envId}/projects/{projectId}/"
+        "/user/{envId}/projects/", 
+        "/user/{envId}/projects/{projectId}/"
       ]
     }

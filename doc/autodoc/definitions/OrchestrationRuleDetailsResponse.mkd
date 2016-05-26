@@ -48,14 +48,16 @@ An object of type [`OrchestrationRule`](./../definitions/OrchestrationRule.mkd).
 
 ## Used in ##
 
-  + [`/orchestration-rules/`](./../rest/api/v1beta0/account/orchestration-rules/)
-  + [`/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/orchestration-rules/{orchestrationRuleId}/)
-  + [`/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/)
-  + [`/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
-  + [`/{envId}/farm-roles/{farmRoleId}/orchestration-rules/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/)
-  + [`/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/)
-  + [`/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/)
-  + [`/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/account/orchestration-rules/`](./../rest/api/v1beta0/account/orchestration-rules/)
+  + [`/account/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/orchestration-rules/{orchestrationRuleId}/)
+  + [`/account/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/)
+  + [`/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/global/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/global/roles/{roleId}/orchestration-rules/)
+  + [`/global/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/global/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/)
+  + [`/user/{envId}/roles/{roleId}/orchestration-rules/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/)
+  + [`/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
 
 ## Swagger Definition ##
 
@@ -88,13 +90,15 @@ An object of type [`OrchestrationRule`](./../definitions/OrchestrationRule.mkd).
         "$ref": "#/definitions/OrchestrationRule"
       }, 
       "x-usedIn": [
-        "/orchestration-rules/", 
-        "/orchestration-rules/{orchestrationRuleId}/", 
-        "/roles/{roleId}/orchestration-rules/", 
-        "/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
-        "/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/", 
-        "/{envId}/roles/{roleId}/orchestration-rules/", 
-        "/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/"
+        "/account/orchestration-rules/", 
+        "/account/orchestration-rules/{orchestrationRuleId}/", 
+        "/account/roles/{roleId}/orchestration-rules/", 
+        "/account/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/global/roles/{roleId}/orchestration-rules/", 
+        "/global/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/orchestration-rules/{orchestrationRuleId}/", 
+        "/user/{envId}/roles/{roleId}/orchestration-rules/", 
+        "/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/"
       ]
     }

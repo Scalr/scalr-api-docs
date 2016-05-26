@@ -48,14 +48,16 @@ An object of type [`GlobalVariable`](./../definitions/GlobalVariable.mkd).
 
 ## Used in ##
 
-  + [`/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/)
-  + [`/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/{globalVariableName}/)
-  + [`/{envId}/farm-roles/{farmRoleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/)
-  + [`/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/)
-  + [`/{envId}/farms/{farmId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/)
-  + [`/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
-  + [`/{envId}/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/)
-  + [`/{envId}/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/{globalVariableName}/)
+  + [`/account/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/)
+  + [`/account/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/account/roles/{roleId}/global-variables/{globalVariableName}/)
+  + [`/global/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/global/roles/{roleId}/global-variables/)
+  + [`/global/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/global/roles/{roleId}/global-variables/{globalVariableName}/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/)
+  + [`/user/{envId}/farms/{farmId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/)
+  + [`/user/{envId}/farms/{farmId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/global-variables/{globalVariableName}/)
+  + [`/user/{envId}/roles/{roleId}/global-variables/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/)
+  + [`/user/{envId}/roles/{roleId}/global-variables/{globalVariableName}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/global-variables/{globalVariableName}/)
 
 ## Swagger Definition ##
 
@@ -88,13 +90,15 @@ An object of type [`GlobalVariable`](./../definitions/GlobalVariable.mkd).
         "$ref": "#/definitions/GlobalVariable"
       }, 
       "x-usedIn": [
-        "/roles/{roleId}/global-variables/", 
-        "/roles/{roleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/farm-roles/{farmRoleId}/global-variables/", 
-        "/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
-        "/{envId}/farms/{farmId}/global-variables/", 
-        "/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
-        "/{envId}/roles/{roleId}/global-variables/", 
-        "/{envId}/roles/{roleId}/global-variables/{globalVariableName}/"
+        "/account/roles/{roleId}/global-variables/", 
+        "/account/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/global/roles/{roleId}/global-variables/", 
+        "/global/roles/{roleId}/global-variables/{globalVariableName}/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/global-variables/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/global-variables/{globalVariableName}/", 
+        "/user/{envId}/farms/{farmId}/global-variables/", 
+        "/user/{envId}/farms/{farmId}/global-variables/{globalVariableName}/", 
+        "/user/{envId}/roles/{roleId}/global-variables/", 
+        "/user/{envId}/roles/{roleId}/global-variables/{globalVariableName}/"
       ]
     }

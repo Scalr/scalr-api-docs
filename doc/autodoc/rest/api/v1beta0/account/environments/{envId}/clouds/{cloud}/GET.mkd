@@ -145,11 +145,8 @@ The response body is an object of type:
       "delete": {
         "description": "Detaches Cloud Credentials from the Environment.", 
         "responses": {
-          "200": {
-            "description": "Successful deletion.", 
-            "schema": {
-              "$ref": "#/definitions/DeleteSuccessResponse"
-            }
+          "204": {
+            "description": "Successful deletion."
           }, 
           "400": {
             "description": "A client-side error was made.", 

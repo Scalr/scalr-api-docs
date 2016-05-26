@@ -57,9 +57,9 @@ objects of type [`ServerSummary`](./../definitions/ServerSummary.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/servers/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/servers/)
-  + [`/{envId}/farms/{farmId}/servers/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/servers/)
-  + [`/{envId}/servers/`](./../rest/api/v1beta0/user/{envId}/servers/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/servers/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/servers/)
+  + [`/user/{envId}/farms/{farmId}/servers/`](./../rest/api/v1beta0/user/{envId}/farms/{farmId}/servers/)
+  + [`/user/{envId}/servers/`](./../rest/api/v1beta0/user/{envId}/servers/)
 
 ## Swagger Definition ##
 
@@ -99,8 +99,8 @@ objects of type [`ServerSummary`](./../definitions/ServerSummary.mkd).
         "$ref": "#/definitions/ServerSummary"
       }, 
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/servers/", 
-        "/{envId}/farms/{farmId}/servers/", 
-        "/{envId}/servers/"
+        "/user/{envId}/farm-roles/{farmRoleId}/servers/", 
+        "/user/{envId}/farms/{farmId}/servers/", 
+        "/user/{envId}/servers/"
       ]
     }

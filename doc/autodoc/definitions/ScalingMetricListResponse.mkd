@@ -57,7 +57,7 @@ objects of type [`ScalingMetric`](./../definitions/ScalingMetric.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/scaling-metrics/`](./../rest/api/v1beta0/user/{envId}/scaling-metrics/)
+  + [`/user/{envId}/scaling-metrics/`](./../rest/api/v1beta0/user/{envId}/scaling-metrics/)
 
 ## Swagger Definition ##
 
@@ -97,6 +97,6 @@ objects of type [`ScalingMetric`](./../definitions/ScalingMetric.mkd).
         "$ref": "#/definitions/ScalingMetric"
       }, 
       "x-usedIn": [
-        "/{envId}/scaling-metrics/"
+        "/user/{envId}/scaling-metrics/"
       ]
     }

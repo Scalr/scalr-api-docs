@@ -34,7 +34,7 @@ e.g.: `defaultAclRole=...`.
 
 ## Used in ##
 
-  + [`/environments/{envId}/teams/`](./../rest/api/v1beta0/account/environments/{envId}/teams/)
+  + [`/account/environments/{envId}/teams/`](./../rest/api/v1beta0/account/environments/{envId}/teams/)
 
 ## Swagger Definition ##
 
@@ -58,6 +58,6 @@ e.g.: `defaultAclRole=...`.
         "team"
       ], 
       "x-usedIn": [
-        "/environments/{envId}/teams/"
+        "/account/environments/{envId}/teams/"
       ]
     }

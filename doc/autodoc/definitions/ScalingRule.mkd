@@ -51,8 +51,8 @@ To filter on this field, use: `name=...`.
 
 ## Used in ##
 
-  + [`/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
-  + [`/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/scaling/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/)
+  + [`/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/`](./../rest/api/v1beta0/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/)
 
 ## Swagger Definition ##
 
@@ -97,7 +97,7 @@ To filter on this field, use: `name=...`.
         "ruleType"
       ], 
       "x-usedIn": [
-        "/{envId}/farm-roles/{farmRoleId}/scaling/", 
-        "/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/"
+        "/user/{envId}/farm-roles/{farmRoleId}/scaling/", 
+        "/user/{envId}/farm-roles/{farmRoleId}/scaling/{metricName}/"
       ]
     }

@@ -57,7 +57,7 @@ objects of type [`Project`](./../definitions/Project.mkd).
 
 ## Used in ##
 
-  + [`/{envId}/projects/`](./../rest/api/v1beta0/user/{envId}/projects/)
+  + [`/user/{envId}/projects/`](./../rest/api/v1beta0/user/{envId}/projects/)
 
 ## Swagger Definition ##
 
@@ -97,6 +97,6 @@ objects of type [`Project`](./../definitions/Project.mkd).
         "$ref": "#/definitions/Project"
       }, 
       "x-usedIn": [
-        "/{envId}/projects/"
+        "/user/{envId}/projects/"
       ]
     }

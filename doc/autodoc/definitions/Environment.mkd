@@ -71,8 +71,8 @@ To filter on this field, use: `added=...`.
 
 ## Used in ##
 
-  + [`/environments/`](./../rest/api/v1beta0/account/environments/)
-  + [`/environments/{envId}/`](./../rest/api/v1beta0/account/environments/{envId}/)
+  + [`/account/environments/`](./../rest/api/v1beta0/account/environments/)
+  + [`/account/environments/{envId}/`](./../rest/api/v1beta0/account/environments/{envId}/)
 
 ## Swagger Definition ##
 
@@ -113,7 +113,7 @@ To filter on this field, use: `added=...`.
         "status"
       ], 
       "x-usedIn": [
-        "/environments/", 
-        "/environments/{envId}/"
+        "/account/environments/", 
+        "/account/environments/{envId}/"
       ]
     }

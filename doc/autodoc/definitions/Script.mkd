@@ -120,14 +120,14 @@ Property of type: `string`.
 
 ## Used in ##
 
-  + [`/scripts/`](./../rest/api/v1beta0/account/scripts/)
-  + [`/scripts/{scriptId}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/)
-  + [`/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/)
-  + [`/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
-  + [`/{envId}/scripts/`](./../rest/api/v1beta0/user/{envId}/scripts/)
-  + [`/{envId}/scripts/{scriptId}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/)
-  + [`/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
-  + [`/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+  + [`/account/scripts/`](./../rest/api/v1beta0/account/scripts/)
+  + [`/account/scripts/{scriptId}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/)
+  + [`/account/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/)
+  + [`/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+  + [`/user/{envId}/scripts/`](./../rest/api/v1beta0/user/{envId}/scripts/)
+  + [`/user/{envId}/scripts/{scriptId}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/)
+  + [`/user/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
+  + [`/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
 
 ## Swagger Definition ##
 
@@ -196,13 +196,13 @@ Property of type: `string`.
         "scope"
       ], 
       "x-usedIn": [
-        "/scripts/", 
-        "/scripts/{scriptId}/", 
-        "/scripts/{scriptId}/script-versions/", 
-        "/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
-        "/{envId}/scripts/", 
-        "/{envId}/scripts/{scriptId}/", 
-        "/{envId}/scripts/{scriptId}/script-versions/", 
-        "/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
+        "/account/scripts/", 
+        "/account/scripts/{scriptId}/", 
+        "/account/scripts/{scriptId}/script-versions/", 
+        "/account/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/user/{envId}/scripts/", 
+        "/user/{envId}/scripts/{scriptId}/", 
+        "/user/{envId}/scripts/{scriptId}/script-versions/", 
+        "/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/"
       ]
     }

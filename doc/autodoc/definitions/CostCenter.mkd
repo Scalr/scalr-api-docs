@@ -45,8 +45,8 @@ To filter on this field, use: `billingCode=...`.
 
 ## Used in ##
 
-  + [`/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/account/cost-centers/{costCenterId}/)
-  + [`/{envId}/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/user/{envId}/cost-centers/{costCenterId}/)
+  + [`/account/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/account/cost-centers/{costCenterId}/)
+  + [`/user/{envId}/cost-centers/{costCenterId}/`](./../rest/api/v1beta0/user/{envId}/cost-centers/{costCenterId}/)
 
 ## Swagger Definition ##
 
@@ -76,7 +76,7 @@ To filter on this field, use: `billingCode=...`.
         "name"
       ], 
       "x-usedIn": [
-        "/cost-centers/{costCenterId}/", 
-        "/{envId}/cost-centers/{costCenterId}/"
+        "/account/cost-centers/{costCenterId}/", 
+        "/user/{envId}/cost-centers/{costCenterId}/"
       ]
     }

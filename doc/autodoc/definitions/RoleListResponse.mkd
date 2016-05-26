@@ -57,8 +57,9 @@ objects of type [`Role`](./../definitions/Role.mkd).
 
 ## Used in ##
 
-  + [`/roles/`](./../rest/api/v1beta0/account/roles/)
-  + [`/{envId}/roles/`](./../rest/api/v1beta0/user/{envId}/roles/)
+  + [`/account/roles/`](./../rest/api/v1beta0/account/roles/)
+  + [`/global/roles/`](./../rest/api/v1beta0/global/roles/)
+  + [`/user/{envId}/roles/`](./../rest/api/v1beta0/user/{envId}/roles/)
 
 ## Swagger Definition ##
 
@@ -98,7 +99,8 @@ objects of type [`Role`](./../definitions/Role.mkd).
         "$ref": "#/definitions/Role"
       }, 
       "x-usedIn": [
-        "/roles/", 
-        "/{envId}/roles/"
+        "/account/roles/", 
+        "/global/roles/", 
+        "/user/{envId}/roles/"
       ]
     }
