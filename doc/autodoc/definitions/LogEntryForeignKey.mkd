@@ -1,0 +1,46 @@
+# `LogEntryForeignKey` #
+
+
+
+
+
+## Reference ##
+
+`LogEntryForeignKey` is used when a reference to an object of type [`LogEntry`](./../definitions/LogEntry.mkd) is expected.
+Note that you can pass a complete [`LogEntry`](./../definitions/LogEntry.mkd) object as well.
+
+
+## Properties ##
+
+### `id` (required) ###
+
+Orchestration log entry identifier.
+
+
+Property of type: `string`.
+
+
+
+
+
+
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "id": {
+          "description": "Orchestration log entry identifier.", 
+          "type": "string"
+        }
+      }, 
+      "required": [
+        "id"
+      ], 
+      "x-derived": {
+        "$ref": "#/definitions/LogEntry"
+      }, 
+      "x-references": {
+        "$ref": "#/definitions/LogEntry"
+      }
+    }

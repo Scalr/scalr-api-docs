@@ -17,7 +17,7 @@ Parameter of type: `integer`.
 
 #### `serverId` ####
 
-The identifier of the Server.
+The ID of a Server object.
 
 Parameter of type: `string`.
 
@@ -131,9 +131,22 @@ The following errors **may** be returned by this endpoint.
 + `Locked`: Some of the objects being changed is locked for changing. Check the error message for more information.
 + `NotEnabledPlatform`: Cloud platform is not enabled. Check the error message for more information.
 + `OperatingSystemMismatch`: The Operating system mismatch. Check the error message for more information.
-+ `ConfigurationMismatch`: Some of the configuration settings cannot be applied, conflicts or wrong. Check the error message for more information.
 + `Deprecated`: Some of the object or action is deprecated. Check the error message for more information.
 + `UnacceptableState`: The action can't be perfomed due to object's state. Check the error message for more information.
++ `ObjectNotFoundOnCloud`: The object that you are trying to use does not exist on the cloud. Check the error message for more information.
++ `UnacceptableObjectConfiguration`: Some of the configuration settings cannot be applied, conflicts or wrong. Check the error message for more information.
+
+
+### 422 ###
+
+The request was well-formed but due to semantic errors was rejected.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `ConfigurationMismatch`: Some of the configuration settings cannot be applied because of disagreements. Check the error message for more information.
 
 
 ### 500 ###
@@ -177,14 +190,17 @@ The response body is an object of type:
           "type": "integer"
         }, 
         {
-          "description": "The identifier of the Server.", 
+          "description": "The ID of a Server object.", 
           "in": "path", 
           "maxLength": 36, 
           "minLength": 36, 
           "name": "serverId", 
           "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
           "required": true, 
-          "type": "string"
+          "type": "string", 
+          "x-references": {
+            "$ref": "#/definitions/Server"
+          }
         }
       ], 
       "post": {
@@ -305,16 +321,32 @@ The response body is an object of type:
                 "name": "OperatingSystemMismatch"
               }, 
               {
-                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
-                "name": "ConfigurationMismatch"
-              }, 
-              {
                 "description": "Some of the object or action is deprecated.", 
                 "name": "Deprecated"
               }, 
               {
                 "description": "The action can't be perfomed due to object's state.", 
                 "name": "UnacceptableState"
+              }, 
+              {
+                "description": "The object that you are trying to use does not exist on the cloud.", 
+                "name": "ObjectNotFoundOnCloud"
+              }, 
+              {
+                "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "UnacceptableObjectConfiguration"
+              }
+            ]
+          }, 
+          "422": {
+            "description": "The request was well-formed but due to semantic errors was rejected.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Some of the configuration settings cannot be applied because of disagreements.", 
+                "name": "ConfigurationMismatch"
               }
             ]
           }, 

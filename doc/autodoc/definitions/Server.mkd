@@ -1,0 +1,334 @@
+# `Server` #
+
+JSON Representation of the Scalr Server.
+
+
+
+
+
+## Properties ##
+
+### `type` (read-only, filterable) ###
+
+The type of the instance.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `type=...`.
+
+
+### `status` (read-only, filterable) ###
+
+Server status.
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `status` property:
+  + `temporary`
+  + `running`
+  + `pending`
+  + `pending_launch`
+  + `initializing`
+  + `importing`
+  + `terminated`
+  + `pending_terminate`
+  + `pending_suspend`
+  + `suspended`
+  + `resuming`
+
+To filter on this field, use: `status=...`.
+
+
+### `publicIp` (read-only, filterable) ###
+
+IP address of the public network interface of the Server.
+
+
+An array of 
+`string` objects.
+
+
+### `privateIp` (read-only, filterable) ###
+
+IP address of the private network interface of the Server.
+
+
+An array of 
+`string` objects.
+
+
+### `launchedBy` (read-only, filterable) ###
+
+The identifier of the User who launched the Server.
+
+
+An object of type [`UserForeignKey`](./../definitions/UserForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`UserForeignKey`](./../definitions/UserForeignKey.mkd) object you are referencing,
+e.g.: `launchedBy=...`.
+
+
+### `launched` (read-only) ###
+
+The date and time the Server was launched.
+
+
+Property of type: `string`.
+
+
+
+
+### `launchReason` (read-only, filterable) ###
+
+The reason the Server was launched.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `launchReason=...`.
+
+
+### `index` (read-only, filterable) ###
+
+The index of the Server in the Farm Role.
+
+
+Property of type: `integer`.
+
+
+To filter on this field, use: `index=...`.
+
+
+### `id` (read-only, filterable) ###
+
+Identifier of the Scalr Server.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `id=...`.
+
+
+### `hostname` (read-only, filterable) ###
+
+The hostname of this Server.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `hostname=...`.
+
+
+### `farmRole` (read-only, filterable) ###
+
+Identifier of the Farm Role
+
+
+An object of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd) object you are referencing,
+e.g.: `farmRole=...`.
+
+
+### `farm` (read-only, filterable) ###
+
+Identifier of the Farm
+
+
+An object of type [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd).
+
+To filter on this field, pass the `id` property of the [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd) object you are referencing,
+e.g.: `farm=...`.
+
+
+### `cloudPlatform` (read-only, filterable) ###
+
+Cloud Platform this resources resides in.
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `cloudPlatform` property:
+  + `ec2`
+  + `gce`
+  + `azure`
+  + `cloudstack`
+  + `idcf`
+  + `openstack`
+  + `ocs`
+  + `rackspacenguk`
+  + `rackspacengus`
+  + `hpcloud`
+  + `mirantis`
+  + `vio`
+  + `cisco`
+
+To filter on this field, use: `cloudPlatform=...`.
+
+
+### `cloudLocation` (read-only, filterable) ###
+
+More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.
+
+
+Property of type: `string`.
+
+
+To filter on this field, use: `cloudLocation=...`.
+
+
+
+
+## Used in ##
+
+  + [`/user/{envId}/servers/{serverId}/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/)
+  + [`/user/{envId}/servers/{serverId}/actions/reboot/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/reboot/)
+  + [`/user/{envId}/servers/{serverId}/actions/resume/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/resume/)
+  + [`/user/{envId}/servers/{serverId}/actions/suspend/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/suspend/)
+  + [`/user/{envId}/servers/{serverId}/actions/terminate/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/terminate/)
+
+## Swagger Definition ##
+
+    {
+      "description": "JSON Representation of the Scalr Server.", 
+      "properties": {
+        "cloudLocation": {
+          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "cloudPlatform": {
+          "description": "Cloud Platform this resources resides in.", 
+          "enum": [
+            "ec2", 
+            "gce", 
+            "azure", 
+            "cloudstack", 
+            "idcf", 
+            "openstack", 
+            "ocs", 
+            "rackspacenguk", 
+            "rackspacengus", 
+            "hpcloud", 
+            "mirantis", 
+            "vio", 
+            "cisco"
+          ], 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "farm": {
+          "$ref": "#/definitions/FarmForeignKey", 
+          "description": "Identifier of the Farm", 
+          "readOnly": true
+        }, 
+        "farmRole": {
+          "$ref": "#/definitions/FarmRoleForeignKey", 
+          "description": "Identifier of the Farm Role", 
+          "readOnly": true
+        }, 
+        "hostname": {
+          "description": "The hostname of this Server.", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "id": {
+          "description": "Identifier of the Scalr Server.", 
+          "maxLength": 36, 
+          "minLength": 36, 
+          "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "index": {
+          "description": "The index of the Server in the Farm Role.", 
+          "readOnly": true, 
+          "type": "integer"
+        }, 
+        "launchReason": {
+          "description": "The reason the Server was launched.", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "launched": {
+          "description": "The date and time the Server was launched.", 
+          "format": "date-time", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "launchedBy": {
+          "$ref": "#/definitions/UserForeignKey", 
+          "description": "The identifier of the User who launched the Server.", 
+          "readOnly": true
+        }, 
+        "privateIp": {
+          "description": "IP address of the private network interface of the Server.", 
+          "items": {
+            "type": "string"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "publicIp": {
+          "description": "IP address of the public network interface of the Server.", 
+          "items": {
+            "type": "string"
+          }, 
+          "readOnly": true, 
+          "type": "array"
+        }, 
+        "status": {
+          "description": "Server status.", 
+          "enum": [
+            "temporary", 
+            "running", 
+            "pending", 
+            "pending_launch", 
+            "initializing", 
+            "importing", 
+            "terminated", 
+            "pending_terminate", 
+            "pending_suspend", 
+            "suspended", 
+            "resuming"
+          ], 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "type": {
+          "description": "The type of the instance.", 
+          "readOnly": true, 
+          "type": "string"
+        }
+      }, 
+      "x-filterable": [
+        "cloudLocation", 
+        "cloudPlatform", 
+        "farm", 
+        "farmRole", 
+        "hostname", 
+        "id", 
+        "index", 
+        "launchReason", 
+        "launchedBy", 
+        "privateIp", 
+        "publicIp", 
+        "status", 
+        "type"
+      ], 
+      "x-usedIn": [
+        "/user/{envId}/servers/{serverId}/", 
+        "/user/{envId}/servers/{serverId}/actions/reboot/", 
+        "/user/{envId}/servers/{serverId}/actions/resume/", 
+        "/user/{envId}/servers/{serverId}/actions/suspend/", 
+        "/user/{envId}/servers/{serverId}/actions/terminate/"
+      ]
+    }

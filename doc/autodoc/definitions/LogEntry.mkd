@@ -1,0 +1,170 @@
+# `LogEntry` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `triggeredBy` (read-only) ###
+
+The context that caused excecution of the Script.
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `triggeredBy` property:
+  + `ui`
+  + `api`
+  + `system`
+
+
+
+### `server` (read-only) ###
+
+Identifier of the target Server.
+
+
+An object of type [`ServerForeignKey`](./../definitions/ServerForeignKey.mkd).
+
+
+
+### `scriptName` (read-only) ###
+
+The name of the Script that is executed.
+
+
+Property of type: `string`.
+
+
+
+
+### `result` (read-only) ###
+
+The result of the Script execution.
+
+
+Property of type: `string`.
+
+
+
+
+### `id` (read-only) ###
+
+Orchestration log entry identifier.
+
+
+Property of type: `string`.
+
+
+
+
+### `farmRole` (read-only) ###
+
+Identifier of the Farm Role that the target Server is related to.
+
+
+An object of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd).
+
+
+
+### `farm` (read-only) ###
+
+Identifier of the Farm that the target Server is related to.
+
+
+An object of type [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd).
+
+
+
+### `executionTime` (read-only) ###
+
+Total Script execution time in seconds.
+
+
+Property of type: `integer`.
+
+
+
+
+### `executionExitCode` (read-only) ###
+
+The exit status code of the Script. The value is zero when the script is executed successfully and non-zero when it fails.
+
+
+Property of type: `integer`.
+
+
+
+
+
+
+## Used in ##
+
+  + [`/user/{envId}/orchestration-logs/{logEntryId}/`](./../rest/api/v1beta0/user/{envId}/orchestration-logs/{logEntryId}/)
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "executionExitCode": {
+          "description": "The exit status code of the Script. The value is zero when the script is executed successfully and non-zero when it fails.", 
+          "readOnly": true, 
+          "type": "integer"
+        }, 
+        "executionTime": {
+          "description": "Total Script execution time in seconds.", 
+          "readOnly": true, 
+          "type": "integer"
+        }, 
+        "farm": {
+          "$ref": "#/definitions/FarmForeignKey", 
+          "description": "Identifier of the Farm that the target Server is related to.", 
+          "readOnly": true
+        }, 
+        "farmRole": {
+          "$ref": "#/definitions/FarmRoleForeignKey", 
+          "description": "Identifier of the Farm Role that the target Server is related to.", 
+          "readOnly": true
+        }, 
+        "id": {
+          "description": "Orchestration log entry identifier.", 
+          "maxLength": 36, 
+          "minLength": 36, 
+          "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "result": {
+          "description": "The result of the Script execution.", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "scriptName": {
+          "description": "The name of the Script that is executed.", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "server": {
+          "$ref": "#/definitions/ServerForeignKey", 
+          "description": "Identifier of the target Server.", 
+          "readOnly": true
+        }, 
+        "triggeredBy": {
+          "description": "The context that caused excecution of the Script.", 
+          "enum": [
+            "ui", 
+            "api", 
+            "system"
+          ], 
+          "readOnly": true, 
+          "type": "string"
+        }
+      }, 
+      "x-usedIn": [
+        "/user/{envId}/orchestration-logs/{logEntryId}/"
+      ]
+    }

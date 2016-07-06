@@ -100,7 +100,19 @@ The following errors **may** be returned by this endpoint.
 + `Locked`: Some of the objects being changed is locked for changing. Check the error message for more information.
 + `NotEnabledPlatform`: Cloud platform is not enabled. Check the error message for more information.
 + `OperatingSystemMismatch`: The Operating system mismatch. Check the error message for more information.
-+ `ConfigurationMismatch`: Some of the configuration settings cannot be applied, conflicts or wrong. Check the error message for more information.
++ `UnacceptableObjectConfiguration`: Some of the configuration settings cannot be applied, conflicts or wrong. Check the error message for more information.
+
+
+### 422 ###
+
+The request was well-formed but due to semantic errors was rejected.
+
+The response body is an object of type:
+[`ApiErrorResponse`](./../../../../../../../definitions/ApiErrorResponse.mkd).
+
+The following errors **may** be returned by this endpoint.
+
++ `ConfigurationMismatch`: Some of the configuration settings cannot be applied because of disagreements. Check the error message for more information.
 
 
 ### 500 ###
@@ -237,6 +249,18 @@ The response body is an object of type:
               }, 
               {
                 "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "UnacceptableObjectConfiguration"
+              }
+            ]
+          }, 
+          "422": {
+            "description": "The request was well-formed but due to semantic errors was rejected.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Some of the configuration settings cannot be applied because of disagreements.", 
                 "name": "ConfigurationMismatch"
               }
             ]
@@ -383,6 +407,18 @@ The response body is an object of type:
               }, 
               {
                 "description": "Some of the configuration settings cannot be applied, conflicts or wrong.", 
+                "name": "UnacceptableObjectConfiguration"
+              }
+            ]
+          }, 
+          "422": {
+            "description": "The request was well-formed but due to semantic errors was rejected.", 
+            "schema": {
+              "$ref": "#/definitions/ApiErrorResponse"
+            }, 
+            "x-errorCodes": [
+              {
+                "description": "Some of the configuration settings cannot be applied because of disagreements.", 
                 "name": "ConfigurationMismatch"
               }
             ]

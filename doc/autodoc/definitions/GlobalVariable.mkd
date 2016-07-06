@@ -107,9 +107,28 @@ Property of type: `string`.
 
 
 
+### `definedIn` (read-only) ###
+
+The Scope where variable is defined.
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `definedIn` property:
+  + `scalr`
+  + `account`
+  + `environment`
+  + `farm`
+  + `farmrole`
+  + `role`
+  + `server`
+
+
+
 ### `declaredIn` (read-only) ###
 
-Whether this variable is declared in the current scope.
+The Scope where variable is declared.
 
 
 Property of type: `string`.
@@ -180,7 +199,21 @@ Property of type: `string`.
           "type": "string"
         }, 
         "declaredIn": {
-          "description": "Whether this variable is declared in the current scope.", 
+          "description": "The Scope where variable is declared.", 
+          "enum": [
+            "scalr", 
+            "account", 
+            "environment", 
+            "farm", 
+            "farmrole", 
+            "role", 
+            "server"
+          ], 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "definedIn": {
+          "description": "The Scope where variable is defined.", 
           "enum": [
             "scalr", 
             "account", 
