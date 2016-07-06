@@ -68,6 +68,7 @@ The following are valid values for the `family` property:
   + `centos`
   + `amazon`
   + `windows`
+  + `scientific`
 
 To filter on this field, use: `family=...`.
 
@@ -93,7 +94,8 @@ To filter on this field, use: `family=...`.
             "redhat", 
             "centos", 
             "amazon", 
-            "windows"
+            "windows", 
+            "scientific"
           ], 
           "type": "string"
         }, 

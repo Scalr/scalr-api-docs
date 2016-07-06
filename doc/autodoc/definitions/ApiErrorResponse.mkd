@@ -117,6 +117,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/user/{envId}/images/`](./../rest/api/v1beta0/user/{envId}/images/)
   + [`/user/{envId}/images/{imageId}/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/)
   + [`/user/{envId}/images/{imageId}/actions/copy/`](./../rest/api/v1beta0/user/{envId}/images/{imageId}/actions/copy/)
+  + [`/user/{envId}/orchestration-logs/{logEntryId}/`](./../rest/api/v1beta0/user/{envId}/orchestration-logs/{logEntryId}/)
   + [`/user/{envId}/os/`](./../rest/api/v1beta0/user/{envId}/os/)
   + [`/user/{envId}/os/{osId}/`](./../rest/api/v1beta0/user/{envId}/os/{osId}/)
   + [`/user/{envId}/projects/`](./../rest/api/v1beta0/user/{envId}/projects/)
@@ -134,10 +135,13 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
   + [`/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/`](./../rest/api/v1beta0/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/)
   + [`/user/{envId}/scaling-metrics/`](./../rest/api/v1beta0/user/{envId}/scaling-metrics/)
   + [`/user/{envId}/scaling-metrics/{metricName}/`](./../rest/api/v1beta0/user/{envId}/scaling-metrics/{metricName}/)
+  + [`/user/{envId}/script-executions/{scriptExecutionId}/`](./../rest/api/v1beta0/user/{envId}/script-executions/{scriptExecutionId}/)
   + [`/user/{envId}/scripts/`](./../rest/api/v1beta0/user/{envId}/scripts/)
   + [`/user/{envId}/scripts/{scriptId}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/)
+  + [`/user/{envId}/scripts/{scriptId}/actions/execute/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/actions/execute/)
   + [`/user/{envId}/scripts/{scriptId}/script-versions/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/)
   + [`/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/)
+  + [`/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/actions/execute/`](./../rest/api/v1beta0/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/actions/execute/)
   + [`/user/{envId}/servers/`](./../rest/api/v1beta0/user/{envId}/servers/)
   + [`/user/{envId}/servers/{serverId}/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/)
   + [`/user/{envId}/servers/{serverId}/actions/reboot/`](./../rest/api/v1beta0/user/{envId}/servers/{serverId}/actions/reboot/)
@@ -248,6 +252,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/user/{envId}/images/", 
         "/user/{envId}/images/{imageId}/", 
         "/user/{envId}/images/{imageId}/actions/copy/", 
+        "/user/{envId}/orchestration-logs/{logEntryId}/", 
         "/user/{envId}/os/", 
         "/user/{envId}/os/{osId}/", 
         "/user/{envId}/projects/", 
@@ -265,10 +270,13 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
         "/user/{envId}/roles/{roleId}/orchestration-rules/{orchestrationRuleId}/", 
         "/user/{envId}/scaling-metrics/", 
         "/user/{envId}/scaling-metrics/{metricName}/", 
+        "/user/{envId}/script-executions/{scriptExecutionId}/", 
         "/user/{envId}/scripts/", 
         "/user/{envId}/scripts/{scriptId}/", 
+        "/user/{envId}/scripts/{scriptId}/actions/execute/", 
         "/user/{envId}/scripts/{scriptId}/script-versions/", 
         "/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/", 
+        "/user/{envId}/scripts/{scriptId}/script-versions/{scriptVersionNumber}/actions/execute/", 
         "/user/{envId}/servers/", 
         "/user/{envId}/servers/{serverId}/", 
         "/user/{envId}/servers/{serverId}/actions/reboot/", 

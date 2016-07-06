@@ -1,0 +1,94 @@
+# `ScriptExecution` #
+
+
+
+
+
+
+
+## Properties ##
+
+### `status` (read-only) ###
+
+The value indicates the Script execution status.
+
+
+Property of type: `string`.
+
+ 
+The following are valid values for the `status` property:
+  + `running`
+  + `finished`
+
+
+
+### `server` (read-only) ###
+
+Identifier of the Server.
+
+
+An object of type [`ServerForeignKey`](./../definitions/ServerForeignKey.mkd).
+
+
+
+### `logEntry` (read-only) ###
+
+Orchestration log entry identifier.
+
+
+An object of type [`LogEntryForeignKey`](./../definitions/LogEntryForeignKey.mkd).
+
+
+
+### `id` (read-only) ###
+
+Identifier of the Script execution.
+
+
+Property of type: `string`.
+
+
+
+
+
+
+## Used in ##
+
+  + [`/user/{envId}/script-executions/{scriptExecutionId}/`](./../rest/api/v1beta0/user/{envId}/script-executions/{scriptExecutionId}/)
+
+## Swagger Definition ##
+
+    {
+      "properties": {
+        "id": {
+          "description": "Identifier of the Script execution.", 
+          "maxLength": 36, 
+          "minLength": 36, 
+          "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
+          "readOnly": true, 
+          "type": "string"
+        }, 
+        "logEntry": {
+          "$ref": "#/definitions/LogEntryForeignKey", 
+          "description": "Orchestration log entry identifier.", 
+          "readOnly": true
+        }, 
+        "server": {
+          "$ref": "#/definitions/ServerForeignKey", 
+          "description": "Identifier of the Server.", 
+          "readOnly": true
+        }, 
+        "status": {
+          "description": "The value indicates the Script execution status.", 
+          "enum": [
+            "running", 
+            "finished"
+          ], 
+          "readOnly": true, 
+          "type": "string"
+        }
+      }, 
+      "x-usedIn": [
+        "/user/{envId}/script-executions/{scriptExecutionId}/"
+      ]
+    }
