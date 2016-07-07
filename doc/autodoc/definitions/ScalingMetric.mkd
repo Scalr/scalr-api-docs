@@ -10,7 +10,7 @@
 
 ### `retrieveMethod` (required, filterable) ###
 
-The operation on the File that should be performed to obtain the value of the Metric.
+The operation that should be performed on the File to obtain the value of the Metric.
 
 
 Property of type: `string`.
@@ -64,7 +64,7 @@ Property of type: `string`.
 
 ### `inverted` (optional, filterable) ###
 
-Whether this metric uses inverted logic. In case of the inversion it scales up when the value goes under instead of scaling down.
+Whether this metric should be inverted. By default Farm Roles scale up when the value goes above the scale up threshold. If this is true, Farm Roles will scale up when the value goes below the scale up threshold.
 
 
 Property of type: `boolean`.
@@ -119,15 +119,15 @@ To filter on this field, use: `scope=...`.
           "type": "string"
         }, 
         "inverted": {
-          "description": "Whether this metric uses inverted logic. In case of the inversion it scales up when the value goes under instead of scaling down.", 
+          "description": "Whether this metric should be inverted. By default Farm Roles scale up when the value goes above the scale up threshold. If this is true, Farm Roles will scale up when the value goes below the scale up threshold.", 
           "type": "boolean"
         }, 
         "name": {
-          "descritpion": "The name of the Scaling Metric.", 
+          "descritpion": "The name of a Scaling Metric.", 
           "type": "string"
         }, 
         "retrieveMethod": {
-          "description": "The operation on the File that should be performed to obtain the value of the Metric.", 
+          "description": "The operation that should be performed on the File to obtain the value of the Metric.", 
           "enum": [
             "read", 
             "execute", 

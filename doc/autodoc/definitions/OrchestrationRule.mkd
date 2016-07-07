@@ -37,7 +37,7 @@ An object of type [`Action`](./../definitions/Action.mkd).
 
 ### `timeout` (optional) ###
 
-How long should Scalr wait before aborting the execution of this Orchestration Rule? Defaults to the action's default when null.
+The time Scalr should wait for before aborting the execution of this Orchestration Rule, in seconds. Defaults to the action's default when null.
 
 
 Property of type: `integer`.
@@ -58,7 +58,7 @@ To filter on this field, use: `runAs=...`.
 
 ### `order` (optional, filterable) ###
 
-When should this Orchestration Rule execute relative to other Orchestration Rules that use the same triggeringEvent? Default is relative to existing Rules.
+The priority of this Orchestration Rule relative to other Orchestration Rules that use the same triggeringEvent. Default is relative to existing Rules.
 
 
 Property of type: `integer`.
@@ -69,7 +69,7 @@ To filter on this field, use: `order=...`.
 
 ### `blocking` (optional, filterable) ###
 
-Should this Orchestration Rule's execution delay the execution of further Orchestration Rules and triggering of further Events? Defaults to the action's default when null.
+Whether this Orchestration Rule's execution should delay the execution of further Orchestration Rules and the triggering of further Events. Defaults to the action's default when null.
 
 
 Property of type: `boolean`.
@@ -131,7 +131,7 @@ To filter on this field, use: `id=...`.
           "$ref": "#/definitions/Action"
         }, 
         "blocking": {
-          "description": "Should this Orchestration Rule's execution delay the execution of further Orchestration Rules and triggering of further Events? Defaults to the action's default when null.", 
+          "description": "Whether this Orchestration Rule's execution should delay the execution of further Orchestration Rules and the triggering of further Events. Defaults to the action's default when null.", 
           "type": "boolean"
         }, 
         "id": {
@@ -139,7 +139,7 @@ To filter on this field, use: `id=...`.
           "type": "integer"
         }, 
         "order": {
-          "description": "When should this Orchestration Rule execute relative to other Orchestration Rules that use the same triggeringEvent? Default is relative to existing Rules.", 
+          "description": "The priority of this Orchestration Rule relative to other Orchestration Rules that use the same triggeringEvent. Default is relative to existing Rules.", 
           "type": "integer"
         }, 
         "runAs": {
@@ -163,7 +163,7 @@ To filter on this field, use: `id=...`.
           "$ref": "#/definitions/Target"
         }, 
         "timeout": {
-          "description": "How long should Scalr wait before aborting the execution of this Orchestration Rule? Defaults to the action's default when null.", 
+          "description": "The time Scalr should wait for before aborting the execution of this Orchestration Rule, in seconds. Defaults to the action's default when null.", 
           "type": "integer"
         }, 
         "trigger": {

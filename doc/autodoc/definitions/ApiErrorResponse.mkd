@@ -1,6 +1,6 @@
 # `ApiErrorResponse` #
 
-Common envelope.
+Common reponse for erroneous requests.
 
 
 
@@ -152,7 +152,7 @@ objects of type [`ApiMessage`](./../definitions/ApiMessage.mkd).
 ## Swagger Definition ##
 
     {
-      "description": "Common envelope.", 
+      "description": "Common reponse for erroneous requests.", 
       "properties": {
         "errors": {
           "items": {

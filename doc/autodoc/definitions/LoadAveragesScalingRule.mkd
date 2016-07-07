@@ -1,6 +1,6 @@
 # `LoadAveragesScalingRule` #
 
-It is used in combination with user defined Scaling Metrics.
+Used in combination with user defined Scaling Metrics.
 
 ## Polymorphism ##
 
@@ -55,7 +55,7 @@ To filter on this field, use: `name=...`.
 
 ### `calculatingPeriod` (required) ###
 
-Period in minutes which is used to aggregate the Metric Value.
+Period in minutes during which to aggregate the Metric Value.
 
 
 Property of type: `integer`.
@@ -69,14 +69,14 @@ Property of type: `integer`.
 ## Swagger Definition ##
 
     {
-      "description": "It is used in combination with user defined Scaling Metrics.", 
+      "description": "Used in combination with user defined Scaling Metrics.", 
       "properties": {
         "calculatingPeriod": {
-          "description": "Period in minutes which is used to aggregate the Metric Value.", 
+          "description": "Period in minutes during which to aggregate the Metric Value.", 
           "type": "integer"
         }, 
         "name": {
-          "descritpion": "The name of the Scaling Metric.", 
+          "descritpion": "The name of a Scaling Metric.", 
           "type": "string"
         }, 
         "ruleType": {

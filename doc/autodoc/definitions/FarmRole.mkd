@@ -21,7 +21,7 @@ e.g.: `role=...`.
 
 ### `platform` (required, filterable) ###
 
-Farm Role platform.
+The Cloud Platform this Farm Role runs on.
 
 
 Property of type: `string`.
@@ -50,7 +50,7 @@ An object of type [`InstanceConfiguration`](./../definitions/InstanceConfigurati
 
 ### `alias` (required) ###
 
-The Alias for this Farm Role. If this isn't provided, it will default to the Role's name (possibly with '-n' appended if the Role name is already taken)
+The Alias for this Farm Role. The default value is the Role's name (potentially with '-n' appended if the Role name is already taken by another Farm Role)
 
 
 Property of type: `string`.
@@ -111,7 +111,7 @@ e.g.: `farm=...`.
     {
       "properties": {
         "alias": {
-          "description": "The Alias for this Farm Role. If this isn't provided, it will default to the Role's name (possibly with '-n' appended if the Role name is already taken)", 
+          "description": "The Alias for this Farm Role. The default value is the Role's name (potentially with '-n' appended if the Role name is already taken by another Farm Role)", 
           "type": "string"
         }, 
         "farm": {
@@ -130,7 +130,7 @@ e.g.: `farm=...`.
           "$ref": "#/definitions/PlacementConfiguration"
         }, 
         "platform": {
-          "description": "Farm Role platform.", 
+          "description": "The Cloud Platform this Farm Role runs on.", 
           "type": "string"
         }, 
         "role": {

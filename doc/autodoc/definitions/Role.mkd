@@ -43,7 +43,7 @@ e.g.: `category=...`.
 
 ### `useScalrAgent` (create-only, filterable) ###
 
-Using Scalarizr (Scalr agent).
+Whether this Role uses Scalarizr, the Scalr agent.
 
 
 Property of type: `boolean`.
@@ -65,7 +65,7 @@ To filter on this field, use: `quickStartGroup=...`.
 
 ### `quickStart` (optional, filterable) ###
 
-Whether it is QuickStart Role.
+Whether this Role is a QuickStart Role.
 
 
 Property of type: `boolean`.
@@ -86,7 +86,7 @@ Property of type: `string`.
 
 ### `deprecated` (optional, filterable) ###
 
-Whether the Role is deprecated.
+Whether this Role is deprecated.
 
 
 Property of type: `boolean`.
@@ -196,7 +196,7 @@ To filter on this field, use: `id=...`.
           "$ref": "#/definitions/RoleCategoryForeignKey"
         }, 
         "deprecated": {
-          "description": "Whether the Role is deprecated.", 
+          "description": "Whether this Role is deprecated.", 
           "type": "boolean"
         }, 
         "description": {
@@ -213,7 +213,7 @@ To filter on this field, use: `id=...`.
           "$ref": "#/definitions/OsForeignKey"
         }, 
         "quickStart": {
-          "description": "Whether it is QuickStart Role.", 
+          "description": "Whether this Role is a QuickStart Role.", 
           "type": "boolean"
         }, 
         "quickStartGroup": {
@@ -234,7 +234,7 @@ To filter on this field, use: `id=...`.
           "type": "string"
         }, 
         "useScalrAgent": {
-          "description": "Using Scalarizr (Scalr agent).", 
+          "description": "Whether this Role uses Scalarizr, the Scalr agent.", 
           "type": "boolean"
         }
       }, 

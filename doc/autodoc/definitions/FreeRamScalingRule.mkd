@@ -1,6 +1,6 @@
 # `FreeRamScalingRule` #
 
-It is used in combination with user defined Scaling Metrics.
+Used in combination with user defined Scaling Metrics.
 
 ## Polymorphism ##
 
@@ -69,10 +69,10 @@ Property of type: `boolean`.
 ## Swagger Definition ##
 
     {
-      "description": "It is used in combination with user defined Scaling Metrics.", 
+      "description": "Used in combination with user defined Scaling Metrics.", 
       "properties": {
         "name": {
-          "descritpion": "The name of the Scaling Metric.", 
+          "descritpion": "The name of a Scaling Metric.", 
           "type": "string"
         }, 
         "ruleType": {
@@ -96,7 +96,7 @@ Property of type: `boolean`.
           "type": "integer"
         }, 
         "useCachedRam": {
-          "descripiton": "Whether it should use cached RAM in addition to free RAM as scaling metric.", 
+          "descripiton": "Whether the cached RAM is counted as free RAM in the metric computation.", 
           "type": "boolean"
         }
       }, 

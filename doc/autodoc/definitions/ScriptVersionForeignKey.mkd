@@ -21,7 +21,7 @@ e.g.: `script=...`.
 
 ### `version` (read-only) ###
 
-The Script version number. NULL is interpreted as the Latest Version.
+The Script version number. null is interpreted as the Latest Version.
 
 
 Property of type: `integer`.
@@ -41,7 +41,7 @@ Property of type: `integer`.
           "description": "The Script this ScriptVersion is a version of."
         }, 
         "version": {
-          "description": "The Script version number. NULL is interpreted as the Latest Version.", 
+          "description": "The Script version number. null is interpreted as the Latest Version.", 
           "readOnly": true, 
           "type": "integer"
         }

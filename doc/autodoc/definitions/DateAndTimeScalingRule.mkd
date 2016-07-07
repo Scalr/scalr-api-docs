@@ -1,6 +1,6 @@
 # `DateAndTimeScalingRule` #
 
-It defines the number of running instances for the specified time frames.
+This Scaling Rule defines the number of instances that should be running during specified time frames.
 
 ## Polymorphism ##
 
@@ -48,10 +48,10 @@ To filter on this field, use: `name=...`.
 ## Swagger Definition ##
 
     {
-      "description": "It defines the number of running instances for the specified time frames.", 
+      "description": "This Scaling Rule defines the number of instances that should be running during specified time frames.", 
       "properties": {
         "name": {
-          "descritpion": "The name of the Scaling Metric.", 
+          "descritpion": "The name of a Scaling Metric.", 
           "type": "string"
         }, 
         "ruleType": {

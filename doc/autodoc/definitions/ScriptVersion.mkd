@@ -21,7 +21,7 @@ e.g.: `script=...`.
 
 ### `body` (required) ###
 
-The contents of this ScriptVersion, those will be validated as per the Script's OS Type.
+The content of this ScriptVersion. This content will be validated according to the Script's OS Type.
 
 
 Property of type: `string`.
@@ -31,7 +31,7 @@ Property of type: `string`.
 
 ### `version` (read-only) ###
 
-The Script version number. NULL is interpreted as the Latest Version.
+The Script version number. null is interpreted as the Latest Version.
 
 
 Property of type: `integer`.
@@ -68,7 +68,7 @@ Property of type: `string`.
           "type": "string"
         }, 
         "body": {
-          "description": "The contents of this ScriptVersion, those will be validated as per the Script's OS Type.", 
+          "description": "The content of this ScriptVersion. This content will be validated according to the Script's OS Type.", 
           "type": "string"
         }, 
         "script": {
@@ -76,7 +76,7 @@ Property of type: `string`.
           "description": "The Script this ScriptVersion is a version of."
         }, 
         "version": {
-          "description": "The Script version number. NULL is interpreted as the Latest Version.", 
+          "description": "The Script version number. null is interpreted as the Latest Version.", 
           "readOnly": true, 
           "type": "integer"
         }

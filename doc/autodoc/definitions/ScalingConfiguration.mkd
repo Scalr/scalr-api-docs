@@ -68,7 +68,7 @@ An array of
         }, 
         "rules": {
           "items": {
-            "description": "The list of the Scaling Metric's names.", 
+            "description": "A list of Scaling Metrics' names.", 
             "type": "string"
           }, 
           "readOnly": true, 

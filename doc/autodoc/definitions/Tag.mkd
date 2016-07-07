@@ -1,6 +1,6 @@
 # `Tag` #
 
-JSON Representation of the Tag.
+A Tag object.
 
 
 
@@ -10,7 +10,7 @@ JSON Representation of the Tag.
 
 ### `key` (required) ###
 
-The Tag key.
+The Tag's key.
 
 
 Property of type: `string`.
@@ -20,7 +20,7 @@ Property of type: `string`.
 
 ### `value` (optional) ###
 
-The Tag value.
+The Tag's value.
 
 
 Property of type: `string`.
@@ -34,14 +34,14 @@ Property of type: `string`.
 ## Swagger Definition ##
 
     {
-      "description": "JSON Representation of the Tag.", 
+      "description": "A Tag object.", 
       "properties": {
         "key": {
-          "description": "The Tag key.", 
+          "description": "The Tag's key.", 
           "type": "string"
         }, 
         "value": {
-          "description": "The Tag value.", 
+          "description": "The Tag's value.", 
           "type": "string"
         }
       }, 

@@ -20,7 +20,7 @@ Property of type: `string`.
 
 ### `value` (optional) ###
 
-The value declared in the current scope for this variable.  null allows inheritance. Any other value overrides inheritance.  This is ignored if `declaredIn` is not the current scope.
+The value declared in the current scope for this Global Variable. If it is null, the value will be inherited from higher scopes. This field is ignored if `declaredIn` is not the current scope.
 
 
 Property of type: `string`.
@@ -40,7 +40,7 @@ Property of type: `string`.
 
 ### `requiredIn` (optional) ###
 
-The scope where this variable is required. This is read-only if `declaredIn` is not the current scope.
+The scope where this Global Variable is required. This is read-only if `declaredIn` is not the current scope.
 
 
 Property of type: `string`.
@@ -59,7 +59,7 @@ The following are valid values for the `requiredIn` property:
 
 ### `outputFormat` (optional) ###
 
-The formatting to apply when formatting this variable. This is read-only if `declaredIn` is not the current scope.
+The formatting to apply when displaying this variable. This is read-only if `declaredIn` is not the current scope.
 
 
 Property of type: `string`.
@@ -69,7 +69,7 @@ Property of type: `string`.
 
 ### `locked` (optional) ###
 
-Whether this variable is locked in inner scopes. This is read-only if `declaredIn` is not the current scope.
+Whether this Global Variable is locked in inner scopes. This is read-only if `declaredIn` is not the current scope.
 
 
 Property of type: `boolean`.
@@ -79,7 +79,7 @@ Property of type: `boolean`.
 
 ### `hidden` (optional) ###
 
-Whether this variable is hidden in inner scopes. This is read-only if `declaredIn` is not the current scope.
+Whether this Global Variable is hidden in inner scopes. This is read-only if `declaredIn` is not the current scope.
 
 
 Property of type: `boolean`.
@@ -99,7 +99,7 @@ Property of type: `string`.
 
 ### `category` (optional) ###
 
-Category of the variable.
+The category of this Global Variable.
 
 
 Property of type: `string`.
@@ -109,7 +109,7 @@ Property of type: `string`.
 
 ### `definedIn` (read-only) ###
 
-The Scope where variable is defined.
+The Scope in which this Global Vsariable is given a value.
 
 
 Property of type: `string`.
@@ -128,7 +128,7 @@ The following are valid values for the `definedIn` property:
 
 ### `declaredIn` (read-only) ###
 
-The Scope where variable is declared.
+The Scope in which this Global Variable is declared.
 
 
 Property of type: `string`.
@@ -147,7 +147,7 @@ The following are valid values for the `declaredIn` property:
 
 ### `computedValue` (read-only) ###
 
-The value computed by Scalr for this variable.
+The value computed by Scalr for this Global Variable.
 
 
 Property of type: `string`.
@@ -157,7 +157,7 @@ Property of type: `string`.
 
 ### `computedCategory` (read-only) ###
 
-The category computed by Scalr for this variable.
+The category computed by Scalr for this Global Variable.
 
 
 Property of type: `string`.
@@ -185,21 +185,21 @@ Property of type: `string`.
     {
       "properties": {
         "category": {
-          "description": "Category of the variable.", 
+          "description": "The category of this Global Variable.", 
           "type": "string"
         }, 
         "computedCategory": {
-          "description": "The category computed by Scalr for this variable.", 
+          "description": "The category computed by Scalr for this Global Variable.", 
           "readOnly": true, 
           "type": "string"
         }, 
         "computedValue": {
-          "description": "The value computed by Scalr for this variable.", 
+          "description": "The value computed by Scalr for this Global Variable.", 
           "readOnly": true, 
           "type": "string"
         }, 
         "declaredIn": {
-          "description": "The Scope where variable is declared.", 
+          "description": "The Scope in which this Global Variable is declared.", 
           "enum": [
             "scalr", 
             "account", 
@@ -213,7 +213,7 @@ Property of type: `string`.
           "type": "string"
         }, 
         "definedIn": {
-          "description": "The Scope where variable is defined.", 
+          "description": "The Scope in which this Global Vsariable is given a value.", 
           "enum": [
             "scalr", 
             "account", 
@@ -231,22 +231,22 @@ Property of type: `string`.
           "type": "string"
         }, 
         "hidden": {
-          "description": "Whether this variable is hidden in inner scopes. This is read-only if `declaredIn` is not the current scope.", 
+          "description": "Whether this Global Variable is hidden in inner scopes. This is read-only if `declaredIn` is not the current scope.", 
           "type": "boolean"
         }, 
         "locked": {
-          "description": "Whether this variable is locked in inner scopes. This is read-only if `declaredIn` is not the current scope.", 
+          "description": "Whether this Global Variable is locked in inner scopes. This is read-only if `declaredIn` is not the current scope.", 
           "type": "boolean"
         }, 
         "name": {
           "type": "string"
         }, 
         "outputFormat": {
-          "description": "The formatting to apply when formatting this variable. This is read-only if `declaredIn` is not the current scope.", 
+          "description": "The formatting to apply when displaying this variable. This is read-only if `declaredIn` is not the current scope.", 
           "type": "string"
         }, 
         "requiredIn": {
-          "description": "The scope where this variable is required. This is read-only if `declaredIn` is not the current scope.", 
+          "description": "The scope where this Global Variable is required. This is read-only if `declaredIn` is not the current scope.", 
           "enum": [
             "scalr", 
             "account", 
@@ -263,7 +263,7 @@ Property of type: `string`.
           "type": "string"
         }, 
         "value": {
-          "description": "The value declared in the current scope for this variable.  null allows inheritance. Any other value overrides inheritance.  This is ignored if `declaredIn` is not the current scope.", 
+          "description": "The value declared in the current scope for this Global Variable. If it is null, the value will be inherited from higher scopes. This field is ignored if `declaredIn` is not the current scope.", 
           "type": "string"
         }
       }, 

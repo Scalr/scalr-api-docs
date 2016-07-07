@@ -1,6 +1,6 @@
 # `SelectedFarmRolesTarget` #
 
-Selects all Servers with specified Roles.
+Selects all Servers that belong to the specified Farm Roles.
 
 ## Polymorphism ##
 
@@ -37,7 +37,7 @@ objects of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd).
 ## Swagger Definition ##
 
     {
-      "description": "Selects all Servers with specified Roles.", 
+      "description": "Selects all Servers that belong to the specified Farm Roles.", 
       "properties": {
         "roles": {
           "items": {

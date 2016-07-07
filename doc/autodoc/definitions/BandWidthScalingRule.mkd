@@ -1,6 +1,6 @@
 # `BandWidthScalingRule` #
 
-It is used in combination with user defined Scaling Metrics.
+Used in combination with user defined Scaling Metrics.
 
 ## Polymorphism ##
 
@@ -73,7 +73,7 @@ The following are valid values for the `direction` property:
 ## Swagger Definition ##
 
     {
-      "description": "It is used in combination with user defined Scaling Metrics.", 
+      "description": "Used in combination with user defined Scaling Metrics.", 
       "properties": {
         "direction": {
           "enum": [
@@ -83,7 +83,7 @@ The following are valid values for the `direction` property:
           "type": "string"
         }, 
         "name": {
-          "descritpion": "The name of the Scaling Metric.", 
+          "descritpion": "The name of a Scaling Metric.", 
           "type": "string"
         }, 
         "ruleType": {

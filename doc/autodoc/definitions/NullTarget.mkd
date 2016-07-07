@@ -1,6 +1,6 @@
 # `NullTarget` #
 
-Selects no Server at all.
+Do not select any Server.
 
 ## Polymorphism ##
 
@@ -28,7 +28,7 @@ This `string` property is used for polymorphism. It **must** be set to: `"NullTa
 ## Swagger Definition ##
 
     {
-      "description": "Selects no Server at all.", 
+      "description": "Do not select any Server.", 
       "properties": {
         "targetType": {
           "enum": [

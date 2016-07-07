@@ -32,7 +32,7 @@ To filter on this field, use: `name=...`.
 
 ### `cloudPlatform` (required, filterable) ###
 
-Cloud Platform this resources resides in.
+The Cloud Platform this resource resides in.
 
 
 Property of type: `string`.
@@ -94,7 +94,7 @@ Property of type: `string`.
 
 ### `size` (optional) ###
 
-At the Environment scope this property is read-only.
+Size of the image in GB. This property is read-only at the Environment scope.
 
 
 Property of type: `integer`.
@@ -104,7 +104,7 @@ Property of type: `integer`.
 
 ### `scalrAgentInstalled` (create-only, filterable) ###
 
-Scalarizer is installed.
+Whether Scalarizer is installed on this Image.
 
 
 Property of type: `boolean`.
@@ -115,7 +115,7 @@ To filter on this field, use: `scalrAgentInstalled=...`.
 
 ### `cloudLocation` (optional, filterable) ###
 
-More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.
+Cloud Location, inside a given Cloud Platform, for this resource. May be null if this resource does not have a specific location. Note: if you would like to filter on this property, you **must** also filter on `cloudPlatform`.
 
 
 Property of type: `string`.
@@ -126,7 +126,7 @@ To filter on this field, use: `cloudLocation=...`.
 
 ### `cloudInitInstalled` (create-only, filterable) ###
 
-Install scalarizr via cloud-init at instance launch.
+Whether cloud-init is installed on this Image.
 
 
 Property of type: `boolean`.
@@ -147,7 +147,7 @@ Property of type: `string`.
 
 ### `status` (read-only, filterable) ###
 
-Current status for this Image. That `failed` means deletion failed.
+Current status for this Image. `failed` means that the deletion failed.
 
 
 Property of type: `string`.
@@ -198,7 +198,7 @@ To filter on this field, use: `scope=...`.
 
 ### `lastUsed` (read-only) ###
 
-Date and time when this Image was last used.
+Date and time at which this Image was last used.
 
 
 Property of type: `string`.
@@ -230,7 +230,7 @@ To filter on this field, use: `deprecated=...`.
 
 ### `added` (read-only) ###
 
-Date and time when this Image was created.
+Date and time at which this Image was created.
 
 
 Property of type: `string`.
@@ -261,7 +261,7 @@ Property of type: `string`.
     {
       "properties": {
         "added": {
-          "description": "Date and time when this Image was created.", 
+          "description": "Date and time at which this Image was created.", 
           "format": "date-time", 
           "readOnly": true, 
           "type": "string"
@@ -277,15 +277,15 @@ Property of type: `string`.
           "type": "string"
         }, 
         "cloudInitInstalled": {
-          "description": "Install scalarizr via cloud-init at instance launch.", 
+          "description": "Whether cloud-init is installed on this Image.", 
           "type": "boolean"
         }, 
         "cloudLocation": {
-          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.", 
+          "description": "Cloud Location, inside a given Cloud Platform, for this resource. May be null if this resource does not have a specific location. Note: if you would like to filter on this property, you **must** also filter on `cloudPlatform`.", 
           "type": "string"
         }, 
         "cloudPlatform": {
-          "description": "Cloud Platform this resources resides in.", 
+          "description": "The Cloud Platform this resource resides in.", 
           "enum": [
             "ec2", 
             "gce", 
@@ -316,7 +316,7 @@ Property of type: `string`.
           "type": "string"
         }, 
         "lastUsed": {
-          "description": "Date and time when this Image was last used.", 
+          "description": "Date and time at which this Image was last used.", 
           "format": "date-time", 
           "readOnly": true, 
           "type": "string"
@@ -328,7 +328,7 @@ Property of type: `string`.
           "$ref": "#/definitions/OsForeignKey"
         }, 
         "scalrAgentInstalled": {
-          "description": "Scalarizer is installed.", 
+          "description": "Whether Scalarizer is installed on this Image.", 
           "type": "boolean"
         }, 
         "scope": {
@@ -345,7 +345,7 @@ Property of type: `string`.
           "type": "string"
         }, 
         "size": {
-          "description": "At the Environment scope this property is read-only.", 
+          "description": "Size of the image in GB. This property is read-only at the Environment scope.", 
           "type": "integer"
         }, 
         "source": {
@@ -358,7 +358,7 @@ Property of type: `string`.
           "type": "string"
         }, 
         "status": {
-          "description": "Current status for this Image. That `failed` means deletion failed.", 
+          "description": "Current status for this Image. `failed` means that the deletion failed.", 
           "enum": [
             "active", 
             "pending_delete", 
