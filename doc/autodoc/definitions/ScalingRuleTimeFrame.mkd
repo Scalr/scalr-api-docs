@@ -20,7 +20,7 @@ Property of type: `string`.
 
 ### `instanceCount` (required) ###
 
-The number of the instances which should be running.
+The number of instances which should be running.
 
 
 Property of type: `integer`.
@@ -40,7 +40,7 @@ Property of type: `string`.
 
 ### `daysOfWeek` (required) ###
 
-The days of week which the rule is applied on.
+The days this rule is applied on.
 
 
 An array of 
@@ -55,7 +55,7 @@ An array of
     {
       "properties": {
         "daysOfWeek": {
-          "description": "The days of week which the rule is applied on.", 
+          "description": "The days this rule is applied on.", 
           "items": {
             "enum": [
               "sun", 
@@ -76,7 +76,7 @@ An array of
           "type": "string"
         }, 
         "instanceCount": {
-          "description": "The number of the instances which should be running.", 
+          "description": "The number of instances which should be running.", 
           "type": "integer"
         }, 
         "start": {

@@ -19,7 +19,7 @@ An object of type [`CloudCredentialsForeignKey`](./../definitions/CloudCredentia
 
 ### `cloud` (optional) ###
 
-Cloud Platform this resources resides in.
+The Cloud Platform this resource resides in.
 
 
 Property of type: `string`.
@@ -50,7 +50,7 @@ The following are valid values for the `cloud` property:
     {
       "properties": {
         "cloud": {
-          "description": "Cloud Platform this resources resides in.", 
+          "description": "The Cloud Platform this resource resides in.", 
           "enum": [
             "ec2", 
             "gce", 

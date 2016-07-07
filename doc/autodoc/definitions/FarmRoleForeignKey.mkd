@@ -14,7 +14,7 @@ Note that you can pass a complete [`FarmRole`](./../definitions/FarmRole.mkd) ob
 
 ### `id` (required) ###
 
-
+The ID of the Farm that is referred to.
 
 
 Property of type: `integer`.
@@ -30,6 +30,7 @@ Property of type: `integer`.
     {
       "properties": {
         "id": {
+          "description": "The ID of the Farm that is referred to.", 
           "type": "integer"
         }
       }, 

@@ -10,7 +10,7 @@
 
 ### `name` (required, filterable) ###
 
-The name of the ACL Role.
+Name of this ACL Role.
 
 
 Property of type: `string`.
@@ -37,7 +37,7 @@ To filter on this field, use: `baseRole=...`.
 
 ### `id` (read-only, filterable) ###
 
-Unique identifier of ACL Role object.
+Unique identifier for this ACL Role object.
 
 
 Property of type: `string`.
@@ -63,7 +63,7 @@ To filter on this field, use: `id=...`.
           "type": "string"
         }, 
         "id": {
-          "description": "Unique identifier of ACL Role object.", 
+          "description": "Unique identifier for this ACL Role object.", 
           "maxLength": 20, 
           "minLength": 20, 
           "pattern": "[A-Fa-f0-9]+", 
@@ -71,7 +71,7 @@ To filter on this field, use: `id=...`.
           "type": "string"
         }, 
         "name": {
-          "description": "The name of the ACL Role.", 
+          "description": "Name of this ACL Role.", 
           "type": "string"
         }
       }, 

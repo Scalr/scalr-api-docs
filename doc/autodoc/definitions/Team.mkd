@@ -10,7 +10,7 @@
 
 ### `name` (required, filterable) ###
 
-The name of the Team.
+Name of the Team.
 
 
 Property of type: `string`.
@@ -21,7 +21,7 @@ To filter on this field, use: `name=...`.
 
 ### `defaultAclRole` (required, filterable) ###
 
-Default ACL Role for the Team. It is applied only for Users which get membership in a Team whithout explicitly defined ACL Role.
+Default ACL Role for the Team. This ACL Role is applied by default to all the members of the Team, but it can be overridden for specific users.
 
 
 An object of type [`AclRoleForeignKey`](./../definitions/AclRoleForeignKey.mkd).
@@ -65,7 +65,7 @@ To filter on this field, use: `id=...`.
       "properties": {
         "defaultAclRole": {
           "$ref": "#/definitions/AclRoleForeignKey", 
-          "description": "Default ACL Role for the Team. It is applied only for Users which get membership in a Team whithout explicitly defined ACL Role."
+          "description": "Default ACL Role for the Team. This ACL Role is applied by default to all the members of the Team, but it can be overridden for specific users."
         }, 
         "description": {
           "description": "Description of the Team.", 
@@ -77,7 +77,7 @@ To filter on this field, use: `id=...`.
           "type": "integer"
         }, 
         "name": {
-          "description": "The name of the Team.", 
+          "description": "Name of the Team.", 
           "type": "string"
         }
       }, 

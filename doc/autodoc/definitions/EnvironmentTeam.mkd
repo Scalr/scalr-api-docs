@@ -21,7 +21,7 @@ e.g.: `team=...`.
 
 ### `defaultAclRole` (read-only, filterable) ###
 
-Default ACL Role which overrides Team's default ACL Role for the Environment.  If it's ommited Team's default ACL Role will be applied.  Beware that default ACL Role is only applied for Users which get Team membership without explicitly defined ACL Role.
+Default ACL Role to override the Team's default ACL Role for this Environment. If it is ommited Team's default ACL Role will be used. Note that this default ACL Role is only applied for members of the Team that don't have an explicitely defined ACL Role.
 
 
 An object of type [`AclRoleForeignKey`](./../definitions/AclRoleForeignKey.mkd).
@@ -42,7 +42,7 @@ e.g.: `defaultAclRole=...`.
       "properties": {
         "defaultAclRole": {
           "$ref": "#/definitions/AclRoleForeignKey", 
-          "description": "Default ACL Role which overrides Team's default ACL Role for the Environment.  If it's ommited Team's default ACL Role will be applied.  Beware that default ACL Role is only applied for Users which get Team membership without explicitly defined ACL Role.", 
+          "description": "Default ACL Role to override the Team's default ACL Role for this Environment. If it is ommited Team's default ACL Role will be used. Note that this default ACL Role is only applied for members of the Team that don't have an explicitely defined ACL Role.", 
           "readOnly": true
         }, 
         "team": {

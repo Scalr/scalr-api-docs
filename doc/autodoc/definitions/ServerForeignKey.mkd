@@ -14,7 +14,7 @@ Note that you can pass a complete [`Server`](./../definitions/Server.mkd) object
 
 ### `id` (required) ###
 
-Identifier of the Scalr Server.
+Unique identifier for this Server.
 
 
 Property of type: `string`.
@@ -30,7 +30,7 @@ Property of type: `string`.
     {
       "properties": {
         "id": {
-          "description": "Identifier of the Scalr Server.", 
+          "description": "Unique identifier for this Server.", 
           "type": "string"
         }
       }, 

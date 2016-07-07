@@ -44,21 +44,21 @@ The response body is an object of type:
 
 The following errors **may** be returned by this endpoint.
 
-+ `InvalidStructure`: Your request is structurally incorrect, and was not understood by the API. Check the error message for more information.
-+ `InvalidValue`: Your request was understood by the API, but included data that is not acceptable. Check the error message for more information.
-+ `BadRequest`: Your request wasn't understood by the API. Check the error message for more information.
++ `InvalidStructure`: The request was structurally incorrect, and was not understood by the API. Check the error message for more information.
++ `InvalidValue`: The request was understood by the API, but included invalid data. Check the error message for more information.
++ `BadRequest`: The request wasn't understood by the API. Check the error message for more information.
 
 
 ### 401 ###
 
-Request was not authenticated.
+The request was not authenticated.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
-+ `BadAuthentication`: Your request authentication failed to validate. Check the error message for more information.
++ `BadAuthentication`: The request was not properly authenticated. Check the error message for more information.
 
 
 ### 403 ###
@@ -70,8 +70,8 @@ The response body is an object of type:
 
 The following errors **may** be returned by this endpoint.
 
-+ `ScopeViolation`: Your request should be made in a different Scope. Check the error message for more information.
-+ `PermissionViolation`: Your request requires permissions you do not have. Check the error message for more information.
++ `ScopeViolation`: This request should be made in a different Scope. Check the error message for more information.
++ `PermissionViolation`: You do not have the necessary permissions to perform this request. Check the error message for more information.
 
 
 ### 404 ###
@@ -83,7 +83,7 @@ The response body is an object of type:
 
 The following errors **may** be returned by this endpoint.
 
-+ `ObjectNotFound`: The URL you are trying to access does not exist. Check the error message for more information.
++ `ObjectNotFound`: The object you are trying to access does not exist. Check the error message for more information.
 
 
 ### 409 ###
@@ -95,23 +95,23 @@ The response body is an object of type:
 
 The following errors **may** be returned by this endpoint.
 
-+ `ObjectInUse`: The changes you are trying to make aren't possible while this object is in use. Check the error message for more information.
-+ `UnicityViolation`: The changes you are trying to make violate a unicity constraint. Check the error message for more information.
-+ `Locked`: Some of the objects being changed is locked for changing. Check the error message for more information.
-+ `NotEnabledPlatform`: Cloud platform is not enabled. Check the error message for more information.
-+ `OperatingSystemMismatch`: The Operating system mismatch. Check the error message for more information.
++ `ObjectInUse`: These changes aren't possible while this object is in use. Check the error message for more information.
++ `UnicityViolation`: These changes would violate a unicity constraint. Check the error message for more information.
++ `Locked`: Some of the objects being changed are locked and cannot be changed. Check the error message for more information.
++ `NotEnabledPlatform`: This Cloud platform is not enabled. Check the error message for more information.
++ `OperatingSystemMismatch`: The Operating System does not match. Check the error message for more information.
 
 
 ### 422 ###
 
-The request was well-formed but due to semantic errors was rejected.
+This request was well-formed but was rejected due to semantic errors.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
 
 The following errors **may** be returned by this endpoint.
 
-+ `ConfigurationMismatch`: Some of the configuration settings cannot be applied because of disagreements. Check the error message for more information.
++ `ConfigurationMismatch`: Some of the configuration settings cannot be applied because they conflict with the current state. Check the error message for more information.
 
 
 ### 500 ###
@@ -125,7 +125,7 @@ The response body is an object of type:
 
 ### 501 ###
 
-Error is raised when the feature is not implemented in Scalr.
+This feature is not implemented in Scalr.
 
 The response body is an object of type:
 [`ApiErrorResponse`](./../../../../../definitions/ApiErrorResponse.mkd).
@@ -147,7 +147,7 @@ The response body is an object of type:
 
     {
       "get": {
-        "description": "Describes all Images available in the global scope.", 
+        "description": "List all the Images available in the global scope.", 
         "responses": {
           "200": {
             "description": "A list of Image objects.", 
@@ -162,27 +162,27 @@ The response body is an object of type:
             }, 
             "x-errorCodes": [
               {
-                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "description": "The request was structurally incorrect, and was not understood by the API.", 
                 "name": "InvalidStructure"
               }, 
               {
-                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "description": "The request was understood by the API, but included invalid data.", 
                 "name": "InvalidValue"
               }, 
               {
-                "description": "Your request wasn't understood by the API.", 
+                "description": "The request wasn't understood by the API.", 
                 "name": "BadRequest"
               }
             ]
           }, 
           "401": {
-            "description": "Request was not authenticated.", 
+            "description": "The request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }, 
             "x-errorCodes": [
               {
-                "description": "Your request authentication failed to validate.", 
+                "description": "The request was not properly authenticated.", 
                 "name": "BadAuthentication"
               }
             ]
@@ -194,11 +194,11 @@ The response body is an object of type:
             }, 
             "x-errorCodes": [
               {
-                "description": "Your request should be made in a different Scope.", 
+                "description": "This request should be made in a different Scope.", 
                 "name": "ScopeViolation"
               }, 
               {
-                "description": "Your request requires permissions you do not have.", 
+                "description": "You do not have the necessary permissions to perform this request.", 
                 "name": "PermissionViolation"
               }
             ]
@@ -210,12 +210,12 @@ The response body is an object of type:
             }, 
             "x-errorCodes": [
               {
-                "description": "The route you are trying to access does not exist.", 
+                "description": "This endpoint does not exist.", 
                 "name": "EndpointNotFound", 
                 "noDoc": true
               }, 
               {
-                "description": "The URL you are trying to access does not exist.", 
+                "description": "The object you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ]
@@ -227,35 +227,35 @@ The response body is an object of type:
             }, 
             "x-errorCodes": [
               {
-                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "description": "These changes aren't possible while this object is in use.", 
                 "name": "ObjectInUse"
               }, 
               {
-                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "description": "These changes would violate a unicity constraint.", 
                 "name": "UnicityViolation"
               }, 
               {
-                "description": "Some of the objects being changed is locked for changing.", 
+                "description": "Some of the objects being changed are locked and cannot be changed.", 
                 "name": "Locked"
               }, 
               {
-                "description": "Cloud platform is not enabled.", 
+                "description": "This Cloud platform is not enabled.", 
                 "name": "NotEnabledPlatform"
               }, 
               {
-                "description": "The Operating system mismatch.", 
+                "description": "The Operating System does not match.", 
                 "name": "OperatingSystemMismatch"
               }
             ]
           }, 
           "422": {
-            "description": "The request was well-formed but due to semantic errors was rejected.", 
+            "description": "This request was well-formed but was rejected due to semantic errors.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }, 
             "x-errorCodes": [
               {
-                "description": "Some of the configuration settings cannot be applied because of disagreements.", 
+                "description": "Some of the configuration settings cannot be applied because they conflict with the current state.", 
                 "name": "ConfigurationMismatch"
               }
             ]
@@ -267,7 +267,7 @@ The response body is an object of type:
             }
           }, 
           "501": {
-            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "description": "This feature is not implemented in Scalr.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }
@@ -307,27 +307,27 @@ The response body is an object of type:
             }, 
             "x-errorCodes": [
               {
-                "description": "Your request is structurally incorrect, and was not understood by the API.", 
+                "description": "The request was structurally incorrect, and was not understood by the API.", 
                 "name": "InvalidStructure"
               }, 
               {
-                "description": "Your request was understood by the API, but included data that is not acceptable.", 
+                "description": "The request was understood by the API, but included invalid data.", 
                 "name": "InvalidValue"
               }, 
               {
-                "description": "Your request wasn't understood by the API.", 
+                "description": "The request wasn't understood by the API.", 
                 "name": "BadRequest"
               }
             ]
           }, 
           "401": {
-            "description": "Request was not authenticated.", 
+            "description": "The request was not authenticated.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }, 
             "x-errorCodes": [
               {
-                "description": "Your request authentication failed to validate.", 
+                "description": "The request was not properly authenticated.", 
                 "name": "BadAuthentication"
               }
             ]
@@ -339,11 +339,11 @@ The response body is an object of type:
             }, 
             "x-errorCodes": [
               {
-                "description": "Your request should be made in a different Scope.", 
+                "description": "This request should be made in a different Scope.", 
                 "name": "ScopeViolation"
               }, 
               {
-                "description": "Your request requires permissions you do not have.", 
+                "description": "You do not have the necessary permissions to perform this request.", 
                 "name": "PermissionViolation"
               }
             ]
@@ -355,12 +355,12 @@ The response body is an object of type:
             }, 
             "x-errorCodes": [
               {
-                "description": "The route you are trying to access does not exist.", 
+                "description": "This endpoint does not exist.", 
                 "name": "EndpointNotFound", 
                 "noDoc": true
               }, 
               {
-                "description": "The URL you are trying to access does not exist.", 
+                "description": "The object you are trying to access does not exist.", 
                 "name": "ObjectNotFound"
               }
             ]
@@ -372,35 +372,35 @@ The response body is an object of type:
             }, 
             "x-errorCodes": [
               {
-                "description": "The changes you are trying to make aren't possible while this object is in use.", 
+                "description": "These changes aren't possible while this object is in use.", 
                 "name": "ObjectInUse"
               }, 
               {
-                "description": "The changes you are trying to make violate a unicity constraint.", 
+                "description": "These changes would violate a unicity constraint.", 
                 "name": "UnicityViolation"
               }, 
               {
-                "description": "Some of the objects being changed is locked for changing.", 
+                "description": "Some of the objects being changed are locked and cannot be changed.", 
                 "name": "Locked"
               }, 
               {
-                "description": "Cloud platform is not enabled.", 
+                "description": "This Cloud platform is not enabled.", 
                 "name": "NotEnabledPlatform"
               }, 
               {
-                "description": "The Operating system mismatch.", 
+                "description": "The Operating System does not match.", 
                 "name": "OperatingSystemMismatch"
               }
             ]
           }, 
           "422": {
-            "description": "The request was well-formed but due to semantic errors was rejected.", 
+            "description": "This request was well-formed but was rejected due to semantic errors.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }, 
             "x-errorCodes": [
               {
-                "description": "Some of the configuration settings cannot be applied because of disagreements.", 
+                "description": "Some of the configuration settings cannot be applied because they conflict with the current state.", 
                 "name": "ConfigurationMismatch"
               }
             ]
@@ -412,7 +412,7 @@ The response body is an object of type:
             }
           }, 
           "501": {
-            "description": "Error is raised when the feature is not implemented in Scalr.", 
+            "description": "This feature is not implemented in Scalr.", 
             "schema": {
               "$ref": "#/definitions/ApiErrorResponse"
             }

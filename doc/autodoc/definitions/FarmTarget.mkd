@@ -1,6 +1,6 @@
 # `FarmTarget` #
 
-Selects all Servers of the triggering Server's Farm
+Selects all the Servers that belong to the triggering Server's Farm.
 
 ## Polymorphism ##
 
@@ -28,7 +28,7 @@ This `string` property is used for polymorphism. It **must** be set to: `"FarmTa
 ## Swagger Definition ##
 
     {
-      "description": "Selects all Servers of the triggering Server's Farm", 
+      "description": "Selects all the Servers that belong to the triggering Server's Farm.", 
       "properties": {
         "targetType": {
           "enum": [

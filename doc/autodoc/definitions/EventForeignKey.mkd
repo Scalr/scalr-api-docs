@@ -14,7 +14,7 @@ Note that you can pass a complete [`Event`](./../definitions/Event.mkd) object a
 
 ### `id` (required) ###
 
-The name of this custom event.
+The name of this Custom Event.
 
 
 Property of type: `string`.
@@ -30,7 +30,7 @@ Property of type: `string`.
     {
       "properties": {
         "id": {
-          "description": "The name of this custom event.", 
+          "description": "The name of this Custom Event.", 
           "type": "string"
         }
       }, 

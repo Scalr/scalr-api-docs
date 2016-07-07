@@ -60,7 +60,7 @@ To filter on this field, use: `name=...`.
       "discriminator": "ruleType", 
       "properties": {
         "name": {
-          "descritpion": "The name of the Scaling Metric.", 
+          "descritpion": "The name of a Scaling Metric.", 
           "type": "string"
         }, 
         "ruleType": {

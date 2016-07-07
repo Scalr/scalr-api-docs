@@ -54,7 +54,7 @@ To filter on this field, use: `timezone=...`.
 
 ### `teams` (optional, filterable) ###
 
-List of the Teams that have access to the Farm.
+List of the Teams that have access to this Farm.
 
 
 An array of 
@@ -151,7 +151,7 @@ To filter on this field, use: `id=...`.
           "$ref": "#/definitions/ProjectForeignKey"
         }, 
         "teams": {
-          "description": "List of the Teams that have access to the Farm.", 
+          "description": "List of the Teams that have access to this Farm.", 
           "items": {
             "$ref": "#/definitions/TeamForeignKey"
           }, 

@@ -1,6 +1,6 @@
 # `BasicScalingRule` #
 
-It is used in combination with user defined Scaling Metrics.
+Used in combination with user defined Scaling Metrics.
 
 ## Polymorphism ##
 
@@ -70,10 +70,10 @@ To filter on this field, use: `name=...`.
 ## Swagger Definition ##
 
     {
-      "description": "It is used in combination with user defined Scaling Metrics.", 
+      "description": "Used in combination with user defined Scaling Metrics.", 
       "properties": {
         "name": {
-          "descritpion": "The name of the Scaling Metric.", 
+          "descritpion": "The name of a Scaling Metric.", 
           "type": "string"
         }, 
         "ruleType": {

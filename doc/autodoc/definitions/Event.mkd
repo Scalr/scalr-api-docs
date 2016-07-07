@@ -10,7 +10,7 @@
 
 ### `id` (required, create-only, filterable) ###
 
-The name of this custom event.
+The name of this Custom Event.
 
 
 Property of type: `string`.
@@ -66,7 +66,7 @@ To filter on this field, use: `scope=...`.
           "type": "string"
         }, 
         "id": {
-          "description": "The name of this custom event.", 
+          "description": "The name of this Custom Event.", 
           "maxLength": 25, 
           "pattern": "[A-Za-z0-9]+", 
           "type": "string"

@@ -10,7 +10,7 @@
 
 ### `osType` (required, create-only, filterable) ###
 
-Type of OS this Script should execute on. This will influence Orchestration Rules, an will trigger validation on individual ScriptVersion's you upload.
+Type of OS this Script should execute on. This will influence Orchestration Rules, and will impact the validation rules applied to the ScriptVersions.
 
 
 Property of type: `string`.
@@ -36,7 +36,7 @@ To filter on this field, use: `name=...`.
 
 ### `timeoutDefault` (optional) ###
 
-
+The time after which Scalr will abort the execution of this Script, in seconds. This can be overridden in the Orchestration Rules that use this Script.
 
 
 Property of type: `integer`.
@@ -56,7 +56,7 @@ Property of type: `string`.
 
 ### `blockingDefault` (optional, filterable) ###
 
-
+Wether this Script is blocking by default. This can be overridden in the Orchestration Rules that use this Script.
 
 
 Property of type: `boolean`.
@@ -141,6 +141,7 @@ Property of type: `string`.
           "type": "string"
         }, 
         "blockingDefault": {
+          "description": "Wether this Script is blocking by default. This can be overridden in the Orchestration Rules that use this Script.", 
           "type": "boolean"
         }, 
         "description": {
@@ -159,7 +160,7 @@ Property of type: `string`.
           "type": "string"
         }, 
         "osType": {
-          "description": "Type of OS this Script should execute on. This will influence Orchestration Rules, an will trigger validation on individual ScriptVersion's you upload.", 
+          "description": "Type of OS this Script should execute on. This will influence Orchestration Rules, and will impact the validation rules applied to the ScriptVersions.", 
           "enum": [
             "linux", 
             "windows"
@@ -180,6 +181,7 @@ Property of type: `string`.
           "type": "string"
         }, 
         "timeoutDefault": {
+          "description": "The time after which Scalr will abort the execution of this Script, in seconds. This can be overridden in the Orchestration Rules that use this Script.", 
           "type": "integer"
         }
       }, 

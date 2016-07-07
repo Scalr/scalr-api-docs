@@ -10,7 +10,7 @@
 
 ### `cloudPlatform` (required, filterable) ###
 
-Cloud Platform this resources resides in.
+The Cloud Platform this resource resides in.
 
 
 Property of type: `string`.
@@ -36,7 +36,7 @@ To filter on this field, use: `cloudPlatform=...`.
 
 ### `cloudLocation` (optional, filterable) ###
 
-More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.
+Cloud Location, inside a given Cloud Platform, for this resource. May be null if this resource does not have a specific location. Note: if you would like to filter on this property, you **must** also filter on `cloudPlatform`.
 
 
 Property of type: `string`.
@@ -56,11 +56,11 @@ To filter on this field, use: `cloudLocation=...`.
     {
       "properties": {
         "cloudLocation": {
-          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.", 
+          "description": "Cloud Location, inside a given Cloud Platform, for this resource. May be null if this resource does not have a specific location. Note: if you would like to filter on this property, you **must** also filter on `cloudPlatform`.", 
           "type": "string"
         }, 
         "cloudPlatform": {
-          "description": "Cloud Platform this resources resides in.", 
+          "description": "The Cloud Platform this resource resides in.", 
           "enum": [
             "ec2", 
             "gce", 

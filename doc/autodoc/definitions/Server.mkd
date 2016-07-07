@@ -1,6 +1,6 @@
 # `Server` #
 
-JSON Representation of the Scalr Server.
+A Scalr Server.
 
 
 
@@ -10,7 +10,7 @@ JSON Representation of the Scalr Server.
 
 ### `type` (read-only, filterable) ###
 
-The type of the instance.
+Instance type on the Cloud Platform.
 
 
 Property of type: `string`.
@@ -45,7 +45,7 @@ To filter on this field, use: `status=...`.
 
 ### `publicIp` (read-only, filterable) ###
 
-IP address of the public network interface of the Server.
+The public IP address of this Server.
 
 
 An array of 
@@ -54,7 +54,7 @@ An array of
 
 ### `privateIp` (read-only, filterable) ###
 
-IP address of the private network interface of the Server.
+The private IP address of this Server.
 
 
 An array of 
@@ -63,7 +63,7 @@ An array of
 
 ### `launchedBy` (read-only, filterable) ###
 
-The identifier of the User who launched the Server.
+The identifier of the User who launched this Server.
 
 
 An object of type [`UserForeignKey`](./../definitions/UserForeignKey.mkd).
@@ -74,7 +74,7 @@ e.g.: `launchedBy=...`.
 
 ### `launched` (read-only) ###
 
-The date and time the Server was launched.
+The date at which this Server was launched.
 
 
 Property of type: `string`.
@@ -84,7 +84,7 @@ Property of type: `string`.
 
 ### `launchReason` (read-only, filterable) ###
 
-The reason the Server was launched.
+The reason this Server was launched.
 
 
 Property of type: `string`.
@@ -95,7 +95,7 @@ To filter on this field, use: `launchReason=...`.
 
 ### `index` (read-only, filterable) ###
 
-The index of the Server in the Farm Role.
+The index of this Server in the Farm Role.
 
 
 Property of type: `integer`.
@@ -106,7 +106,7 @@ To filter on this field, use: `index=...`.
 
 ### `id` (read-only, filterable) ###
 
-Identifier of the Scalr Server.
+Unique identifier for this Server.
 
 
 Property of type: `string`.
@@ -128,7 +128,7 @@ To filter on this field, use: `hostname=...`.
 
 ### `farmRole` (read-only, filterable) ###
 
-Identifier of the Farm Role
+Identifier of the Farm Role this Server belongs to.
 
 
 An object of type [`FarmRoleForeignKey`](./../definitions/FarmRoleForeignKey.mkd).
@@ -139,7 +139,7 @@ e.g.: `farmRole=...`.
 
 ### `farm` (read-only, filterable) ###
 
-Identifier of the Farm
+Identifier of the Farm this Server belongs to.
 
 
 An object of type [`FarmForeignKey`](./../definitions/FarmForeignKey.mkd).
@@ -150,7 +150,7 @@ e.g.: `farm=...`.
 
 ### `cloudPlatform` (read-only, filterable) ###
 
-Cloud Platform this resources resides in.
+The Cloud Platform this resource resides in.
 
 
 Property of type: `string`.
@@ -176,7 +176,7 @@ To filter on this field, use: `cloudPlatform=...`.
 
 ### `cloudLocation` (read-only, filterable) ###
 
-More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.
+Cloud Location, inside a given Cloud Platform, for this resource. May be null if this resource does not have a specific location. Note: if you would like to filter on this property, you **must** also filter on `cloudPlatform`.
 
 
 Property of type: `string`.
@@ -198,15 +198,15 @@ To filter on this field, use: `cloudLocation=...`.
 ## Swagger Definition ##
 
     {
-      "description": "JSON Representation of the Scalr Server.", 
+      "description": "A Scalr Server.", 
       "properties": {
         "cloudLocation": {
-          "description": "More precise Cloud Location (within a given Cloud Platform) for this resource. May be null if this resource does not have a location (and is global to the platform). Note that if you'd like to filter on this property, you **must** also filter on `cloudPlatform`.", 
+          "description": "Cloud Location, inside a given Cloud Platform, for this resource. May be null if this resource does not have a specific location. Note: if you would like to filter on this property, you **must** also filter on `cloudPlatform`.", 
           "readOnly": true, 
           "type": "string"
         }, 
         "cloudPlatform": {
-          "description": "Cloud Platform this resources resides in.", 
+          "description": "The Cloud Platform this resource resides in.", 
           "enum": [
             "ec2", 
             "gce", 
@@ -227,12 +227,12 @@ To filter on this field, use: `cloudLocation=...`.
         }, 
         "farm": {
           "$ref": "#/definitions/FarmForeignKey", 
-          "description": "Identifier of the Farm", 
+          "description": "Identifier of the Farm this Server belongs to.", 
           "readOnly": true
         }, 
         "farmRole": {
           "$ref": "#/definitions/FarmRoleForeignKey", 
-          "description": "Identifier of the Farm Role", 
+          "description": "Identifier of the Farm Role this Server belongs to.", 
           "readOnly": true
         }, 
         "hostname": {
@@ -241,7 +241,7 @@ To filter on this field, use: `cloudLocation=...`.
           "type": "string"
         }, 
         "id": {
-          "description": "Identifier of the Scalr Server.", 
+          "description": "Unique identifier for this Server.", 
           "maxLength": 36, 
           "minLength": 36, 
           "pattern": "[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}", 
@@ -249,28 +249,28 @@ To filter on this field, use: `cloudLocation=...`.
           "type": "string"
         }, 
         "index": {
-          "description": "The index of the Server in the Farm Role.", 
+          "description": "The index of this Server in the Farm Role.", 
           "readOnly": true, 
           "type": "integer"
         }, 
         "launchReason": {
-          "description": "The reason the Server was launched.", 
+          "description": "The reason this Server was launched.", 
           "readOnly": true, 
           "type": "string"
         }, 
         "launched": {
-          "description": "The date and time the Server was launched.", 
+          "description": "The date at which this Server was launched.", 
           "format": "date-time", 
           "readOnly": true, 
           "type": "string"
         }, 
         "launchedBy": {
           "$ref": "#/definitions/UserForeignKey", 
-          "description": "The identifier of the User who launched the Server.", 
+          "description": "The identifier of the User who launched this Server.", 
           "readOnly": true
         }, 
         "privateIp": {
-          "description": "IP address of the private network interface of the Server.", 
+          "description": "The private IP address of this Server.", 
           "items": {
             "type": "string"
           }, 
@@ -278,7 +278,7 @@ To filter on this field, use: `cloudLocation=...`.
           "type": "array"
         }, 
         "publicIp": {
-          "description": "IP address of the public network interface of the Server.", 
+          "description": "The public IP address of this Server.", 
           "items": {
             "type": "string"
           }, 
@@ -304,7 +304,7 @@ To filter on this field, use: `cloudLocation=...`.
           "type": "string"
         }, 
         "type": {
-          "description": "The type of the instance.", 
+          "description": "Instance type on the Cloud Platform.", 
           "readOnly": true, 
           "type": "string"
         }
