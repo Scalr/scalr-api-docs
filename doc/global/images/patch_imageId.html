@@ -1,0 +1,2617 @@
+<!DOCTYPE html>
+<html>
+<!-- File generated from src/templates/tpl/base.html -->
+<head>
+  <meta charset="UTF-8">
+  <title>Images: Edit - Scalr API Documentation</title>
+  <link rel="icon" type="image/ico" href="/images/favicon-retina.ico" />
+  <link href='/css/fonts.css' media='screen' rel='stylesheet' type='text/css'/>
+  <link href='/css/reset.css' media='screen' rel='stylesheet' type='text/css'/>
+  <link href='/css/style.css' media='screen' rel='stylesheet' type='text/css'/>
+  <link href='/css/tooltip-theme-arrows.css' rel='stylesheet' type='text/css'/>
+  <link href='/css/codemirror.css' rel='stylesheet' type='text/css'/>
+  <script src='/lib/jquery-1.12.3.min.js' type='text/javascript'></script>
+  <script src='/lib/highlight.pack.js' type='text/javascript'></script>
+  <script src='/lib/hmac-sha256.js' type='text/javascript'></script>
+  <script src='/lib/enc-base64-min.js' type='text/javascript'></script>
+  <script src='/lib/scalr-api.js' type='text/javascript'></script>
+  <script src="/lib/store.min.js"></script>
+  <script src="/lib/tether.min.js"></script>
+  <script src="/lib/drop.min.js"></script>
+  <script src="/lib/tooltip.min.js"></script>
+  <script src="/lib/codemirror-compressed.js"></script>
+</head>
+
+<body class="main">
+<div id='header'>
+  <a id="logo" href="/">
+    <img class="logo-img" alt="scalr" height="33" src="/images/scalr-logo-retina.png" /><span class="logo-title">Scalr API Documentation</span>
+  </a>
+</div>
+
+  <div id="navbar">
+    <nav>
+      <ul>
+        <li id="menu-home" class="menu-item">
+          <a href="/">Getting Started</a>
+            
+        </li>
+        <li id="menu-auth" class="menu-item">
+          <a href="/authentication/index.html">Authentication algorithm</a>
+            
+        </li>
+        <li id="menu-user" class="menu-item">
+          <a href="/user"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>User API</a>
+      <ul style="display:none;">
+              <li id="menu-user-cost-centers" class="menu-item">
+          <a href="/user/cost-centers"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>cost-centers</a>
+      <ul style="display:none;">
+              <li id="menu-user-cost-centers-get_costCenterId" class="menu-item">
+          <a href="/user/cost-centers/get_costCenterId.html">get</a>
+            
+        </li>
+        <li id="menu-user-cost-centers-get" class="menu-item">
+          <a href="/user/cost-centers/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-events" class="menu-item">
+          <a href="/user/events"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>events</a>
+      <ul style="display:none;">
+              <li id="menu-user-events-post" class="menu-item">
+          <a href="/user/events/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-events-delete_eventId" class="menu-item">
+          <a href="/user/events/delete_eventId.html">delete</a>
+            
+        </li>
+        <li id="menu-user-events-patch_eventId" class="menu-item">
+          <a href="/user/events/patch_eventId.html">edit</a>
+            
+        </li>
+        <li id="menu-user-events-get_eventId" class="menu-item">
+          <a href="/user/events/get_eventId.html">get</a>
+            
+        </li>
+        <li id="menu-user-events-get" class="menu-item">
+          <a href="/user/events/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-farm-roles" class="menu-item">
+          <a href="/user/farm-roles"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>farm-roles</a>
+      <ul style="display:none;">
+              <li id="menu-user-farm-roles-delete_farmRoleId" class="menu-item">
+          <a href="/user/farm-roles/delete_farmRoleId.html">delete</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-patch_farmRoleId" class="menu-item">
+          <a href="/user/farm-roles/patch_farmRoleId.html">edit</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-patch_farmRoleId_instance" class="menu-item">
+          <a href="/user/farm-roles/patch_farmRoleId_instance.html">edit instance</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-patch_farmRoleId_placement" class="menu-item">
+          <a href="/user/farm-roles/patch_farmRoleId_placement.html">edit placement</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-get_farmRoleId" class="menu-item">
+          <a href="/user/farm-roles/get_farmRoleId.html">get</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-get_farmRoleId_instance" class="menu-item">
+          <a href="/user/farm-roles/get_farmRoleId_instance.html">get instance</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-get_farmRoleId_placement" class="menu-item">
+          <a href="/user/farm-roles/get_farmRoleId_placement.html">get placement</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-post_farmRoleId_actions_import-server" class="menu-item">
+          <a href="/user/farm-roles/post_farmRoleId_actions_import-server.html">import server</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-global-variables" class="menu-item">
+          <a href="/user/farm-roles/global-variables"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>global-variables</a>
+      <ul style="display:none;">
+              <li id="menu-user-farm-roles-global-variables-post" class="menu-item">
+          <a href="/user/farm-roles/global-variables/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-global-variables-delete_globalVariableName" class="menu-item">
+          <a href="/user/farm-roles/global-variables/delete_globalVariableName.html">delete</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-global-variables-patch_globalVariableName" class="menu-item">
+          <a href="/user/farm-roles/global-variables/patch_globalVariableName.html">edit</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-global-variables-get_globalVariableName" class="menu-item">
+          <a href="/user/farm-roles/global-variables/get_globalVariableName.html">get</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-global-variables-get" class="menu-item">
+          <a href="/user/farm-roles/global-variables/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-farm-roles-orchestration-rules" class="menu-item">
+          <a href="/user/farm-roles/orchestration-rules"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>orchestration-rules</a>
+      <ul style="display:none;">
+              <li id="menu-user-farm-roles-orchestration-rules-post" class="menu-item">
+          <a href="/user/farm-roles/orchestration-rules/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-orchestration-rules-delete_orchestrationRuleId" class="menu-item">
+          <a href="/user/farm-roles/orchestration-rules/delete_orchestrationRuleId.html">delete</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-orchestration-rules-patch_orchestrationRuleId" class="menu-item">
+          <a href="/user/farm-roles/orchestration-rules/patch_orchestrationRuleId.html">edit</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-orchestration-rules-get_orchestrationRuleId" class="menu-item">
+          <a href="/user/farm-roles/orchestration-rules/get_orchestrationRuleId.html">get</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-orchestration-rules-get" class="menu-item">
+          <a href="/user/farm-roles/orchestration-rules/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-farm-roles-scaling" class="menu-item">
+          <a href="/user/farm-roles/scaling"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>scaling</a>
+      <ul style="display:none;">
+              <li id="menu-user-farm-roles-scaling-post" class="menu-item">
+          <a href="/user/farm-roles/scaling/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-scaling-delete_metricName" class="menu-item">
+          <a href="/user/farm-roles/scaling/delete_metricName.html">delete</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-scaling-patch" class="menu-item">
+          <a href="/user/farm-roles/scaling/patch.html">edit</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-scaling-patch_metricName" class="menu-item">
+          <a href="/user/farm-roles/scaling/patch_metricName.html">edit</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-scaling-get_metricName" class="menu-item">
+          <a href="/user/farm-roles/scaling/get_metricName.html">get</a>
+            
+        </li>
+        <li id="menu-user-farm-roles-scaling-get" class="menu-item">
+          <a href="/user/farm-roles/scaling/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-farm-roles-servers" class="menu-item">
+          <a href="/user/farm-roles/servers"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>servers</a>
+      <ul style="display:none;">
+              <li id="menu-user-farm-roles-servers-get" class="menu-item">
+          <a href="/user/farm-roles/servers/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-farms" class="menu-item">
+          <a href="/user/farms"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>farms</a>
+      <ul style="display:none;">
+              <li id="menu-user-farms-post" class="menu-item">
+          <a href="/user/farms/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-farms-delete_farmId" class="menu-item">
+          <a href="/user/farms/delete_farmId.html">delete</a>
+            
+        </li>
+        <li id="menu-user-farms-patch_farmId" class="menu-item">
+          <a href="/user/farms/patch_farmId.html">edit</a>
+            
+        </li>
+        <li id="menu-user-farms-get_farmId" class="menu-item">
+          <a href="/user/farms/get_farmId.html">get</a>
+            
+        </li>
+        <li id="menu-user-farms-get" class="menu-item">
+          <a href="/user/farms/get.html">list</a>
+            
+        </li>
+        <li id="menu-user-farms-get_farmId_servers" class="menu-item">
+          <a href="/user/farms/get_farmId_servers.html">list servers</a>
+            
+        </li>
+        <li id="menu-user-farms-actions" class="menu-item">
+          <a href="/user/farms/actions"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>actions</a>
+      <ul style="display:none;">
+              <li id="menu-user-farms-actions-post_clone" class="menu-item">
+          <a href="/user/farms/actions/post_clone.html">clone</a>
+            
+        </li>
+        <li id="menu-user-farms-actions-post_launch" class="menu-item">
+          <a href="/user/farms/actions/post_launch.html">launch</a>
+            
+        </li>
+        <li id="menu-user-farms-actions-post_terminate" class="menu-item">
+          <a href="/user/farms/actions/post_terminate.html">terminate</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-farms-farm-roles" class="menu-item">
+          <a href="/user/farms/farm-roles"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>farm-roles</a>
+      <ul style="display:none;">
+              <li id="menu-user-farms-farm-roles-post" class="menu-item">
+          <a href="/user/farms/farm-roles/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-farms-farm-roles-get" class="menu-item">
+          <a href="/user/farms/farm-roles/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-farms-global-variables" class="menu-item">
+          <a href="/user/farms/global-variables"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>global-variables</a>
+      <ul style="display:none;">
+              <li id="menu-user-farms-global-variables-post" class="menu-item">
+          <a href="/user/farms/global-variables/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-farms-global-variables-delete_globalVariableName" class="menu-item">
+          <a href="/user/farms/global-variables/delete_globalVariableName.html">delete</a>
+            
+        </li>
+        <li id="menu-user-farms-global-variables-patch_globalVariableName" class="menu-item">
+          <a href="/user/farms/global-variables/patch_globalVariableName.html">edit</a>
+            
+        </li>
+        <li id="menu-user-farms-global-variables-get_globalVariableName" class="menu-item">
+          <a href="/user/farms/global-variables/get_globalVariableName.html">get</a>
+            
+        </li>
+        <li id="menu-user-farms-global-variables-get" class="menu-item">
+          <a href="/user/farms/global-variables/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-images" class="menu-item">
+          <a href="/user/images"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>images</a>
+      <ul style="display:none;">
+              <li id="menu-user-images-post_imageId_actions_copy" class="menu-item">
+          <a href="/user/images/post_imageId_actions_copy.html">copy</a>
+            
+        </li>
+        <li id="menu-user-images-post" class="menu-item">
+          <a href="/user/images/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-images-delete_imageId" class="menu-item">
+          <a href="/user/images/delete_imageId.html">delete</a>
+            
+        </li>
+        <li id="menu-user-images-patch_imageId" class="menu-item">
+          <a href="/user/images/patch_imageId.html">edit</a>
+            
+        </li>
+        <li id="menu-user-images-get_imageId" class="menu-item">
+          <a href="/user/images/get_imageId.html">get</a>
+            
+        </li>
+        <li id="menu-user-images-get" class="menu-item">
+          <a href="/user/images/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-orchestration-logs" class="menu-item">
+          <a href="/user/orchestration-logs"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>orchestration-logs</a>
+      <ul style="display:none;">
+              <li id="menu-user-orchestration-logs-get_logEntryId" class="menu-item">
+          <a href="/user/orchestration-logs/get_logEntryId.html">get</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-os" class="menu-item">
+          <a href="/user/os"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>os</a>
+      <ul style="display:none;">
+              <li id="menu-user-os-get_osId" class="menu-item">
+          <a href="/user/os/get_osId.html">get</a>
+            
+        </li>
+        <li id="menu-user-os-get" class="menu-item">
+          <a href="/user/os/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-projects" class="menu-item">
+          <a href="/user/projects"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>projects</a>
+      <ul style="display:none;">
+              <li id="menu-user-projects-post" class="menu-item">
+          <a href="/user/projects/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-projects-get_projectId" class="menu-item">
+          <a href="/user/projects/get_projectId.html">get</a>
+            
+        </li>
+        <li id="menu-user-projects-get" class="menu-item">
+          <a href="/user/projects/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-role-categories" class="menu-item">
+          <a href="/user/role-categories"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>role-categories</a>
+      <ul style="display:none;">
+              <li id="menu-user-role-categories-post" class="menu-item">
+          <a href="/user/role-categories/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-role-categories-delete_roleCategoryId" class="menu-item">
+          <a href="/user/role-categories/delete_roleCategoryId.html">delete</a>
+            
+        </li>
+        <li id="menu-user-role-categories-patch_roleCategoryId" class="menu-item">
+          <a href="/user/role-categories/patch_roleCategoryId.html">edit</a>
+            
+        </li>
+        <li id="menu-user-role-categories-get_roleCategoryId" class="menu-item">
+          <a href="/user/role-categories/get_roleCategoryId.html">get</a>
+            
+        </li>
+        <li id="menu-user-role-categories-get" class="menu-item">
+          <a href="/user/role-categories/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-roles" class="menu-item">
+          <a href="/user/roles"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>roles</a>
+      <ul style="display:none;">
+              <li id="menu-user-roles-post" class="menu-item">
+          <a href="/user/roles/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-roles-delete_roleId" class="menu-item">
+          <a href="/user/roles/delete_roleId.html">delete</a>
+            
+        </li>
+        <li id="menu-user-roles-patch_roleId" class="menu-item">
+          <a href="/user/roles/patch_roleId.html">edit</a>
+            
+        </li>
+        <li id="menu-user-roles-get_roleId" class="menu-item">
+          <a href="/user/roles/get_roleId.html">get</a>
+            
+        </li>
+        <li id="menu-user-roles-get" class="menu-item">
+          <a href="/user/roles/get.html">list</a>
+            
+        </li>
+        <li id="menu-user-roles-global-variables" class="menu-item">
+          <a href="/user/roles/global-variables"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>global-variables</a>
+      <ul style="display:none;">
+              <li id="menu-user-roles-global-variables-post" class="menu-item">
+          <a href="/user/roles/global-variables/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-roles-global-variables-delete_globalVariableName" class="menu-item">
+          <a href="/user/roles/global-variables/delete_globalVariableName.html">delete</a>
+            
+        </li>
+        <li id="menu-user-roles-global-variables-patch_globalVariableName" class="menu-item">
+          <a href="/user/roles/global-variables/patch_globalVariableName.html">edit</a>
+            
+        </li>
+        <li id="menu-user-roles-global-variables-get_globalVariableName" class="menu-item">
+          <a href="/user/roles/global-variables/get_globalVariableName.html">get</a>
+            
+        </li>
+        <li id="menu-user-roles-global-variables-get" class="menu-item">
+          <a href="/user/roles/global-variables/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-roles-images" class="menu-item">
+          <a href="/user/roles/images"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>images</a>
+      <ul style="display:none;">
+              <li id="menu-user-roles-images-post" class="menu-item">
+          <a href="/user/roles/images/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-roles-images-delete_imageId" class="menu-item">
+          <a href="/user/roles/images/delete_imageId.html">delete</a>
+            
+        </li>
+        <li id="menu-user-roles-images-get_imageId" class="menu-item">
+          <a href="/user/roles/images/get_imageId.html">get</a>
+            
+        </li>
+        <li id="menu-user-roles-images-get" class="menu-item">
+          <a href="/user/roles/images/get.html">list</a>
+            
+        </li>
+        <li id="menu-user-roles-images-post_imageId_actions_replace" class="menu-item">
+          <a href="/user/roles/images/post_imageId_actions_replace.html">replace</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-roles-orchestration-rules" class="menu-item">
+          <a href="/user/roles/orchestration-rules"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>orchestration-rules</a>
+      <ul style="display:none;">
+              <li id="menu-user-roles-orchestration-rules-post" class="menu-item">
+          <a href="/user/roles/orchestration-rules/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-roles-orchestration-rules-delete_orchestrationRuleId" class="menu-item">
+          <a href="/user/roles/orchestration-rules/delete_orchestrationRuleId.html">delete</a>
+            
+        </li>
+        <li id="menu-user-roles-orchestration-rules-patch_orchestrationRuleId" class="menu-item">
+          <a href="/user/roles/orchestration-rules/patch_orchestrationRuleId.html">edit</a>
+            
+        </li>
+        <li id="menu-user-roles-orchestration-rules-get_orchestrationRuleId" class="menu-item">
+          <a href="/user/roles/orchestration-rules/get_orchestrationRuleId.html">get</a>
+            
+        </li>
+        <li id="menu-user-roles-orchestration-rules-get" class="menu-item">
+          <a href="/user/roles/orchestration-rules/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-scaling-metrics" class="menu-item">
+          <a href="/user/scaling-metrics"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>scaling-metrics</a>
+      <ul style="display:none;">
+              <li id="menu-user-scaling-metrics-post" class="menu-item">
+          <a href="/user/scaling-metrics/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-scaling-metrics-delete_metricName" class="menu-item">
+          <a href="/user/scaling-metrics/delete_metricName.html">delete</a>
+            
+        </li>
+        <li id="menu-user-scaling-metrics-patch_metricName" class="menu-item">
+          <a href="/user/scaling-metrics/patch_metricName.html">edit</a>
+            
+        </li>
+        <li id="menu-user-scaling-metrics-get_metricName" class="menu-item">
+          <a href="/user/scaling-metrics/get_metricName.html">get</a>
+            
+        </li>
+        <li id="menu-user-scaling-metrics-get" class="menu-item">
+          <a href="/user/scaling-metrics/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-script-executions" class="menu-item">
+          <a href="/user/script-executions"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>script-executions</a>
+      <ul style="display:none;">
+              <li id="menu-user-script-executions-get_scriptExecutionId" class="menu-item">
+          <a href="/user/script-executions/get_scriptExecutionId.html">get</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-scripts" class="menu-item">
+          <a href="/user/scripts"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>scripts</a>
+      <ul style="display:none;">
+              <li id="menu-user-scripts-post" class="menu-item">
+          <a href="/user/scripts/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-scripts-delete_scriptId" class="menu-item">
+          <a href="/user/scripts/delete_scriptId.html">delete</a>
+            
+        </li>
+        <li id="menu-user-scripts-patch_scriptId" class="menu-item">
+          <a href="/user/scripts/patch_scriptId.html">edit</a>
+            
+        </li>
+        <li id="menu-user-scripts-post_scriptId_actions_execute" class="menu-item">
+          <a href="/user/scripts/post_scriptId_actions_execute.html">execute</a>
+            
+        </li>
+        <li id="menu-user-scripts-get_scriptId" class="menu-item">
+          <a href="/user/scripts/get_scriptId.html">get</a>
+            
+        </li>
+        <li id="menu-user-scripts-get" class="menu-item">
+          <a href="/user/scripts/get.html">list</a>
+            
+        </li>
+        <li id="menu-user-scripts-script-versions" class="menu-item">
+          <a href="/user/scripts/script-versions"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>script-versions</a>
+      <ul style="display:none;">
+              <li id="menu-user-scripts-script-versions-post" class="menu-item">
+          <a href="/user/scripts/script-versions/post.html">create</a>
+            
+        </li>
+        <li id="menu-user-scripts-script-versions-delete_scriptVersionNumber" class="menu-item">
+          <a href="/user/scripts/script-versions/delete_scriptVersionNumber.html">delete</a>
+            
+        </li>
+        <li id="menu-user-scripts-script-versions-patch_scriptVersionNumber" class="menu-item">
+          <a href="/user/scripts/script-versions/patch_scriptVersionNumber.html">edit</a>
+            
+        </li>
+        <li id="menu-user-scripts-script-versions-post_scriptVersionNumber_actions_execute" class="menu-item">
+          <a href="/user/scripts/script-versions/post_scriptVersionNumber_actions_execute.html">execute</a>
+            
+        </li>
+        <li id="menu-user-scripts-script-versions-get_scriptVersionNumber" class="menu-item">
+          <a href="/user/scripts/script-versions/get_scriptVersionNumber.html">get</a>
+            
+        </li>
+        <li id="menu-user-scripts-script-versions-get" class="menu-item">
+          <a href="/user/scripts/script-versions/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-user-servers" class="menu-item">
+          <a href="/user/servers"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>servers</a>
+      <ul style="display:none;">
+              <li id="menu-user-servers-get_serverId" class="menu-item">
+          <a href="/user/servers/get_serverId.html">get</a>
+            
+        </li>
+        <li id="menu-user-servers-get" class="menu-item">
+          <a href="/user/servers/get.html">list</a>
+            
+        </li>
+        <li id="menu-user-servers-actions" class="menu-item">
+          <a href="/user/servers/actions"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>actions</a>
+      <ul style="display:none;">
+              <li id="menu-user-servers-actions-post_reboot" class="menu-item">
+          <a href="/user/servers/actions/post_reboot.html">reboot</a>
+            
+        </li>
+        <li id="menu-user-servers-actions-post_resume" class="menu-item">
+          <a href="/user/servers/actions/post_resume.html">resume</a>
+            
+        </li>
+        <li id="menu-user-servers-actions-post_suspend" class="menu-item">
+          <a href="/user/servers/actions/post_suspend.html">suspend</a>
+            
+        </li>
+        <li id="menu-user-servers-actions-post_terminate" class="menu-item">
+          <a href="/user/servers/actions/post_terminate.html">terminate</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account" class="menu-item">
+          <a href="/account"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>Account API</a>
+      <ul style="display:none;">
+              <li id="menu-account-acl-roles" class="menu-item">
+          <a href="/account/acl-roles"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>acl-roles</a>
+      <ul style="display:none;">
+              <li id="menu-account-acl-roles-get" class="menu-item">
+          <a href="/account/acl-roles/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-cloud-credentials" class="menu-item">
+          <a href="/account/cloud-credentials"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>cloud-credentials</a>
+      <ul style="display:none;">
+              <li id="menu-account-cloud-credentials-post" class="menu-item">
+          <a href="/account/cloud-credentials/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-cloud-credentials-delete_cloudCredentialsId" class="menu-item">
+          <a href="/account/cloud-credentials/delete_cloudCredentialsId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-cloud-credentials-patch_cloudCredentialsId" class="menu-item">
+          <a href="/account/cloud-credentials/patch_cloudCredentialsId.html">edit</a>
+            
+        </li>
+        <li id="menu-account-cloud-credentials-get_cloudCredentialsId" class="menu-item">
+          <a href="/account/cloud-credentials/get_cloudCredentialsId.html">get</a>
+            
+        </li>
+        <li id="menu-account-cloud-credentials-get" class="menu-item">
+          <a href="/account/cloud-credentials/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-cost-centers" class="menu-item">
+          <a href="/account/cost-centers"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>cost-centers</a>
+      <ul style="display:none;">
+              <li id="menu-account-cost-centers-get_costCenterId" class="menu-item">
+          <a href="/account/cost-centers/get_costCenterId.html">get</a>
+            
+        </li>
+        <li id="menu-account-cost-centers-get" class="menu-item">
+          <a href="/account/cost-centers/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-environments" class="menu-item">
+          <a href="/account/environments"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>environments</a>
+      <ul style="display:none;">
+              <li id="menu-account-environments-post" class="menu-item">
+          <a href="/account/environments/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-environments-delete_envId" class="menu-item">
+          <a href="/account/environments/delete_envId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-environments-patch_envId" class="menu-item">
+          <a href="/account/environments/patch_envId.html">edit</a>
+            
+        </li>
+        <li id="menu-account-environments-get_envId" class="menu-item">
+          <a href="/account/environments/get_envId.html">get</a>
+            
+        </li>
+        <li id="menu-account-environments-get" class="menu-item">
+          <a href="/account/environments/get.html">list</a>
+            
+        </li>
+        <li id="menu-account-environments-clouds" class="menu-item">
+          <a href="/account/environments/clouds"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>clouds</a>
+      <ul style="display:none;">
+              <li id="menu-account-environments-clouds-delete_cloud" class="menu-item">
+          <a href="/account/environments/clouds/delete_cloud.html">delete</a>
+            
+        </li>
+        <li id="menu-account-environments-clouds-get_cloud" class="menu-item">
+          <a href="/account/environments/clouds/get_cloud.html">get</a>
+            
+        </li>
+        <li id="menu-account-environments-clouds-get" class="menu-item">
+          <a href="/account/environments/clouds/get.html">list</a>
+            
+        </li>
+        <li id="menu-account-environments-clouds-post_cloud" class="menu-item">
+          <a href="/account/environments/clouds/post_cloud.html">replace</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-environments-teams" class="menu-item">
+          <a href="/account/environments/teams"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>teams</a>
+      <ul style="display:none;">
+              <li id="menu-account-environments-teams-post" class="menu-item">
+          <a href="/account/environments/teams/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-environments-teams-delete_teamId" class="menu-item">
+          <a href="/account/environments/teams/delete_teamId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-environments-teams-get" class="menu-item">
+          <a href="/account/environments/teams/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-events" class="menu-item">
+          <a href="/account/events"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>events</a>
+      <ul style="display:none;">
+              <li id="menu-account-events-post" class="menu-item">
+          <a href="/account/events/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-events-delete_eventId" class="menu-item">
+          <a href="/account/events/delete_eventId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-events-patch_eventId" class="menu-item">
+          <a href="/account/events/patch_eventId.html">edit</a>
+            
+        </li>
+        <li id="menu-account-events-get_eventId" class="menu-item">
+          <a href="/account/events/get_eventId.html">get</a>
+            
+        </li>
+        <li id="menu-account-events-get" class="menu-item">
+          <a href="/account/events/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-images" class="menu-item">
+          <a href="/account/images"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>images</a>
+      <ul style="display:none;">
+              <li id="menu-account-images-post_imageId_actions_copy" class="menu-item">
+          <a href="/account/images/post_imageId_actions_copy.html">copy</a>
+            
+        </li>
+        <li id="menu-account-images-post" class="menu-item">
+          <a href="/account/images/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-images-delete_imageId" class="menu-item">
+          <a href="/account/images/delete_imageId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-images-patch_imageId" class="menu-item">
+          <a href="/account/images/patch_imageId.html">edit</a>
+            
+        </li>
+        <li id="menu-account-images-get_imageId" class="menu-item">
+          <a href="/account/images/get_imageId.html">get</a>
+            
+        </li>
+        <li id="menu-account-images-get" class="menu-item">
+          <a href="/account/images/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-orchestration-rules" class="menu-item">
+          <a href="/account/orchestration-rules"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>orchestration-rules</a>
+      <ul style="display:none;">
+              <li id="menu-account-orchestration-rules-post" class="menu-item">
+          <a href="/account/orchestration-rules/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-orchestration-rules-delete_orchestrationRuleId" class="menu-item">
+          <a href="/account/orchestration-rules/delete_orchestrationRuleId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-orchestration-rules-patch_orchestrationRuleId" class="menu-item">
+          <a href="/account/orchestration-rules/patch_orchestrationRuleId.html">edit</a>
+            
+        </li>
+        <li id="menu-account-orchestration-rules-get_orchestrationRuleId" class="menu-item">
+          <a href="/account/orchestration-rules/get_orchestrationRuleId.html">get</a>
+            
+        </li>
+        <li id="menu-account-orchestration-rules-get" class="menu-item">
+          <a href="/account/orchestration-rules/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-os" class="menu-item">
+          <a href="/account/os"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>os</a>
+      <ul style="display:none;">
+              <li id="menu-account-os-get_osId" class="menu-item">
+          <a href="/account/os/get_osId.html">get</a>
+            
+        </li>
+        <li id="menu-account-os-get" class="menu-item">
+          <a href="/account/os/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-role-categories" class="menu-item">
+          <a href="/account/role-categories"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>role-categories</a>
+      <ul style="display:none;">
+              <li id="menu-account-role-categories-post" class="menu-item">
+          <a href="/account/role-categories/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-role-categories-delete_roleCategoryId" class="menu-item">
+          <a href="/account/role-categories/delete_roleCategoryId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-role-categories-patch_roleCategoryId" class="menu-item">
+          <a href="/account/role-categories/patch_roleCategoryId.html">edit</a>
+            
+        </li>
+        <li id="menu-account-role-categories-get_roleCategoryId" class="menu-item">
+          <a href="/account/role-categories/get_roleCategoryId.html">get</a>
+            
+        </li>
+        <li id="menu-account-role-categories-get" class="menu-item">
+          <a href="/account/role-categories/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-roles" class="menu-item">
+          <a href="/account/roles"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>roles</a>
+      <ul style="display:none;">
+              <li id="menu-account-roles-post" class="menu-item">
+          <a href="/account/roles/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-roles-delete_roleId" class="menu-item">
+          <a href="/account/roles/delete_roleId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-roles-patch_roleId" class="menu-item">
+          <a href="/account/roles/patch_roleId.html">edit</a>
+            
+        </li>
+        <li id="menu-account-roles-get_roleId" class="menu-item">
+          <a href="/account/roles/get_roleId.html">get</a>
+            
+        </li>
+        <li id="menu-account-roles-get" class="menu-item">
+          <a href="/account/roles/get.html">list</a>
+            
+        </li>
+        <li id="menu-account-roles-global-variables" class="menu-item">
+          <a href="/account/roles/global-variables"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>global-variables</a>
+      <ul style="display:none;">
+              <li id="menu-account-roles-global-variables-post" class="menu-item">
+          <a href="/account/roles/global-variables/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-roles-global-variables-delete_globalVariableName" class="menu-item">
+          <a href="/account/roles/global-variables/delete_globalVariableName.html">delete</a>
+            
+        </li>
+        <li id="menu-account-roles-global-variables-patch_globalVariableName" class="menu-item">
+          <a href="/account/roles/global-variables/patch_globalVariableName.html">edit</a>
+            
+        </li>
+        <li id="menu-account-roles-global-variables-get_globalVariableName" class="menu-item">
+          <a href="/account/roles/global-variables/get_globalVariableName.html">get</a>
+            
+        </li>
+        <li id="menu-account-roles-global-variables-get" class="menu-item">
+          <a href="/account/roles/global-variables/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-roles-images" class="menu-item">
+          <a href="/account/roles/images"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>images</a>
+      <ul style="display:none;">
+              <li id="menu-account-roles-images-post" class="menu-item">
+          <a href="/account/roles/images/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-roles-images-delete_imageId" class="menu-item">
+          <a href="/account/roles/images/delete_imageId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-roles-images-get_imageId" class="menu-item">
+          <a href="/account/roles/images/get_imageId.html">get</a>
+            
+        </li>
+        <li id="menu-account-roles-images-get" class="menu-item">
+          <a href="/account/roles/images/get.html">list</a>
+            
+        </li>
+        <li id="menu-account-roles-images-post_imageId_actions_replace" class="menu-item">
+          <a href="/account/roles/images/post_imageId_actions_replace.html">replace</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-roles-orchestration-rules" class="menu-item">
+          <a href="/account/roles/orchestration-rules"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>orchestration-rules</a>
+      <ul style="display:none;">
+              <li id="menu-account-roles-orchestration-rules-post" class="menu-item">
+          <a href="/account/roles/orchestration-rules/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-roles-orchestration-rules-delete_orchestrationRuleId" class="menu-item">
+          <a href="/account/roles/orchestration-rules/delete_orchestrationRuleId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-roles-orchestration-rules-patch_orchestrationRuleId" class="menu-item">
+          <a href="/account/roles/orchestration-rules/patch_orchestrationRuleId.html">edit</a>
+            
+        </li>
+        <li id="menu-account-roles-orchestration-rules-get_orchestrationRuleId" class="menu-item">
+          <a href="/account/roles/orchestration-rules/get_orchestrationRuleId.html">get</a>
+            
+        </li>
+        <li id="menu-account-roles-orchestration-rules-get" class="menu-item">
+          <a href="/account/roles/orchestration-rules/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-scripts" class="menu-item">
+          <a href="/account/scripts"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>scripts</a>
+      <ul style="display:none;">
+              <li id="menu-account-scripts-post" class="menu-item">
+          <a href="/account/scripts/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-scripts-delete_scriptId" class="menu-item">
+          <a href="/account/scripts/delete_scriptId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-scripts-patch_scriptId" class="menu-item">
+          <a href="/account/scripts/patch_scriptId.html">edit</a>
+            
+        </li>
+        <li id="menu-account-scripts-get_scriptId" class="menu-item">
+          <a href="/account/scripts/get_scriptId.html">get</a>
+            
+        </li>
+        <li id="menu-account-scripts-get" class="menu-item">
+          <a href="/account/scripts/get.html">list</a>
+            
+        </li>
+        <li id="menu-account-scripts-script-versions" class="menu-item">
+          <a href="/account/scripts/script-versions"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>script-versions</a>
+      <ul style="display:none;">
+              <li id="menu-account-scripts-script-versions-post" class="menu-item">
+          <a href="/account/scripts/script-versions/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-scripts-script-versions-delete_scriptVersionNumber" class="menu-item">
+          <a href="/account/scripts/script-versions/delete_scriptVersionNumber.html">delete</a>
+            
+        </li>
+        <li id="menu-account-scripts-script-versions-patch_scriptVersionNumber" class="menu-item">
+          <a href="/account/scripts/script-versions/patch_scriptVersionNumber.html">edit</a>
+            
+        </li>
+        <li id="menu-account-scripts-script-versions-get_scriptVersionNumber" class="menu-item">
+          <a href="/account/scripts/script-versions/get_scriptVersionNumber.html">get</a>
+            
+        </li>
+        <li id="menu-account-scripts-script-versions-get" class="menu-item">
+          <a href="/account/scripts/script-versions/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-account-teams" class="menu-item">
+          <a href="/account/teams"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>teams</a>
+      <ul style="display:none;">
+              <li id="menu-account-teams-post" class="menu-item">
+          <a href="/account/teams/post.html">create</a>
+            
+        </li>
+        <li id="menu-account-teams-delete_teamId" class="menu-item">
+          <a href="/account/teams/delete_teamId.html">delete</a>
+            
+        </li>
+        <li id="menu-account-teams-patch_teamId" class="menu-item">
+          <a href="/account/teams/patch_teamId.html">edit</a>
+            
+        </li>
+        <li id="menu-account-teams-get_teamId" class="menu-item">
+          <a href="/account/teams/get_teamId.html">get</a>
+            
+        </li>
+        <li id="menu-account-teams-get" class="menu-item">
+          <a href="/account/teams/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-global" class="menu-item">
+          <a href="/global"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>Global API</a>
+      <ul style="display:none;">
+              <li id="menu-global-images" class="menu-item">
+          <a href="/global/images"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>images</a>
+      <ul style="display:none;">
+              <li id="menu-global-images-post_imageId_actions_copy" class="menu-item">
+          <a href="/global/images/post_imageId_actions_copy.html">copy</a>
+            
+        </li>
+        <li id="menu-global-images-post" class="menu-item">
+          <a href="/global/images/post.html">create</a>
+            
+        </li>
+        <li id="menu-global-images-delete_imageId" class="menu-item">
+          <a href="/global/images/delete_imageId.html">delete</a>
+            
+        </li>
+        <li id="menu-global-images-patch_imageId" class="menu-item">
+          <a href="/global/images/patch_imageId.html">edit</a>
+            
+        </li>
+        <li id="menu-global-images-get_imageId" class="menu-item">
+          <a href="/global/images/get_imageId.html">get</a>
+            
+        </li>
+        <li id="menu-global-images-get" class="menu-item">
+          <a href="/global/images/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-global-os" class="menu-item">
+          <a href="/global/os"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>os</a>
+      <ul style="display:none;">
+              <li id="menu-global-os-get_osId" class="menu-item">
+          <a href="/global/os/get_osId.html">get</a>
+            
+        </li>
+        <li id="menu-global-os-get" class="menu-item">
+          <a href="/global/os/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-global-role-categories" class="menu-item">
+          <a href="/global/role-categories"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>role-categories</a>
+      <ul style="display:none;">
+              <li id="menu-global-role-categories-post" class="menu-item">
+          <a href="/global/role-categories/post.html">create</a>
+            
+        </li>
+        <li id="menu-global-role-categories-delete_roleCategoryId" class="menu-item">
+          <a href="/global/role-categories/delete_roleCategoryId.html">delete</a>
+            
+        </li>
+        <li id="menu-global-role-categories-patch_roleCategoryId" class="menu-item">
+          <a href="/global/role-categories/patch_roleCategoryId.html">edit</a>
+            
+        </li>
+        <li id="menu-global-role-categories-get_roleCategoryId" class="menu-item">
+          <a href="/global/role-categories/get_roleCategoryId.html">get</a>
+            
+        </li>
+        <li id="menu-global-role-categories-get" class="menu-item">
+          <a href="/global/role-categories/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-global-roles" class="menu-item">
+          <a href="/global/roles"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>roles</a>
+      <ul style="display:none;">
+              <li id="menu-global-roles-post" class="menu-item">
+          <a href="/global/roles/post.html">create</a>
+            
+        </li>
+        <li id="menu-global-roles-delete_roleId" class="menu-item">
+          <a href="/global/roles/delete_roleId.html">delete</a>
+            
+        </li>
+        <li id="menu-global-roles-patch_roleId" class="menu-item">
+          <a href="/global/roles/patch_roleId.html">edit</a>
+            
+        </li>
+        <li id="menu-global-roles-get_roleId" class="menu-item">
+          <a href="/global/roles/get_roleId.html">get</a>
+            
+        </li>
+        <li id="menu-global-roles-get" class="menu-item">
+          <a href="/global/roles/get.html">list</a>
+            
+        </li>
+        <li id="menu-global-roles-global-variables" class="menu-item">
+          <a href="/global/roles/global-variables"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>global-variables</a>
+      <ul style="display:none;">
+              <li id="menu-global-roles-global-variables-post" class="menu-item">
+          <a href="/global/roles/global-variables/post.html">create</a>
+            
+        </li>
+        <li id="menu-global-roles-global-variables-delete_globalVariableName" class="menu-item">
+          <a href="/global/roles/global-variables/delete_globalVariableName.html">delete</a>
+            
+        </li>
+        <li id="menu-global-roles-global-variables-patch_globalVariableName" class="menu-item">
+          <a href="/global/roles/global-variables/patch_globalVariableName.html">edit</a>
+            
+        </li>
+        <li id="menu-global-roles-global-variables-get_globalVariableName" class="menu-item">
+          <a href="/global/roles/global-variables/get_globalVariableName.html">get</a>
+            
+        </li>
+        <li id="menu-global-roles-global-variables-get" class="menu-item">
+          <a href="/global/roles/global-variables/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-global-roles-images" class="menu-item">
+          <a href="/global/roles/images"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>images</a>
+      <ul style="display:none;">
+              <li id="menu-global-roles-images-post" class="menu-item">
+          <a href="/global/roles/images/post.html">create</a>
+            
+        </li>
+        <li id="menu-global-roles-images-delete_imageId" class="menu-item">
+          <a href="/global/roles/images/delete_imageId.html">delete</a>
+            
+        </li>
+        <li id="menu-global-roles-images-get_imageId" class="menu-item">
+          <a href="/global/roles/images/get_imageId.html">get</a>
+            
+        </li>
+        <li id="menu-global-roles-images-get" class="menu-item">
+          <a href="/global/roles/images/get.html">list</a>
+            
+        </li>
+        <li id="menu-global-roles-images-post_imageId_actions_replace" class="menu-item">
+          <a href="/global/roles/images/post_imageId_actions_replace.html">replace</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-global-roles-orchestration-rules" class="menu-item">
+          <a href="/global/roles/orchestration-rules"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>orchestration-rules</a>
+      <ul style="display:none;">
+              <li id="menu-global-roles-orchestration-rules-post" class="menu-item">
+          <a href="/global/roles/orchestration-rules/post.html">create</a>
+            
+        </li>
+        <li id="menu-global-roles-orchestration-rules-delete_orchestrationRuleId" class="menu-item">
+          <a href="/global/roles/orchestration-rules/delete_orchestrationRuleId.html">delete</a>
+            
+        </li>
+        <li id="menu-global-roles-orchestration-rules-patch_orchestrationRuleId" class="menu-item">
+          <a href="/global/roles/orchestration-rules/patch_orchestrationRuleId.html">edit</a>
+            
+        </li>
+        <li id="menu-global-roles-orchestration-rules-get_orchestrationRuleId" class="menu-item">
+          <a href="/global/roles/orchestration-rules/get_orchestrationRuleId.html">get</a>
+            
+        </li>
+        <li id="menu-global-roles-orchestration-rules-get" class="menu-item">
+          <a href="/global/roles/orchestration-rules/get.html">list</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="menu-definitions" class="menu-item">
+          <a href="/definitions"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>Object definitions</a>
+      <ul style="display:none;">
+              <li id="m-def-cat-A" class="menu-item">
+          <a href="/definitions/A"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>A</a>
+      <ul style="display:none;">
+              <li id="m-def-aclrole" class="menu-item">
+          <a href="/definitions/A/AclRole.html">AclRole</a>
+            
+        </li>
+        <li id="m-def-aclroleforeignkey" class="menu-item">
+          <a href="/definitions/A/AclRoleForeignKey.html">AclRoleForeignKey</a>
+            
+        </li>
+        <li id="m-def-aclrolelistresponse" class="menu-item">
+          <a href="/definitions/A/AclRoleListResponse.html">AclRoleListResponse</a>
+            
+        </li>
+        <li id="m-def-action" class="menu-item">
+          <a href="/definitions/A/Action.html">Action</a>
+            
+        </li>
+        <li id="m-def-alleventstrigger" class="menu-item">
+          <a href="/definitions/A/AllEventsTrigger.html">AllEventsTrigger</a>
+            
+        </li>
+        <li id="m-def-apierrorresponse" class="menu-item">
+          <a href="/definitions/A/ApiErrorResponse.html">ApiErrorResponse</a>
+            
+        </li>
+        <li id="m-def-apimessage" class="menu-item">
+          <a href="/definitions/A/ApiMessage.html">ApiMessage</a>
+            
+        </li>
+        <li id="m-def-apimetacontainer" class="menu-item">
+          <a href="/definitions/A/ApiMetaContainer.html">ApiMetaContainer</a>
+            
+        </li>
+        <li id="m-def-apipagination" class="menu-item">
+          <a href="/definitions/A/ApiPagination.html">ApiPagination</a>
+            
+        </li>
+        <li id="m-def-awsclassicplacementconfiguration" class="menu-item">
+          <a href="/definitions/A/AwsClassicPlacementConfiguration.html">AwsClassicPlacementConfiguration</a>
+            
+        </li>
+        <li id="m-def-awscloudcredentials" class="menu-item">
+          <a href="/definitions/A/AwsCloudCredentials.html">AwsCloudCredentials</a>
+            
+        </li>
+        <li id="m-def-awsdetailedbilling" class="menu-item">
+          <a href="/definitions/A/AwsDetailedBilling.html">AwsDetailedBilling</a>
+            
+        </li>
+        <li id="m-def-awsinstanceconfiguration" class="menu-item">
+          <a href="/definitions/A/AwsInstanceConfiguration.html">AwsInstanceConfiguration</a>
+            
+        </li>
+        <li id="m-def-awsvpcplacementconfiguration" class="menu-item">
+          <a href="/definitions/A/AwsVpcPlacementConfiguration.html">AwsVpcPlacementConfiguration</a>
+            
+        </li>
+        <li id="m-def-azurecloudcredentials" class="menu-item">
+          <a href="/definitions/A/AzureCloudCredentials.html">AzureCloudCredentials</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-B" class="menu-item">
+          <a href="/definitions/B"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>B</a>
+      <ul style="display:none;">
+              <li id="m-def-bandwidthscalingrule" class="menu-item">
+          <a href="/definitions/B/BandWidthScalingRule.html">BandWidthScalingRule</a>
+            
+        </li>
+        <li id="m-def-basicscalingrule" class="menu-item">
+          <a href="/definitions/B/BasicScalingRule.html">BasicScalingRule</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-C" class="menu-item">
+          <a href="/definitions/C"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>C</a>
+      <ul style="display:none;">
+              <li id="m-def-chefaction" class="menu-item">
+          <a href="/definitions/C/ChefAction.html">ChefAction</a>
+            
+        </li>
+        <li id="m-def-cloud" class="menu-item">
+          <a href="/definitions/C/Cloud.html">Cloud</a>
+            
+        </li>
+        <li id="m-def-cloudawsvpcforeignkey" class="menu-item">
+          <a href="/definitions/C/CloudAwsVpcForeignKey.html">CloudAwsVpcForeignKey</a>
+            
+        </li>
+        <li id="m-def-cloudawsvpcsubnetforeignkey" class="menu-item">
+          <a href="/definitions/C/CloudAwsVpcSubnetForeignKey.html">CloudAwsVpcSubnetForeignKey</a>
+            
+        </li>
+        <li id="m-def-cloudcredentials" class="menu-item">
+          <a href="/definitions/C/CloudCredentials.html">CloudCredentials</a>
+            
+        </li>
+        <li id="m-def-cloudcredentialsdetailsresponse" class="menu-item">
+          <a href="/definitions/C/CloudCredentialsDetailsResponse.html">CloudCredentialsDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-cloudcredentialsforeignkey" class="menu-item">
+          <a href="/definitions/C/CloudCredentialsForeignKey.html">CloudCredentialsForeignKey</a>
+            
+        </li>
+        <li id="m-def-cloudcredentialssummary" class="menu-item">
+          <a href="/definitions/C/CloudCredentialsSummary.html">CloudCredentialsSummary</a>
+            
+        </li>
+        <li id="m-def-cloudcredentialssummarylistresponse" class="menu-item">
+          <a href="/definitions/C/CloudCredentialsSummaryListResponse.html">CloudCredentialsSummaryListResponse</a>
+            
+        </li>
+        <li id="m-def-cloudinstancetype" class="menu-item">
+          <a href="/definitions/C/CloudInstanceType.html">CloudInstanceType</a>
+            
+        </li>
+        <li id="m-def-cloudlistresponse" class="menu-item">
+          <a href="/definitions/C/CloudListResponse.html">CloudListResponse</a>
+            
+        </li>
+        <li id="m-def-cloudlocation" class="menu-item">
+          <a href="/definitions/C/CloudLocation.html">CloudLocation</a>
+            
+        </li>
+        <li id="m-def-cloudstackcloudcredentials" class="menu-item">
+          <a href="/definitions/C/CloudstackCloudCredentials.html">CloudstackCloudCredentials</a>
+            
+        </li>
+        <li id="m-def-costcenter" class="menu-item">
+          <a href="/definitions/C/CostCenter.html">CostCenter</a>
+            
+        </li>
+        <li id="m-def-costcenterdetailsresponse" class="menu-item">
+          <a href="/definitions/C/CostCenterDetailsResponse.html">CostCenterDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-costcenterforeignkey" class="menu-item">
+          <a href="/definitions/C/CostCenterForeignKey.html">CostCenterForeignKey</a>
+            
+        </li>
+        <li id="m-def-costcenterlistresponse" class="menu-item">
+          <a href="/definitions/C/CostCenterListResponse.html">CostCenterListResponse</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-D" class="menu-item">
+          <a href="/definitions/D"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>D</a>
+      <ul style="display:none;">
+              <li id="m-def-dateandtimescalingrule" class="menu-item">
+          <a href="/definitions/D/DateAndTimeScalingRule.html">DateAndTimeScalingRule</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-E" class="menu-item">
+          <a href="/definitions/E"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>E</a>
+      <ul style="display:none;">
+              <li id="m-def-environment" class="menu-item">
+          <a href="/definitions/E/Environment.html">Environment</a>
+            
+        </li>
+        <li id="m-def-environmentdetailsresponse" class="menu-item">
+          <a href="/definitions/E/EnvironmentDetailsResponse.html">EnvironmentDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-environmentlistresponse" class="menu-item">
+          <a href="/definitions/E/EnvironmentListResponse.html">EnvironmentListResponse</a>
+            
+        </li>
+        <li id="m-def-environmentteam" class="menu-item">
+          <a href="/definitions/E/EnvironmentTeam.html">EnvironmentTeam</a>
+            
+        </li>
+        <li id="m-def-environmentteamdetailsresponse" class="menu-item">
+          <a href="/definitions/E/EnvironmentTeamDetailsResponse.html">EnvironmentTeamDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-environmentteamlistresponse" class="menu-item">
+          <a href="/definitions/E/EnvironmentTeamListResponse.html">EnvironmentTeamListResponse</a>
+            
+        </li>
+        <li id="m-def-event" class="menu-item">
+          <a href="/definitions/E/Event.html">Event</a>
+            
+        </li>
+        <li id="m-def-eventdetailsresponse" class="menu-item">
+          <a href="/definitions/E/EventDetailsResponse.html">EventDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-eventforeignkey" class="menu-item">
+          <a href="/definitions/E/EventForeignKey.html">EventForeignKey</a>
+            
+        </li>
+        <li id="m-def-eventlistresponse" class="menu-item">
+          <a href="/definitions/E/EventListResponse.html">EventListResponse</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-F" class="menu-item">
+          <a href="/definitions/F"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>F</a>
+      <ul style="display:none;">
+              <li id="m-def-farm" class="menu-item">
+          <a href="/definitions/F/Farm.html">Farm</a>
+            
+        </li>
+        <li id="m-def-farmdetailsresponse" class="menu-item">
+          <a href="/definitions/F/FarmDetailsResponse.html">FarmDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-farmforeignkey" class="menu-item">
+          <a href="/definitions/F/FarmForeignKey.html">FarmForeignKey</a>
+            
+        </li>
+        <li id="m-def-farmlistresponse" class="menu-item">
+          <a href="/definitions/F/FarmListResponse.html">FarmListResponse</a>
+            
+        </li>
+        <li id="m-def-farmrole" class="menu-item">
+          <a href="/definitions/F/FarmRole.html">FarmRole</a>
+            
+        </li>
+        <li id="m-def-farmroledetailsresponse" class="menu-item">
+          <a href="/definitions/F/FarmRoleDetailsResponse.html">FarmRoleDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-farmroleforeignkey" class="menu-item">
+          <a href="/definitions/F/FarmRoleForeignKey.html">FarmRoleForeignKey</a>
+            
+        </li>
+        <li id="m-def-farmrolelistresponse" class="menu-item">
+          <a href="/definitions/F/FarmRoleListResponse.html">FarmRoleListResponse</a>
+            
+        </li>
+        <li id="m-def-farmtarget" class="menu-item">
+          <a href="/definitions/F/FarmTarget.html">FarmTarget</a>
+            
+        </li>
+        <li id="m-def-freeramscalingrule" class="menu-item">
+          <a href="/definitions/F/FreeRamScalingRule.html">FreeRamScalingRule</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-G" class="menu-item">
+          <a href="/definitions/G"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>G</a>
+      <ul style="display:none;">
+              <li id="m-def-gcecloudcredentials" class="menu-item">
+          <a href="/definitions/G/GceCloudCredentials.html">GceCloudCredentials</a>
+            
+        </li>
+        <li id="m-def-globalvariable" class="menu-item">
+          <a href="/definitions/G/GlobalVariable.html">GlobalVariable</a>
+            
+        </li>
+        <li id="m-def-globalvariabledetailsresponse" class="menu-item">
+          <a href="/definitions/G/GlobalVariableDetailsResponse.html">GlobalVariableDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-globalvariablelistresponse" class="menu-item">
+          <a href="/definitions/G/GlobalVariableListResponse.html">GlobalVariableListResponse</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-I" class="menu-item">
+          <a href="/definitions/I"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>I</a>
+      <ul style="display:none;">
+              <li id="m-def-image" class="menu-item">
+          <a href="/definitions/I/Image.html">Image</a>
+            
+        </li>
+        <li id="m-def-imagedetailsresponse" class="menu-item">
+          <a href="/definitions/I/ImageDetailsResponse.html">ImageDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-imageforeignkey" class="menu-item">
+          <a href="/definitions/I/ImageForeignKey.html">ImageForeignKey</a>
+            
+        </li>
+        <li id="m-def-imagelistresponse" class="menu-item">
+          <a href="/definitions/I/ImageListResponse.html">ImageListResponse</a>
+            
+        </li>
+        <li id="m-def-instanceconfiguration" class="menu-item">
+          <a href="/definitions/I/InstanceConfiguration.html">InstanceConfiguration</a>
+            
+        </li>
+        <li id="m-def-instanceconfigurationdetailsresponse" class="menu-item">
+          <a href="/definitions/I/InstanceConfigurationDetailsResponse.html">InstanceConfigurationDetailsResponse</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-L" class="menu-item">
+          <a href="/definitions/L"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>L</a>
+      <ul style="display:none;">
+              <li id="m-def-loadaveragesscalingrule" class="menu-item">
+          <a href="/definitions/L/LoadAveragesScalingRule.html">LoadAveragesScalingRule</a>
+            
+        </li>
+        <li id="m-def-logentry" class="menu-item">
+          <a href="/definitions/L/LogEntry.html">LogEntry</a>
+            
+        </li>
+        <li id="m-def-logentrydetailsresponse" class="menu-item">
+          <a href="/definitions/L/LogEntryDetailsResponse.html">LogEntryDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-logentryforeignkey" class="menu-item">
+          <a href="/definitions/L/LogEntryForeignKey.html">LogEntryForeignKey</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-N" class="menu-item">
+          <a href="/definitions/N"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>N</a>
+      <ul style="display:none;">
+              <li id="m-def-nulltarget" class="menu-item">
+          <a href="/definitions/N/NullTarget.html">NullTarget</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-O" class="menu-item">
+          <a href="/definitions/O"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>O</a>
+      <ul style="display:none;">
+              <li id="m-def-openstackcloudcredentials" class="menu-item">
+          <a href="/definitions/O/OpenstackCloudCredentials.html">OpenstackCloudCredentials</a>
+            
+        </li>
+        <li id="m-def-orchestrationrule" class="menu-item">
+          <a href="/definitions/O/OrchestrationRule.html">OrchestrationRule</a>
+            
+        </li>
+        <li id="m-def-orchestrationruledetailsresponse" class="menu-item">
+          <a href="/definitions/O/OrchestrationRuleDetailsResponse.html">OrchestrationRuleDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-orchestrationrulelistresponse" class="menu-item">
+          <a href="/definitions/O/OrchestrationRuleListResponse.html">OrchestrationRuleListResponse</a>
+            
+        </li>
+        <li id="m-def-os" class="menu-item">
+          <a href="/definitions/O/Os.html">Os</a>
+            
+        </li>
+        <li id="m-def-osdetailsresponse" class="menu-item">
+          <a href="/definitions/O/OsDetailsResponse.html">OsDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-osforeignkey" class="menu-item">
+          <a href="/definitions/O/OsForeignKey.html">OsForeignKey</a>
+            
+        </li>
+        <li id="m-def-oslistresponse" class="menu-item">
+          <a href="/definitions/O/OsListResponse.html">OsListResponse</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-P" class="menu-item">
+          <a href="/definitions/P"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>P</a>
+      <ul style="display:none;">
+              <li id="m-def-placementconfiguration" class="menu-item">
+          <a href="/definitions/P/PlacementConfiguration.html">PlacementConfiguration</a>
+            
+        </li>
+        <li id="m-def-placementconfigurationdetailsresponse" class="menu-item">
+          <a href="/definitions/P/PlacementConfigurationDetailsResponse.html">PlacementConfigurationDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-project" class="menu-item">
+          <a href="/definitions/P/Project.html">Project</a>
+            
+        </li>
+        <li id="m-def-projectdetailsresponse" class="menu-item">
+          <a href="/definitions/P/ProjectDetailsResponse.html">ProjectDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-projectforeignkey" class="menu-item">
+          <a href="/definitions/P/ProjectForeignKey.html">ProjectForeignKey</a>
+            
+        </li>
+        <li id="m-def-projectlistresponse" class="menu-item">
+          <a href="/definitions/P/ProjectListResponse.html">ProjectListResponse</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-R" class="menu-item">
+          <a href="/definitions/R"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>R</a>
+      <ul style="display:none;">
+              <li id="m-def-rackspacecloudcredentials" class="menu-item">
+          <a href="/definitions/R/RackspaceCloudCredentials.html">RackspaceCloudCredentials</a>
+            
+        </li>
+        <li id="m-def-role" class="menu-item">
+          <a href="/definitions/R/Role.html">Role</a>
+            
+        </li>
+        <li id="m-def-rolecategory" class="menu-item">
+          <a href="/definitions/R/RoleCategory.html">RoleCategory</a>
+            
+        </li>
+        <li id="m-def-rolecategorydetailsresponse" class="menu-item">
+          <a href="/definitions/R/RoleCategoryDetailsResponse.html">RoleCategoryDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-rolecategoryforeignkey" class="menu-item">
+          <a href="/definitions/R/RoleCategoryForeignKey.html">RoleCategoryForeignKey</a>
+            
+        </li>
+        <li id="m-def-rolecategorylistresponse" class="menu-item">
+          <a href="/definitions/R/RoleCategoryListResponse.html">RoleCategoryListResponse</a>
+            
+        </li>
+        <li id="m-def-roledetailsresponse" class="menu-item">
+          <a href="/definitions/R/RoleDetailsResponse.html">RoleDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-roleforeignkey" class="menu-item">
+          <a href="/definitions/R/RoleForeignKey.html">RoleForeignKey</a>
+            
+        </li>
+        <li id="m-def-roleimage" class="menu-item">
+          <a href="/definitions/R/RoleImage.html">RoleImage</a>
+            
+        </li>
+        <li id="m-def-roleimagedetailsresponse" class="menu-item">
+          <a href="/definitions/R/RoleImageDetailsResponse.html">RoleImageDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-roleimagelistresponse" class="menu-item">
+          <a href="/definitions/R/RoleImageListResponse.html">RoleImageListResponse</a>
+            
+        </li>
+        <li id="m-def-rolelistresponse" class="menu-item">
+          <a href="/definitions/R/RoleListResponse.html">RoleListResponse</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-S" class="menu-item">
+          <a href="/definitions/S"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>S</a>
+      <ul style="display:none;">
+              <li id="m-def-scalingconfiguration" class="menu-item">
+          <a href="/definitions/S/ScalingConfiguration.html">ScalingConfiguration</a>
+            
+        </li>
+        <li id="m-def-scalingconfigurationdetailsresponse" class="menu-item">
+          <a href="/definitions/S/ScalingConfigurationDetailsResponse.html">ScalingConfigurationDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-scalingmetric" class="menu-item">
+          <a href="/definitions/S/ScalingMetric.html">ScalingMetric</a>
+            
+        </li>
+        <li id="m-def-scalingmetricdetailsresponse" class="menu-item">
+          <a href="/definitions/S/ScalingMetricDetailsResponse.html">ScalingMetricDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-scalingmetricforeignkey" class="menu-item">
+          <a href="/definitions/S/ScalingMetricForeignKey.html">ScalingMetricForeignKey</a>
+            
+        </li>
+        <li id="m-def-scalingmetriclistresponse" class="menu-item">
+          <a href="/definitions/S/ScalingMetricListResponse.html">ScalingMetricListResponse</a>
+            
+        </li>
+        <li id="m-def-scalingrule" class="menu-item">
+          <a href="/definitions/S/ScalingRule.html">ScalingRule</a>
+            
+        </li>
+        <li id="m-def-scalingruledetailsresponse" class="menu-item">
+          <a href="/definitions/S/ScalingRuleDetailsResponse.html">ScalingRuleDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-scalingrulethresholds" class="menu-item">
+          <a href="/definitions/S/ScalingRuleThresholds.html">ScalingRuleThresholds</a>
+            
+        </li>
+        <li id="m-def-scalingruletimeframe" class="menu-item">
+          <a href="/definitions/S/ScalingRuleTimeFrame.html">ScalingRuleTimeFrame</a>
+            
+        </li>
+        <li id="m-def-script" class="menu-item">
+          <a href="/definitions/S/Script.html">Script</a>
+            
+        </li>
+        <li id="m-def-scriptaction" class="menu-item">
+          <a href="/definitions/S/ScriptAction.html">ScriptAction</a>
+            
+        </li>
+        <li id="m-def-scriptdetailsresponse" class="menu-item">
+          <a href="/definitions/S/ScriptDetailsResponse.html">ScriptDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-scriptexecution" class="menu-item">
+          <a href="/definitions/S/ScriptExecution.html">ScriptExecution</a>
+            
+        </li>
+        <li id="m-def-scriptexecutiondetailsresponse" class="menu-item">
+          <a href="/definitions/S/ScriptExecutionDetailsResponse.html">ScriptExecutionDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-scriptexecutionrequest" class="menu-item">
+          <a href="/definitions/S/ScriptExecutionRequest.html">ScriptExecutionRequest</a>
+            
+        </li>
+        <li id="m-def-scriptforeignkey" class="menu-item">
+          <a href="/definitions/S/ScriptForeignKey.html">ScriptForeignKey</a>
+            
+        </li>
+        <li id="m-def-scriptlistresponse" class="menu-item">
+          <a href="/definitions/S/ScriptListResponse.html">ScriptListResponse</a>
+            
+        </li>
+        <li id="m-def-scriptversion" class="menu-item">
+          <a href="/definitions/S/ScriptVersion.html">ScriptVersion</a>
+            
+        </li>
+        <li id="m-def-scriptversiondetailsresponse" class="menu-item">
+          <a href="/definitions/S/ScriptVersionDetailsResponse.html">ScriptVersionDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-scriptversionforeignkey" class="menu-item">
+          <a href="/definitions/S/ScriptVersionForeignKey.html">ScriptVersionForeignKey</a>
+            
+        </li>
+        <li id="m-def-scriptversionlistresponse" class="menu-item">
+          <a href="/definitions/S/ScriptVersionListResponse.html">ScriptVersionListResponse</a>
+            
+        </li>
+        <li id="m-def-selectedfarmrolestarget" class="menu-item">
+          <a href="/definitions/S/SelectedFarmRolesTarget.html">SelectedFarmRolesTarget</a>
+            
+        </li>
+        <li id="m-def-server" class="menu-item">
+          <a href="/definitions/S/Server.html">Server</a>
+            
+        </li>
+        <li id="m-def-serverforeignkey" class="menu-item">
+          <a href="/definitions/S/ServerForeignKey.html">ServerForeignKey</a>
+            
+        </li>
+        <li id="m-def-serversummary" class="menu-item">
+          <a href="/definitions/S/ServerSummary.html">ServerSummary</a>
+            
+        </li>
+        <li id="m-def-serversummarydetailsresponse" class="menu-item">
+          <a href="/definitions/S/ServerSummaryDetailsResponse.html">ServerSummaryDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-serversummarylistresponse" class="menu-item">
+          <a href="/definitions/S/ServerSummaryListResponse.html">ServerSummaryListResponse</a>
+            
+        </li>
+        <li id="m-def-specificeventtrigger" class="menu-item">
+          <a href="/definitions/S/SpecificEventTrigger.html">SpecificEventTrigger</a>
+            
+        </li>
+        <li id="m-def-sqsqueuesizescalingrule" class="menu-item">
+          <a href="/definitions/S/SqsQueueSizeScalingRule.html">SqsQueueSizeScalingRule</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-T" class="menu-item">
+          <a href="/definitions/T"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>T</a>
+      <ul style="display:none;">
+              <li id="m-def-tag" class="menu-item">
+          <a href="/definitions/T/Tag.html">Tag</a>
+            
+        </li>
+        <li id="m-def-target" class="menu-item">
+          <a href="/definitions/T/Target.html">Target</a>
+            
+        </li>
+        <li id="m-def-team" class="menu-item">
+          <a href="/definitions/T/Team.html">Team</a>
+            
+        </li>
+        <li id="m-def-teamdetailsresponse" class="menu-item">
+          <a href="/definitions/T/TeamDetailsResponse.html">TeamDetailsResponse</a>
+            
+        </li>
+        <li id="m-def-teamforeignkey" class="menu-item">
+          <a href="/definitions/T/TeamForeignKey.html">TeamForeignKey</a>
+            
+        </li>
+        <li id="m-def-teamlistresponse" class="menu-item">
+          <a href="/definitions/T/TeamListResponse.html">TeamListResponse</a>
+            
+        </li>
+        <li id="m-def-trigger" class="menu-item">
+          <a href="/definitions/T/Trigger.html">Trigger</a>
+            
+        </li>
+        <li id="m-def-triggeringfarmroletarget" class="menu-item">
+          <a href="/definitions/T/TriggeringFarmRoleTarget.html">TriggeringFarmRoleTarget</a>
+            
+        </li>
+        <li id="m-def-triggeringservertarget" class="menu-item">
+          <a href="/definitions/T/TriggeringServerTarget.html">TriggeringServerTarget</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+        <li id="m-def-cat-U" class="menu-item">
+          <a href="/definitions/U"><img class="expand-img" src="/images/expand-retina.png" height="18" width="9"/>U</a>
+      <ul style="display:none;">
+              <li id="m-def-uriaction" class="menu-item">
+          <a href="/definitions/U/UriAction.html">UriAction</a>
+            
+        </li>
+        <li id="m-def-urlresponsetimescalingrule" class="menu-item">
+          <a href="/definitions/U/UrlResponseTimeScalingRule.html">UrlResponseTimeScalingRule</a>
+            
+        </li>
+        <li id="m-def-userforeignkey" class="menu-item">
+          <a href="/definitions/U/UserForeignKey.html">UserForeignKey</a>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+
+      </ul>
+            
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id='content'>
+<div id="operation-contents" class="content">
+
+  <div id="auth-window" style="display:none;">
+    <div id="creds-window">
+      <div id="close-button">
+        <a href="#" id="auth-window-close">
+          <img src="/images/close-login-retina.png" width="20px" height="20px" />
+        </a>
+      </div>
+      <h1>API Credentials</h1>
+      <h2>Scalr API authentication</h2>
+      <form>
+        <label for="auth-server">
+        <span class="auth-label">Server</span>
+        <input required id="auth-server" class="auth-input" name="server" value="https://my.scalr.com/" type="text"/>
+        </label>
+        <br/>
+        <label for="auth-keyid">
+        <span class="auth-label">API Key ID</span>
+        <input required id="auth-keyid" class="auth-input" name="keyid" placeholder="Required" value="" type="text"/>
+        </label>
+        <br/>
+        <label for="auth-secret">
+        <span class="auth-label">Secret</span>
+        <input required id="auth-secret" class="auth-input" name="secret" placeholder="Required" value="" type="password"/>
+        </label>
+        <br/>
+        <div id="button-container">
+          <button type="button" class="auth-button" id="auth-button-done" style="width: 18%;">Done</button><!-- get rid of spacing
+       --><button type="button" class="auth-button store-dependant" id="auth-button-save" style="width: 39%;">Save credentials locally</button><!--
+       --><button type="button" class="auth-button store-dependant" id="auth-button-unsave" style="width: 39%;">Delete saved credentials</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div>
+  <h1>Images: Edit</h1>
+
+
+  <h2>Description</h2>
+  <p><p>Modify the attributes of an Image. Currently only the name of the Image can be changed.</p></p>
+
+  <h2>HTTP Request</h2>
+  <pre><code class="nohighlight">PATCH /api/v1beta0/global/images/<em>imageId</em>/</code></pre>
+
+  <h2>Parameters</h2>
+  <table class='fullwidth'>
+  <thead>
+    <tr>
+    <th>Name</th>
+    <th>Required</th>
+    <th>Description</th>
+    <th>Location</th>
+    </tr>
+  </thead>
+  <tbody class="operation-params-desc">
+    <tr>
+      <td><span class="fixed-width">imageId</span><br/><span class="data-type">string</span></td>
+      <td>Yes</td>
+      <td><p>The ID of a Image object.</p></td>
+      <td>path</td>
+    </tr>
+  </tbody>
+  </table>
+
+  <h2>Request body</h2>
+  <div class='request-body'>
+      <p><p>The updated definition.</p></p>
+          <p>The body must be a valid <a target="_blank" href="/definitions/I/Image.html">Image</a> object. Example value:
+          <div class="json">
+            <pre><code>{
+  "architecture": "i386", 
+  "cloudImageId": "string", 
+  "cloudLocation": "string", 
+  "cloudPlatform": "ec2", 
+  "name": "string", 
+  "os": {
+    "id": "string"
+  }, 
+  "size": 1, 
+  "type": "string"
+}</code></pre>
+          </div>
+          </p>
+  </div>
+
+    <div class="response-class">
+      <h2>Successful Response (Status 200)</h2>
+<p><p>The JSON representation of a Image object.</p></p>        <p>The API replies with a <a target="_blank" href="/definitions/I/ImageDetailsResponse.html">ImageDetailsResponse</a> object. Example response body:
+        <div class="json">
+          <pre><code>{
+  "data": {
+    "added": "2013-01-01T12:34:56.789Z", 
+    "architecture": "i386", 
+    "cloudImageId": "string", 
+    "cloudInitInstalled": true, 
+    "cloudLocation": "string", 
+    "cloudPlatform": "ec2", 
+    "deprecated": true, 
+    "id": "string", 
+    "lastUsed": "2013-01-01T12:34:56.789Z", 
+    "name": "string", 
+    "os": {
+      "id": "string"
+    }, 
+    "scalrAgentInstalled": true, 
+    "scope": "scalr", 
+    "size": 1, 
+    "source": "Manual", 
+    "status": "active", 
+    "statusError": "string", 
+    "type": "string"
+  }, 
+  "errors": [
+    {
+      "code": "string", 
+      "message": "string"
+    }
+  ], 
+  "meta": {
+    "sample": "string"
+  }, 
+  "warnings": [
+    {
+      "code": "string", 
+      "message": "string"
+    }
+  ]
+}</code></pre>
+        </div>
+        </p>
+    </div>
+
+  <h2>Other Response Messages</h2>
+  <table class="fullwidth">
+    <thead>
+    <tr>
+      <th>HTTP Status Code</th>
+      <th>Reason</th>
+      <th>Response Model</th>
+    </tr>
+    </thead>
+    <tbody class="operation-status">
+    <tr>
+      <td width='15%' class='code'>400</td>
+      <td width='50%' class="markdown"><p>A client-side error was made.</p></td>
+      <td>An <a target="_blank" href="/definitions/A/ApiErrorResponse.html">ApiErrorResponse</a> object</td>
+    </tr>
+    <tr>
+      <td width='15%' class='code'>401</td>
+      <td width='50%' class="markdown"><p>The request was not authenticated.</p></td>
+      <td>An <a target="_blank" href="/definitions/A/ApiErrorResponse.html">ApiErrorResponse</a> object</td>
+    </tr>
+    <tr>
+      <td width='15%' class='code'>403</td>
+      <td width='50%' class="markdown"><p>Insufficient permissions.</p></td>
+      <td>An <a target="_blank" href="/definitions/A/ApiErrorResponse.html">ApiErrorResponse</a> object</td>
+    </tr>
+    <tr>
+      <td width='15%' class='code'>404</td>
+      <td width='50%' class="markdown"><p>Resource not found.</p></td>
+      <td>An <a target="_blank" href="/definitions/A/ApiErrorResponse.html">ApiErrorResponse</a> object</td>
+    </tr>
+    <tr>
+      <td width='15%' class='code'>409</td>
+      <td width='50%' class="markdown"><p>Conflict with current state.</p></td>
+      <td>An <a target="_blank" href="/definitions/A/ApiErrorResponse.html">ApiErrorResponse</a> object</td>
+    </tr>
+    <tr>
+      <td width='15%' class='code'>422</td>
+      <td width='50%' class="markdown"><p>This request was well-formed but was rejected due to semantic errors.</p></td>
+      <td>An <a target="_blank" href="/definitions/A/ApiErrorResponse.html">ApiErrorResponse</a> object</td>
+    </tr>
+    <tr>
+      <td width='15%' class='code'>500</td>
+      <td width='50%' class="markdown"><p>A server-side error occured.</p></td>
+      <td>An <a target="_blank" href="/definitions/A/ApiErrorResponse.html">ApiErrorResponse</a> object</td>
+    </tr>
+    <tr>
+      <td width='15%' class='code'>501</td>
+      <td width='50%' class="markdown"><p>This feature is not implemented in Scalr.</p></td>
+      <td>An <a target="_blank" href="/definitions/A/ApiErrorResponse.html">ApiErrorResponse</a> object</td>
+    </tr>
+    <tr>
+      <td width='15%' class='code'>503</td>
+      <td width='50%' class="markdown"><p>The service is currently unavailable.</p></td>
+      <td>An <a target="_blank" href="/definitions/A/ApiErrorResponse.html">ApiErrorResponse</a> object</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h2>Try it out!</h2>
+  <form accept-charset='UTF-8' class='sandbox'>
+    <div style='margin:0;padding:0;display:inline'></div>
+
+    <table class='fullwidth'>
+    <thead>
+      <tr>
+      <th>Parameter</th>
+      <th>Value</th>
+      <th>Description</th>
+      </tr>
+    </thead>
+    <tbody class="operation-params">
+    <tr>
+        <td style="vertical-align:middle;"><span class="fixed-width">imageId</span></td>
+        <td><input type="text" class="operation-arg" name="imageId" id="imageId"  class="required" placeholder="string"/></td>
+        <td style="vertical-align:middle;"><p>The ID of a Image object.</p></td>
+    </tr>
+    <tr>
+        <td>body<br/>
+          </span>
+        </td>
+        <td>
+            <textarea name="body" id="body">{
+  "architecture": "i386", 
+  "cloudImageId": "string", 
+  "cloudLocation": "string", 
+  "cloudPlatform": "ec2", 
+  "name": "string", 
+  "os": {
+    "id": "string"
+  }, 
+  "size": 1, 
+  "type": "string"
+}</textarea>
+        </td>
+
+        <td><p>The updated definition.</p></td>
+    </tr>
+    </tbody>
+    </table>
+    <div class="execute-btn">
+      <input id="submit" class='submit' type='submit' value='Authorize and execute'/>
+    </div>
+    <div class="execute-btn">
+      <input id="auth-container" class='submit' type="submit" value='Change credentials'/>
+    </div>
+    <div class="clear"></div>
+  </form>
+
+  <div class='response' style='display:none'>
+    <a href='#' class='response_hider' style='display:none'>Hide Response</a>
+    <h2>Request URL</h2>
+    <pre><code id="request-url" class='block request_url'></code></pre>
+    <h2>Request Headers</h2>
+    <pre><code id="request-headers" class='block request_headers'></code></pre>
+    <h2>Response Body</h2>
+    <pre><code id="response-body" class='block response_body json'></code></pre>
+    <h2>Response Code</h2>
+    <pre><code id="response-code" class='block response_code'></code></pre>
+  </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+  // API interaction
+  var headerRepresentation = function(headers) {
+    resultString = "";
+    for (var h in headers) {
+      resultString += h + ": " + headers[h] + "\n";
+    }
+    return resultString;
+  };
+
+  var onOpSuccess = function(data, status, xhr) {
+    $('.response').show();
+    $('#request-url').html(this.url);
+    $('#request-headers').html(headerRepresentation(this.headers));
+    if (xhr.responseText) {
+      $('#response-body').html(JSON.stringify(JSON.parse(xhr.responseText),null,2));
+    }
+    $('#response-code').html(xhr.status + ' (success)');
+    hljs.highlightBlock(document.getElementById('response-body'));
+  };
+
+  var onOpError = function(xhr, status, error) {
+    $('.response').show();
+    $('#request-url').html(this.url);
+    $('#request-headers').html(headerRepresentation(this.headers));
+    if (xhr.responseText) {
+      $('#response-body').html(JSON.stringify(JSON.parse(xhr.responseText),null,2));
+      hljs.highlightBlock(document.getElementById('response-body'));
+    } else {
+      $('#response-body').html('No data was returned by Scalr.\n\nThis may happen if the preflight request doesn\'t succeed.\nPlease check that you can reach Scalr, that the API is enabled,\nthat \'https://api-explorer.scalr.com\' is in the list of allowed origins for the Scalr API (see the Getting Started page for more details)\nand that your credentials and parameters are correct.');
+    }
+    $('#response-code').html(xhr.status);
+  }
+
+  var bodyEditor = CodeMirror.fromTextArea(document.getElementById("body"), {
+    mode: {name: "javascript", json: true},
+    viewportMargin: Infinity
+  });
+
+  var submitWhenAuthDone = false;
+
+  var submitOperation = function(e) {
+    if (e) {
+      e.preventDefault();
+    }
+
+    if (!areCredentialsValid()) {
+      submitWhenAuthDone = true;
+      showAuthWindow();
+      return;
+    }
+
+    var invalid = false;
+          if (!bodyEditor.getValue()) {
+            $('.CodeMirror').addClass('invalid');
+            invalid = true;
+          }
+          if (!$('#imageId').val()) {
+            $('#imageId').addClass("invalid");
+            invalid = true;
+          }
+    if (invalid) {
+      return;
+    }
+
+    $('.respons_throbber').show();
+    hideResponse();
+    var path = '/api/v1beta0/global/images/{imageId}/';
+    var params = {};
+        path = path.replace('{imageId}', $('#imageId').val());
+
+    var body = bodyEditor.getValue();
+
+    console.log(path, params , body  );
+
+      ScalrAPI.edit(path, body, params, onOpSuccess, onOpError);
+  };
+
+  // Credentials handling
+
+  $.ajaxSetup({
+    contentType: "application/json; charset=utf-8",
+    dataType:"json",
+  });
+
+  // Default values
+  var apiSettings = {
+    apiUrl: 'https://my.scalr.com',
+    keyId: '',
+    secretKey: ''
+  };
+
+  //Load settings if they are stored
+  if (store.enabled) {
+    if (store.get('auth-scalr-server')) {
+        apiSettings.apiUrl = store.get('auth-scalr-server');
+        if (apiSettings.apiUrl.endsWith('/')) {
+          apiSettings.apiUrl = apiSettings.apiUrl.substring(0, apiSettings.apiUrl.length - 1);
+        }
+    }   
+    if (store.get('auth-scalr-keyid')) {
+        apiSettings.keyId = store.get('auth-scalr-keyid');
+    }
+    if (store.get('auth-scalr-secret')) {
+        apiSettings.secretKey = store.get('auth-scalr-secret');
+    }
+  }
+
+  var areCredentialsValid = function() {
+    return apiSettings.apiUrl.length > 0 && apiSettings.keyId.length > 0 && apiSettings.secretKey.length > 0;
+  }
+
+  ScalrAPI.setSettings(apiSettings);
+
+  showAuthWindow = function(e) {
+    $("#auth-server").val(apiSettings.apiUrl); 
+    $("#auth-keyid").val(apiSettings.keyId);
+    $("#auth-secret").val(apiSettings.secretKey);
+    $("#auth-window").show();
+    if (e) {
+      e.preventDefault();
+    }
+  };
+
+  closeAuthWindow = function() {
+    $("#auth-window").hide();
+  };
+
+  applyCredentials = function() {
+    apiSettings.apiUrl = $("#auth-server").val(); 
+    apiSettings.keyId = $("#auth-keyid").val();
+    apiSettings.secretKey = $("#auth-secret").val();
+    if (apiSettings.apiUrl.endsWith('/')) {
+      apiSettings.apiUrl = apiSettings.apiUrl.substring(0, apiSettings.apiUrl.length - 1);
+    }
+    closeAuthWindow();
+    if (submitWhenAuthDone) {
+      submitWhenAuthDone = false;
+      submitOperation();
+    }
+  };
+
+  saveAndApplyCredentials = function() {
+    applyCredentials();
+    if (store.enabled) {
+      store.set('auth-scalr-server', apiSettings.apiUrl);
+      store.set('auth-scalr-keyid', apiSettings.keyId);
+      store.set('auth-scalr-secret', apiSettings.secretKey);
+    }
+  };
+
+  deleteSavedCredentials = function() {
+    if (store.enabled) {
+      store.remove('auth-scalr-server');
+      store.remove('auth-scalr-keyid');
+      store.remove('auth-scalr-secret');
+    }
+  };
+
+  // Events bindings 
+  $("#auth-container").click(showAuthWindow);
+  $("#auth-window-close").click(closeAuthWindow);
+  $("#auth-button-done").click(applyCredentials);
+  if (store.enabled) {
+    $("#auth-button-save").click(saveAndApplyCredentials);
+    $("#auth-button-unsave").click(deleteSavedCredentials);
+  } else {
+    var buttons = $(".store-dependant");
+    buttons.addClass("disabled");
+    for (var i = 0; i < buttons.length; i ++) {
+      new Tooltip({
+          target: buttons[i],
+          content: "Local Storage is not enabled on your browser.<br/>Please switch to a more recent browser to use this functionality.",
+          classes: 'tooltip-theme-arrows',
+          position: 'top left'
+        });
+    }
+  }
+
+  var hideResponse = function() {
+    $('.response').hide();
+  };
+
+  $('.response_hider').click(hideResponse);
+  $('#submit').click(submitOperation);
+
+  $('input').keyup(function(e) {
+    $(this).removeClass('invalid');
+  });
+
+  $('.CodeMirror').keyup(function(e) {
+    $(this).removeClass('invalid');
+  });
+
+
+  // Inputs size adaptation
+  var resizeInputs = function() {
+    var w = $("#operation-contents").width();
+    if (w > 800) {
+      $(".main .CodeMirror").width(w / 2);
+      $(".main .content input.operation-arg").width(w / 2);
+    } else {
+      $(".main .CodeMirror").width(400);
+      $(".main .content input.operation-arg").width(400);
+    }
+  }
+
+  // Only on page load
+  resizeInputs();
+
+});
+</script>
+  </div>
+
+  <div class="clear"></div>
+</body>
+<script type="text/javascript">
+$(function () {
+  // Menu management
+  var menu = [{"url":"/","id":"menu-home","name":"Getting Started"},{"url":"/authentication/index.html","id":"menu-auth","name":"Authentication algorithm"},{"url":"/user","expanded":false,"children":[{"url":"/cost-centers","expanded":false,"children":[{"url":"/get_costCenterId.html","id":"menu-user-cost-centers-get_costCenterId","name":"get"},{"url":"/get.html","id":"menu-user-cost-centers-get","name":"list"}],"id":"menu-user-cost-centers","name":"cost-centers"},{"url":"/events","expanded":false,"children":[{"url":"/post.html","id":"menu-user-events-post","name":"create"},{"url":"/delete_eventId.html","id":"menu-user-events-delete_eventId","name":"delete"},{"url":"/patch_eventId.html","id":"menu-user-events-patch_eventId","name":"edit"},{"url":"/get_eventId.html","id":"menu-user-events-get_eventId","name":"get"},{"url":"/get.html","id":"menu-user-events-get","name":"list"}],"id":"menu-user-events","name":"events"},{"url":"/farm-roles","expanded":false,"children":[{"url":"/delete_farmRoleId.html","id":"menu-user-farm-roles-delete_farmRoleId","name":"delete"},{"url":"/patch_farmRoleId.html","id":"menu-user-farm-roles-patch_farmRoleId","name":"edit"},{"url":"/patch_farmRoleId_instance.html","id":"menu-user-farm-roles-patch_farmRoleId_instance","name":"edit instance"},{"url":"/patch_farmRoleId_placement.html","id":"menu-user-farm-roles-patch_farmRoleId_placement","name":"edit placement"},{"url":"/get_farmRoleId.html","id":"menu-user-farm-roles-get_farmRoleId","name":"get"},{"url":"/get_farmRoleId_instance.html","id":"menu-user-farm-roles-get_farmRoleId_instance","name":"get instance"},{"url":"/get_farmRoleId_placement.html","id":"menu-user-farm-roles-get_farmRoleId_placement","name":"get placement"},{"url":"/post_farmRoleId_actions_import-server.html","id":"menu-user-farm-roles-post_farmRoleId_actions_import-server","name":"import server"},{"url":"/global-variables","expanded":false,"children":[{"url":"/post.html","id":"menu-user-farm-roles-global-variables-post","name":"create"},{"url":"/delete_globalVariableName.html","id":"menu-user-farm-roles-global-variables-delete_globalVariableName","name":"delete"},{"url":"/patch_globalVariableName.html","id":"menu-user-farm-roles-global-variables-patch_globalVariableName","name":"edit"},{"url":"/get_globalVariableName.html","id":"menu-user-farm-roles-global-variables-get_globalVariableName","name":"get"},{"url":"/get.html","id":"menu-user-farm-roles-global-variables-get","name":"list"}],"id":"menu-user-farm-roles-global-variables","name":"global-variables"},{"url":"/orchestration-rules","expanded":false,"children":[{"url":"/post.html","id":"menu-user-farm-roles-orchestration-rules-post","name":"create"},{"url":"/delete_orchestrationRuleId.html","id":"menu-user-farm-roles-orchestration-rules-delete_orchestrationRuleId","name":"delete"},{"url":"/patch_orchestrationRuleId.html","id":"menu-user-farm-roles-orchestration-rules-patch_orchestrationRuleId","name":"edit"},{"url":"/get_orchestrationRuleId.html","id":"menu-user-farm-roles-orchestration-rules-get_orchestrationRuleId","name":"get"},{"url":"/get.html","id":"menu-user-farm-roles-orchestration-rules-get","name":"list"}],"id":"menu-user-farm-roles-orchestration-rules","name":"orchestration-rules"},{"url":"/scaling","expanded":false,"children":[{"url":"/post.html","id":"menu-user-farm-roles-scaling-post","name":"create"},{"url":"/delete_metricName.html","id":"menu-user-farm-roles-scaling-delete_metricName","name":"delete"},{"url":"/patch.html","id":"menu-user-farm-roles-scaling-patch","name":"edit"},{"url":"/patch_metricName.html","id":"menu-user-farm-roles-scaling-patch_metricName","name":"edit"},{"url":"/get_metricName.html","id":"menu-user-farm-roles-scaling-get_metricName","name":"get"},{"url":"/get.html","id":"menu-user-farm-roles-scaling-get","name":"list"}],"id":"menu-user-farm-roles-scaling","name":"scaling"},{"url":"/servers","expanded":false,"children":[{"url":"/get.html","id":"menu-user-farm-roles-servers-get","name":"list"}],"id":"menu-user-farm-roles-servers","name":"servers"}],"id":"menu-user-farm-roles","name":"farm-roles"},{"url":"/farms","expanded":false,"children":[{"url":"/post.html","id":"menu-user-farms-post","name":"create"},{"url":"/delete_farmId.html","id":"menu-user-farms-delete_farmId","name":"delete"},{"url":"/patch_farmId.html","id":"menu-user-farms-patch_farmId","name":"edit"},{"url":"/get_farmId.html","id":"menu-user-farms-get_farmId","name":"get"},{"url":"/get.html","id":"menu-user-farms-get","name":"list"},{"url":"/get_farmId_servers.html","id":"menu-user-farms-get_farmId_servers","name":"list servers"},{"url":"/actions","expanded":false,"children":[{"url":"/post_clone.html","id":"menu-user-farms-actions-post_clone","name":"clone"},{"url":"/post_launch.html","id":"menu-user-farms-actions-post_launch","name":"launch"},{"url":"/post_terminate.html","id":"menu-user-farms-actions-post_terminate","name":"terminate"}],"id":"menu-user-farms-actions","name":"actions"},{"url":"/farm-roles","expanded":false,"children":[{"url":"/post.html","id":"menu-user-farms-farm-roles-post","name":"create"},{"url":"/get.html","id":"menu-user-farms-farm-roles-get","name":"list"}],"id":"menu-user-farms-farm-roles","name":"farm-roles"},{"url":"/global-variables","expanded":false,"children":[{"url":"/post.html","id":"menu-user-farms-global-variables-post","name":"create"},{"url":"/delete_globalVariableName.html","id":"menu-user-farms-global-variables-delete_globalVariableName","name":"delete"},{"url":"/patch_globalVariableName.html","id":"menu-user-farms-global-variables-patch_globalVariableName","name":"edit"},{"url":"/get_globalVariableName.html","id":"menu-user-farms-global-variables-get_globalVariableName","name":"get"},{"url":"/get.html","id":"menu-user-farms-global-variables-get","name":"list"}],"id":"menu-user-farms-global-variables","name":"global-variables"}],"id":"menu-user-farms","name":"farms"},{"url":"/images","expanded":false,"children":[{"url":"/post_imageId_actions_copy.html","id":"menu-user-images-post_imageId_actions_copy","name":"copy"},{"url":"/post.html","id":"menu-user-images-post","name":"create"},{"url":"/delete_imageId.html","id":"menu-user-images-delete_imageId","name":"delete"},{"url":"/patch_imageId.html","id":"menu-user-images-patch_imageId","name":"edit"},{"url":"/get_imageId.html","id":"menu-user-images-get_imageId","name":"get"},{"url":"/get.html","id":"menu-user-images-get","name":"list"}],"id":"menu-user-images","name":"images"},{"url":"/orchestration-logs","expanded":false,"children":[{"url":"/get_logEntryId.html","id":"menu-user-orchestration-logs-get_logEntryId","name":"get"}],"id":"menu-user-orchestration-logs","name":"orchestration-logs"},{"url":"/os","expanded":false,"children":[{"url":"/get_osId.html","id":"menu-user-os-get_osId","name":"get"},{"url":"/get.html","id":"menu-user-os-get","name":"list"}],"id":"menu-user-os","name":"os"},{"url":"/projects","expanded":false,"children":[{"url":"/post.html","id":"menu-user-projects-post","name":"create"},{"url":"/get_projectId.html","id":"menu-user-projects-get_projectId","name":"get"},{"url":"/get.html","id":"menu-user-projects-get","name":"list"}],"id":"menu-user-projects","name":"projects"},{"url":"/role-categories","expanded":false,"children":[{"url":"/post.html","id":"menu-user-role-categories-post","name":"create"},{"url":"/delete_roleCategoryId.html","id":"menu-user-role-categories-delete_roleCategoryId","name":"delete"},{"url":"/patch_roleCategoryId.html","id":"menu-user-role-categories-patch_roleCategoryId","name":"edit"},{"url":"/get_roleCategoryId.html","id":"menu-user-role-categories-get_roleCategoryId","name":"get"},{"url":"/get.html","id":"menu-user-role-categories-get","name":"list"}],"id":"menu-user-role-categories","name":"role-categories"},{"url":"/roles","expanded":false,"children":[{"url":"/post.html","id":"menu-user-roles-post","name":"create"},{"url":"/delete_roleId.html","id":"menu-user-roles-delete_roleId","name":"delete"},{"url":"/patch_roleId.html","id":"menu-user-roles-patch_roleId","name":"edit"},{"url":"/get_roleId.html","id":"menu-user-roles-get_roleId","name":"get"},{"url":"/get.html","id":"menu-user-roles-get","name":"list"},{"url":"/global-variables","expanded":false,"children":[{"url":"/post.html","id":"menu-user-roles-global-variables-post","name":"create"},{"url":"/delete_globalVariableName.html","id":"menu-user-roles-global-variables-delete_globalVariableName","name":"delete"},{"url":"/patch_globalVariableName.html","id":"menu-user-roles-global-variables-patch_globalVariableName","name":"edit"},{"url":"/get_globalVariableName.html","id":"menu-user-roles-global-variables-get_globalVariableName","name":"get"},{"url":"/get.html","id":"menu-user-roles-global-variables-get","name":"list"}],"id":"menu-user-roles-global-variables","name":"global-variables"},{"url":"/images","expanded":false,"children":[{"url":"/post.html","id":"menu-user-roles-images-post","name":"create"},{"url":"/delete_imageId.html","id":"menu-user-roles-images-delete_imageId","name":"delete"},{"url":"/get_imageId.html","id":"menu-user-roles-images-get_imageId","name":"get"},{"url":"/get.html","id":"menu-user-roles-images-get","name":"list"},{"url":"/post_imageId_actions_replace.html","id":"menu-user-roles-images-post_imageId_actions_replace","name":"replace"}],"id":"menu-user-roles-images","name":"images"},{"url":"/orchestration-rules","expanded":false,"children":[{"url":"/post.html","id":"menu-user-roles-orchestration-rules-post","name":"create"},{"url":"/delete_orchestrationRuleId.html","id":"menu-user-roles-orchestration-rules-delete_orchestrationRuleId","name":"delete"},{"url":"/patch_orchestrationRuleId.html","id":"menu-user-roles-orchestration-rules-patch_orchestrationRuleId","name":"edit"},{"url":"/get_orchestrationRuleId.html","id":"menu-user-roles-orchestration-rules-get_orchestrationRuleId","name":"get"},{"url":"/get.html","id":"menu-user-roles-orchestration-rules-get","name":"list"}],"id":"menu-user-roles-orchestration-rules","name":"orchestration-rules"}],"id":"menu-user-roles","name":"roles"},{"url":"/scaling-metrics","expanded":false,"children":[{"url":"/post.html","id":"menu-user-scaling-metrics-post","name":"create"},{"url":"/delete_metricName.html","id":"menu-user-scaling-metrics-delete_metricName","name":"delete"},{"url":"/patch_metricName.html","id":"menu-user-scaling-metrics-patch_metricName","name":"edit"},{"url":"/get_metricName.html","id":"menu-user-scaling-metrics-get_metricName","name":"get"},{"url":"/get.html","id":"menu-user-scaling-metrics-get","name":"list"}],"id":"menu-user-scaling-metrics","name":"scaling-metrics"},{"url":"/script-executions","expanded":false,"children":[{"url":"/get_scriptExecutionId.html","id":"menu-user-script-executions-get_scriptExecutionId","name":"get"}],"id":"menu-user-script-executions","name":"script-executions"},{"url":"/scripts","expanded":false,"children":[{"url":"/post.html","id":"menu-user-scripts-post","name":"create"},{"url":"/delete_scriptId.html","id":"menu-user-scripts-delete_scriptId","name":"delete"},{"url":"/patch_scriptId.html","id":"menu-user-scripts-patch_scriptId","name":"edit"},{"url":"/post_scriptId_actions_execute.html","id":"menu-user-scripts-post_scriptId_actions_execute","name":"execute"},{"url":"/get_scriptId.html","id":"menu-user-scripts-get_scriptId","name":"get"},{"url":"/get.html","id":"menu-user-scripts-get","name":"list"},{"url":"/script-versions","expanded":false,"children":[{"url":"/post.html","id":"menu-user-scripts-script-versions-post","name":"create"},{"url":"/delete_scriptVersionNumber.html","id":"menu-user-scripts-script-versions-delete_scriptVersionNumber","name":"delete"},{"url":"/patch_scriptVersionNumber.html","id":"menu-user-scripts-script-versions-patch_scriptVersionNumber","name":"edit"},{"url":"/post_scriptVersionNumber_actions_execute.html","id":"menu-user-scripts-script-versions-post_scriptVersionNumber_actions_execute","name":"execute"},{"url":"/get_scriptVersionNumber.html","id":"menu-user-scripts-script-versions-get_scriptVersionNumber","name":"get"},{"url":"/get.html","id":"menu-user-scripts-script-versions-get","name":"list"}],"id":"menu-user-scripts-script-versions","name":"script-versions"}],"id":"menu-user-scripts","name":"scripts"},{"url":"/servers","expanded":false,"children":[{"url":"/get_serverId.html","id":"menu-user-servers-get_serverId","name":"get"},{"url":"/get.html","id":"menu-user-servers-get","name":"list"},{"url":"/actions","expanded":false,"children":[{"url":"/post_reboot.html","id":"menu-user-servers-actions-post_reboot","name":"reboot"},{"url":"/post_resume.html","id":"menu-user-servers-actions-post_resume","name":"resume"},{"url":"/post_suspend.html","id":"menu-user-servers-actions-post_suspend","name":"suspend"},{"url":"/post_terminate.html","id":"menu-user-servers-actions-post_terminate","name":"terminate"}],"id":"menu-user-servers-actions","name":"actions"}],"id":"menu-user-servers","name":"servers"}],"id":"menu-user","name":"User API"},{"url":"/account","expanded":false,"children":[{"url":"/acl-roles","expanded":false,"children":[{"url":"/get.html","id":"menu-account-acl-roles-get","name":"list"}],"id":"menu-account-acl-roles","name":"acl-roles"},{"url":"/cloud-credentials","expanded":false,"children":[{"url":"/post.html","id":"menu-account-cloud-credentials-post","name":"create"},{"url":"/delete_cloudCredentialsId.html","id":"menu-account-cloud-credentials-delete_cloudCredentialsId","name":"delete"},{"url":"/patch_cloudCredentialsId.html","id":"menu-account-cloud-credentials-patch_cloudCredentialsId","name":"edit"},{"url":"/get_cloudCredentialsId.html","id":"menu-account-cloud-credentials-get_cloudCredentialsId","name":"get"},{"url":"/get.html","id":"menu-account-cloud-credentials-get","name":"list"}],"id":"menu-account-cloud-credentials","name":"cloud-credentials"},{"url":"/cost-centers","expanded":false,"children":[{"url":"/get_costCenterId.html","id":"menu-account-cost-centers-get_costCenterId","name":"get"},{"url":"/get.html","id":"menu-account-cost-centers-get","name":"list"}],"id":"menu-account-cost-centers","name":"cost-centers"},{"url":"/environments","expanded":false,"children":[{"url":"/post.html","id":"menu-account-environments-post","name":"create"},{"url":"/delete_envId.html","id":"menu-account-environments-delete_envId","name":"delete"},{"url":"/patch_envId.html","id":"menu-account-environments-patch_envId","name":"edit"},{"url":"/get_envId.html","id":"menu-account-environments-get_envId","name":"get"},{"url":"/get.html","id":"menu-account-environments-get","name":"list"},{"url":"/clouds","expanded":false,"children":[{"url":"/delete_cloud.html","id":"menu-account-environments-clouds-delete_cloud","name":"delete"},{"url":"/get_cloud.html","id":"menu-account-environments-clouds-get_cloud","name":"get"},{"url":"/get.html","id":"menu-account-environments-clouds-get","name":"list"},{"url":"/post_cloud.html","id":"menu-account-environments-clouds-post_cloud","name":"replace"}],"id":"menu-account-environments-clouds","name":"clouds"},{"url":"/teams","expanded":false,"children":[{"url":"/post.html","id":"menu-account-environments-teams-post","name":"create"},{"url":"/delete_teamId.html","id":"menu-account-environments-teams-delete_teamId","name":"delete"},{"url":"/get.html","id":"menu-account-environments-teams-get","name":"list"}],"id":"menu-account-environments-teams","name":"teams"}],"id":"menu-account-environments","name":"environments"},{"url":"/events","expanded":false,"children":[{"url":"/post.html","id":"menu-account-events-post","name":"create"},{"url":"/delete_eventId.html","id":"menu-account-events-delete_eventId","name":"delete"},{"url":"/patch_eventId.html","id":"menu-account-events-patch_eventId","name":"edit"},{"url":"/get_eventId.html","id":"menu-account-events-get_eventId","name":"get"},{"url":"/get.html","id":"menu-account-events-get","name":"list"}],"id":"menu-account-events","name":"events"},{"url":"/images","expanded":false,"children":[{"url":"/post_imageId_actions_copy.html","id":"menu-account-images-post_imageId_actions_copy","name":"copy"},{"url":"/post.html","id":"menu-account-images-post","name":"create"},{"url":"/delete_imageId.html","id":"menu-account-images-delete_imageId","name":"delete"},{"url":"/patch_imageId.html","id":"menu-account-images-patch_imageId","name":"edit"},{"url":"/get_imageId.html","id":"menu-account-images-get_imageId","name":"get"},{"url":"/get.html","id":"menu-account-images-get","name":"list"}],"id":"menu-account-images","name":"images"},{"url":"/orchestration-rules","expanded":false,"children":[{"url":"/post.html","id":"menu-account-orchestration-rules-post","name":"create"},{"url":"/delete_orchestrationRuleId.html","id":"menu-account-orchestration-rules-delete_orchestrationRuleId","name":"delete"},{"url":"/patch_orchestrationRuleId.html","id":"menu-account-orchestration-rules-patch_orchestrationRuleId","name":"edit"},{"url":"/get_orchestrationRuleId.html","id":"menu-account-orchestration-rules-get_orchestrationRuleId","name":"get"},{"url":"/get.html","id":"menu-account-orchestration-rules-get","name":"list"}],"id":"menu-account-orchestration-rules","name":"orchestration-rules"},{"url":"/os","expanded":false,"children":[{"url":"/get_osId.html","id":"menu-account-os-get_osId","name":"get"},{"url":"/get.html","id":"menu-account-os-get","name":"list"}],"id":"menu-account-os","name":"os"},{"url":"/role-categories","expanded":false,"children":[{"url":"/post.html","id":"menu-account-role-categories-post","name":"create"},{"url":"/delete_roleCategoryId.html","id":"menu-account-role-categories-delete_roleCategoryId","name":"delete"},{"url":"/patch_roleCategoryId.html","id":"menu-account-role-categories-patch_roleCategoryId","name":"edit"},{"url":"/get_roleCategoryId.html","id":"menu-account-role-categories-get_roleCategoryId","name":"get"},{"url":"/get.html","id":"menu-account-role-categories-get","name":"list"}],"id":"menu-account-role-categories","name":"role-categories"},{"url":"/roles","expanded":false,"children":[{"url":"/post.html","id":"menu-account-roles-post","name":"create"},{"url":"/delete_roleId.html","id":"menu-account-roles-delete_roleId","name":"delete"},{"url":"/patch_roleId.html","id":"menu-account-roles-patch_roleId","name":"edit"},{"url":"/get_roleId.html","id":"menu-account-roles-get_roleId","name":"get"},{"url":"/get.html","id":"menu-account-roles-get","name":"list"},{"url":"/global-variables","expanded":false,"children":[{"url":"/post.html","id":"menu-account-roles-global-variables-post","name":"create"},{"url":"/delete_globalVariableName.html","id":"menu-account-roles-global-variables-delete_globalVariableName","name":"delete"},{"url":"/patch_globalVariableName.html","id":"menu-account-roles-global-variables-patch_globalVariableName","name":"edit"},{"url":"/get_globalVariableName.html","id":"menu-account-roles-global-variables-get_globalVariableName","name":"get"},{"url":"/get.html","id":"menu-account-roles-global-variables-get","name":"list"}],"id":"menu-account-roles-global-variables","name":"global-variables"},{"url":"/images","expanded":false,"children":[{"url":"/post.html","id":"menu-account-roles-images-post","name":"create"},{"url":"/delete_imageId.html","id":"menu-account-roles-images-delete_imageId","name":"delete"},{"url":"/get_imageId.html","id":"menu-account-roles-images-get_imageId","name":"get"},{"url":"/get.html","id":"menu-account-roles-images-get","name":"list"},{"url":"/post_imageId_actions_replace.html","id":"menu-account-roles-images-post_imageId_actions_replace","name":"replace"}],"id":"menu-account-roles-images","name":"images"},{"url":"/orchestration-rules","expanded":false,"children":[{"url":"/post.html","id":"menu-account-roles-orchestration-rules-post","name":"create"},{"url":"/delete_orchestrationRuleId.html","id":"menu-account-roles-orchestration-rules-delete_orchestrationRuleId","name":"delete"},{"url":"/patch_orchestrationRuleId.html","id":"menu-account-roles-orchestration-rules-patch_orchestrationRuleId","name":"edit"},{"url":"/get_orchestrationRuleId.html","id":"menu-account-roles-orchestration-rules-get_orchestrationRuleId","name":"get"},{"url":"/get.html","id":"menu-account-roles-orchestration-rules-get","name":"list"}],"id":"menu-account-roles-orchestration-rules","name":"orchestration-rules"}],"id":"menu-account-roles","name":"roles"},{"url":"/scripts","expanded":false,"children":[{"url":"/post.html","id":"menu-account-scripts-post","name":"create"},{"url":"/delete_scriptId.html","id":"menu-account-scripts-delete_scriptId","name":"delete"},{"url":"/patch_scriptId.html","id":"menu-account-scripts-patch_scriptId","name":"edit"},{"url":"/get_scriptId.html","id":"menu-account-scripts-get_scriptId","name":"get"},{"url":"/get.html","id":"menu-account-scripts-get","name":"list"},{"url":"/script-versions","expanded":false,"children":[{"url":"/post.html","id":"menu-account-scripts-script-versions-post","name":"create"},{"url":"/delete_scriptVersionNumber.html","id":"menu-account-scripts-script-versions-delete_scriptVersionNumber","name":"delete"},{"url":"/patch_scriptVersionNumber.html","id":"menu-account-scripts-script-versions-patch_scriptVersionNumber","name":"edit"},{"url":"/get_scriptVersionNumber.html","id":"menu-account-scripts-script-versions-get_scriptVersionNumber","name":"get"},{"url":"/get.html","id":"menu-account-scripts-script-versions-get","name":"list"}],"id":"menu-account-scripts-script-versions","name":"script-versions"}],"id":"menu-account-scripts","name":"scripts"},{"url":"/teams","expanded":false,"children":[{"url":"/post.html","id":"menu-account-teams-post","name":"create"},{"url":"/delete_teamId.html","id":"menu-account-teams-delete_teamId","name":"delete"},{"url":"/patch_teamId.html","id":"menu-account-teams-patch_teamId","name":"edit"},{"url":"/get_teamId.html","id":"menu-account-teams-get_teamId","name":"get"},{"url":"/get.html","id":"menu-account-teams-get","name":"list"}],"id":"menu-account-teams","name":"teams"}],"id":"menu-account","name":"Account API"},{"url":"/global","expanded":false,"children":[{"url":"/images","expanded":false,"children":[{"url":"/post_imageId_actions_copy.html","id":"menu-global-images-post_imageId_actions_copy","name":"copy"},{"url":"/post.html","id":"menu-global-images-post","name":"create"},{"url":"/delete_imageId.html","id":"menu-global-images-delete_imageId","name":"delete"},{"url":"/patch_imageId.html","id":"menu-global-images-patch_imageId","name":"edit"},{"url":"/get_imageId.html","id":"menu-global-images-get_imageId","name":"get"},{"url":"/get.html","id":"menu-global-images-get","name":"list"}],"id":"menu-global-images","name":"images"},{"url":"/os","expanded":false,"children":[{"url":"/get_osId.html","id":"menu-global-os-get_osId","name":"get"},{"url":"/get.html","id":"menu-global-os-get","name":"list"}],"id":"menu-global-os","name":"os"},{"url":"/role-categories","expanded":false,"children":[{"url":"/post.html","id":"menu-global-role-categories-post","name":"create"},{"url":"/delete_roleCategoryId.html","id":"menu-global-role-categories-delete_roleCategoryId","name":"delete"},{"url":"/patch_roleCategoryId.html","id":"menu-global-role-categories-patch_roleCategoryId","name":"edit"},{"url":"/get_roleCategoryId.html","id":"menu-global-role-categories-get_roleCategoryId","name":"get"},{"url":"/get.html","id":"menu-global-role-categories-get","name":"list"}],"id":"menu-global-role-categories","name":"role-categories"},{"url":"/roles","expanded":false,"children":[{"url":"/post.html","id":"menu-global-roles-post","name":"create"},{"url":"/delete_roleId.html","id":"menu-global-roles-delete_roleId","name":"delete"},{"url":"/patch_roleId.html","id":"menu-global-roles-patch_roleId","name":"edit"},{"url":"/get_roleId.html","id":"menu-global-roles-get_roleId","name":"get"},{"url":"/get.html","id":"menu-global-roles-get","name":"list"},{"url":"/global-variables","expanded":false,"children":[{"url":"/post.html","id":"menu-global-roles-global-variables-post","name":"create"},{"url":"/delete_globalVariableName.html","id":"menu-global-roles-global-variables-delete_globalVariableName","name":"delete"},{"url":"/patch_globalVariableName.html","id":"menu-global-roles-global-variables-patch_globalVariableName","name":"edit"},{"url":"/get_globalVariableName.html","id":"menu-global-roles-global-variables-get_globalVariableName","name":"get"},{"url":"/get.html","id":"menu-global-roles-global-variables-get","name":"list"}],"id":"menu-global-roles-global-variables","name":"global-variables"},{"url":"/images","expanded":false,"children":[{"url":"/post.html","id":"menu-global-roles-images-post","name":"create"},{"url":"/delete_imageId.html","id":"menu-global-roles-images-delete_imageId","name":"delete"},{"url":"/get_imageId.html","id":"menu-global-roles-images-get_imageId","name":"get"},{"url":"/get.html","id":"menu-global-roles-images-get","name":"list"},{"url":"/post_imageId_actions_replace.html","id":"menu-global-roles-images-post_imageId_actions_replace","name":"replace"}],"id":"menu-global-roles-images","name":"images"},{"url":"/orchestration-rules","expanded":false,"children":[{"url":"/post.html","id":"menu-global-roles-orchestration-rules-post","name":"create"},{"url":"/delete_orchestrationRuleId.html","id":"menu-global-roles-orchestration-rules-delete_orchestrationRuleId","name":"delete"},{"url":"/patch_orchestrationRuleId.html","id":"menu-global-roles-orchestration-rules-patch_orchestrationRuleId","name":"edit"},{"url":"/get_orchestrationRuleId.html","id":"menu-global-roles-orchestration-rules-get_orchestrationRuleId","name":"get"},{"url":"/get.html","id":"menu-global-roles-orchestration-rules-get","name":"list"}],"id":"menu-global-roles-orchestration-rules","name":"orchestration-rules"}],"id":"menu-global-roles","name":"roles"}],"id":"menu-global","name":"Global API"},{"url":"/definitions","expanded":false,"children":[{"url":"/A","expanded":false,"children":[{"url":"/AclRole.html","id":"m-def-aclrole","name":"AclRole"},{"url":"/AclRoleForeignKey.html","id":"m-def-aclroleforeignkey","name":"AclRoleForeignKey"},{"url":"/AclRoleListResponse.html","id":"m-def-aclrolelistresponse","name":"AclRoleListResponse"},{"url":"/Action.html","id":"m-def-action","name":"Action"},{"url":"/AllEventsTrigger.html","id":"m-def-alleventstrigger","name":"AllEventsTrigger"},{"url":"/ApiErrorResponse.html","id":"m-def-apierrorresponse","name":"ApiErrorResponse"},{"url":"/ApiMessage.html","id":"m-def-apimessage","name":"ApiMessage"},{"url":"/ApiMetaContainer.html","id":"m-def-apimetacontainer","name":"ApiMetaContainer"},{"url":"/ApiPagination.html","id":"m-def-apipagination","name":"ApiPagination"},{"url":"/AwsClassicPlacementConfiguration.html","id":"m-def-awsclassicplacementconfiguration","name":"AwsClassicPlacementConfiguration"},{"url":"/AwsCloudCredentials.html","id":"m-def-awscloudcredentials","name":"AwsCloudCredentials"},{"url":"/AwsDetailedBilling.html","id":"m-def-awsdetailedbilling","name":"AwsDetailedBilling"},{"url":"/AwsInstanceConfiguration.html","id":"m-def-awsinstanceconfiguration","name":"AwsInstanceConfiguration"},{"url":"/AwsVpcPlacementConfiguration.html","id":"m-def-awsvpcplacementconfiguration","name":"AwsVpcPlacementConfiguration"},{"url":"/AzureCloudCredentials.html","id":"m-def-azurecloudcredentials","name":"AzureCloudCredentials"}],"id":"m-def-cat-A","name":"A"},{"url":"/B","expanded":false,"children":[{"url":"/BandWidthScalingRule.html","id":"m-def-bandwidthscalingrule","name":"BandWidthScalingRule"},{"url":"/BasicScalingRule.html","id":"m-def-basicscalingrule","name":"BasicScalingRule"}],"id":"m-def-cat-B","name":"B"},{"url":"/C","expanded":false,"children":[{"url":"/ChefAction.html","id":"m-def-chefaction","name":"ChefAction"},{"url":"/Cloud.html","id":"m-def-cloud","name":"Cloud"},{"url":"/CloudAwsVpcForeignKey.html","id":"m-def-cloudawsvpcforeignkey","name":"CloudAwsVpcForeignKey"},{"url":"/CloudAwsVpcSubnetForeignKey.html","id":"m-def-cloudawsvpcsubnetforeignkey","name":"CloudAwsVpcSubnetForeignKey"},{"url":"/CloudCredentials.html","id":"m-def-cloudcredentials","name":"CloudCredentials"},{"url":"/CloudCredentialsDetailsResponse.html","id":"m-def-cloudcredentialsdetailsresponse","name":"CloudCredentialsDetailsResponse"},{"url":"/CloudCredentialsForeignKey.html","id":"m-def-cloudcredentialsforeignkey","name":"CloudCredentialsForeignKey"},{"url":"/CloudCredentialsSummary.html","id":"m-def-cloudcredentialssummary","name":"CloudCredentialsSummary"},{"url":"/CloudCredentialsSummaryListResponse.html","id":"m-def-cloudcredentialssummarylistresponse","name":"CloudCredentialsSummaryListResponse"},{"url":"/CloudInstanceType.html","id":"m-def-cloudinstancetype","name":"CloudInstanceType"},{"url":"/CloudListResponse.html","id":"m-def-cloudlistresponse","name":"CloudListResponse"},{"url":"/CloudLocation.html","id":"m-def-cloudlocation","name":"CloudLocation"},{"url":"/CloudstackCloudCredentials.html","id":"m-def-cloudstackcloudcredentials","name":"CloudstackCloudCredentials"},{"url":"/CostCenter.html","id":"m-def-costcenter","name":"CostCenter"},{"url":"/CostCenterDetailsResponse.html","id":"m-def-costcenterdetailsresponse","name":"CostCenterDetailsResponse"},{"url":"/CostCenterForeignKey.html","id":"m-def-costcenterforeignkey","name":"CostCenterForeignKey"},{"url":"/CostCenterListResponse.html","id":"m-def-costcenterlistresponse","name":"CostCenterListResponse"}],"id":"m-def-cat-C","name":"C"},{"url":"/D","expanded":false,"children":[{"url":"/DateAndTimeScalingRule.html","id":"m-def-dateandtimescalingrule","name":"DateAndTimeScalingRule"}],"id":"m-def-cat-D","name":"D"},{"url":"/E","expanded":false,"children":[{"url":"/Environment.html","id":"m-def-environment","name":"Environment"},{"url":"/EnvironmentDetailsResponse.html","id":"m-def-environmentdetailsresponse","name":"EnvironmentDetailsResponse"},{"url":"/EnvironmentListResponse.html","id":"m-def-environmentlistresponse","name":"EnvironmentListResponse"},{"url":"/EnvironmentTeam.html","id":"m-def-environmentteam","name":"EnvironmentTeam"},{"url":"/EnvironmentTeamDetailsResponse.html","id":"m-def-environmentteamdetailsresponse","name":"EnvironmentTeamDetailsResponse"},{"url":"/EnvironmentTeamListResponse.html","id":"m-def-environmentteamlistresponse","name":"EnvironmentTeamListResponse"},{"url":"/Event.html","id":"m-def-event","name":"Event"},{"url":"/EventDetailsResponse.html","id":"m-def-eventdetailsresponse","name":"EventDetailsResponse"},{"url":"/EventForeignKey.html","id":"m-def-eventforeignkey","name":"EventForeignKey"},{"url":"/EventListResponse.html","id":"m-def-eventlistresponse","name":"EventListResponse"}],"id":"m-def-cat-E","name":"E"},{"url":"/F","expanded":false,"children":[{"url":"/Farm.html","id":"m-def-farm","name":"Farm"},{"url":"/FarmDetailsResponse.html","id":"m-def-farmdetailsresponse","name":"FarmDetailsResponse"},{"url":"/FarmForeignKey.html","id":"m-def-farmforeignkey","name":"FarmForeignKey"},{"url":"/FarmListResponse.html","id":"m-def-farmlistresponse","name":"FarmListResponse"},{"url":"/FarmRole.html","id":"m-def-farmrole","name":"FarmRole"},{"url":"/FarmRoleDetailsResponse.html","id":"m-def-farmroledetailsresponse","name":"FarmRoleDetailsResponse"},{"url":"/FarmRoleForeignKey.html","id":"m-def-farmroleforeignkey","name":"FarmRoleForeignKey"},{"url":"/FarmRoleListResponse.html","id":"m-def-farmrolelistresponse","name":"FarmRoleListResponse"},{"url":"/FarmTarget.html","id":"m-def-farmtarget","name":"FarmTarget"},{"url":"/FreeRamScalingRule.html","id":"m-def-freeramscalingrule","name":"FreeRamScalingRule"}],"id":"m-def-cat-F","name":"F"},{"url":"/G","expanded":false,"children":[{"url":"/GceCloudCredentials.html","id":"m-def-gcecloudcredentials","name":"GceCloudCredentials"},{"url":"/GlobalVariable.html","id":"m-def-globalvariable","name":"GlobalVariable"},{"url":"/GlobalVariableDetailsResponse.html","id":"m-def-globalvariabledetailsresponse","name":"GlobalVariableDetailsResponse"},{"url":"/GlobalVariableListResponse.html","id":"m-def-globalvariablelistresponse","name":"GlobalVariableListResponse"}],"id":"m-def-cat-G","name":"G"},{"url":"/I","expanded":false,"children":[{"url":"/Image.html","id":"m-def-image","name":"Image"},{"url":"/ImageDetailsResponse.html","id":"m-def-imagedetailsresponse","name":"ImageDetailsResponse"},{"url":"/ImageForeignKey.html","id":"m-def-imageforeignkey","name":"ImageForeignKey"},{"url":"/ImageListResponse.html","id":"m-def-imagelistresponse","name":"ImageListResponse"},{"url":"/InstanceConfiguration.html","id":"m-def-instanceconfiguration","name":"InstanceConfiguration"},{"url":"/InstanceConfigurationDetailsResponse.html","id":"m-def-instanceconfigurationdetailsresponse","name":"InstanceConfigurationDetailsResponse"}],"id":"m-def-cat-I","name":"I"},{"url":"/L","expanded":false,"children":[{"url":"/LoadAveragesScalingRule.html","id":"m-def-loadaveragesscalingrule","name":"LoadAveragesScalingRule"},{"url":"/LogEntry.html","id":"m-def-logentry","name":"LogEntry"},{"url":"/LogEntryDetailsResponse.html","id":"m-def-logentrydetailsresponse","name":"LogEntryDetailsResponse"},{"url":"/LogEntryForeignKey.html","id":"m-def-logentryforeignkey","name":"LogEntryForeignKey"}],"id":"m-def-cat-L","name":"L"},{"url":"/N","expanded":false,"children":[{"url":"/NullTarget.html","id":"m-def-nulltarget","name":"NullTarget"}],"id":"m-def-cat-N","name":"N"},{"url":"/O","expanded":false,"children":[{"url":"/OpenstackCloudCredentials.html","id":"m-def-openstackcloudcredentials","name":"OpenstackCloudCredentials"},{"url":"/OrchestrationRule.html","id":"m-def-orchestrationrule","name":"OrchestrationRule"},{"url":"/OrchestrationRuleDetailsResponse.html","id":"m-def-orchestrationruledetailsresponse","name":"OrchestrationRuleDetailsResponse"},{"url":"/OrchestrationRuleListResponse.html","id":"m-def-orchestrationrulelistresponse","name":"OrchestrationRuleListResponse"},{"url":"/Os.html","id":"m-def-os","name":"Os"},{"url":"/OsDetailsResponse.html","id":"m-def-osdetailsresponse","name":"OsDetailsResponse"},{"url":"/OsForeignKey.html","id":"m-def-osforeignkey","name":"OsForeignKey"},{"url":"/OsListResponse.html","id":"m-def-oslistresponse","name":"OsListResponse"}],"id":"m-def-cat-O","name":"O"},{"url":"/P","expanded":false,"children":[{"url":"/PlacementConfiguration.html","id":"m-def-placementconfiguration","name":"PlacementConfiguration"},{"url":"/PlacementConfigurationDetailsResponse.html","id":"m-def-placementconfigurationdetailsresponse","name":"PlacementConfigurationDetailsResponse"},{"url":"/Project.html","id":"m-def-project","name":"Project"},{"url":"/ProjectDetailsResponse.html","id":"m-def-projectdetailsresponse","name":"ProjectDetailsResponse"},{"url":"/ProjectForeignKey.html","id":"m-def-projectforeignkey","name":"ProjectForeignKey"},{"url":"/ProjectListResponse.html","id":"m-def-projectlistresponse","name":"ProjectListResponse"}],"id":"m-def-cat-P","name":"P"},{"url":"/R","expanded":false,"children":[{"url":"/RackspaceCloudCredentials.html","id":"m-def-rackspacecloudcredentials","name":"RackspaceCloudCredentials"},{"url":"/Role.html","id":"m-def-role","name":"Role"},{"url":"/RoleCategory.html","id":"m-def-rolecategory","name":"RoleCategory"},{"url":"/RoleCategoryDetailsResponse.html","id":"m-def-rolecategorydetailsresponse","name":"RoleCategoryDetailsResponse"},{"url":"/RoleCategoryForeignKey.html","id":"m-def-rolecategoryforeignkey","name":"RoleCategoryForeignKey"},{"url":"/RoleCategoryListResponse.html","id":"m-def-rolecategorylistresponse","name":"RoleCategoryListResponse"},{"url":"/RoleDetailsResponse.html","id":"m-def-roledetailsresponse","name":"RoleDetailsResponse"},{"url":"/RoleForeignKey.html","id":"m-def-roleforeignkey","name":"RoleForeignKey"},{"url":"/RoleImage.html","id":"m-def-roleimage","name":"RoleImage"},{"url":"/RoleImageDetailsResponse.html","id":"m-def-roleimagedetailsresponse","name":"RoleImageDetailsResponse"},{"url":"/RoleImageListResponse.html","id":"m-def-roleimagelistresponse","name":"RoleImageListResponse"},{"url":"/RoleListResponse.html","id":"m-def-rolelistresponse","name":"RoleListResponse"}],"id":"m-def-cat-R","name":"R"},{"url":"/S","expanded":false,"children":[{"url":"/ScalingConfiguration.html","id":"m-def-scalingconfiguration","name":"ScalingConfiguration"},{"url":"/ScalingConfigurationDetailsResponse.html","id":"m-def-scalingconfigurationdetailsresponse","name":"ScalingConfigurationDetailsResponse"},{"url":"/ScalingMetric.html","id":"m-def-scalingmetric","name":"ScalingMetric"},{"url":"/ScalingMetricDetailsResponse.html","id":"m-def-scalingmetricdetailsresponse","name":"ScalingMetricDetailsResponse"},{"url":"/ScalingMetricForeignKey.html","id":"m-def-scalingmetricforeignkey","name":"ScalingMetricForeignKey"},{"url":"/ScalingMetricListResponse.html","id":"m-def-scalingmetriclistresponse","name":"ScalingMetricListResponse"},{"url":"/ScalingRule.html","id":"m-def-scalingrule","name":"ScalingRule"},{"url":"/ScalingRuleDetailsResponse.html","id":"m-def-scalingruledetailsresponse","name":"ScalingRuleDetailsResponse"},{"url":"/ScalingRuleThresholds.html","id":"m-def-scalingrulethresholds","name":"ScalingRuleThresholds"},{"url":"/ScalingRuleTimeFrame.html","id":"m-def-scalingruletimeframe","name":"ScalingRuleTimeFrame"},{"url":"/Script.html","id":"m-def-script","name":"Script"},{"url":"/ScriptAction.html","id":"m-def-scriptaction","name":"ScriptAction"},{"url":"/ScriptDetailsResponse.html","id":"m-def-scriptdetailsresponse","name":"ScriptDetailsResponse"},{"url":"/ScriptExecution.html","id":"m-def-scriptexecution","name":"ScriptExecution"},{"url":"/ScriptExecutionDetailsResponse.html","id":"m-def-scriptexecutiondetailsresponse","name":"ScriptExecutionDetailsResponse"},{"url":"/ScriptExecutionRequest.html","id":"m-def-scriptexecutionrequest","name":"ScriptExecutionRequest"},{"url":"/ScriptForeignKey.html","id":"m-def-scriptforeignkey","name":"ScriptForeignKey"},{"url":"/ScriptListResponse.html","id":"m-def-scriptlistresponse","name":"ScriptListResponse"},{"url":"/ScriptVersion.html","id":"m-def-scriptversion","name":"ScriptVersion"},{"url":"/ScriptVersionDetailsResponse.html","id":"m-def-scriptversiondetailsresponse","name":"ScriptVersionDetailsResponse"},{"url":"/ScriptVersionForeignKey.html","id":"m-def-scriptversionforeignkey","name":"ScriptVersionForeignKey"},{"url":"/ScriptVersionListResponse.html","id":"m-def-scriptversionlistresponse","name":"ScriptVersionListResponse"},{"url":"/SelectedFarmRolesTarget.html","id":"m-def-selectedfarmrolestarget","name":"SelectedFarmRolesTarget"},{"url":"/Server.html","id":"m-def-server","name":"Server"},{"url":"/ServerForeignKey.html","id":"m-def-serverforeignkey","name":"ServerForeignKey"},{"url":"/ServerSummary.html","id":"m-def-serversummary","name":"ServerSummary"},{"url":"/ServerSummaryDetailsResponse.html","id":"m-def-serversummarydetailsresponse","name":"ServerSummaryDetailsResponse"},{"url":"/ServerSummaryListResponse.html","id":"m-def-serversummarylistresponse","name":"ServerSummaryListResponse"},{"url":"/SpecificEventTrigger.html","id":"m-def-specificeventtrigger","name":"SpecificEventTrigger"},{"url":"/SqsQueueSizeScalingRule.html","id":"m-def-sqsqueuesizescalingrule","name":"SqsQueueSizeScalingRule"}],"id":"m-def-cat-S","name":"S"},{"url":"/T","expanded":false,"children":[{"url":"/Tag.html","id":"m-def-tag","name":"Tag"},{"url":"/Target.html","id":"m-def-target","name":"Target"},{"url":"/Team.html","id":"m-def-team","name":"Team"},{"url":"/TeamDetailsResponse.html","id":"m-def-teamdetailsresponse","name":"TeamDetailsResponse"},{"url":"/TeamForeignKey.html","id":"m-def-teamforeignkey","name":"TeamForeignKey"},{"url":"/TeamListResponse.html","id":"m-def-teamlistresponse","name":"TeamListResponse"},{"url":"/Trigger.html","id":"m-def-trigger","name":"Trigger"},{"url":"/TriggeringFarmRoleTarget.html","id":"m-def-triggeringfarmroletarget","name":"TriggeringFarmRoleTarget"},{"url":"/TriggeringServerTarget.html","id":"m-def-triggeringservertarget","name":"TriggeringServerTarget"}],"id":"m-def-cat-T","name":"T"},{"url":"/U","expanded":false,"children":[{"url":"/UriAction.html","id":"m-def-uriaction","name":"UriAction"},{"url":"/UrlResponseTimeScalingRule.html","id":"m-def-urlresponsetimescalingrule","name":"UrlResponseTimeScalingRule"},{"url":"/UserForeignKey.html","id":"m-def-userforeignkey","name":"UserForeignKey"}],"id":"m-def-cat-U","name":"U"}],"id":"menu-definitions","name":"Object definitions"}];
+
+  var expand = function(item, noanimate) {
+    if (noanimate) {
+      $('#' + item.id + " > ul").show();
+    } else {
+      $('#' + item.id + " > ul").slideDown();
+    }
+    $('#' + item.id + " > a > img").attr("src", "/images/collapse-retina.png");
+    item.expanded = true;
+  };
+
+  var hide = function(item, noanimate) {
+    if (noanimate) {
+       $('#' + item.id + " > ul:first").hide();
+    } else {
+      $('#' + item.id + " > ul:first").slideUp();
+    }
+    $('#' + item.id + " > a > img").attr("src", "/images/expand-retina.png");
+    item.expanded = false;
+  };
+
+  var toggle = function(item) {
+    if (item.expanded) {
+      hide(item);
+    } else {
+      expand(item);
+    }
+  };
+
+  var hasChildren = function(item) {
+    return "children" in item;
+  };
+
+  var findMenuItemById = function(id) {
+    var items = menu.slice();
+    while (items.length > 0) {
+      var item = items.pop();
+      if (item.id == id) {
+        return item;
+      }
+      if (hasChildren(item)) {
+        items = items.concat(item.children);
+      }
+    }
+    console.log("Error: menu item not found for id:", id);
+  };
+
+  function supports_history_api() {
+    return !!(window.history && history.pushState);
+  };
+
+  $(".menu-item > a").click(function(e) {
+    var id = e.target.parentElement.id;
+    if (e.target.nodeName === 'IMG') {
+      id = e.target.parentElement.parentElement.id;
+    }
+    var item = findMenuItemById(id);
+    if (hasChildren(item)) {
+      e.preventDefault();
+      toggle(item);
+    } else {
+      // Fast navigation
+      if (supports_history_api()) {
+        var url = e.target.href;
+        goTo(url);
+        history.pushState({url: url}, null, url);
+        return e.preventDefault();
+      }
+    }
+  });
+
+  var goTo = function(url) {
+    var originalUrl = url;
+    if (url.endsWith('/')) {
+      url += 'index.html'
+    }
+
+    url = url.replace('.html', '.body.json')
+
+    $.ajax({
+      url: url,
+      contentType: 'application/json',
+      dataType: 'json',
+      success: fastNavSuccess(originalUrl),
+      error: fastNavError(originalUrl)
+    });
+  };
+
+  var fastNavSuccess = function(targetUrl) {
+    return function(data, status, jqXHR) {
+      highlightMenuItem();
+      $('#content').html(data.body);
+      document.title = data.title;
+      $('#content pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    };
+  };
+
+  var fastNavError = function(targetUrl) {
+    return function(data, status, jqXHR) {
+      window.location = targetUrl;
+    }
+  };
+
+  if (supports_history_api()) {
+    window.addEventListener('popstate', function(e) {
+      var location = e.state.url;
+      goTo(location);
+    });
+    history.replaceState(
+      {url: window.location.href},
+      null,
+      window.location.href
+    );
+  }
+
+  var highlightMenuItem = function() {
+    var location = window.location.pathname;
+    var menuItem = {id: "menu-home"};
+
+    if (location.startsWith("/user/")) {
+      menuItem = findMenuItemById("menu-user");
+    } else if (location.startsWith("/account/")) {
+      menuItem = findMenuItemById("menu-account");
+    } else if (location.startsWith("/global/")) {
+      menuItem = findMenuItemById("menu-global");
+    } else if (location.startsWith("/definitions/")) {
+      menuItem = findMenuItemById("menu-definitions");
+    } else if (location.startsWith("/authentication/")) {
+      menuItem = findMenuItemById("menu-auth");
+    }
+
+    $('.selected').removeClass('selected');
+
+    $('#' + menuItem.id + ' > a').first().addClass("selected");      
+    expand(menuItem, true);
+
+    path = location.split('/');
+
+    for (var i = 2; i < path.length; i ++) {
+      if (! menuItem.children) {
+        continue;
+      }
+      for (var j = 0; j < menuItem.children.length; j ++) {
+        if (menuItem.children[j].url == '/' + path[i]) {
+          menuItem = menuItem.children[j];
+          $('#' + menuItem.id + ' > a').first().addClass("selected");
+          expand(menuItem, true);
+          break;
+        }
+      }
+    }
+  }
+  highlightMenuItem();
+
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
+});
+</script>
+</html>
